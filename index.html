@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PaperRev | Gerontology & Aging</title>
+    <meta
+      name="description"
+      content="Gerontology and aging journal article dashboard with Korean summaries and source links."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div>
+          <p class="eyebrow">PaperRev prototype</p>
+          <h1>Gerontology & Aging 최신 논문 브리프</h1>
+          <p class="lead">
+            SSCI/JCR 상위권 지표가 공개 확인되는 노년학·Aging 저널을 우선 수집하고,
+            한국어 요약과 원문 링크를 함께 정리합니다.
+          </p>
+        </div>
+        <div class="header-panel" aria-label="prototype status">
+          <span class="status-dot"></span>
+          <strong>1차 범위</strong>
+          <span>4개 저널 · Crossref 확인 · GitHub Pages 대응</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="article filters">
+        <label>
+          <span>검색</span>
+          <input id="searchInput" type="search" placeholder="제목, 저널, 태그 검색" />
+        </label>
+        <label>
+          <span>저널</span>
+          <select id="journalFilter">
+            <option value="all">전체 저널</option>
+          </select>
+        </label>
+        <label>
+          <span>주제</span>
+          <select id="topicFilter">
+            <option value="all">전체 주제</option>
+          </select>
+        </label>
+        <label>
+          <span>접근성</span>
+          <select id="accessFilter">
+            <option value="all">전체</option>
+            <option value="open">Open access</option>
+            <option value="metadata">Metadata/abstract 확인</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="summary-grid" aria-label="selection summary">
+        <article>
+          <span class="metric" id="articleCount">0</span>
+          <p>표시 논문</p>
+        </article>
+        <article>
+          <span class="metric" id="openCount">0</span>
+          <p>Open access</p>
+        </article>
+        <article>
+          <span class="metric">2026.05</span>
+          <p>샘플 수집 기준</p>
+        </article>
+      </section>
+
+      <section class="content-layout">
+        <aside class="journal-panel" aria-label="selected journals">
+          <div class="section-heading">
+            <h2>1차 저널 후보</h2>
+            <p>공개 지표와 Crossref 수집 가능성을 기준으로 시작합니다.</p>
+          </div>
+          <div id="journalList" class="journal-list"></div>
+        </aside>
+
+        <section aria-label="latest articles">
+          <div class="section-heading">
+            <h2>최신 논문</h2>
+            <p>
+              아래 요약은 프로토타입용 초안입니다. 운영 단계에서는 초록 기반 AI 요약 후
+              사람이 검수한 항목만 게시합니다.
+            </p>
+          </div>
+          <div id="articleList" class="article-list"></div>
+        </section>
+      </section>
+
+      <section class="method-section" aria-label="method note">
+        <div class="section-heading">
+          <h2>추가 방식</h2>
+          <p>저널과 논문은 데이터 파일을 분리해 이후 자동 수집으로 교체할 수 있습니다.</p>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3>저널 추가</h3>
+            <p>
+              <code>data/journals.json</code>에 저널명, ISSN, 접근성, JCR/SSCI 선정 근거,
+              Crossref 엔드포인트를 추가합니다.
+            </p>
+          </article>
+          <article>
+            <h3>논문 추가</h3>
+            <p>
+              <code>scripts/fetch-crossref.ps1</code>로 Crossref 메타데이터를 받은 뒤
+              <code>data/articles.json</code> 형식으로 정규화합니다.
+            </p>
+          </article>
+          <article>
+            <h3>검수 추가</h3>
+            <p>
+              <code>summary_status</code>를 <code>ai_draft</code>에서
+              <code>human_reviewed</code>, <code>published</code>로 이동시키는 검수
+              파일 또는 관리 화면을 다음 단계에서 붙입니다.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PaperRev prototype</span>
+      <a href="https://api.crossref.org/" target="_blank" rel="noreferrer">Crossref API</a>
+      <a href="https://clarivate.com/products/journal-citation-reports/" target="_blank" rel="noreferrer">JCR</a>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

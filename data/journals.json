@@ -1,0 +1,42 @@
+[
+  {
+    "id": "jmir-aging",
+    "name": "JMIR Aging",
+    "shortName": "JMIR Aging",
+    "issn": "2561-7605",
+    "accessLabel": "Gold open access",
+    "metric": "JCR 2024 Gerontology #1/57; 2025 JIF 4.8",
+    "crossrefEndpoint": "https://api.crossref.org/journals/2561-7605/works",
+    "selectionNote": "완전 오픈액세스 저널이며, JMIR 공식 페이지에서 JCR/Clarivate 지표와 색인 정보를 확인할 수 있어 1차 수집 우선순위로 둔다."
+  },
+  {
+    "id": "innovation-in-aging",
+    "name": "Innovation in Aging",
+    "shortName": "Innovation in Aging",
+    "issn": "2399-5300",
+    "accessLabel": "Open access",
+    "metric": "2024 IF 4.3; Gerontology IF rank 3/48",
+    "crossrefEndpoint": "https://api.crossref.org/journals/2399-5300/works",
+    "selectionNote": "GSA/OUP의 노년학 오픈액세스 저널이며, 공식 About 페이지에서 Gerontology 상위권 JCR 지표를 확인했다."
+  },
+  {
+    "id": "the-gerontologist",
+    "name": "The Gerontologist",
+    "shortName": "The Gerontologist",
+    "issn": "0016-9013",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "2024 IF 3.2; Gerontology JCI rank 2/48",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0016-9013/works",
+    "selectionNote": "사회적 노화와 실천 지향 연구를 다루는 GSA/OUP 핵심 저널이다. 전문 접근은 논문별로 다르지만 Crossref 초록/메타데이터 수집이 가능하다."
+  },
+  {
+    "id": "gerontology-series-b",
+    "name": "The Journals of Gerontology: Series B",
+    "shortName": "J Gerontol B",
+    "issn": "1079-5014",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "2024 IF 3.2; Gerontology JCI rank 1/48",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1079-5014/works",
+    "selectionNote": "심리과학과 사회과학 기반 노화 연구에 직접 부합하며, 공식 About 페이지에서 심리학/노년학 JCR 지표를 확인했다."
+  }
+]
