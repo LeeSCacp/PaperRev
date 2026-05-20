@@ -1,0 +1,66 @@
+[
+  {
+    "id": "does-memory-always-decline",
+    "topicId": "cognitive-aging",
+    "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+    "shortAnswer": "저하만으로 설명하기 어렵습니다. 건강, 환경, 훈련, 보상 전략에 따라 기능 변화가 다르게 나타납니다.",
+    "trend": "최근 논문은 개인 능력과 생활환경, 디지털 지원을 함께 보는 방향으로 이동합니다.",
+    "uncertainty": "장기 효과와 실제 생활 기능으로 이어지는지는 더 검증이 필요합니다."
+  },
+  {
+    "id": "what-supports-mental-health",
+    "topicId": "emotional-aging",
+    "question": "노년기 정신건강은 어떤 환경에서 좋아지는가?",
+    "shortAnswer": "개인의 정서조절뿐 아니라 이동성, 녹지, 서비스 접근성, 사회적 포용이 반복적으로 등장합니다.",
+    "trend": "도시환경과 사회환경을 공중보건 개입 대상으로 보는 연구가 늘고 있습니다.",
+    "uncertainty": "지역, 계층, 문화권별 차이를 설명하는 연구는 아직 부족합니다."
+  },
+  {
+    "id": "how-does-society-define-old-age",
+    "topicId": "social-aging",
+    "question": "사람들은 언제부터 노년이라고 느끼는가?",
+    "shortAnswer": "고정된 나이가 아니라 은퇴 연령, 건강수명, 고령자 고용률 같은 사회 지표와 함께 달라집니다.",
+    "trend": "유럽 자료에서는 노년 시작 연령이 과거보다 늦게 인식되는 경향이 관찰됩니다.",
+    "uncertainty": "국가별 제도와 성별 인식 차이를 더 세밀하게 비교해야 합니다."
+  },
+  {
+    "id": "what-happens-after-screening",
+    "topicId": "dementia-cognitive-impairment",
+    "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+    "shortAnswer": "건강 문해력, 복잡한 의료 절차, 문화적 인식, 돌봄자의 여건이 진료 연결을 막거나 돕습니다.",
+    "trend": "조기 발견 자체보다 발견 후 행동 변화와 서비스 연결을 설명하는 연구가 중요해지고 있습니다.",
+    "uncertainty": "선별 도구의 신뢰와 실제 의료 접근성을 동시에 개선하는 개입이 필요합니다."
+  },
+  {
+    "id": "what-do-caregivers-need",
+    "topicId": "caregiving-family",
+    "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+    "shortAnswer": "정보 조정, 신뢰 가능한 안내, 정서적 지지, 문화적으로 맞는 지원이 반복적인 요구로 나타납니다.",
+    "trend": "돌봄자를 환자 주변인이 아니라 독립적인 지원 대상과 서비스 공동 설계자로 보는 관점이 강해집니다.",
+    "uncertainty": "측정도구와 지원 프로그램이 다양한 가족 구조와 문화권에 맞는지는 더 검증해야 합니다."
+  },
+  {
+    "id": "can-digital-health-help",
+    "topicId": "digital-health-behavior",
+    "question": "디지털헬스는 고령자에게 실제로 도움이 되는가?",
+    "shortAnswer": "가능성은 있지만 큰 글꼴, 쉬운 언어, 신뢰성, 실생활 동선에 맞춘 설계가 전제되어야 합니다.",
+    "trend": "운전 안전, 낙상 예방, 운동훈련처럼 구체적 문제를 해결하는 도구 중심 연구가 늘고 있습니다.",
+    "uncertainty": "디지털 문해력 격차와 장기 유지율은 여전히 중요한 한계입니다."
+  },
+  {
+    "id": "can-ageism-change",
+    "topicId": "work-retirement-ageism",
+    "question": "연령주의와 고령 근로자에 대한 태도는 바뀔 수 있는가?",
+    "shortAnswer": "짧은 교육과 세대 간 노출만으로도 일부 인식 변화가 나타날 수 있습니다.",
+    "trend": "능력에 대한 정보뿐 아니라 정서적·관계적 이미지가 함께 바뀌어야 협업 의도가 높아집니다.",
+    "uncertainty": "짧은 개입이 실제 조직 행동 변화로 이어지는지는 장기 추적이 필요합니다."
+  },
+  {
+    "id": "how-culture-shapes-care",
+    "topicId": "social-aging",
+    "question": "문화는 노년기 돌봄 경험을 어떻게 바꾸는가?",
+    "shortAnswer": "문화는 돌봄 동기를 강화하는 자원이면서 동시에 부담과 서비스 접근 장벽을 만들 수 있습니다.",
+    "trend": "가족주의, 치매 인식, 경제적 장벽을 함께 보는 문화 민감 연구가 중요해지고 있습니다.",
+    "uncertainty": "같은 문화권 안에서도 세대, 이민 경험, 자원 접근성에 따른 차이가 큽니다."
+  }
+]

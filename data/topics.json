@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cognitive-aging",
+    "name": "인지노화",
+    "kicker": "기억, 주의, 집행기능",
+    "description": "나이가 들며 기억, 주의, 판단, 실행 기능이 어떻게 달라지는지 다루는 섹션입니다.",
+    "editorPick": "노년의 인지는 단순한 저하가 아니라 보상 전략, 환경 지원, 건강 상태와 함께 읽어야 합니다.",
+    "color": "green"
+  },
+  {
+    "id": "emotional-aging",
+    "name": "정서노화",
+    "kicker": "정서조절, 우울, 불안",
+    "description": "노년기 정서 경험, 정서조절, 정신건강 위험과 보호 요인을 다룹니다.",
+    "editorPick": "정서노화 연구는 개인의 조절 능력뿐 아니라 도시환경, 관계, 돌봄 맥락까지 함께 봅니다.",
+    "color": "rose"
+  },
+  {
+    "id": "social-aging",
+    "name": "사회적 노화",
+    "kicker": "관계, 고립, 문화",
+    "description": "노화 인식, 사회관계, 문화, 지역사회 환경이 노년기 삶에 미치는 영향을 정리합니다.",
+    "editorPick": "노년의 경험은 개인 특성만으로 설명되지 않고 사회적 규범과 정책 변화에 민감합니다.",
+    "color": "blue"
+  },
+  {
+    "id": "dementia-cognitive-impairment",
+    "name": "치매·인지장애",
+    "kicker": "MCI, 치매, 조기 발견",
+    "description": "경도인지장애, 치매 선별, 진료 연결, 가족 돌봄의 심리사회적 쟁점을 다룹니다.",
+    "editorPick": "조기 발견 이후 실제 도움으로 연결되는 과정이 핵심 연구 질문으로 떠오르고 있습니다.",
+    "color": "gold"
+  },
+  {
+    "id": "caregiving-family",
+    "name": "돌봄·가족",
+    "kicker": "가족돌봄, 전환돌봄, 미충족 요구",
+    "description": "가족과 비공식 돌봄자가 경험하는 부담, 회복탄력성, 지원체계를 정리합니다.",
+    "editorPick": "돌봄자는 보조 인력이 아니라 서비스 설계의 핵심 사용자로 다뤄져야 합니다.",
+    "color": "teal"
+  },
+  {
+    "id": "digital-health-behavior",
+    "name": "건강행동·디지털헬스",
+    "kicker": "앱, 운동, 안전, 접근성",
+    "description": "고령자의 건강행동 변화와 디지털 도구의 실행 가능성, 접근성, 수용성을 다룹니다.",
+    "editorPick": "디지털헬스의 효과는 기술 자체보다 사용자 요구와 접근성 설계에 달려 있습니다.",
+    "color": "indigo"
+  },
+  {
+    "id": "work-retirement-ageism",
+    "name": "일·은퇴·연령주의",
+    "kicker": "고령 근로자, 은퇴, 세대 인식",
+    "description": "일터에서의 노화 인식, 은퇴 정책, 연령주의 완화 개입을 다룹니다.",
+    "editorPick": "노화 인식은 개인 태도뿐 아니라 노동시장과 은퇴 제도의 변화 속에서 움직입니다.",
+    "color": "orange"
+  }
+]

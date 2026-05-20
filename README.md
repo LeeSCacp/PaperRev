@@ -1,13 +1,21 @@
 # PaperRev
 
-Gerontology/Aging 분야의 최신 저널 논문을 수집하고 한국어 브리프 형태로 보여주는 정적 웹사이트 프로토타입입니다.
+Gerontology/Aging 분야의 최신 저널 논문을 수집하고 노화 심리 하위 분야별 카드뉴스 형태로 보여주는 정적 웹사이트 프로토타입입니다.
 
 ## 현재 범위
 
 - 주제: Gerontology, Aging
+- 화면 방향: 검색형 논문 목록이 아니라 분야별 매거진형 카드뉴스
 - 1차 저널: JMIR Aging, Innovation in Aging, The Gerontologist, The Journals of Gerontology: Series B
 - 데이터 확인: Crossref에서 최신 논문 메타데이터 수집 가능 확인
 - 배포 전제: GitHub Pages
+
+## 정보 구조
+
+- 분야별 매거진 홈: 인지노화, 정서노화, 사회적 노화, 치매·인지장애, 돌봄·가족, 건강행동·디지털헬스, 일·은퇴·연령주의
+- 질문으로 읽기: 독자 질문, 짧은 답, 공통 경향, 남은 쟁점
+- 논문 카드뉴스: 핵심 질문, 무엇을 했나, 주요 결과, 왜 중요한가, 조심해서 볼 점
+- 원문 목록: DOI, Crossref, 저널 정보와 보조 검색
 
 ## 로컬 실행
 
