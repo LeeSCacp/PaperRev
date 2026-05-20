@@ -1,0 +1,1237 @@
+{
+  "generatedAt": "2026-05-20T06:05:23.058Z",
+  "source": "Crossref",
+  "windowsTried": [
+    7,
+    14,
+    30
+  ],
+  "selectedWindow": 14,
+  "coverageByTopic": {
+    "cognitive-aging": 6,
+    "emotional-aging": 1,
+    "social-aging": 11,
+    "dementia-cognitive-impairment": 5,
+    "caregiving-family": 5,
+    "digital-health-behavior": 4,
+    "work-retirement-ageism": 2
+  },
+  "records": [
+    {
+      "id": "10-2196-79630",
+      "doi": "10.2196/79630",
+      "title": "Development of a Web-Based Resource to Support Driving Safety in Older Adults: Semistructured Interview and Focus Group Study",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-19",
+      "authors": [
+        "Mollie Cahill",
+        "Ranmalee Eramudugolla",
+        "Marwin Tang",
+        "Diane Hosking",
+        "Stephen Cratchley",
+        "Michael Regan",
+        "Lesley A Ross",
+        "Jasmine Price",
+        "Kaarin J Anstey"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/79630",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F79630",
+      "abstract": "Older adults face increased crash risk due to age-related declines in cognitive, visual, and physical functioning; yet, many Australians in their 70s are continuing to drive. Web-based platforms are increasingly used to deliver health and mobility information to older adults and may support safer driving; however, existing online resources on driving safety often lack age-specific guidance, have usability limitations, and may not be designed with older adults in mind.  This study aimed to explore the information needs, preferences, and experiences of older drivers and general practitioners (GPs) to inform the formative, prelaunch development of a user-centered web-based platform, Ageing Well on the Road. Interviews and focus groups were conducted to gather feedback on content, accessibility, and usability, with data collection guided by the Consolidated Framework for Implementation Research and the Technology Acceptance Model frameworks to explore implementation and technology adoption factors.  Website development was informed by a review of 26 Australian websites and consultations with stakeholders. Semistructured interviews were conducted with 7 older adults (aged >67 years; one additional participant completed only survey data) and a focus group with 10 GPs experienced in fitness to drive assessments for older drivers. Thematic analysis was used to explore participants’ experiences with online driving information and feedback on content, usability, and accessibility. Formative feedback from these users directly informed content and design refinements before public launch.  The website addressed priority topics, including age-related health conditions affecting driving, licensing requirements, vehicle safety features, and strategies for maintaining driving confidence. Older adults valued large fonts, plain language, intuitive navigation, and trustworthy, practical advice. GPs highlighted the website’s potential to support clinical discussions around driving capacity and safety. Barriers to engagement included digital literacy limitations, accessibility concerns, and uncertainty about online information credibility.  A co-designed, web-based platform tailored to older adults and clinicians can enhance access to relevant, trustworthy information and support driving self-regulation. Involving end users in the development process is critical to optimize usability and ensure the resource aligns with their needs, highlighting the value of theory-informed, user-guided development for digital health resources.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "digital-health-behavior",
+      "questionIds": [
+        "can-digital-health-help"
+      ],
+      "deck": {
+        "question": "디지털헬스는 고령자에게 실제로 도움이 되는가?",
+        "method": "초록 기준으로, 이 연구는 Semistructured interviews were conducted with 7 older adults (aged >67 years; one additional participant completed only survey data) and a focus group with 10 GPs experienced in fitness to drive assessments for older drivers.",
+        "finding": "주요 결과는 Barriers to engagement included digital literacy limitations, accessibility concerns, and uncertainty about online information credibility.",
+        "meaning": "이 논문은 건강행동·디지털헬스 분야에서 A co-designed, web-based platform tailored to older adults and clinicians can enhance access to relevant, trustworthy information and support driving self-regulation.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "건강행동·디지털헬스 분야 카드뉴스 후보입니다. Older adults face increased crash risk due to age-related declines in cognitive, visual, and physical functioning; yet, many Australians in their 70s are continuing to drive. Web-based platforms are increasingly used to…"
+    },
+    {
+      "id": "10-2196-79386",
+      "doi": "10.2196/79386",
+      "title": "Determinants of Medical Help–Seeking Behavior Following Case Finding of Early Cognitive Impairment: Semistructured Interview Study of Patients and Caregivers",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-19",
+      "authors": [
+        "Shu Rong Lim",
+        "Xiaohui Xin",
+        "Gerald Choon Huat Koh",
+        "Julian Thumboo",
+        "Tau Ming Liew"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/79386",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F79386",
+      "abstract": "Timely medical follow-up after a diagnosis of cognitive impairment, such as mild cognitive impairment (MCI) or dementia, is imperative for initiating appropriate medical treatment and accessing comprehensive care management and psychosocial support. However, many community-dwelling older adults who receive a positive case-finding result default on their medical follow-up appointments. This persistent challenge undermines early detection and active case-finding efforts and increases the risk of early institutionalization. Understanding the determinants is important for developing effective interventions in community-based case-finding.  This qualitative study aimed to explore the barriers and facilitators influencing medical help–seeking behavior among community-dwelling individuals in Singapore diagnosed with MCI or dementia following a positive case-finding result. The COM-B (capability, opportunity, motivation-behavior) framework of the Behavior Change Wheel (BCW) was used to systematically identify these determinants.  Using maximum variation sampling based on age, gender, ethnicity, living arrangement, relationship with caregiver, prior memory concerns, and whether participants had sought medical follow-up after their cognitive impairment diagnosis, we conducted 21 unique household semistructured interviews with 26 individuals (comprising 5 participant-caregiver dyads of MCI, 6 participants diagnosed with MCI, 1 caregiver of a participant with MCI, and 9 caregivers of participants diagnosed with dementia). These participants were a subset of individuals and caregivers recruited from a community-based study validating an artificial intelligence (AI)–based dementia case-finding tool. Interviews were audio-recorded, transcribed verbatim, and analyzed using the framework analysis method. Two authors (SRL and XX) performed inductive coding before mapping to COM-B, with subsequent discussion and review by the remaining authors. The COM-B components informed the selection of the relevant intervention functions from the BCW.  Barriers to medical help–seeking behavior after cognitive impairment diagnosis included physical impairments, low health literacy to navigate the health care processes, inaccurate disease knowledge, complicated health care processes, inadequate physical infrastructure to navigate health care organizations, oversimplified cultural representation of dementia, perceived inaccuracy of the case-finding tool, and lay beliefs about seeking medical care when sick. Facilitators included adopting strategies to track medical appointments, a case-finding result letter as a cue for action, caregivers with profamily workplace policies, and valuing proactive medical disease management. Notably, social capital, (in)ability to recognize symptoms, and strong affective states triggered by the case-finding  were both barriers and enablers.  These findings highlight a complex interplay of individual, social, and structural determinants influencing medical help–seeking behavior following a cognitive impairment diagnosis. Rather than a linear trajectory, medical help–seeking is shaped by a dynamic interplay across the COM-B domains. Drawing on these findings, we developed a set of comprehensive and actionable recommendations grounded in the BCW intervention functions to support timely medical follow-up after a cognitive impairment diagnosis. To maximize their impact, these recommendations should be collaboratively refined and evaluated with stakeholders using the acceptability, practicability, effectiveness, affordability, side effects, and equity (APEASE) criteria.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "dementia-cognitive-impairment",
+      "questionIds": [
+        "what-happens-after-screening"
+      ],
+      "deck": {
+        "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+        "method": "초록 기준으로, 이 연구는 Interviews were audio-recorded, transcribed verbatim, and analyzed using the framework analysis method.",
+        "finding": "주요 결과는 Facilitators included adopting strategies to track medical appointments, a case-finding result letter as a cue for action, caregivers with profamily workplace policies, and valuing proactive medical disease management.",
+        "meaning": "이 논문은 치매·인지장애 분야에서 Drawing on these findings, we developed a set of comprehensive and actionable recommendations grounded in the BCW intervention functions to support timely medical follow-up after a cognitive impairment diagnosis.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "치매·인지장애 분야 카드뉴스 후보입니다. Timely medical follow-up after a diagnosis of cognitive impairment, such as mild cognitive impairment (MCI) or dementia, is imperative for initiating appropriate medical treatment and accessing comprehensive care manage…"
+    },
+    {
+      "id": "10-1093-geronb-gbag089",
+      "doi": "10.1093/geronb/gbag089",
+      "title": "Leisure Activity Engagement, Spirituality, and Cognitive Function in Middle-Aged and Older Black Adults",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-19",
+      "authors": [
+        "Angie L Sardina",
+        "Jasmine Sampson",
+        "Alexa C Allan",
+        "Lena G Simon",
+        "Marsha Hampton-Jarmon",
+        "Roland J Thorpe",
+        "Lesley A Ross",
+        "Jason Ashe",
+        "Alan B Zonderman",
+        "Michele K Evans",
+        "Alyssa A Gamaldo"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag089",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag089",
+      "abstract": "Leisure activity engagement (LAE) and spirituality are independently associated with cognition and may serve as protective cognitive factors with age. However, the dynamic interaction of LAE and spirituality on subjective (e.g., memory complaints) and  cognitive function (e.g., neuropsychological battery) within Black adults has not been explored. Thus, this study examined the relationships between LAE and subjective and  cognitive function, and whether these relationships varied by spirituality levels in middle-aged and older Black adults. Method Black adults (N = 165; M age=62) from the Healthy Aging in Neighborhoods of Diversity Across the Life Span–Sleep Sub-Study (Wave-1) were included. LAE comprised the average total number of self-reported LAE across a 7-day consecutive period. Spirituality reflected the sum score on the Spiritual Transcendence Scale. Cognitive measures included subjective (e.g., memory complaints) and  cognitive indices (e.g., attention, memory/learning, language, processing speed, executive function). Multivariable regressions were conducted to examine the relationship between LAE and each cognitive variable before and after adjusting for covariates. Analyses also included interactions between LAE and spirituality on cognitive functions.  Participants averaged seven LAE per day on consecutive days. Greater LAE was associated with better performance in processing speed, executive function, and memory/learning (ps Discussion These findings provide preliminary support for the development of targeted programs coupling spiritual and leisure components to promote language cognitive domain among Black adults.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "초록 기준으로, 이 연구는 Method Black adults (N = 165; M age=62) from the Healthy Aging in Neighborhoods of Diversity Across the Life Span–Sleep Sub-Study (Wave-1) were included.",
+        "finding": "주요 결과는 Greater LAE was associated with better performance in processing speed, executive function, and memory/learning (ps Discussion These findings provide preliminary support for the development of targeted programs coupling spiritual and leisure components to promote language cognitive domain among Black adults.",
+        "meaning": "이 논문은 인지노화 분야에서 Greater LAE was associated with better performance in processing speed, executive function, and memory/learning (ps Discussion These findings provide preliminary support for the development of targeted programs coupling spiritual and leisure components to promote language cognitive domain among Black adults.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. Leisure activity engagement (LAE) and spirituality are independently associated with cognition and may serve as protective cognitive factors with age. However, the dynamic interaction of LAE and spirituality on subjecti…"
+    },
+    {
+      "id": "10-2196-87577",
+      "doi": "10.2196/87577",
+      "title": "Supervised and Self-Directed Technology-Based Dual-Task Exercise Training Program for Older Adults With a History of Falls: Mixed Methods Feasibility Study",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-18",
+      "authors": [
+        "Prerna Mathur",
+        "Afroditi Stathi",
+        "Victoria A Goodyear",
+        "Taylor Krauss",
+        "Helen Thomas",
+        "Angela Cooper",
+        "Philip Kinghorn",
+        "Caroline Miller",
+        "Natalie Ives",
+        "Magdalena Chechlacz",
+        "Daisy Wilson",
+        "Laura Magill",
+        "Shin-Yi Chiou"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/87577",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F87577",
+      "abstract": "Older adults who have fallen are at an increased risk of future falls. Training cognitive and physical functions simultaneously, known as dual-task (DT) training, has been shown to improve mobility and reduce fall risks. With appropriate digital tools, such as smartphones and mobile apps, it is possible to deliver DT training in unsupervised, home-based settings, thereby increasing accessibility beyond the clinical environment.  This study aimed to evaluate the feasibility and acceptability of a technology-based DT training program delivered through a blended model of supervised and self-directed sessions for older adults with a history of falls. Perspectives of health care professionals working in fall-prevention services were also explored.  A single-arm, nonrandomized feasibility study was conducted with 45 community-dwelling adults aged 65 years or older with a history of falls. Participants were recruited through primary care practices, secondary care fall-prevention services, and community outreach. The 24-week DT program, which integrated balance and strength exercises with cognitive training using a mobile app, was delivered in two phases: (1) for12 weeks, weekly 50-minute physiotherapist-led group classes in the community, and 2 additional 50-minute self-directed sessions at home, and (2) for 12 weeks, 3 weekly 50-minute self-directed sessions at home. Feasibility and acceptability were assessed through recruitment and retention rates, adherence, app usage, and self-reported satisfaction. Qualitative data were obtained from focus groups with 28 participants who completed the program and 16 health care professionals. Quantitative data were analyzed descriptively, and qualitative data were analyzed thematically.  We recruited 45 of the target 50 participants, with most participants (n=41) recruited through community pathways; 4 were recruited via National Health Service (NHS) pathways. Adherence was 64%, with higher adherence during phase 1 (81%) than phase 2 (50%). App usage was high (95%), and self-reported program satisfaction was moderate to high. Retention at 24 weeks was 76%, and no adverse events occurred. The qualitative findings supported the program’s feasibility and acceptability, emphasizing social connection and tailored exercises as key to adherence—especially in home-based sessions. Health care professionals identified community organizations and referral pathways as the most practical routes for implementation.  A blended, technology-based DT training program is both feasible and acceptable for older adults at risk of falling and can be effectively delivered beyond clinical settings. Community-based recruitment outperformed NHS pathways, highlighting the value of community engagement. These findings support the feasibility and acceptability of a full-scale trial, with targeted refinements to recruitment, support structures, and delivery to maximize scalability and impact.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "digital-health-behavior",
+      "questionIds": [
+        "can-digital-health-help"
+      ],
+      "deck": {
+        "question": "디지털헬스는 고령자에게 실제로 도움이 되는가?",
+        "method": "초록 기준으로, 이 연구는 These findings support the feasibility and acceptability of a full-scale trial, with targeted refinements to recruitment, support structures, and delivery to maximize scalability and impact.",
+        "finding": "주요 결과는 We recruited 45 of the target 50 participants, with most participants (n=41) recruited through community pathways; 4 were recruited via National Health Service (NHS) pathways.",
+        "meaning": "이 논문은 건강행동·디지털헬스 분야에서 These findings support the feasibility and acceptability of a full-scale trial, with targeted refinements to recruitment, support structures, and delivery to maximize scalability and impact.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "건강행동·디지털헬스 분야 카드뉴스 후보입니다. Older adults who have fallen are at an increased risk of future falls. Training cognitive and physical functions simultaneously, known as dual-task (DT) training, has been shown to improve mobility and reduce fall risks…"
+    },
+    {
+      "id": "10-2196-85074",
+      "doi": "10.2196/85074",
+      "title": "Digital Handwriting Kinematics and Physical Performance According to Pentagon-Copy Performance in Community-Dwelling Older Adults: Cross-Sectional Study",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-18",
+      "authors": [
+        "Pau Ferrer-Ramos",
+        "Marcos Faundez-Zanuy",
+        "Noemí Serra-Payá",
+        "Manuel Vicente Garnacho-Castaño",
+        "Montserrat Girabent-Farrés"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/85074",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F85074",
+      "abstract": "Cognitive decline in older adults is often accompanied by subtle motor alterations. Digital handwriting analysis has emerged as a promising noninvasive approach for detecting these changes, but its usefulness in community-based settings remains unclear.  This study aims to examine the association of handwriting kinematics and physical performance measures with pentagon-copy performance classification in community-dwelling older adults.  This cross-sectional study included 174 community-dwelling adults aged 60 years or older (mean age 73.9, SD 6.1 years; 108/174, 62% women). Participants completed 10 digital handwriting tasks and a battery of physical performance tests assessing strength, balance, gait, and cardiorespiratory fitness. Group classification was based on pentagon-copy performance and categorized as normal (93/174, 53% participants) or altered (81/174, 46% participants). Adjusted linear regression models included group as the main predictor and age and sex as covariates. Multiple comparisons were controlled using the Benjamini-Hochberg false discovery rate.  After adjustment for age, sex, and multiple comparisons, selected handwriting variables remained significantly associated with altered pentagon-copy performance, whereas no physical performance variables remained statistically significant. The most consistent differences were observed in cognitive effort and mechanical tasks, where participants with altered pentagon-copy performance showed longer contact time (β=526.8 ms; P  Selected digital handwriting variables, particularly temporal measures, were more consistently associated with altered pentagon-copy performance than physical performance outcomes. These findings suggest that digital handwriting analysis may represent a sensitive complementary approach for exploring subtle functional differences in community-based settings.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 These findings suggest that digital handwriting analysis may represent a sensitive complementary approach for exploring subtle functional differences in community-based settings.",
+        "finding": "주요 결과는 The most consistent differences were observed in cognitive effort and mechanical tasks, where participants with altered pentagon-copy performance showed longer contact time (β=526.8 ms; P Selected digital handwriting variables, particularly temporal measures, were more consistently associated with altered pentagon-copy performance than physical performance outcomes.",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. Cognitive decline in older adults is often accompanied by subtle motor alterations. Digital handwriting analysis has emerged as a promising noninvasive approach for detecting these changes, but its usefulness in communi…"
+    },
+    {
+      "id": "10-1093-geroni-igag056",
+      "doi": "10.1093/geroni/igag056",
+      "title": "“There doesn't seem to be the help there for people who are carers”: Qualitative findings from a realist evaluation of hospital-to-home transitions",
+      "journalId": "innovation-in-aging",
+      "journal": "Innovation in Aging",
+      "publishedDate": "2026-05-18",
+      "authors": [
+        "Lauren Lawson",
+        "Matthew Cooper",
+        "Clare Tolley",
+        "Annette Hand",
+        "Hamde Nazar"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.1093/geroni/igag056",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeroni%2Figag056",
+      "abstract": "and : Unpaid carers play a significant role in supporting older adults with multiple long-term conditions including dementia (MLTCiD), during complex hospital-to-home transitions. However, their needs are often overlooked during hospital discharge, highlighting a gap in how meaningful support can be provided. This study explored how, for whom, and under which circumstances these transitions work (or not) for carers. Research Design and  Fifteen semi-structured interviews were conducted with carers as part of a realist evaluation. Interviews were coded to identify patterns of contexts and outcomes, explained through causal mechanisms, and used to refine an explanatory framework capturing what works, for whom, and under which circumstances in promoting safer transitions.  Three interdependent themes that shaped carer experiences were identified: Managing information, Carer well-being, and Engagement with support. Fragmented or inaccessible information increased carers’ uncertainty, reduced engagement, and negatively influenced well-being. Many carers felt overwhelmed by excessive or conflicting information and reported barriers to accessing reliable guidance, such as limited trustworthy sources and low digital literacy. Carers valued a single point of contact to coordinate information and provide relational support, but implementation of this role was rare. : Care during hospital-to-home transitions remains fragmented, with limited support for carers. Although digital solutions have the potential to improve efficiency and safety, current systems overlook carers’ roles, capacity, and needs. Involving carers in service design, improving communication, and providing personalised guidance could strengthen safety in transitional care.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "caregiving-family",
+      "questionIds": [
+        "what-do-caregivers-need"
+      ],
+      "deck": {
+        "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+        "method": "Innovation in Aging에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Many carers felt overwhelmed by excessive or conflicting information and reported barriers to accessing reliable guidance, such as limited trustworthy sources and low digital literacy.",
+        "meaning": "이 논문은 돌봄·가족 분야에서 : Care during hospital-to-home transitions remains fragmented, with limited support for carers.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "돌봄·가족 분야 카드뉴스 후보입니다. and : Unpaid carers play a significant role in supporting older adults with multiple long-term conditions including dementia (MLTCiD), during complex hospital-to-home transitions. However, their needs are often overlook…"
+    },
+    {
+      "id": "10-1093-geront-gnag110",
+      "doi": "10.1093/geront/gnag110",
+      "title": "Validity Testing of the Benjamin Rose Unmet Need Instrument: A Comprehensive Measure for Dementia Caregiving",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-18",
+      "authors": [
+        "Morgan J Minyo",
+        "David M Bass",
+        "Katherine S Judge"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag110",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag110",
+      "abstract": "and  Few psychometrically tested, comprehensive measures exist for assessing dementia caregivers’ unmet needs. This has limited unmet need from being used as a key outcome in efficacy and/or effectiveness testing of programs supporting family/friend caregivers. This investigation tested the psychometric properties of the Benjamin Rose Unmet Need Instrument; a comprehensive measure designed for use in research with dementia caregivers. Research Design and  The Instrument was examined for three types of validity (structural, concurrent, discriminant) and internal consistency reliability using secondary baseline data from a large-scale translation study of 192 community-dwelling family/friend dementia caregivers living in the U.S.  Exploratory factor analysis confirmed structural validity of a 45-item Total Unmet Need Scale (loadings=.31-.66), and eight multi-item and one single-item subscales (loadings=.34-.81). Total Unmet Need and all subscales demonstrated high internal consistency reliability (α=.70-.95). Concurrent validity was demonstrated for Total Unmet Need and seven subscales by significant relationships with measures of depressive symptoms (β=.16-.32) and care-related strains (β=.15-.42). Discriminant validity was partially confirmed through principal component analysis for Total Unmet Need (loading=.92) and nine subscales (loadings=.90-.95).   suggest the Benjamin Rose Unmet Need Instrument is a valid and reliable measure to understand dementia caregivers’ expressed need for help across a variety of medical and non-medical domains. It also can be used as a research outcome in studies of programs and services for caregivers. Additional research is needed to further test the Instrument’s validity with caregivers of people with mild dementia and those living in facilities.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "caregiving-family",
+      "questionIds": [
+        "what-do-caregivers-need"
+      ],
+      "deck": {
+        "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+        "method": "초록 기준으로, 이 연구는 Discriminant validity was partially confirmed through principal component analysis for Total Unmet Need (loading=.92) and nine subscales (loadings=.90-.95).",
+        "finding": "주요 결과는 suggest the Benjamin Rose Unmet Need Instrument is a valid and reliable measure to understand dementia caregivers’ expressed need for help across a variety of medical and non-medical domains.",
+        "meaning": "이 논문은 돌봄·가족 분야에서 suggest the Benjamin Rose Unmet Need Instrument is a valid and reliable measure to understand dementia caregivers’ expressed need for help across a variety of medical and non-medical domains.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "돌봄·가족 분야 카드뉴스 후보입니다. and  Few psychometrically tested, comprehensive measures exist for assessing dementia caregivers’ unmet needs. This has limited unmet need from being used as a key outcome in efficacy and/or effectiveness testing of pro…"
+    },
+    {
+      "id": "10-1093-geroni-igag049",
+      "doi": "10.1093/geroni/igag049",
+      "title": "Developing age-inclusive mindsets in future managers: Insights from a classroom intervention",
+      "journalId": "innovation-in-aging",
+      "journal": "Innovation in Aging",
+      "publishedDate": "2026-05-15",
+      "authors": [
+        "Maria Eduarda Soares",
+        "Chantale Jeanrie",
+        "Dinis Macedo",
+        "Susana Santos",
+        "Bruno Futre",
+        "Frederico Caetano",
+        "Abílio Zacarias",
+        "Paulo Almeida Gonçalves"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.1093/geroni/igag049",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeroni%2Figag049",
+      "abstract": "and  The increased participation of older workers in the labour force has brought about various challenges for managers. This study investigates whether a brief classroom-based intervention may influence management students’ attitudes towards older workers and their willingness to work with them. Research Design and  The intervention combined feedback on aging-related knowledge with testimonial videos from older workers. A total of 208 first-year undergraduates completed surveys before and immediately after the intervention, with 92 participating again one month later.  Paired samples t-tests revealed significant immediate improvements across perceptions of older workers’ adaptability, conscientiousness, generosity, and performance and value, as well as in willingness to work with older workers. Improvements in perceptions of adaptability were particularly salient and most improvements persisted at follow-up. Structural equations modelling further indicated that perceptions of generosity consistently predicted willingness to work with older workers, whereas perceptions of adaptability and conscientiousness did not. Performance and value were significantly associated with willingness in the initial stages but not at follow-up. The model explained 12-20.5% of the variance in willingness to work with older workers.  Findings suggest that even brief interventions combining factual information with intergenerational exposure may foster attitudinal shifts that remain evident one month later, particularly by enhancing perceptions of adaptability. The  further underscore the importance of addressing not only competence but also affective and relational dimensions of ageism, such as perceptions of generosity.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "work-retirement-ageism",
+      "questionIds": [
+        "can-ageism-change"
+      ],
+      "deck": {
+        "question": "연령주의와 고령 근로자에 대한 태도는 바뀔 수 있는가?",
+        "method": "Innovation in Aging에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Findings suggest that even brief interventions combining factual information with intergenerational exposure may foster attitudinal shifts that remain evident one month later, particularly by enhancing perceptions of adaptability.",
+        "meaning": "일·은퇴·연령주의 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "일·은퇴·연령주의 분야 카드뉴스 후보입니다. and  The increased participation of older workers in the labour force has brought about various challenges for managers. This study investigates whether a brief classroom-based intervention may influence management stud…"
+    },
+    {
+      "id": "10-1093-geront-gnag104",
+      "doi": "10.1093/geront/gnag104",
+      "title": "Long-Term Care Facilities to Rehabilitation Hospital Transitions in the United States: Principal Diagnoses at Admission and Hospitalization Outcomes with Comorbid Conditions",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-14",
+      "authors": [
+        "Cheng Yin",
+        "Xiaoli Li",
+        "Elias Mpofu",
+        "Kayi Ntinda",
+        "Bin Zhang"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag104",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag104",
+      "abstract": "and  Hospitalization outcomes of long-term care facility (LTCF) residents aged 60 years or older who are admitted to rehabilitation hospitals may differ by diagnosis at admission. This study aimed to determine the relationship between principal admitting diagnoses and discharge destination and the role of length of stay (LoS) and comorbid conditions. Research Design and  This retrospective cohort study utilized the Texas Inpatient Public Use Data File from October 2022 to June 2024. The cohort included 3,446 patients admitted to rehabilitation hospitals from LTCFs. Discharge destination (five-level) was modeled with multinomial logistic regression adjusting for age, gender, race/ethnicity, and health insurance status.  Neurological disorders (20.0%) and myopathies (20.2%) were the most common principal admitting diagnoses. Compared with neurological disorders, myopathies had a higher likelihood of transferring to subacute or short-term hospital care (RRR = 2.18, 95% CI : 1.41-3.37) and home under care (RRR = 1.69, 95% CI : 1.21-2.36). General symptoms or functional impairments were similarly associated with higher relative risk of discharge from acute to short-term care hospitals (RRR = 2.05, 95% CI : 1.13-3.72) and home under care (RRR = 1.73, 95% CI : 1.08-2.77). Post-surgical or orthopedic aftercare had lower relative risk of discharge to skilled nursing rather than rehabilitation hospital facilities (RRR = 0.50, 95% CI : 0.28-0.88).  Among patients admitted to rehabilitation hospitals from LTCFs, a neurological principal admitting diagnosis and extended LoS with comorbid conditions carry a higher likelihood of discharge to an intensive care facility. These findings suggest a need for proactive admission diagnosis-tailored discharge planning and attention for patients with extended LoS.",
+      "source": "Crossref",
+      "fetchedWindowDays": 7,
+      "summary_status": "ai_draft",
+      "topicId": "dementia-cognitive-impairment",
+      "questionIds": [
+        "what-happens-after-screening"
+      ],
+      "deck": {
+        "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+        "method": "초록 기준으로, 이 연구는 The cohort included 3,446 patients admitted to rehabilitation hospitals from LTCFs.",
+        "finding": "주요 결과는 These findings suggest a need for proactive admission diagnosis-tailored discharge planning and attention for patients with extended LoS.",
+        "meaning": "이 논문은 치매·인지장애 분야에서 These findings suggest a need for proactive admission diagnosis-tailored discharge planning and attention for patients with extended LoS.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "치매·인지장애 분야 카드뉴스 후보입니다. and  Hospitalization outcomes of long-term care facility (LTCF) residents aged 60 years or older who are admitted to rehabilitation hospitals may differ by diagnosis at admission. This study aimed to determine the relat…"
+    },
+    {
+      "id": "10-2196-77591",
+      "doi": "10.2196/77591",
+      "title": "Leveraging Multimodal Large Language Models for Fall Risk Reduction in Older Adults in the Home: Proposed Model Design",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-13",
+      "authors": [
+        "Justin Do",
+        "Vivaswat Suresh",
+        "Lily Zhang",
+        "Bharvi M Chavre",
+        "Jeremy Cha",
+        "Robert Pugliese"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/77591",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F77591",
+      "abstract": "This research letter proposes a novel model design leveraging natively multimodal large language models to identify fall risks and generate visualizations of recommended home environmental modifications, aiming to improve the accessibility and impact of personalized fall prevention advice for older adults. Through a pilot rating study, this work demonstrates that multimodal large language models can generate safe and actionable advice to reduce fall risk in lived spaces of older adults, and also generate realistic edits based on original images. While this concept needs further testing and clinical comparison, it highlights a promising avenue for further innovation of fall prevention tactics.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "work-retirement-ageism",
+      "questionIds": [
+        "can-ageism-change"
+      ],
+      "deck": {
+        "question": "연령주의와 고령 근로자에 대한 태도는 바뀔 수 있는가?",
+        "method": "JMIR Aging에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "초록에서 핵심 결과 문장을 추가 검수해야 합니다. 현재 자동 추출 요약: This research letter proposes a novel model design leveraging natively multimodal large language models to identify fall risks and generate visualizations of recommended home envi…",
+        "meaning": "일·은퇴·연령주의 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "일·은퇴·연령주의 분야 카드뉴스 후보입니다. This research letter proposes a novel model design leveraging natively multimodal large language models to identify fall risks and generate visualizations of recommended home environmental modifications, aiming to impro…"
+    },
+    {
+      "id": "10-2196-90103",
+      "doi": "10.2196/90103",
+      "title": "Self-Identified Age Cohorts and Personal Experience Sharing in Pseudonymous Online Spaces: Natural Language Processing Analysis of Reddit",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Ern Chern Khor",
+        "Moon Choi"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/90103",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F90103",
+      "abstract": "While older adults’ social media use has been widely studied for its instrumental benefits, such as accessing health information or maintaining family ties, research has largely focused on identity-based platforms that mirror offline social networks, leaving pseudonymous, interest-driven environments such as Reddit underexplored. Although older adults actively participate in these spaces to share personal narratives and engage beyond their existing social roles, the literature has yet to center their own voices, with most existing work focusing on caregivers or younger users discussing older adults rather than older adults speaking for themselves.  Integrating a life course perspective with the concept of subjective age cohort, this study examines how Reddit users who explicitly self-identify as being in their 50s, 60s, or 70s engage in self-expression and personal experience sharing within pseudonymous online spaces.  Using data collected via the Reddit application programming interface, this study analyzed posts and comments from 848 self-identified older Reddit users, including 488 future older adults in their 50s (57.5%) and 360 current older adults in their 60s and 70s (42.5%) identified through age-based flairs in the subreddit r/AskOldPeople. A fine-tuned large language model (BLOOM-560m; F1-score=0.96) classified 4,055,275 sentences into three personal experience domains: (1) health and wellness, (2) personal relationships and identity, and (3) professional and financial life. Chi-square analysis compared domain distributions across age groups. BERTopic topic modeling identified thematic patterns within each domain.  Of 569,107 personal experience sentences identified, personal relationships and identity comprised the largest share (n=268,212, 47.1%), followed by professional and financial (n=186,768, 32.8%) and health and wellness (n=114,127, 20.1%). Chi-square analysis revealed significant between-group differences (χ22=34.7; P  This study demonstrates that older adults’ personal experience sharing on pseudonymous platforms is shaped by the simultaneous interplay of life course stage, age cohort , and platform affordances, rather than by any single factor. Pseudonymous environments such as Reddit enable disclosures of health vulnerabilities, contested social identities, and emotional experiences that are structurally discouraged on identity-based networks, and this has direct implications for how digital inclusion is conceptualized and practiced. Beyond operational literacy, supporting older adults’ expressive inclusion in interest-based, pseudonymous online communities represents a meaningful yet underaddressed dimension of digital participation policy.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-culture-shapes-care"
+      ],
+      "deck": {
+        "question": "문화는 노년기 돌봄 경험을 어떻게 바꾸는가?",
+        "method": "초록 기준으로, 이 연구는 Chi-square analysis revealed significant between-group differences (χ22=34.7; P This study demonstrates that older adults’ personal experience sharing on pseudonymous platforms is shaped by the simultaneous interplay of life course stage, age cohort , and platform affordances, rather than by any single factor.",
+        "finding": "주요 결과는 Using data collected via the Reddit application programming interface, this study analyzed posts and comments from 848 self-identified older Reddit users, including 488 future older adults in their 50s (57.5%) and 360 current older adults in their 60s and 70s (42.5%) identified through age-based flairs in the subreddit r/AskOldPeople.",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. While older adults’ social media use has been widely studied for its instrumental benefits, such as accessing health information or maintaining family ties, research has largely focused on identity-based platforms that…"
+    },
+    {
+      "id": "10-1093-geront-gnag105",
+      "doi": "10.1093/geront/gnag105",
+      "title": "Associations between the physical and social urban environment and older adults’ mental health–a scoping review of reviews",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Noortje Jacobs",
+        "Anthony Walsh",
+        "Nele Pauwels",
+        "Amber Van Puyvelde",
+        "Delfien Van Dyck",
+        "Jenny Veitch",
+        "Megan Teychenne",
+        "Jelle Van Cauwenberg",
+        "Benedicte Deforche"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag105",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag105",
+      "abstract": "and  As populations age and urbanization accelerates, understanding how urban environments influence older adults’ mental health is crucial. Due to declining physical abilities, older adults rely heavily on their surroundings, giving urban environments significant public health potential. Research Design and  This scoping review synthesized empirical evidence on associations between urban environmental characteristics and mental health among older adults. A review of reviews was conducted using six electronic databases, targeting peer-reviewed studies published in English between 2000 and 2024.  Out of 16,449 identified articles, 43 met inclusion criteria. Thematic analysis revealed eight overarching topics. Five related to the physical environment: (1) access to and/or availability of functional services and amenities, (2) access to and/or availability of natural and recreational spaces, (3) air and water quality, and noise, (4) mobility and streetscape infrastructure, and (5) aesthetics. Three related to the social environment: (1) civic engagement, (2) neighborhood adversity, and (3) social inclusion and non-discrimination. Key research gaps included a lack of research in underrepresented regions and among older adults from varied socioeconomic backgrounds, as well as inconsistent definitions of ‘older adults’.  These findings provide valuable insights for future research, interventions, and urban planning efforts aimed at promoting mental health among older adults.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 Thematic analysis revealed eight overarching topics.",
+        "finding": "주요 결과는 These findings provide valuable insights for future research, interventions, and urban planning efforts aimed at promoting mental health among older adults.",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. and  As populations age and urbanization accelerates, understanding how urban environments influence older adults’ mental health is crucial. Due to declining physical abilities, older adults rely heavily on their surrou…"
+    },
+    {
+      "id": "10-1093-geront-gnag108",
+      "doi": "10.1093/geront/gnag108",
+      "title": "AI for Relational Reconnection and Social Support in Alzheimer’s Disease: A Conceptual Framework for Socially Embedded Systems",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Chengmeng Zhang"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag108",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag108",
+      "abstract": "Alzheimer’s Disease (AD) has traditionally been approached through a biomedical lens, focusing on neurodegenerative markers such as amyloid-β plaques and tau protein accumulation. However, clinical evidence increasingly demonstrates that social dysfunction, which including identity confusion, emotional withdrawal, and breakdowns in social roles. This article reconceptualizes Alzheimer’s disease as a disorder in which the primary dimension of decline lies in social relationship management capacity (SRMC), while recognizing that neurobiological and cognitive deterioration remain integral to its manifestation and progression. SRMC refers to a person’s ability to identify, interpret, maintain, and regulate social ties embedded in complex networks. This article introduces a conceptual and technical framework for a socially embedded artificial intelligence (AI) framework designed to recognize and compensate for the deterioration of SRMC in AD. Drawing on social capital theory, affective computing, and neural social cognition research, this framework proposes a four-dimensional intervention model: relationship recognition, relationship learning, relationship establishment, and relationship management. By aligning cutting-edge AI techniques with the lived social reality of individuals with AD, this approach not only provides a new path for supportive care but also reorients ethical and technological discourse toward sustaining social personhood in the face of neurodegeneration.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "The Gerontologist에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "초록에서 핵심 결과 문장을 추가 검수해야 합니다. 현재 자동 추출 요약: Alzheimer’s Disease (AD) has traditionally been approached through a biomedical lens, focusing on neurodegenerative markers such as amyloid-β plaques and tau protein accumulation.…",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. Alzheimer’s Disease (AD) has traditionally been approached through a biomedical lens, focusing on neurodegenerative markers such as amyloid-β plaques and tau protein accumulation. However, clinical evidence increasingly…"
+    },
+    {
+      "id": "10-1093-geront-gnag109",
+      "doi": "10.1093/geront/gnag109",
+      "title": "Urvey Methods for a Nationally Representative Sample of Assisted Living and Residential Care Communities",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Melissa A Clark",
+        "Michelle L Rogers",
+        "Tamara A Sequeira",
+        "Kali S Thomas",
+        "Emmanuelle Belanger"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag109",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag109",
+      "abstract": "and  Survey research is important in tackling the complexity of the increasing numbers and types of assisted living and residential care communities (ALCs) and the services provided, as well as the staffing challenges affecting long-term care settings. We describe the methodological experience of conducting a nationally representative survey of administrators. Research Design and  The sampling frame was drawn a directory of ALCs that were licensed, certified or otherwise regulated by states in 2019 . From October 2021-October 2023, the administrator from each randomly selected ALC was mailed a questionnaire about end-of-life care and cover letter with a username and password for web-response if preferred. Tailored follow-up was conducted with non-responders.  A total of 2084 ALCs participated [Overall response rate (RR)=43.4%. Research staff made a total of 36,258 contacts with administrators in all sampled ALCs for an average of nine minutes per contact. The likelihood of obtaining a completed survey increased with additional contact attempts, with the most gains occurring within seven attempts. More contacts were required for large, urban ALCs as well as those with specialized memory care. Accounting for all direct costs, the average cost per survey completion was $195 exclusive of incentives.  To obtain representative, high-quality data about the characteristics of residents and the care provided within the large and growing sector of ALCs, sufficient resources must be available to continue to develop and refine cost-effective, novel survey  for recruitment and data collection.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "초록 기준으로, 이 연구는 To obtain representative, high-quality data about the characteristics of residents and the care provided within the large and growing sector of ALCs, sufficient resources must be available to continue to develop and refine cost-effective, novel survey for recruitment and data collection.",
+        "finding": "초록에서 핵심 결과 문장을 추가 검수해야 합니다. 현재 자동 추출 요약: and  Survey research is important in tackling the complexity of the increasing numbers and types of assisted living and residential care communities (ALCs) and the services provid…",
+        "meaning": "인지노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. and  Survey research is important in tackling the complexity of the increasing numbers and types of assisted living and residential care communities (ALCs) and the services provided, as well as the staffing challenges a…"
+    },
+    {
+      "id": "10-1093-geront-gnag107",
+      "doi": "10.1093/geront/gnag107",
+      "title": "Emancipation in Old Age—A Working Definition and its Challenges",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Israel Issi Doron"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag107",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag107",
+      "abstract": "Since the early development of critical gerontology, scholars have recognized the importance of the concept of emancipatory gerontology. In recent years, references to emancipation within gerontological discourse have increased substantially. This growing attention is partly attributable to the rising prominence of emancipatory and participatory research paradigms across the social sciences more broadly. However, a close reading of much of the academic literature in this field suggests that an important element is missing. As this commentary argues, many scholars invoke the concept of “emancipation” in gerontological research as though its meaning were self-evident, without offering a clear definition or explicitly situating their usage within an established theoretical framework. In light of this conceptual ambiguity, this viewpoint seeks to address this gap through a three-stage process. First, it outlines the general meaning of the term “emancipation” and proposes a preliminary working definition of “emancipation in old age.” Second, it examines the key elements of this working definition as they are reflected in selected examples of existing gerontological research. Finally, it outlines potential next steps for advancing the conceptual development of “emancipation in old age” as a coherent, comprehensible, and potentially open to future operationalization.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "The Gerontologist에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "초록에서 핵심 결과 문장을 추가 검수해야 합니다. 현재 자동 추출 요약: Since the early development of critical gerontology, scholars have recognized the importance of the concept of emancipatory gerontology. In recent years, references to emancipatio…",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. Since the early development of critical gerontology, scholars have recognized the importance of the concept of emancipatory gerontology. In recent years, references to emancipation within gerontological discourse have i…"
+    },
+    {
+      "id": "10-1093-geronb-gbag083",
+      "doi": "10.1093/geronb/gbag083",
+      "title": "Old age is perceived to begin later: Cross-European differences and the role of macro-level factors for historical change in perceived onset of old age",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Markus Wettstein",
+        "Rinseo Park",
+        "Moritz Hess",
+        "Jana Mäcken",
+        "Anna Wanka",
+        "Susanne Wurm",
+        "Nilam Ram",
+        "Denis Gerstorf"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag083",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag083",
+      "abstract": "The age at which people consider old age to begin (i.e., perceived onset of old age) might have changed over the past decades, due to changes in macro-level factors, such as statutory retirement age, older adults’ employment rate, and healthy life expectancy.  We applied multilevel models to data from the European Social Survey (n = 55,721) to examine how change in perceived onset of old age—“At what age do men/women reach old age?”—over 12 years, measured in independent samples in 2006 and 2018 across 17 European countries, was related to macro-level changes in employment rate among those aged 55-64 years, gender-specific statutory retirement ages, and healthy life expectancy at age 65.   suggest that, on average, perceived onset of old age was 3.7 years later in 2018 than in 2006. Perceived onset of old age in 2006 was later in countries with a higher healthy life expectancy in 2006. Increases in the perceived onset of old age between 2006 and 2018 were larger in countries with higher rises in men’s retirement age; increases were smaller in countries with greater gains in healthy life expectancy and with higher rises in older adults’ employment rates and in women’s retirement age between 2006 and 2018. Particularly men perceived women to enter old age earlier than men. Discussion Our findings suggest that theoretical frameworks on perceptions on old age need to consider the role of macro-level policies with regard to societal health, retirement, and age-related employment structure.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 We applied multilevel models to data from the European Social Survey (n = 55,721) to examine how change in perceived onset of old age—“At what age do men/women reach old age?”—over 12 years, measured in independent samples in 2006 and 2018 across 17 European countries, was related to macro-level changes in employment rate among those aged 55-64 years, gender-specific statutory retirement ages, and healthy life expectancy at age 65.",
+        "finding": "주요 결과는 Discussion Our findings suggest that theoretical frameworks on perceptions on old age need to consider the role of macro-level policies with regard to societal health, retirement, and age-related employment structure.",
+        "meaning": "이 논문은 사회적 노화 분야에서 Discussion Our findings suggest that theoretical frameworks on perceptions on old age need to consider the role of macro-level policies with regard to societal health, retirement, and age-related employment structure.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. The age at which people consider old age to begin (i.e., perceived onset of old age) might have changed over the past decades, due to changes in macro-level factors, such as statutory retirement age, older adults’ emplo…"
+    },
+    {
+      "id": "10-1093-geronb-gbag086",
+      "doi": "10.1093/geronb/gbag086",
+      "title": "Latino Family Caregivers: “It’s What We Do—We Take Care of Our Own”",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Bianca Shieu",
+        "Daria B Neidre",
+        "Lixin Song",
+        "Roxana E Delgado",
+        "M Cary Reid",
+        "Joseph E Gaugler",
+        "Carole L White"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag086",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag086",
+      "abstract": "To better understand the interplay of culture and family caregiving among Latinos, we explored the perceptions of caregivers of persons living with dementia on how their culture informs the care they provide.  This study used a descriptive qualitative design to explore the perceptions of Latino family caregivers of persons living with dementia. A Community-Based Participatory Research (CBPR) approach underpinned the study design and execution, with a Latino Caregiver Advisory Council (LCAC) engaged in study design, recruitment, and interpretation. Individual semi-structured interviews were conducted via Zoom with Latino family caregivers of persons living with dementia from South Central Texas, in either English or Spanish. The interview guide consisted of questions about participants’ perceptions of caregiving and culture. Content analysis was used to analyze the transcripts.  Among 13 caregivers, we identified two overarching themes, “The Influence of Culture on Caregiving” and “Barriers to Care,” that together illustrate how cultural values serve as a profound source of both resilience and distress. We identified key subthemes related to the influence of culture (i.e., motivations for providing care, who provides this care, and where it is provided) and barriers to care (i.e., cultural beliefs about dementia, structural barriers to accessing resources, and systemic financial challenges). Discussion Our findings indicate that culture can be a source of strength and a source of stress for Latino family caregivers. These  highlight the need for tailored caregiver support intervention programs that recognize the cultural influence shaping how families give and receive care.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-culture-shapes-care"
+      ],
+      "deck": {
+        "question": "문화는 노년기 돌봄 경험을 어떻게 바꾸는가?",
+        "method": "초록 기준으로, 이 연구는 Content analysis was used to analyze the transcripts.",
+        "finding": "주요 결과는 We identified key subthemes related to the influence of culture (i.e., motivations for providing care, who provides this care, and where it is provided) and barriers to care (i.e., cultural beliefs about dementia, structural barriers to accessing resources, and systemic financial challenges).",
+        "meaning": "이 논문은 사회적 노화 분야에서 These highlight the need for tailored caregiver support intervention programs that recognize the cultural influence shaping how families give and receive care.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. To better understand the interplay of culture and family caregiving among Latinos, we explored the perceptions of caregivers of persons living with dementia on how their culture informs the care they provide.  This stud…"
+    },
+    {
+      "id": "10-1093-geronb-gbag088",
+      "doi": "10.1093/geronb/gbag088",
+      "title": "Caregiving Stressors and Sleep Outcomes: Examining Group Differences Among Caregivers of Persons Living with Dementia",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Fei Wang",
+        "Seungjong Cho",
+        "Anne Conway",
+        "Yejin Heo",
+        "Christine Lau",
+        "Karyne Machry"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag088",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag088",
+      "abstract": "Caring for persons living with dementia often involves high levels of physical demands and emotional burden, which may undermine caregivers’ sleep quality. Few studies have examined sleep health among Black caregivers of persons living with dementia, despite the fact that they are underrepresented in dementia research and experience poorer sleep outcomes compared to non-Hispanic White caregivers. This study aimed to examine the relationships between caregiving stressors and sleep health among family caregivers of persons living with dementia and whether these relationships differ between Black and non-Hispanic White caregivers.  Data were drawn from 288 Black (Mage = 59.91) and non-Hispanic White (Mage = 62.67) caregivers of persons living with dementia (> 64 years old) in the 2017 National Study of Caregiving. Sleep outcomes included sleep disturbance and prior-night sleep difficulty. Hierarchical multiple linear regression models were conducted to examine the study aims.  Subjective caregiving stressor (i.e., role overload) was positively associated with sleep disturbance. A significant interaction showed that the association between role overload and sleep disturbance was stronger among Black caregivers than in non-Hispanic White caregivers. Discussion The study identifies the detrimental role of role overload for caregiver sleep health. Findings also suggest that Black caregivers of persons living with dementia may experience greater vulnerability to the adverse role of role overload in relation to sleep. Further research is needed to better understand Black caregivers’ experiences and the potential role of culturally appropriate interventions in improving their sleep health.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "dementia-cognitive-impairment",
+      "questionIds": [
+        "what-happens-after-screening"
+      ],
+      "deck": {
+        "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+        "method": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Findings also suggest that Black caregivers of persons living with dementia may experience greater vulnerability to the adverse role of role overload in relation to sleep.",
+        "meaning": "이 논문은 치매·인지장애 분야에서 Discussion The study identifies the detrimental role of role overload for caregiver sleep health.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "치매·인지장애 분야 카드뉴스 후보입니다. Caring for persons living with dementia often involves high levels of physical demands and emotional burden, which may undermine caregivers’ sleep quality. Few studies have examined sleep health among Black caregivers o…"
+    },
+    {
+      "id": "10-1093-geronb-gbag087",
+      "doi": "10.1093/geronb/gbag087",
+      "title": "Heterogeneous Impairment Patterns among Midlife Latinos in the United States",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Courtney E Boen",
+        "Elise M Parrish",
+        "Catherine García",
+        "Marc A Garcia"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag087",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag087",
+      "abstract": "Latinos are a large, growing, and diverse group whose disability and impairment profiles prominently shape patterns of population aging in the United States. To date, however, research has largely documented disability and impairment risks among older Latinos under a pan-ethnic umbrella, with fewer studies investigating disparities among Latino subgroups at midlife working ages. This study aims to estimate population-level impairment prevalence among midlife working-aged Latinos in the United States, paying particular attention to the subgroup heterogeneity.  Using data from the American Community Survey (2008-2019) (n=1,032,333), we document patterns of impairment—including overall impairment and by impairment type (i.e., cognitive and physical impairments)—among Latinos aged 45-64, examining heterogeneity across nativity and citizenship, age at migration, duration in the United States, heritage and country/region of origin, and race. Taking an intersectional approach, we further consider whether these patterns vary by gender and age.  Our findings show substantial heterogeneity in impairment among Latinos, with Puerto Rican, American Indian, and Alaska Native, Black, and multiracial Latinos having especially high probabilities of impairment. U.S.-born Latinos, immigrants who migrated as children or adolescents, and those who have resided in the United States for extended durations also experience relatively high probabilities of impairment. Discussion Understanding impairment patterns among Latino subgroups during midlife working ages is crucial for addressing health disparities and promoting health equity within this diverse and growing population. Our findings suggest that not considering within-group diversity among pan-ethnic Latinos risks masking substantial heterogeneity, with important consequences for policy and intervention efforts.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "초록 기준으로, 이 연구는 Using data from the American Community Survey (2008-2019) (n=1,032,333), we document patterns of impairment—including overall impairment and by impairment type (i.e., cognitive and physical impairments)—among Latinos aged 45-64, examining heterogeneity across nativity and citizenship, age at migration, duration in the United States, heritage and country/region of origin, and race.",
+        "finding": "주요 결과는 Our findings suggest that not considering within-group diversity among pan-ethnic Latinos risks masking substantial heterogeneity, with important consequences for policy and intervention efforts.",
+        "meaning": "이 논문은 인지노화 분야에서 Discussion Understanding impairment patterns among Latino subgroups during midlife working ages is crucial for addressing health disparities and promoting health equity within this diverse and growing population.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. Latinos are a large, growing, and diverse group whose disability and impairment profiles prominently shape patterns of population aging in the United States. To date, however, research has largely documented disability…"
+    },
+    {
+      "id": "10-1093-geronb-gbag085",
+      "doi": "10.1093/geronb/gbag085",
+      "title": "Longitudinal relationship between volunteering and cognitive functioning among older chinese immigrants in the United States",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-12",
+      "authors": [
+        "Fengyan Tang",
+        "Qingqing Yin",
+        "Wendi Da",
+        "Yanping Jiang"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag085",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag085",
+      "abstract": "Research on the cognitive benefits of volunteering has largely focused on U.S.-born or general older adult populations, leaving older immigrants understudied despite evidence suggesting that volunteering may protect against cognitive decline. This study examined the longitudinal relationship between volunteering and cognitive functioning among older Chinese immigrants and whether the relationship varies by immigration-related characteristics.  A prospective cohort design was applied using data from 2,087 older Chinese immigrants aged 60 and above (mean age =75.6) who participated in three waves of the Population Study of Chinese Elderly in Chicago (Waves 3-5, 2015–2020). Volunteering was measured at Waves 3 and 4. Cognitive functioning was assessed at three waves using a comprehensive battery of cognitive tests. Latent growth curve models and cross-lagged panel models were estimated.  At Wave 3, 6.6% of participants reported volunteering through organizations. Volunteering was associated with higher initial cognitive functioning and a slower rate of cognitive decline over time after adjusting for sociodemographic and health covariates. The association was stronger among those migrating at an older age and those with lower levels of acculturation. Cross-lagged analyses indicated that volunteering predicted subsequent cognitive functioning, whereas the reverse association was not statistically significant. Discussion Organizational volunteering that offers cognitively and socially engaging activities may support cognitive health among older Chinese immigrants. Benefits appear especially salient for those facing greater social and cultural barriers. Findings underscore the importance of culturally responsive volunteer programs that promote meaningful participation in aging immigrant populations.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "초록 기준으로, 이 연구는 A prospective cohort design was applied using data from 2,087 older Chinese immigrants aged 60 and above (mean age =75.6) who participated in three waves of the Population Study of Chinese Elderly in Chicago (Waves 3-5, 2015–2020).",
+        "finding": "주요 결과는 Benefits appear especially salient for those facing greater social and cultural barriers.",
+        "meaning": "이 논문은 인지노화 분야에서 Discussion Organizational volunteering that offers cognitively and socially engaging activities may support cognitive health among older Chinese immigrants.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. Research on the cognitive benefits of volunteering has largely focused on U.S.-born or general older adult populations, leaving older immigrants understudied despite evidence suggesting that volunteering may protect aga…"
+    },
+    {
+      "id": "10-2196-77187",
+      "doi": "10.2196/77187",
+      "title": "Early Identification of Mobility Limitations in Community-Dwelling Middle-Aged and Older Adults: Development of a Prediction Model Based on a Prospective Cohort",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-11",
+      "authors": [
+        "Alberto Conde Freniche",
+        "Wei Hu",
+        "Mo Chen",
+        "Dantong Wang",
+        "Denis Breuillé",
+        "Yu-ming Chen"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/77187",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F77187",
+      "abstract": "With the aging of the global population, preventing the onset of mobility limitations is considered a worldwide public health priority.  This study aimed to develop a predictive model for incident early mobility limitations (EMLs) in late middle-aged and older adults, based on a simple functional test and modifiable lifestyle factors to facilitate a home-based self-assessment of early mobility decline and promote lifestyle intervention strategies.  Our study population was community dwellers aged 45 years and above who participated in the second and fourth waves of the Guangzhou Nutrition and Health Study. The included participants were healthy, nonfrail adults reporting no limitations in activities of daily living at baseline. At the 6-year follow-up, participants with poor physical performance (walking speed  A total of 1344 participants were included in the analysis, of which 206 (15.33%) developed EMLs after a median follow-up of 6.67 (IQR 5.91‐7.26) years. Those who developed EMLs were older, had a higher BMI, a lower alternate Mediterranean diet score, and poorer performance in the sit-to-stand (STS) test, as well as lower estimated muscle power from the STS at baseline. The final models included 6 out of 9 predictors: age, sex, BMI, alternate Mediterranean diet score, STS power, and dietary calcium intake. Four machine learning models (logistic regression, LASSO, support vector machine, and neural network) achieved an acceptable AUC value (≥0.70) or slightly below in the testing dataset, with the neural network performing the best (AUC 0.70, 95% CI 0.63‐0.77). Curve analysis showed positive net benefits for LASSO and logistic regression. Bootstrapping did not improve classification performance. Advanced age, lower adherence to Mediterranean diet, lower muscle power estimated from STS test, and higher BMI at baseline emerged as the most important predictors of EMLs.  This study shows that EMLs in Chinese adults aged 45 years and older can be predicted using easy-to-obtain physical performance measures, age, sex, BMI, and specific nutritional factors. The combination of prediction models and variable importance analysis provides valuable insights for the early identification and intervention of EMLs. More efforts are needed to validate our findings in external cohorts.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 The combination of prediction models and variable importance analysis provides valuable insights for the early identification and intervention of EMLs.",
+        "finding": "주요 결과는 Advanced age, lower adherence to Mediterranean diet, lower muscle power estimated from STS test, and higher BMI at baseline emerged as the most important predictors of EMLs.",
+        "meaning": "이 논문은 사회적 노화 분야에서 Four machine learning models (logistic regression, LASSO, support vector machine, and neural network) achieved an acceptable AUC value (≥0.70) or slightly below in the testing dataset, with the neural network performing the best (AUC 0.70, 95% CI 0.63‐0.77).",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. With the aging of the global population, preventing the onset of mobility limitations is considered a worldwide public health priority.  This study aimed to develop a predictive model for incident early mobility limitat…"
+    },
+    {
+      "id": "10-1093-geroni-igag038",
+      "doi": "10.1093/geroni/igag038",
+      "title": "Does leisure activity matter for epigenetic ageing? Analyses of arts engagement and physical activity in the UK Household Longitudinal Study",
+      "journalId": "innovation-in-aging",
+      "journal": "Innovation in Aging",
+      "publishedDate": "2026-05-11",
+      "authors": [
+        "Daisy Fancourt",
+        "Lehané Masebo",
+        "Saoirse Finn",
+        "Hei Wan Mak",
+        "Feifei Bu"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.1093/geroni/igag038",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeroni%2Figag038",
+      "abstract": "and  Over the past decade, ageing clocks have become widely adopted as important tools for understanding biological ageing and have been redefining notions of “pro-longevity” lifestyles. However, this work is still at an early stage. Some leisure activities, such as arts and cultural engagement (ACEng) have never been studied at all, while others, such as physical activity (PA), have only received scant attention. Research Design and  This study used data from 3,556 adults (2010-2012) in the UK Household Longitudinal Study, a large, nationally-representative cohort study, which includes seven derived epigenetic clocks. We used a doubly robust estimation using the inverse-probability-weighted regression adjustment estimator adjusted for demographic, socioeconomic, data collection gaps, and technical covariates of epigenetic clocks.  ACEng and PA were related to slower epigenetic ageing in the PhenoAge, DunedinPoAm and DunedinPACE clocks, although not to the other measured clocks (Lin, Horvath2018, Horvath2013 and Hannum), with comparable effect sizes between ACEng and PA. Evidence was consistently found across different measures of engagement, including diversity and frequency for ACEng, as well as frequency, diversity, and activeness for PA. These  were generally stronger amongst middle-aged and older adults aged 40 or above.  Our study provides the first evidence that ACEng, a much more recently recognised health behaviour, is related to epigenetic ageing, with magnitudes comparable to PA. These findings position ACEng as a potential contributor to healthy ageing at the biological level, supporting its inclusion in public health strategies.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "digital-health-behavior",
+      "questionIds": [
+        "can-digital-health-help"
+      ],
+      "deck": {
+        "question": "디지털헬스는 고령자에게 실제로 도움이 되는가?",
+        "method": "초록 기준으로, 이 연구는 Research Design and This study used data from 3,556 adults (2010-2012) in the UK Household Longitudinal Study, a large, nationally-representative cohort study, which includes seven derived epigenetic clocks.",
+        "finding": "주요 결과는 These findings position ACEng as a potential contributor to healthy ageing at the biological level, supporting its inclusion in public health strategies.",
+        "meaning": "건강행동·디지털헬스 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "건강행동·디지털헬스 분야 카드뉴스 후보입니다. and  Over the past decade, ageing clocks have become widely adopted as important tools for understanding biological ageing and have been redefining notions of “pro-longevity” lifestyles. However, this work is still at a…"
+    },
+    {
+      "id": "10-1093-geront-gnag106",
+      "doi": "10.1093/geront/gnag106",
+      "title": "Associations Between Nursing Home Leadership Turnover and Resident Satisfaction",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-11",
+      "authors": [
+        "Jenny H Kwon",
+        "John R Bowblis"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag106",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag106",
+      "abstract": "and  The impact of nursing home administrator (NHA) and director of nursing (DON) turnover on residents’ care experiences remains underexplored. This study aims to examine the associations of NHA/DON turnover with resident satisfaction scores. Research Design and  Five data sources were merged to create an aggregate dataset of 752 Ohio nursing homes in 2017: The Ohio Nursing Home Resident Satisfaction Survey, the Ohio Biennial Survey of Long-Term Care Facilities, the Certification and Survey Provider Enhanced Reports, Medicaid Cost Report, and LTCFocus. Resident satisfaction was measured by eight resident satisfaction scores: overall satisfaction score and seven individual domain scores. The scores were continuous variables ranging from 0 (low) to 100 (high). Leadership turnover was assessed using four specifications: one NHA turnover, two or more NHA turnover, one DON turnover, and two or more DON turnover over the past three years. Multiple linear regressions were conducted via SAS, adjusting for control variables.  Two or more DON turnover are associated with a lower overall resident satisfaction score by 1.14% points (p  DON turnover is associated with lower resident satisfaction scores, while NHA turnover is not. A single DON turnover may not harm residents’ care experiences; however, frequent turnover among DON could negatively impact them.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 Research Design and Five data sources were merged to create an aggregate dataset of 752 Ohio nursing homes in 2017: The Ohio Nursing Home Resident Satisfaction Survey, the Ohio Biennial Survey of Long-Term Care Facilities, the Certification and Survey Provider Enhanced Reports, Medicaid Cost Report, and LTCFocus.",
+        "finding": "주요 결과는 Two or more DON turnover are associated with a lower overall resident satisfaction score by 1.14% points (p DON turnover is associated with lower resident satisfaction scores, while NHA turnover is not.",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. and  The impact of nursing home administrator (NHA) and director of nursing (DON) turnover on residents’ care experiences remains underexplored. This study aims to examine the associations of NHA/DON turnover with resid…"
+    },
+    {
+      "id": "10-1093-geronb-gbag082",
+      "doi": "10.1093/geronb/gbag082",
+      "title": "Clear Decisions: Improved Perceptual Clarity Reduces Age-Related Decision-making Deficits",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-10",
+      "authors": [
+        "Christopher Atkin",
+        "Hareth Al-Janabi",
+        "Stephen P Badham",
+        "Samuel J Perry",
+        "Katherine L Roberts"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag082",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag082",
+      "abstract": "Making effective everyday decisions is vital for maintaining well-being and independence in older age, yet older adults often face challenges in decision making due to age-related changes in perceptual and cognitive processes. Age-related declines in perception and cognition are not independent, in part because decoding impoverished perceptual input places additional demands on older adults’ limited cognitive resources. In this study, we test whether age-related deficits in decision-making performance can be reduced by improving the perceptual clarity of decision-making materials.  In a pre-registered experimental study, 48 young (18–30 years) and 48 older adults (70+ years) completed decision-making, reading, and information-search tasks when written information was of standard clarity (moderate size and contrast) or enhanced clarity (increased size and contrast).  Older adults had worse decision-making performance than young adults, but, in line with the perceptual degradation hypothesis, the age deficit was reduced when decision-making information was clearer. Improved perceptual clarity also improved reading speed, but changes to reading speed did not fully account for the effect of clarity on decision-making performance. Discussion The  suggest that improving perceptual clarity can reduce age-related deficits in decision making through the provision of clear and accessible information with larger text and better contrast. Older adults can also take steps to improve their own perception, such as wearing appropriate glasses, using magnifiers, and reducing  noise.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Discussion The suggest that improving perceptual clarity can reduce age-related deficits in decision making through the provision of clear and accessible information with larger text and better contrast.",
+        "meaning": "이 논문은 인지노화 분야에서 Discussion The suggest that improving perceptual clarity can reduce age-related deficits in decision making through the provision of clear and accessible information with larger text and better contrast.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. Making effective everyday decisions is vital for maintaining well-being and independence in older age, yet older adults often face challenges in decision making due to age-related changes in perceptual and cognitive pro…"
+    },
+    {
+      "id": "10-1093-geront-gnag102",
+      "doi": "10.1093/geront/gnag102",
+      "title": "Implementation of Enhance®Fitness: A scoping review using the RE-AIM framework",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-09",
+      "authors": [
+        "Wenting Peng",
+        "Sarah McKiddy",
+        "Michiyo Tomioka",
+        "Dina L Maruca",
+        "Nancy M Gell",
+        "Matthew Lee Smith",
+        "Caitlin Maloy",
+        "Basia Belza"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag102",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag102",
+      "abstract": "and  Enhance®Fitness (EF) is an evidence-based group exercise program shown to promote physical and mental health among older adults. The scoping review aims to systematically map and synthesize the literature on EF using the RE-AIM framework (Reach, Effectiveness, Adoption, Implementation, and Maintenance). Research Design and  We conducted a scoping review of implementation studies focusing on EF or its predecessor, the Lifetime Fitness Program. Searches were conducted in six databases (PubMed, Embase, CINAHL, SCOPUS, Web of Science, and PsycINFO) and supplemented with EF-related publications listed on the program’s official website. The search included all publications from January 1, 1980 through July 1, 2025.  We included 33 publications. Reach showed EF primarily engaged community-dwelling older adults, typically female. Effectiveness outcomes were generally positive, including improved physical and mental health and reduced health care utilization. Adoption occurred across varied settings, supported by trained instructors and organizational alignment. Implementation typically followed the standard EF protocol of three 60-minute sessions per week, delivered in person or remotely. Facilitators included instructor training, organizational support, and social engagement, while barriers included attendance challenges, resource needs, and technology issues. Maintenance was demonstrated through sustained program delivery across diverse community settings, and participant-level maintenance was reflected in follow-up assessments of health outcomes at common time points of 4, 6, or 12 months.  EF is a widely adopted program with demonstrated benefits for older adults. Greater attention to equity and long-term sustainability is needed to strengthen future dissemination and support healthy aging.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "초록 기준으로, 이 연구는 Research Design and We conducted a scoping review of implementation studies focusing on EF or its predecessor, the Lifetime Fitness Program.",
+        "finding": "주요 결과는 Facilitators included instructor training, organizational support, and social engagement, while barriers included attendance challenges, resource needs, and technology issues.",
+        "meaning": "이 논문은 사회적 노화 분야에서 Greater attention to equity and long-term sustainability is needed to strengthen future dissemination and support healthy aging.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. and  Enhance®Fitness (EF) is an evidence-based group exercise program shown to promote physical and mental health among older adults. The scoping review aims to systematically map and synthesize the literature on EF usi…"
+    },
+    {
+      "id": "10-2196-83891",
+      "doi": "10.2196/83891",
+      "title": "Response Time Dynamics From Noncognitive Ordinal Ecological Momentary Assessment as a Proxy for Symptom Change in Geriatric Depression: Longitudinal Observational Study",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-08",
+      "authors": [
+        "Jooho Lee",
+        "Jeehang Lee",
+        "Sehwan Park",
+        "Gangho Do",
+        "Jihye Noh",
+        "Sangjoon Moon",
+        "Kyungmi Chung",
+        "Sang Joon Son",
+        "Jin Young Park"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/83891",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F83891",
+      "abstract": "Depressive symptoms in older adults are amplified by social isolation and limited access to clinic-based mental health care. Ecological momentary assessment (EMA) enables remote self-monitoring and unobtrusively captures response times (RTs), which may serve as indicators of psychomotor and cognitive functioning.  This study investigated the use of EMA-based RT dynamics for predicting symptom change and profiling potential responders for repeated self-monitoring in late-life depression.  Forty-nine community-dwelling adults aged 65 years or older (mean age 70.7, SD 5.8 years; female: 35; male: 14) with a history of major depressive disorder received case management incorporating daily EMA. Participants provided self-reports of mood, appetite, sleep quality, and general well-being. Preassessment and postassessment included the 15-item Short Geriatric Depression Scale (GDS-15), the Center for Epidemiologic Studies Depression Scale-Revised (CESD-R), the 9-item Patient Health Questionnaire, and the Beck Anxiety Inventory. RTs were cleaned with an asymmetric IQR rule, z standardized within-person × response level, and modeled with exponential decay curves over successive EMA trials. The efficacy of EMA-adjunctive care was evaluated using pre-post comparisons of symptom scales. We then examined associations between RT-derived features and symptom change using correlational analyses. Finally, Bayesian multilevel modeling was applied to assess the clinical relevance of RT dynamics, including group differences in adaptation patterns.  Older adults at risk for depression showed significant symptom reductions over the 4-week EMA-adjunctive care period across all 4 psychological scales (CESD-R: mean Δ 11.5; rank-biserial r =0.78; GDS-15: mean Δ 2.14, Cohen d =0.76), alongside high EMA adherence (>90%). In correlational analyses, descriptive EMA score metrics and raw RTs showed modest, symptom-specific associations with symptom change (ΔCESD-R: | r |≈0.29; Δ9-item Patient Health Questionnaire: | r |≈0.32; ΔBeck Anxiety Inventory: | r |≈0.35) but were not significantly related to change in geriatric depression (ΔGDS-15: | r |≈0.24). In contrast, exponential-decay model parameters derived from standardized RT were significantly associated with geriatric depressive symptom change (Δ GDS-15), with the strongest effects observed for the feeling item (eg, decay rate θ b : r =−0.398, asymptote θ c : r =−0.321). Bayesian multilevel modeling further indicated that EMA-adjunctive care responders showed faster RT adaptation than nonresponders (median decay-rate ratio≈4.9, 95% credible interval 1.44-14.31), whereas differences in postadaptation RT levels were smaller and uncertain (median postadaptation RT ratio≈1.25, 95% credible interval 0.95-1.58). Sensitivity analyses showed consistent decay-rate effects across alternative specifications.  Dynamic characteristics of EMA-based RTs emerged as a sensitive proxy for monitoring changes in depressive symptoms among older adults at risk. These findings highlight the potential use of RTs as digital biomarkers derived from brief, low-burden EMA self-monitoring, supporting the development of scalable and personalized mental health interventions for geriatric populations.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "emotional-aging",
+      "questionIds": [
+        "what-supports-mental-health"
+      ],
+      "deck": {
+        "question": "노년기 정신건강은 어떤 환경에서 좋아지는가?",
+        "method": "JMIR Aging에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 These findings highlight the potential use of RTs as digital biomarkers derived from brief, low-burden EMA self-monitoring, supporting the development of scalable and personalized mental health interventions for geriatric populations.",
+        "meaning": "이 논문은 정서노화 분야에서 These findings highlight the potential use of RTs as digital biomarkers derived from brief, low-burden EMA self-monitoring, supporting the development of scalable and personalized mental health interventions for geriatric populations.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "정서노화 분야 카드뉴스 후보입니다. Depressive symptoms in older adults are amplified by social isolation and limited access to clinic-based mental health care. Ecological momentary assessment (EMA) enables remote self-monitoring and unobtrusively capture…"
+    },
+    {
+      "id": "10-1093-geront-gnag101",
+      "doi": "10.1093/geront/gnag101",
+      "title": "Older adults’ perceptions of artificial intelligence in healthcare: an exploratory quantitative analysis",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-08",
+      "authors": [
+        "Courtney L Olbrich",
+        "Kelly E Tenzek",
+        "Jennifer Stoll",
+        "Ranjit Singh",
+        "Robert G Wahler",
+        "Arya Rahgozar",
+        "Gavin Raffloer",
+        "Samaira Sharma",
+        "Andrew D Baumgartner"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag101",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag101",
+      "abstract": "and  Artificial intelligence (AI) has the potential to improve healthcare outcomes. There is limited literature regarding older adults’ perceptions on the application of AI. We explored older adults’ perceptions of current communication, AI’s role in healthcare delivery, and AI’s use for various functions with and without clinician supervision. Research Design and  As part of a larger mixed- study, we recruited older adults 65 and older (N = 753) to complete a 32-item survey with 5-point Likert scale and checkbox (yes-no) questions. The data were analyzed quantitatively.  87% of participants agree or strongly agree current communication with their doctor’s office is good. Three factors emerged from exploratory factor analysis examining AI’s role in healthcare delivery: perceived usefulness of AI (Cronbach’s α = .84), AI as administrative aid (α = .84) and AI as independent agent (α = .56). Older adults were more comfortable with AI used under the supervision of a clinician rather than without supervision for diagnosis (75% vs. 5%, p  Findings underscore a cautious optimism among respondents towards AI in healthcare contingent on clinician oversight and patient notification. Continued survey development measuring older adults’ perceptions of AI will be beneficial in this context.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "dementia-cognitive-impairment",
+      "questionIds": [
+        "what-happens-after-screening"
+      ],
+      "deck": {
+        "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+        "method": "초록 기준으로, 이 연구는 Continued survey development measuring older adults’ perceptions of AI will be beneficial in this context.",
+        "finding": "주요 결과는 5%, p Findings underscore a cautious optimism among respondents towards AI in healthcare contingent on clinician oversight and patient notification.",
+        "meaning": "치매·인지장애 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "치매·인지장애 분야 카드뉴스 후보입니다. and  Artificial intelligence (AI) has the potential to improve healthcare outcomes. There is limited literature regarding older adults’ perceptions on the application of AI. We explored older adults’ perceptions of curr…"
+    },
+    {
+      "id": "10-2196-80345",
+      "doi": "10.2196/80345",
+      "title": "Effects of Multisensory Integration Training on Postural Stability Characteristics and Fall Risk in Older Adults: Systematic Review and Meta-Analysis",
+      "journalId": "jmir-aging",
+      "journal": "JMIR Aging",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Chaoyu Guo",
+        "Lulu Yin",
+        "Peng Chen",
+        "Jianglong Zhan",
+        "Zhongqi Yu",
+        "Teck Cheng Tan",
+        "Yaru Wei",
+        "Yixue Gong",
+        "Menghan Xu",
+        "Van Minh Le",
+        "Lin Wang"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.2196/80345",
+      "crossrefUrl": "https://api.crossref.org/works/10.2196%2F80345",
+      "abstract": "The risk of falls escalates with advancing age, a consequence of the concomitant degeneration of multiple physiological systems, altered sensory processing capabilities, and reduced postural control. Multisensory integration (MSI) training has been demonstrated to enhance the brain’s processing of multisensory information. However, existing studies show considerable variability in intervention duration and training modalities, limiting comparability across studies and contributing to inconsistent findings.  This study aimed to systematically evaluate the effectiveness of MSI training on postural stability and fall risk in healthy older adults and provide an evidence base for clinical practice.  Databases including PubMed, Embase, and Cochrane Library were searched by PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) guidelines. The methodological quality of the included randomized controlled trials was assessed using the Cochrane risk of bias tool, and publication bias was evaluated through funnel plots. Meta-analyses using R packages quantified effects via standardized mean differences (SMDs) and 95% CIs, with fixed or random effects models selected based on heterogeneity ( I ²). Subgroup analyses explored age, intervention duration, and type.  A total of 14 randomized controlled trials were included in the meta-analysis.  showed that MSI training significantly reduced center of pressure displacement in the anterior-to-posterior displacement (SMD −1.64, 95% CI −2.78 to −0.49, P P P =.006). In terms of fall risk, MSI training significantly reduced the time to complete the timed up and go test, and intervention type significantly moderated this effect (SMD −1.43, 95% CI −2.36 to −0.50, P P  In , MSI training is an effective intervention for enhancing static and dynamic postural control and reducing fall risk in healthy older adults, suggesting a beneficial effect on postural stability and fall-related outcomes.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "digital-health-behavior",
+      "questionIds": [
+        "can-digital-health-help"
+      ],
+      "deck": {
+        "question": "디지털헬스는 고령자에게 실제로 도움이 되는가?",
+        "method": "초록 기준으로, 이 연구는 A total of 14 randomized controlled trials were included in the meta-analysis.",
+        "finding": "주요 결과는 showed that MSI training significantly reduced center of pressure displacement in the anterior-to-posterior displacement (SMD −1.64, 95% CI −2.78 to −0.49, P P P =.006).",
+        "meaning": "건강행동·디지털헬스 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "건강행동·디지털헬스 분야 카드뉴스 후보입니다. The risk of falls escalates with advancing age, a consequence of the concomitant degeneration of multiple physiological systems, altered sensory processing capabilities, and reduced postural control. Multisensory integr…"
+    },
+    {
+      "id": "10-1093-geroni-igag053",
+      "doi": "10.1093/geroni/igag053",
+      "title": "Refinement of a Piano Improvisation Training Intervention to Reduce Cognitive Inactivity among Older Adults with and without Mild Cognitive Impairments",
+      "journalId": "innovation-in-aging",
+      "journal": "Innovation in Aging",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Haley M Shiff",
+        "Theresa A Allison",
+        "Jennifer A Bugos",
+        "Jing Cheng",
+        "Tammy Hall",
+        "Glen Pearson",
+        "Karen C Barrett",
+        "Charles J Limb",
+        "Rebeca Mauleón",
+        "Julene K Johnson"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.1093/geroni/igag053",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeroni%2Figag053",
+      "abstract": "and  Cognitive inactivity in later life (aged 60 and above) is associated with cognitive decline and other poor health outcomes. Cognitive training interventions are increasingly being studied to help reduce cognitive inactivity among older adults, and the use of music-based training interventions is one potential strategy. The  of the study is to describe the multi-step process used to adapt a candidate music-based intervention for older adults. Research Design and  Using the Transcreation Framework for Community-engaged Behavioral Interventions and three other frameworks, we completed a multi-step and multi-stakeholder process to adapt a candidate piano improvisation intervention to promote late-life cognitive engagement. We enrolled 22 adults aged 60 and over with and without mild cognitive impairments (mean age = 71.5 years, 86% female, 75% from diverse racial/ethnic backgrounds) and used participant observation, interviews, and surveys to adapt the intervention. We used interviews, participant observation, and surveys to obtain feedback.  We completed all steps of the Transcreation Framework that involved establishing collaborations with aging services and confirming the theory. Participants completed three intervention refinement cycles, which resulted in modifications of the intervention and creation of a manual. The final step included finalizing the study design and building capacity for a subsequent feasibility and acceptability randomized controlled trial (RCT).  The Transcreation Framework facilitated an efficient, multi-step refinement process that resulted in an adapted music-based training intervention and the preparations for the RCT. This framework can be considered for adapting other community-based behavioral interventions.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "cognitive-aging",
+      "questionIds": [
+        "does-memory-always-decline"
+      ],
+      "deck": {
+        "question": "나이가 들면 기억과 인지는 반드시 나빠지는가?",
+        "method": "초록 기준으로, 이 연구는 The final step included finalizing the study design and building capacity for a subsequent feasibility and acceptability randomized controlled trial (RCT).",
+        "finding": "주요 결과는 Participants completed three intervention refinement cycles, which resulted in modifications of the intervention and creation of a manual.",
+        "meaning": "인지노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "인지노화 분야 카드뉴스 후보입니다. and  Cognitive inactivity in later life (aged 60 and above) is associated with cognitive decline and other poor health outcomes. Cognitive training interventions are increasingly being studied to help reduce cognitive i…"
+    },
+    {
+      "id": "10-1093-geroni-igag052",
+      "doi": "10.1093/geroni/igag052",
+      "title": "Divergent Effects of Oral Health and Genetic Risk: Competing Risks of Dementia and Mortality",
+      "journalId": "innovation-in-aging",
+      "journal": "Innovation in Aging",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Ruotong Liu",
+        "Xiang Qi",
+        "Yunrui Liu",
+        "Huabin Luo",
+        "Zhijing Xu",
+        "Bei Wu"
+      ],
+      "topics": [],
+      "access": "open",
+      "url": "https://doi.org/10.1093/geroni/igag052",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeroni%2Figag052",
+      "abstract": "and  Polygenic risk scores (PRS) for dementia are increasingly used to capture genetic susceptibility, yet their predictive utility may depend on coexisting health and social conditions. Edentulism, an extreme marker of oral health deterioration and accumulated disadvantage, may influence how genetic risk manifests in later life. This study aims to investigate the independent and joint associations of edentulism and dementia PRS with incident all-cause dementia and mortality risk. Research Design and  We analyzed longitudinal data from the Health and Retirement Study linked to Medicare claims. The sample included 9,806 dementia-free participants aged ≥67 with information on edentulism and PRS for Alzheimer’s disease. Edentulism was self-reported and logically imputed across waves. PRS was categorized as low, intermediate, and high. Outcomes included incident dementia and all-cause mortality. Cox proportional hazards and Fine-Gray competing risk models were used to examine independent and interactive associations.  Edentulism was not independently associated with dementia risk after full adjustment. High PRS was associated with increased dementia risk (sHR 1.20; 95%CI 1.06-1.39). However, the association between PRS and dementia was weaker among edentulous participants (interaction sHR 0.73; 95%CI 0.54-0.99). In contrast, mortality risk was higher among individuals with both edentulism and high PRS (interaction sHR 1.36; 95%CI 1.00-1.84).  These findings suggest that oral health status may modify the association between genetic risk and dementia in late life. Mortality may occur before a diagnosis of dementia, underscoring the importance of considering competing health risks when interpreting genetic susceptibility in aging populations.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "dementia-cognitive-impairment",
+      "questionIds": [
+        "what-happens-after-screening"
+      ],
+      "deck": {
+        "question": "치매·MCI 선별 이후 사람들은 왜 진료로 이어지지 않는가?",
+        "method": "Innovation in Aging에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 These findings suggest that oral health status may modify the association between genetic risk and dementia in late life.",
+        "meaning": "치매·인지장애 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "치매·인지장애 분야 카드뉴스 후보입니다. and  Polygenic risk scores (PRS) for dementia are increasingly used to capture genetic susceptibility, yet their predictive utility may depend on coexisting health and social conditions. Edentulism, an extreme marker of…"
+    },
+    {
+      "id": "10-1093-geront-gnag072",
+      "doi": "10.1093/geront/gnag072",
+      "title": "Kinship, Gender, and the Social Networks of Caregivers for Older Adults",
+      "journalId": "the-gerontologist",
+      "journal": "The Gerontologist",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "James P Murphy",
+        "Esther M Friedman",
+        "David P Kennedy"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geront/gnag072",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeront%2Fgnag072",
+      "abstract": "and  Caregiving for older adults falls disproportionately on women and family members, but little research addresses how gender and kinship intersect to shape caregiver social support. This study generates an empirical typology of caregiver social networks and examines the types’ association with caregiver gender, relationship to the recipient, and their interaction. Research Design and  Decision Editor: Joseph E. Gaugler, PhD, FGSA We collected personal network data from a nationally representative sample of 2,824 caregivers in December 2020 and January 2021. We used zero-inflated negative binomial regressions of network size and latent profile analysis to identify network types based on their size, density, family composition, and proportion sharing in caregiving responsibilities. We used multinomial logistic regressions to examine associations between network type and caregiver and care recipient characteristics.  We identified three network types: close-knit kin-based networks; larger networks sharing caregiving activities; and small networks in which few or no contacts assisted with caregiving. Women caring for a spouse/partner were more likely to have larger networks with broader care-sharing than either married men or other women; non-kin caregivers disproportionately had smaller networks lacking care-sharing.  The  highlight the vulnerability of unpaid non-kin caregivers and suggest that interventions should consider the intersection of gender and kinship. This is important because the proportion of kinless older adults is expected to grow significantly, which may increase older adults’ reliance on non-kin informal caregivers. Future work should examine whether differences in network type lead towards different outcomes by gender and caregiver-recipient relationship.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "caregiving-family",
+      "questionIds": [
+        "what-do-caregivers-need"
+      ],
+      "deck": {
+        "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+        "method": "초록 기준으로, 이 연구는 We used zero-inflated negative binomial regressions of network size and latent profile analysis to identify network types based on their size, density, family composition, and proportion sharing in caregiving responsibilities.",
+        "finding": "주요 결과는 The highlight the vulnerability of unpaid non-kin caregivers and suggest that interventions should consider the intersection of gender and kinship.",
+        "meaning": "이 논문은 돌봄·가족 분야에서 The highlight the vulnerability of unpaid non-kin caregivers and suggest that interventions should consider the intersection of gender and kinship.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "돌봄·가족 분야 카드뉴스 후보입니다. and  Caregiving for older adults falls disproportionately on women and family members, but little research addresses how gender and kinship intersect to shape caregiver social support. This study generates an empirical…"
+    },
+    {
+      "id": "10-1093-geronb-gbag081",
+      "doi": "10.1093/geronb/gbag081",
+      "title": "Informal caregiving trajectories and inflammatory biomarkers: findings from the English Longitudinal Study of Ageing",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Jiawei Wu",
+        "Giorgio Di Gessa"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag081",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag081",
+      "abstract": "To date, the evidence on the adverse effects of informal caregiving on stress-related inflammation remains weak, with most studies focusing solely on the transition to caregiving. This study investigates the relationship between trajectories of informal caregiving in later life and inflammatory biomarkers (C-reactive protein (CRP), fibrinogen, and white blood cell count (WBC)) in England.  Data came from the nationally representative English Longitudinal Study of Ageing (ELSA) waves 6 (2012-13) to 9 (2018-19). Our sample comprised ELSA core members with valid blood samples in waves 6 and 9 (n = 1,162). Group-based trajectory modelling (GBTM) was used to determine the number and shape of trajectories of informal caregiving hours from waves 6 to 9. Logistic regression models were then used to investigate the associations between informal caregiving trajectories and inflammatory biomarkers in wave 9, adjusting for socio-demographics, wave-6 inflammation, and wave-9 non-inflammatory biomarkers.  We identified four informal caregiving trajectories: “stable no care” (72.6%), “light to intensive care” (4.8%), “stable light care” (18.0%), and “intensive to moderate care” (4.6%). Compared with the “stable no care” trajectory, the “intensive to moderate care” trajectory was associated with a higher likelihood of abnormal fibrinogen levels (odds ratio (OR) = 2.97, 95% confidence interval (CI): 1.31 to 6.69) in the fully adjusted model. No associations were found between informal caregiving trajectories and CRP or WBC. Discussion Overall, informal caregiving had only weak adverse effects on older caregivers’ inflammatory biomarkers. However, our findings underscore the importance of supporting persistent intensive caregivers.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "caregiving-family",
+      "questionIds": [
+        "what-do-caregivers-need"
+      ],
+      "deck": {
+        "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+        "method": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Compared with the “stable no care” trajectory, the “intensive to moderate care” trajectory was associated with a higher likelihood of abnormal fibrinogen levels (odds ratio (OR) = 2.97, 95% confidence interval (CI): 1.31 to 6.69) in the fully adjusted model.",
+        "meaning": "이 논문은 돌봄·가족 분야에서 Discussion Overall, informal caregiving had only weak adverse effects on older caregivers’ inflammatory biomarkers.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "돌봄·가족 분야 카드뉴스 후보입니다. To date, the evidence on the adverse effects of informal caregiving on stress-related inflammation remains weak, with most studies focusing solely on the transition to caregiving. This study investigates the relationshi…"
+    },
+    {
+      "id": "10-1093-geronb-gbag048",
+      "doi": "10.1093/geronb/gbag048",
+      "title": "Building the decision neuroscience of aging: origins and evolution of an interdisciplinary field—a perspective from the National Institute on Aging",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Lisbeth Nielsen"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag048",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag048",
+      "abstract": "",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "social-aging",
+      "questionIds": [
+        "how-does-society-define-old-age"
+      ],
+      "deck": {
+        "question": "사람들은 언제부터 노년이라고 느끼는가?",
+        "method": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "Crossref 메타데이터에는 초록이 없어 원문 또는 출판사 페이지 확인이 필요합니다.",
+        "meaning": "사회적 노화 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.",
+        "caution": "초록이 없는 메타데이터 기반 초안이므로 게시 전 원문 확인이 필수입니다."
+      },
+      "koreanSummary": "사회적 노화 분야 카드뉴스 후보입니다. Crossref에서 초록이 제공되지 않아 원문 확인이 필요합니다."
+    },
+    {
+      "id": "10-1093-geronb-gbag078",
+      "doi": "10.1093/geronb/gbag078",
+      "title": "Mental Health Effects of Caregiving for Older Parents in the UK: The Roles of Social Support, Neighborhood Cohesion, and Neighborhood Deprivation",
+      "journalId": "gerontology-series-b",
+      "journal": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences",
+      "publishedDate": "2026-05-07",
+      "authors": [
+        "Pilar Zueras",
+        "Emily Grundy"
+      ],
+      "topics": [],
+      "access": "metadata",
+      "url": "https://doi.org/10.1093/geronb/gbag078",
+      "crossrefUrl": "https://api.crossref.org/works/10.1093%2Fgeronb%2Fgbag078",
+      "abstract": "We investigate whether changes in the mental health of adult children providing care for an older parent or parent-in-law are mediated by perceived social support from relatives and friends and perceived neighborhood social cohesion. We also investigate whether neighborhood deprivation modifies the effects of neighborhood social cohesion or independently influences mental health.  We fit dynamic panel models to analyze changes in the mental health of caregivers using data from four annual waves of a nationally representative UK longitudinal study. We distinguish between intensive caregivers providing 20 or more hours of care per week and those providing fewer hours. We controlled for sociodemographic factors associated with mental health and with caregiving. In some analyses, we distinguished between positive aspects of perceived social support and negative effects of social strain.  Higher perceived neighborhood social cohesion was associated with improved mental health for caregivers providing lesser amounts of care and less mental health deterioration for intensive caregivers, irrespective of neighborhood deprivation. Although less intensive caregiving had no direct effect on caregivers’ mental health, their mental health improved because of the association between less intensive caregiving and perceptions of increased support from family, friends, and the neighborhood. However, intensive caregivers reported increased social strain, exacerbating the negative effects of caregiving on mental health. Discussion The mental health impacts of caregiving vary by the extent of perceived neighborhood social cohesion and support from family and friends. Stresses and supports of less and more intensive caregivers need separate attention.",
+      "source": "Crossref",
+      "fetchedWindowDays": 14,
+      "summary_status": "ai_draft",
+      "topicId": "caregiving-family",
+      "questionIds": [
+        "what-do-caregivers-need"
+      ],
+      "deck": {
+        "question": "가족 돌봄자는 실제로 무엇을 필요로 하는가?",
+        "method": "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.",
+        "finding": "주요 결과는 Higher perceived neighborhood social cohesion was associated with improved mental health for caregivers providing lesser amounts of care and less mental health deterioration for intensive caregivers, irrespective of neighborhood deprivation.",
+        "meaning": "이 논문은 돌봄·가족 분야에서 Discussion The mental health impacts of caregiving vary by the extent of perceived neighborhood social cohesion and support from family and friends.",
+        "caution": "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
+      },
+      "koreanSummary": "돌봄·가족 분야 카드뉴스 후보입니다. We investigate whether changes in the mental health of adult children providing care for an older parent or parent-in-law are mediated by perceived social support from relatives and friends and perceived neighborhood so…"
+    }
+  ]
+}

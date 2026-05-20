@@ -63,9 +63,37 @@ powershell -ExecutionPolicy Bypass -File .\scripts\fetch-crossref.ps1 -FromDate 
 
 4. 수집된 `scratch/crossref-latest.json`을 검토한 뒤 `data/articles.json`에 게시할 항목만 정리합니다.
 
+## 자동 초안 생성
+
+Crossref 수집, 정규화, 규칙 기반 분야 분류, 5장 카드뉴스 초안 생성을 한 번에 실행합니다.
+
+```powershell
+node .\scripts\build-drafts.mjs --windows=7,14,30 --rows=25
+```
+
+동작 방식:
+
+- 최근 7일 논문을 먼저 수집합니다.
+- 7개 하위 분야 중 비어 있는 분야가 있으면 14일, 30일 순서로 기간을 넓힙니다.
+- DOI 기준으로 중복을 제거합니다.
+- Crossref JATS/HTML 태그와 entity를 정리합니다.
+- 제목/초록 키워드로 `topicId`, `questionIds`를 자동 부여합니다.
+- 논문별 카드뉴스 초안을 만듭니다.
+
+생성 파일:
+
+- `data/raw/crossref-latest.json`: Crossref 원본에 가까운 수집 데이터
+- `data/drafts/article-drafts.json`: 정규화, 분류, 카드뉴스 초안이 포함된 검수 후보
+
+주의:
+
+- 생성된 카드뉴스는 `summary_status: ai_draft` 상태입니다.
+- 현재 스크립트는 OpenAI API를 호출하지 않고 규칙 기반 문장 추출과 템플릿으로 초안을 만듭니다.
+- `data/articles.json`은 게시용 데이터이므로 자동 초안으로 바로 덮어쓰지 않습니다.
+
 ## 다음 구현 과제
 
-- Crossref 결과를 `data/articles.json` 형식으로 자동 정규화
-- 초록에서 JATS 태그 제거 및 요약 후보 생성
-- 사람이 검수한 요약만 게시하는 상태 관리
+- 사람이 검수한 초안만 `data/articles.json`으로 승격하는 게시 스크립트
+- 초록 기반 카드뉴스 문장을 더 자연스러운 한국어로 바꾸는 요약 단계
+- draft preview/review 화면
 - GitHub Actions를 이용한 주기적 수집 자동화
