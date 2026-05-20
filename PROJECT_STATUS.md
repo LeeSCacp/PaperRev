@@ -33,6 +33,9 @@
 - PowerShell 실행 정책 때문에 수집 스크립트는 `powershell -ExecutionPolicy Bypass -File .\scripts\fetch-crossref.ps1 ...` 방식으로 실행하도록 README에 기록했다.
 - GitHub Pages 게시 준비를 위해 로컬 Git 저장소를 `main` 브랜치로 초기화했다.
 - 현재 환경에는 GitHub CLI(`gh`)가 없어 원격 저장소 자동 생성은 불가하다. GitHub에서 빈 저장소를 만든 뒤 remote URL을 연결해야 한다.
+- GitHub 원격 저장소 `https://github.com/LeeSCacp/PaperRev.git`의 초기 README 커밋과 로컬 작업을 병합했다.
+- README 충돌은 로컬의 상세 README를 유지하는 방식으로 해결했다.
+- `main` 브랜치를 GitHub 원격 저장소에 push 완료했다.
 
 ## 1차 선정 저널
 
