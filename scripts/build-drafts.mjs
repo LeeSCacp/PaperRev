@@ -2,8 +2,11 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const DEFAULT_WINDOWS = [7, 14, 30];
-const DEFAULT_ROWS = 25;
+const DEFAULT_WINDOWS = [7, 14, 30, 60, 90, 180];
+const DEFAULT_ROWS = 50;
+const DEFAULT_MIN_TOPIC_COUNT = 5;
+const DEFAULT_DRAFT_LIMIT_PER_TOPIC = 5;
+const DEFAULT_ARCHIVE_DAYS = 365;
 const USER_AGENT = "PaperRev prototype; mailto=paperrev@example.com";
 
 const TOPIC_RULES = {
@@ -103,6 +106,12 @@ const QUESTION_RULES = {
 const args = parseArgs(process.argv.slice(2));
 const windows = parseWindows(args.windows || args.days || DEFAULT_WINDOWS.join(","));
 const rows = Number.parseInt(args.rows || `${DEFAULT_ROWS}`, 10);
+const minTopicCount = Number.parseInt(args.minTopicCount || args["min-topic-count"] || `${DEFAULT_MIN_TOPIC_COUNT}`, 10);
+const draftLimitPerTopic = Number.parseInt(
+  args.draftLimitPerTopic || args["draft-limit-per-topic"] || `${DEFAULT_DRAFT_LIMIT_PER_TOPIC}`,
+  10,
+);
+const archiveDays = Number.parseInt(args.archiveDays || args["archive-days"] || `${DEFAULT_ARCHIVE_DAYS}`, 10);
 const untilDate = args.until ? new Date(`${args.until}T00:00:00Z`) : new Date();
 
 const journals = await readJson("data/journals.json");
@@ -129,7 +138,7 @@ for (const dayWindow of windows) {
   lastCoverage = coverageByTopic(classified);
   selectedWindow = dayWindow;
 
-  if (topics.every((topic) => lastCoverage[topic.id] > 0)) {
+  if (topics.every((topic) => lastCoverage[topic.id] >= minTopicCount)) {
     break;
   }
 }
@@ -139,14 +148,25 @@ const normalizedDrafts = [...rawByDoi.values()]
   .filter(Boolean)
   .map(classifyAndDraft)
   .sort(sortByDateDesc);
+const { featuredDrafts, archiveRecords } = splitFeaturedAndArchive(normalizedDrafts);
+const featuredCoverageByTopic = coverageByTopic(featuredDrafts);
 
 const output = {
   generatedAt: new Date().toISOString(),
   source: "Crossref",
   windowsTried: windows,
   selectedWindow,
+  minTopicCount,
+  draftLimitPerTopic,
+  archiveDays,
   coverageByTopic: lastCoverage,
-  records: normalizedDrafts,
+  featuredCoverageByTopic,
+  totalCollected: normalizedDrafts.length,
+  featuredCount: featuredDrafts.length,
+  archiveCount: archiveRecords.length,
+  records: featuredDrafts,
+  featuredDrafts,
+  archiveRecords,
 };
 
 await mkdir(path.join(ROOT, "data", "raw"), { recursive: true });
@@ -156,12 +176,19 @@ await writeJson("data/raw/crossref-latest.json", {
   source: "Crossref",
   windowsTried: windows,
   selectedWindow,
+  minTopicCount,
+  draftLimitPerTopic,
+  archiveDays,
+  totalCollected: normalizedDrafts.length,
   records: [...rawByDoi.values()],
 });
 await writeJson("data/drafts/article-drafts.json", output);
 
 console.log(`Saved ${normalizedDrafts.length} drafts to data/drafts/article-drafts.json`);
+console.log(`Featured drafts: ${featuredDrafts.length}; archive records: ${archiveRecords.length}`);
 console.log(`Windows tried: ${windows.join(", ")} days; selected window: ${selectedWindow} days`);
+console.log(`Minimum topic target: ${minTopicCount}`);
+console.log(`Featured draft limit per topic: ${draftLimitPerTopic}; archive days: ${archiveDays}`);
 console.log("Coverage by topic:");
 for (const topic of topics) {
   console.log(`- ${topic.name}: ${lastCoverage[topic.id] || 0}`);
@@ -213,7 +240,7 @@ async function fetchWindow(dayWindow, fromDate) {
 
 function normalizeRecord(item) {
   const doi = normalizeDoi(item.DOI);
-  const title = firstText(item.title);
+  const title = decodeEntities(firstText(item.title));
   if (!doi || !title) {
     return null;
   }
@@ -224,7 +251,7 @@ function normalizeRecord(item) {
       item["published-print"]?.["date-parts"] ||
       item.created?.["date-parts"],
   );
-  const journal = firstText(item["container-title"]) || item._paperRev?.journalName || "";
+  const journal = decodeEntities(firstText(item["container-title"]) || item._paperRev?.journalName || "");
   const abstract = cleanAbstract(item.abstract || "");
   const authors = Array.isArray(item.author)
     ? item.author.map(formatAuthor).filter(Boolean)
@@ -247,6 +274,31 @@ function normalizeRecord(item) {
     fetchedWindowDays: item._paperRev?.fetchedWindowDays || null,
     summary_status: "normalized",
   };
+}
+
+function splitFeaturedAndArchive(records) {
+  const featuredIds = new Set();
+  const featuredDrafts = [];
+  for (const topic of topics) {
+    const topicRecords = records.filter((record) => record.topicId === topic.id).sort(sortByDateDesc);
+    for (const record of topicRecords.slice(0, draftLimitPerTopic)) {
+      featuredIds.add(record.id);
+      featuredDrafts.push(record);
+    }
+  }
+
+  featuredDrafts.sort(sortByDateDesc);
+
+  const archiveStart = addDays(untilDate, -(archiveDays - 1));
+  const archiveRecords = records
+    .filter((record) => !featuredIds.has(record.id))
+    .filter((record) => {
+      const published = new Date(`${record.publishedDate || "1900-01-01"}T00:00:00Z`);
+      return published >= archiveStart && published <= untilDate;
+    })
+    .sort(sortByDateDesc);
+
+  return { featuredDrafts, archiveRecords };
 }
 
 function classifyAndDraft(article) {

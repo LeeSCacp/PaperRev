@@ -38,5 +38,165 @@
     "metric": "2024 IF 3.2; Gerontology JCI rank 1/48",
     "crossrefEndpoint": "https://api.crossref.org/journals/1079-5014/works",
     "selectionNote": "심리과학과 사회과학 기반 노화 연구에 직접 부합하며, 공식 About 페이지에서 심리학/노년학 JCR 지표를 확인했다."
+  },
+  {
+    "id": "psychology-and-aging",
+    "name": "Psychology and Aging",
+    "shortName": "Psychol Aging",
+    "issn": "0882-7974",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "2024 IF 3.5; SSCI indexed",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0882-7974/works",
+    "selectionNote": "APA의 노화 심리 핵심 저널이다. 성인 발달과 노화의 인지, 정서, 사회, 건강심리 연구를 직접 다루므로 PaperRev의 중심 분야와 가장 잘 맞는다."
+  },
+  {
+    "id": "aging-and-mental-health",
+    "name": "Aging & Mental Health",
+    "shortName": "Aging Ment Health",
+    "issn": "1360-7863",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Gerontology/mental health focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1360-7863/works",
+    "selectionNote": "노년기 정신건강, 우울, 불안, 웰빙, 돌봄 관련 연구를 다루는 저널로 정서노화와 치매·돌봄 주제 보강에 적합하다."
+  },
+  {
+    "id": "ageing-and-society",
+    "name": "Ageing & Society",
+    "shortName": "Ageing Soc",
+    "issn": "0144-686X",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Social gerontology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0144-686X/works",
+    "selectionNote": "사회노년학과 노화 경험, 정책, 관계, 문화 맥락을 다루므로 사회적 노화와 독자 질문 중심 콘텐츠에 적합하다."
+  },
+  {
+    "id": "journal-of-aging-and-health",
+    "name": "Journal of Aging and Health",
+    "shortName": "J Aging Health",
+    "issn": "0898-2643",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Aging/health focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0898-2643/works",
+    "selectionNote": "노년기 건강, 건강행동, 사회경제적 요인, 정신건강과 관련된 연구를 제공해 건강행동·정서노화 섹션을 보강한다."
+  },
+  {
+    "id": "journal-of-applied-gerontology",
+    "name": "Journal of Applied Gerontology",
+    "shortName": "J Appl Gerontol",
+    "issn": "0733-4648",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Applied gerontology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0733-4648/works",
+    "selectionNote": "실천·정책·지역사회 기반 노년학 연구가 많아 돌봄, 건강행동, 사회적 노화 카드뉴스 후보를 넓히는 데 적합하다."
+  },
+  {
+    "id": "clinical-gerontologist",
+    "name": "Clinical Gerontologist",
+    "shortName": "Clin Gerontol",
+    "issn": "0731-7115",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Clinical gerontology/geropsychology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0731-7115/works",
+    "selectionNote": "임상노년학과 geropsychology 성격이 강해 노년기 정신건강, 치매, 가족·돌봄 관련 콘텐츠 보강에 적합하다."
+  },
+  {
+    "id": "research-on-aging",
+    "name": "Research on Aging",
+    "shortName": "Res Aging",
+    "issn": "0164-0275",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Social gerontology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0164-0275/works",
+    "selectionNote": "사회적 노화, 생애과정, 건강 불평등, 관계와 정책 맥락을 다루는 사회노년학 핵심 후보로 섹션 다양성을 넓힌다."
+  },
+  {
+    "id": "international-journal-aging-human-development",
+    "name": "The International Journal of Aging and Human Development",
+    "shortName": "Int J Aging Hum Dev",
+    "issn": "0091-4150",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Lifespan/human development focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0091-4150/works",
+    "selectionNote": "노년기 발달, 적응, 정서, 사회관계를 다루는 생애발달 관점의 저널로 심리학적 해석에 적합하다."
+  },
+  {
+    "id": "aging-neuropsychology-cognition",
+    "name": "Aging, Neuropsychology, and Cognition",
+    "shortName": "Aging Neuropsychol Cogn",
+    "issn": "1382-5585",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Cognitive aging/neuropsychology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1382-5585/works",
+    "selectionNote": "인지노화, 신경심리, 기억, 주의, 집행기능 연구를 직접 다루므로 인지노화 섹션 보강에 적합하다."
+  },
+  {
+    "id": "experimental-aging-research",
+    "name": "Experimental Aging Research",
+    "shortName": "Exp Aging Res",
+    "issn": "0361-073X",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Experimental aging/cognition focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0361-073X/works",
+    "selectionNote": "노화 관련 실험연구와 인지·행동 변화 연구를 보강하는 저널로 카드뉴스의 방법론 다양성을 높인다."
+  },
+  {
+    "id": "dementia",
+    "name": "Dementia",
+    "shortName": "Dementia",
+    "issn": "1471-3012",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Dementia care/social research focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1471-3012/works",
+    "selectionNote": "치매 경험, 돌봄, 가족, 서비스와 사회적 맥락을 다루므로 치매·인지장애와 돌봄 섹션을 보강한다."
+  },
+  {
+    "id": "international-psychogeriatrics",
+    "name": "International Psychogeriatrics",
+    "shortName": "Int Psychogeriatr",
+    "issn": "1041-6102",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Psychogeriatrics focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1041-6102/works",
+    "selectionNote": "노년기 정신건강, 치매, 임상심리·정신의학 인접 연구를 다루는 핵심 psychogeriatrics 저널이다."
+  },
+  {
+    "id": "gerontology-series-a",
+    "name": "The Journals of Gerontology: Series A",
+    "shortName": "J Gerontol A",
+    "issn": "1079-5006",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Biological/medical gerontology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1079-5006/works",
+    "selectionNote": "의학·생물학 비중이 있지만 gerontology 핵심 저널이므로 건강행동, 기능, 질병 관련 노화 연구 후보를 보강한다."
+  },
+  {
+    "id": "age-and-ageing",
+    "name": "Age and Ageing",
+    "shortName": "Age Ageing",
+    "issn": "0002-0729",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Geriatrics/gerontology core journal",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0002-0729/works",
+    "selectionNote": "임상 노인의학 비중이 높지만 gerontology 핵심 저널로 기능, 건강, 돌봄, 디지털헬스 관련 최신 근거를 보강한다."
+  },
+  {
+    "id": "bmc-geriatrics",
+    "name": "BMC Geriatrics",
+    "shortName": "BMC Geriatr",
+    "issn": "1471-2318",
+    "accessLabel": "Open access",
+    "metric": "Open access geriatrics/gerontology focus",
+    "crossrefEndpoint": "https://api.crossref.org/journals/1471-2318/works",
+    "selectionNote": "오픈액세스 기반으로 노년기 건강, 기능, 돌봄, 서비스 연구가 많아 접근 가능한 카드뉴스 후보를 안정적으로 늘릴 수 있다."
+  },
+  {
+    "id": "gerontology",
+    "name": "Gerontology",
+    "shortName": "Gerontology",
+    "issn": "0304-324X",
+    "accessLabel": "Hybrid; metadata accessible",
+    "metric": "Broad gerontology core journal",
+    "crossrefEndpoint": "https://api.crossref.org/journals/0304-324X/works",
+    "selectionNote": "노화 연구 전반을 다루는 broad gerontology 저널로, 심리학 중심 분류 규칙과 함께 선별 수집한다."
   }
 ]

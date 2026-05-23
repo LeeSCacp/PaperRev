@@ -104,6 +104,10 @@ const state = {
   topics: [],
   questions: [],
   articles: [],
+  archiveArticles: [],
+  theories: [],
+  articleMeta: {},
+  articleDataMode: "published",
   selectedTopicId: "cognitive-aging",
   selectedArticleId: null,
   filters: {
@@ -119,24 +123,32 @@ const els = {
   homeArticleList: document.querySelector("#homeArticleList"),
   topicTabs: document.querySelector("#topicTabs"),
   topicDetail: document.querySelector("#topicDetail"),
+  theoryList: document.querySelector("#theoryList"),
   sourceList: document.querySelector("#sourceList"),
+  dataNotice: document.querySelector("#dataNotice"),
   searchInput: document.querySelector("#searchInput"),
   topicFilter: document.querySelector("#topicFilter"),
   accessFilter: document.querySelector("#accessFilter"),
   articleCount: document.querySelector("#articleCount"),
   topicCount: document.querySelector("#topicCount"),
+  issueWindow: document.querySelector("#issueWindow"),
 };
 
 async function loadData() {
-  const [topicsResponse, questionsResponse, articlesResponse] = await Promise.all([
+  const [topicsResponse, questionsResponse, theoriesResponse, articleData] = await Promise.all([
     fetch("./data/topics.json"),
     fetch("./data/questions.json"),
-    fetch("./data/articles.json"),
+    fetch("./data/theories.json"),
+    fetchArticleData(),
   ]);
 
   state.topics = await topicsResponse.json();
   state.questions = await questionsResponse.json();
-  state.articles = (await articlesResponse.json()).map(enrichArticle);
+  state.theories = await theoriesResponse.json();
+  state.articleMeta = articleData.meta;
+  state.articleDataMode = articleData.mode;
+  state.articles = articleData.records.map(enrichArticle);
+  state.archiveArticles = articleData.archiveRecords.map(enrichArticle);
   const firstTopicWithArticle = state.topics.find((topic) => articlesForTopic(topic.id).length > 0);
   state.selectedTopicId = firstTopicWithArticle?.id || state.topics[0]?.id || "cognitive-aging";
   state.selectedArticleId = articlesForTopic(state.selectedTopicId)[0]?.id || state.articles[0]?.id;
@@ -144,13 +156,41 @@ async function loadData() {
   render();
 }
 
+async function fetchArticleData() {
+  const draftResponse = await fetch("./data/drafts/article-drafts.json");
+  if (draftResponse.ok) {
+    const draftPayload = await draftResponse.json();
+    const featuredDrafts = Array.isArray(draftPayload.featuredDrafts)
+      ? draftPayload.featuredDrafts
+      : draftPayload.records;
+    const archiveRecords = Array.isArray(draftPayload.archiveRecords) ? draftPayload.archiveRecords : [];
+    if (Array.isArray(featuredDrafts) && featuredDrafts.length) {
+      return {
+        mode: "draft",
+        meta: draftPayload,
+        records: featuredDrafts,
+        archiveRecords,
+      };
+    }
+  }
+
+  const publishedResponse = await fetch("./data/articles.json");
+  const records = await publishedResponse.json();
+  return {
+    mode: "published",
+    meta: {},
+    records,
+    archiveRecords: [],
+  };
+}
+
 function enrichArticle(article) {
   const item = curation[article.id] || {};
   return {
     ...article,
-    topicId: item.topicId || "social-aging",
-    questionIds: item.questionIds || [],
-    deck: item.deck || {
+    topicId: item.topicId || article.topicId || "social-aging",
+    questionIds: item.questionIds || article.questionIds || [],
+    deck: item.deck || article.deck || {
       question: article.title,
       method: "초록 기반 자동 요약 대기 중입니다.",
       finding: article.koreanSummary,
@@ -172,14 +212,40 @@ function populateFilters() {
 function render() {
   els.articleCount.textContent = state.articles.length;
   els.topicCount.textContent = state.topics.length;
+  els.issueWindow.textContent = state.articleMeta.selectedWindow
+    ? `${state.articleMeta.selectedWindow}일`
+    : "샘플";
+  renderDataNotice();
   renderTopicGrid();
   renderHomePreview();
   renderTopicTabs();
   renderTopicDetail();
+  renderTheories();
   renderSources();
   if (window.lucide) {
     window.lucide.createIcons();
   }
+}
+
+function renderDataNotice() {
+  if (state.articleDataMode === "draft") {
+    const featuredCount = state.articleMeta.featuredCount || state.articles.length;
+    const archiveCount = state.articleMeta.archiveCount || state.archiveArticles.length;
+    const totalCollected = state.articleMeta.totalCollected || featuredCount + archiveCount;
+    els.dataNotice.innerHTML = `
+      <p>
+        현재 화면은 <strong>카드뉴스 draft ${featuredCount}개</strong>를 우선 표시합니다.
+        Crossref에서 최근 ${state.articleMeta.selectedWindow || "-"}일 범위의 논문 ${totalCollected}개를 수집했고,
+        draft에 포함하지 않은 ${archiveCount}개는 최근 ${state.articleMeta.archiveDays || 365}일 기준 보관함에 분리했습니다.
+        공개 게시 전에는 원문과 초록 확인이 필요합니다.
+      </p>
+    `;
+    return;
+  }
+
+  els.dataNotice.innerHTML = `
+    <p>현재 화면은 게시용 샘플 데이터를 표시합니다.</p>
+  `;
 }
 
 function renderTopicGrid() {
@@ -309,8 +375,50 @@ function renderArticleDeck(article) {
   `;
 }
 
+function renderTheories() {
+  if (!els.theoryList) {
+    return;
+  }
+
+  els.theoryList.innerHTML = state.theories
+    .map((theory) => {
+      const relatedTopics = theory.relatedTopicIds
+        .map((topicId) => topicById(topicId))
+        .filter(Boolean)
+        .slice(0, 3);
+      return `
+        <article class="theory-card">
+          <div class="theory-card-top">
+            <span class="badge">${theory.shortName}</span>
+            <small>${theory.domain}</small>
+          </div>
+          <h3>${theory.name}</h3>
+          <p>${theory.summary}</p>
+          <div class="theory-why">
+            <strong>읽을 때 쓰임</strong>
+            <span>${theory.whyItMatters}</span>
+          </div>
+          <div class="theory-topic-list">
+            ${relatedTopics.map((topic) => `<span class="badge ${topic.color}">${topic.name}</span>`).join("")}
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function renderSources() {
   const visibleArticles = filteredArticles();
+  if (!visibleArticles.length) {
+    els.sourceList.innerHTML = `
+      <div class="empty-state">
+        <h3>조건에 맞는 보관 논문이 없습니다.</h3>
+        <p>카드뉴스 draft에 포함된 논문은 이 보관함에서 제외됩니다.</p>
+      </div>
+    `;
+    return;
+  }
+
   els.sourceList.innerHTML = visibleArticles
     .map((article) => {
       const topic = topicById(article.topicId);
@@ -409,7 +517,7 @@ function selectArticle(articleId) {
 
 function filteredArticles() {
   const term = state.filters.search.trim().toLowerCase();
-  return state.articles.filter((article) => {
+  return state.archiveArticles.filter((article) => {
     const topicMatch = state.filters.topic === "all" || article.topicId === state.filters.topic;
     const accessMatch = state.filters.access === "all" || article.access === state.filters.access;
     const searchable = [

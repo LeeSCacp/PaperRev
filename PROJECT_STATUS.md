@@ -1,6 +1,6 @@
 # PaperRev 프로젝트 상태
 
-최종 업데이트: 2026-05-20 12:10 KST
+최종 업데이트: 2026-05-23 KST
 
 ## 프로젝트 목표
 
@@ -54,6 +54,37 @@
 - 생성 결과: `data/raw/crossref-latest.json`, `data/drafts/article-drafts.json`.
 - 14일 기준 분야 커버리지: 인지노화 6, 정서노화 1, 사회적 노화 11, 치매·인지장애 5, 돌봄·가족 5, 건강행동·디지털헬스 4, 일·은퇴·연령주의 2.
 - 현재 카드뉴스 초안은 OpenAI API 없이 Crossref 초록에서 문장을 추출해 한국어 카드 프레임에 넣는 규칙 기반 `ai_draft`다.
+- 사람 검수는 기술적으로 필수는 아니지만, 현재 규칙 기반 초안을 공개할 때는 자동 요약 표시와 보수적 문장 제한이 필요하다고 정리했다.
+- OpenAI API 연결은 보류하고, 나머지 개선을 진행했다.
+- 저널 목록을 4개에서 10개 핵심 저널로 확장했다: Psychology and Aging, Aging & Mental Health, Ageing & Society, Journal of Aging and Health, Journal of Applied Gerontology, Clinical Gerontologist 추가.
+- 확장된 10개 저널 기준으로 `build-drafts.mjs`를 재실행했고, 최근 7일만으로 7개 분야 모두 커버되었다.
+- 2026-05-22 실행 결과 총 24개 draft 생성: 인지노화 4, 정서노화 6, 사회적 노화 7, 치매·인지장애 1, 돌봄·가족 3, 건강행동·디지털헬스 2, 일·은퇴·연령주의 1.
+- GitHub Actions 주간 자동 실행 파일 `.github/workflows/weekly-drafts.yml`을 추가했다. 매주 월요일 09:00 KST에 draft 생성 후 변경 시 자동 커밋한다.
+- UX 개선: 원문 목록은 기본 접힘 영역으로 낮춰 카드뉴스 탐색을 우선하도록 조정했다.
+- Crossref 결과의 제목/저널명 HTML entity 정리를 `build-drafts.mjs`에 추가했다.
+- 저널 목록을 20개로 확장했다. 추가 확장: Research on Aging, The International Journal of Aging and Human Development, Aging Neuropsychology and Cognition, Experimental Aging Research, Dementia, International Psychogeriatrics, The Journals of Gerontology: Series A, Age and Ageing, BMC Geriatrics, Gerontology.
+- `build-drafts.mjs`의 기본 탐색 기간을 `7,14,30,60,90,180`일로 확장하고, `--min-topic-count=5`를 추가했다.
+- 확장된 20개 저널과 섹션별 최소 5개 조건으로 실행한 결과, 최근 14일 범위에서 총 136개 자동 draft가 생성되었다.
+- 2026-05-23 실행 결과 섹션별 draft 수: 인지노화 24, 정서노화 24, 사회적 노화 47, 치매·인지장애 11, 돌봄·가족 14, 건강행동·디지털헬스 10, 일·은퇴·연령주의 6.
+- 프론트엔드는 `data/drafts/article-drafts.json`이 있으면 이를 우선 읽고, 없으면 `data/articles.json`으로 fallback하도록 변경했다.
+- 화면 상단에 자동 생성 draft 안내, 탐색 기간, 섹션별 최소 목표를 표시하도록 변경했다.
+
+## 2026-05-23 추가 진행 기록
+
+- 수집된 전체 논문을 그대로 카드뉴스 영역에 모두 노출하지 않도록 `data/drafts/article-drafts.json` 구조를 분리했다.
+- `featuredDrafts`는 분야별 최신순 상위 5개만 담도록 했고, 현재 7개 분야 x 5개로 총 35개 카드뉴스 draft가 생성된다.
+- `archiveRecords`는 `featuredDrafts`에 포함되지 않은 수집 논문만 담으며, `--archive-days=365` 기준으로 최근 1년 논문만 유지한다.
+- 2026-05-23 재실행 결과: Crossref 수집 136개, `featuredDrafts` 35개, `archiveRecords` 101개, 선택 검색 기간 14일.
+- `records` 필드는 이전 프론트 호환을 위해 유지하되 현재는 `featuredDrafts`와 동일하게 대표 draft만 가리킨다.
+- `data/theories.json`을 추가해 카드뉴스 draft, 수집 보관함과 같은 수준의 `노화 이론` 섹션을 만들었다.
+- 프론트엔드는 카드뉴스/분야 상세에는 `featuredDrafts`를 사용하고, 수집 보관함에는 `archiveRecords`만 사용하도록 변경했다.
+- GitHub Actions 주간 draft 생성 명령에도 `--draft-limit-per-topic=5 --archive-days=365`를 반영했다.
+
+다음 추천 순서:
+
+1. 대표 draft 선정 기준을 단순 최신순에서 `최신성 + 초록 완성도 + 주제 적합도` 점수로 바꾼다.
+2. 노화 이론과 논문 카드를 키워드 기반으로 자동 연결해 이론별 읽기 흐름을 만든다.
+3. OpenAI API 연결 전까지 사용할 수 있는 `검수/승격` 스크립트 또는 리뷰 화면을 만든다.
 
 ## 1차 선정 저널
 
@@ -63,8 +94,29 @@
 | Innovation in Aging | Open access | OUP/GSA 공식 About 기준 2024 IF 4.3, Gerontology IF rank 3/48 | Crossref 수집 확인 |
 | The Gerontologist | Hybrid; metadata accessible | OUP/GSA 공식 About 기준 Gerontology JCI rank 2/48 | Crossref 수집 확인 |
 | The Journals of Gerontology: Series B | Hybrid; metadata accessible | 심리·사회 노화 연구 직접 부합, Gerontology JCI rank 1/48 | Crossref 수집 확인 |
+| Psychology and Aging | Hybrid; metadata accessible | APA 노화 심리 핵심 저널, SSCI indexed | Crossref 수집 확인 |
+| Aging & Mental Health | Hybrid; metadata accessible | 노년기 정신건강, 정서노화, 치매·돌봄 주제 보강 | Crossref 수집 확인 |
+| Ageing & Society | Hybrid; metadata accessible | 사회노년학, 문화, 정책, 관계 맥락 보강 | Crossref 수집 확인 |
+| Journal of Aging and Health | Hybrid; metadata accessible | 노년기 건강, 건강행동, 정신건강 보강 | Crossref 수집 확인 |
+| Journal of Applied Gerontology | Hybrid; metadata accessible | 실천·정책·지역사회 기반 노년학 보강 | Crossref 수집 확인 |
+| Clinical Gerontologist | Hybrid; metadata accessible | 임상노년학과 geropsychology 보강 | Crossref 수집 확인 |
+| Research on Aging | Hybrid; metadata accessible | 사회노년학, 생애과정, 건강 불평등, 정책 맥락 보강 | Crossref 수집 확인 |
+| The International Journal of Aging and Human Development | Hybrid; metadata accessible | 생애발달, 적응, 정서, 사회관계 보강 | Crossref 수집 확인 |
+| Aging, Neuropsychology, and Cognition | Hybrid; metadata accessible | 인지노화, 기억, 주의, 신경심리 보강 | Crossref 수집 확인 |
+| Experimental Aging Research | Hybrid; metadata accessible | 실험노화, 인지·행동 변화 연구 보강 | Crossref 수집 확인 |
+| Dementia | Hybrid; metadata accessible | 치매 경험, 가족, 서비스, 돌봄 맥락 보강 | Crossref 수집 확인 |
+| International Psychogeriatrics | Hybrid; metadata accessible | 노년기 정신건강, 치매, psychogeriatrics 보강 | Crossref 수집 확인 |
+| The Journals of Gerontology: Series A | Hybrid; metadata accessible | 건강, 기능, 질병 관련 gerontology 핵심 근거 보강 | Crossref 수집 확인 |
+| Age and Ageing | Hybrid; metadata accessible | 임상노인의학 비중이 높지만 건강·기능·돌봄 근거 보강 | Crossref 수집 확인 |
+| BMC Geriatrics | Open access | 오픈액세스 노년기 건강·돌봄·서비스 연구 보강 | Crossref 수집 확인 |
+| Gerontology | Hybrid; metadata accessible | broad gerontology 핵심 저널, 심리 중심 분류 규칙으로 선별 수집 | Crossref 수집 확인 |
 
 주의: 정확한 SSCI/JCR 전체 순위표는 보통 구독형 JCR에서 최종 확인해야 한다. 현재 프로토타입은 공개 공식 저널 페이지와 Crossref 수집 가능성을 기준으로 구성했다.
+
+2차 확장 후보:
+
+- `Geriatrics & Gerontology International`: 국제 노년의학·노년학 보강 후보
+- `Aging Clinical and Experimental Research`: 임상·실험노화 보강 후보
 
 ## 확인된 로컬 상태
 

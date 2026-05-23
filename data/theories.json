@@ -1,0 +1,112 @@
+[
+  {
+    "id": "socioemotional-selectivity-theory",
+    "name": "사회정서적 선택 이론",
+    "shortName": "SST",
+    "domain": "정서노화",
+    "summary": "나이가 들수록 남은 시간을 제한적으로 지각하면서 정보 탐색보다 정서적으로 의미 있는 관계와 경험을 더 우선한다는 관점입니다.",
+    "whyItMatters": "정서 조절, 관계 선택, 외로움, 웰빙 논문을 읽을 때 핵심 해석 틀로 쓸 수 있습니다.",
+    "relatedTopicIds": ["emotional-aging", "social-aging"],
+    "relatedQuestionIds": ["what-supports-mental-health", "how-does-society-define-old-age"],
+    "keywords": ["emotion regulation", "time perspective", "well-being", "social goals"]
+  },
+  {
+    "id": "selection-optimization-compensation",
+    "name": "선택-최적화-보상 이론",
+    "shortName": "SOC",
+    "domain": "인지·기능 적응",
+    "summary": "개인이 중요한 목표를 선택하고, 보유 자원을 최적화하며, 손실이 생길 때 보상 전략을 사용해 적응한다는 생애발달 관점입니다.",
+    "whyItMatters": "인지 기능 변화, 건강행동, 일상 수행, 재활과 디지털 지원 연구를 연결해 읽기 좋습니다.",
+    "relatedTopicIds": ["cognitive-aging", "digital-health-behavior"],
+    "relatedQuestionIds": ["does-memory-always-decline", "can-digital-health-help"],
+    "keywords": ["adaptation", "compensation", "goal selection", "functional aging"]
+  },
+  {
+    "id": "cognitive-reserve-scaffolding",
+    "name": "인지 예비능과 보상적 비계화 관점",
+    "shortName": "Reserve/Scaffolding",
+    "domain": "인지노화",
+    "summary": "교육, 직업, 활동 경험 등으로 형성된 예비능과 뇌의 보상적 재조직이 노년기 인지 저하의 속도와 양상을 다르게 만든다는 관점입니다.",
+    "whyItMatters": "기억, 실행기능, MCI, 치매 위험 논문에서 개인차를 해석하는 데 유용합니다.",
+    "relatedTopicIds": ["cognitive-aging", "dementia-cognitive-impairment"],
+    "relatedQuestionIds": ["does-memory-always-decline", "what-happens-after-screening"],
+    "keywords": ["cognitive reserve", "brain maintenance", "scaffolding", "neuropsychology"]
+  },
+  {
+    "id": "activity-theory",
+    "name": "활동 이론",
+    "shortName": "Activity",
+    "domain": "사회적 노화",
+    "summary": "노년기에도 사회적 역할과 활동을 유지할수록 삶의 만족과 적응이 높아진다는 전통적 사회노년학 관점입니다.",
+    "whyItMatters": "사회참여, 지역사회 활동, 건강행동 개입 논문을 읽을 때 기본 비교 틀이 됩니다.",
+    "relatedTopicIds": ["social-aging", "digital-health-behavior"],
+    "relatedQuestionIds": ["what-supports-mental-health", "can-digital-health-help"],
+    "keywords": ["social participation", "activity", "life satisfaction", "engagement"]
+  },
+  {
+    "id": "continuity-theory",
+    "name": "연속성 이론",
+    "shortName": "Continuity",
+    "domain": "생애과정",
+    "summary": "노년기의 적응은 이전 삶의 습관, 역할, 정체성, 관계망을 가능한 한 연속적으로 유지하는 과정에서 이루어진다는 관점입니다.",
+    "whyItMatters": "은퇴, 가족관계, 돌봄, 지역사회 적응 연구의 변화와 안정성을 함께 해석하게 해줍니다.",
+    "relatedTopicIds": ["social-aging", "work-retirement-ageism", "caregiving-family"],
+    "relatedQuestionIds": ["how-does-society-define-old-age", "can-ageism-change", "what-do-caregivers-need"],
+    "keywords": ["continuity", "identity", "roles", "retirement"]
+  },
+  {
+    "id": "stress-process-model",
+    "name": "스트레스 과정 모델",
+    "shortName": "Stress Process",
+    "domain": "돌봄·정신건강",
+    "summary": "일차 스트레스 요인, 이차적 부담, 사회적 지지와 대처 자원이 정신건강 결과로 이어지는 과정을 설명합니다.",
+    "whyItMatters": "가족 돌봄, 치매 돌봄, 우울과 부담 연구를 구조적으로 읽는 데 적합합니다.",
+    "relatedTopicIds": ["caregiving-family", "emotional-aging", "dementia-cognitive-impairment"],
+    "relatedQuestionIds": ["what-do-caregivers-need", "what-supports-mental-health", "what-happens-after-screening"],
+    "keywords": ["caregiver burden", "stress", "coping", "social support"]
+  },
+  {
+    "id": "life-course-perspective",
+    "name": "생애과정 관점",
+    "shortName": "Life Course",
+    "domain": "발달·사회노년학",
+    "summary": "노년기 결과를 현재 상태만이 아니라 초기 생애 경험, 역사적 맥락, 전환 사건, 누적된 노출의 결과로 해석합니다.",
+    "whyItMatters": "건강 불평등, 은퇴, 가족 전환, 문화 차이 논문을 장기적 맥락에서 읽게 해줍니다.",
+    "relatedTopicIds": ["social-aging", "work-retirement-ageism", "emotional-aging"],
+    "relatedQuestionIds": ["how-does-society-define-old-age", "can-ageism-change", "what-supports-mental-health"],
+    "keywords": ["life course", "transitions", "cohort", "historical context"]
+  },
+  {
+    "id": "cumulative-advantage-disadvantage",
+    "name": "누적 이점·누적 불이익 관점",
+    "shortName": "CAD",
+    "domain": "불평등",
+    "summary": "교육, 소득, 건강, 차별 경험의 차이가 생애 전반에 누적되어 노년기 건강과 심리사회적 결과의 격차를 만든다는 관점입니다.",
+    "whyItMatters": "노년기 정신건강, 돌봄 접근성, 디지털 격차, 연령주의 연구의 구조적 배경을 설명합니다.",
+    "relatedTopicIds": ["social-aging", "digital-health-behavior", "work-retirement-ageism"],
+    "relatedQuestionIds": ["how-does-society-define-old-age", "can-digital-health-help", "can-ageism-change"],
+    "keywords": ["inequality", "disadvantage", "digital divide", "access"]
+  },
+  {
+    "id": "successful-aging-model",
+    "name": "성공적 노화 모델",
+    "shortName": "Successful Aging",
+    "domain": "건강·적응",
+    "summary": "질병과 장애의 낮은 위험, 높은 인지·신체 기능, 적극적 삶 참여를 성공적 노화의 핵심 요소로 보는 모델입니다.",
+    "whyItMatters": "건강행동, 활동 참여, 웰빙 지표 논문을 읽을 때 널리 쓰이는 기준이지만, 규범성과 배제 가능성도 함께 검토해야 합니다.",
+    "relatedTopicIds": ["digital-health-behavior", "cognitive-aging", "emotional-aging"],
+    "relatedQuestionIds": ["can-digital-health-help", "does-memory-always-decline", "what-supports-mental-health"],
+    "keywords": ["successful aging", "function", "engagement", "health behavior"]
+  },
+  {
+    "id": "ageism-stereotype-embodiment",
+    "name": "노화 고정관념과 연령주의 관점",
+    "shortName": "Ageism",
+    "domain": "사회인식",
+    "summary": "노화에 대한 사회적 고정관념과 차별이 개인의 자기인식, 건강행동, 일터 경험, 정책 설계에 영향을 준다는 관점입니다.",
+    "whyItMatters": "연령주의 개입, 노동시장, 의료·돌봄 접근성, 노년기 자기인식 논문을 해석하는 중심 프레임입니다.",
+    "relatedTopicIds": ["work-retirement-ageism", "social-aging"],
+    "relatedQuestionIds": ["can-ageism-change", "how-does-society-define-old-age"],
+    "keywords": ["ageism", "stereotype embodiment", "self-perceptions of aging", "workplace"]
+  }
+]
