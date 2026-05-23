@@ -106,10 +106,13 @@ const state = {
   articles: [],
   archiveArticles: [],
   theories: [],
+  theoryNotes: [],
+  theoryPapers: [],
   articleMeta: {},
   articleDataMode: "published",
   selectedTopicId: "cognitive-aging",
   selectedArticleId: null,
+  selectedTheoryId: null,
   filters: {
     search: "",
     topic: "all",
@@ -124,6 +127,7 @@ const els = {
   topicTabs: document.querySelector("#topicTabs"),
   topicDetail: document.querySelector("#topicDetail"),
   theoryList: document.querySelector("#theoryList"),
+  theoryDetail: document.querySelector("#theoryDetail"),
   sourceList: document.querySelector("#sourceList"),
   dataNotice: document.querySelector("#dataNotice"),
   searchInput: document.querySelector("#searchInput"),
@@ -135,16 +139,21 @@ const els = {
 };
 
 async function loadData() {
-  const [topicsResponse, questionsResponse, theoriesResponse, articleData] = await Promise.all([
+  const [topicsResponse, questionsResponse, theoriesResponse, theoryNotesResponse, theoryPapersResponse, articleData] =
+    await Promise.all([
     fetch("./data/topics.json"),
     fetch("./data/questions.json"),
     fetch("./data/theories.json"),
+    fetch("./data/theory-notes.json"),
+    fetch("./data/theory-papers.json"),
     fetchArticleData(),
   ]);
 
   state.topics = await topicsResponse.json();
   state.questions = await questionsResponse.json();
   state.theories = await theoriesResponse.json();
+  state.theoryNotes = (await theoryNotesResponse.json()).notes || [];
+  state.theoryPapers = (await theoryPapersResponse.json()).theories || [];
   state.articleMeta = articleData.meta;
   state.articleDataMode = articleData.mode;
   state.articles = articleData.records.map(enrichArticle);
@@ -152,6 +161,7 @@ async function loadData() {
   const firstTopicWithArticle = state.topics.find((topic) => articlesForTopic(topic.id).length > 0);
   state.selectedTopicId = firstTopicWithArticle?.id || state.topics[0]?.id || "cognitive-aging";
   state.selectedArticleId = articlesForTopic(state.selectedTopicId)[0]?.id || state.articles[0]?.id;
+  state.selectedTheoryId = state.theories[0]?.id || null;
   populateFilters();
   render();
 }
@@ -376,35 +386,155 @@ function renderArticleDeck(article) {
 }
 
 function renderTheories() {
-  if (!els.theoryList) {
+  if (!els.theoryList || !els.theoryDetail) {
     return;
   }
 
   els.theoryList.innerHTML = state.theories
     .map((theory) => {
+      const note = theoryNoteById(theory.id);
       const relatedTopics = theory.relatedTopicIds
         .map((topicId) => topicById(topicId))
         .filter(Boolean)
         .slice(0, 3);
       return `
-        <article class="theory-card">
+        <button class="theory-card ${theory.id === state.selectedTheoryId ? "selected" : ""}" type="button" data-theory-id="${theory.id}">
           <div class="theory-card-top">
             <span class="badge">${theory.shortName}</span>
             <small>${theory.domain}</small>
           </div>
           <h3>${theory.name}</h3>
-          <p>${theory.summary}</p>
+          <p>${note?.oneLine || theory.summary}</p>
           <div class="theory-why">
-            <strong>읽을 때 쓰임</strong>
-            <span>${theory.whyItMatters}</span>
+            <strong>핵심 질문</strong>
+            <span>${note?.explainerDraft?.cardLead || theory.whyItMatters}</span>
           </div>
           <div class="theory-topic-list">
             ${relatedTopics.map((topic) => `<span class="badge ${topic.color}">${topic.name}</span>`).join("")}
           </div>
-        </article>
+        </button>
       `;
     })
     .join("");
+
+  els.theoryList.querySelectorAll("[data-theory-id]").forEach((button) => {
+    button.addEventListener("click", () => selectTheory(button.dataset.theoryId));
+  });
+
+  renderTheoryDetail();
+}
+
+function renderTheoryDetail() {
+  const theory = theoryById(state.selectedTheoryId) || state.theories[0];
+  const note = theoryNoteById(theory?.id);
+  const paperSet = theoryPaperSetById(theory?.id);
+  if (!theory || !note) {
+    els.theoryDetail.innerHTML = `
+      <div class="empty-state">
+        <h3>이론 상세 정리가 아직 없습니다.</h3>
+        <p>theory-notes.json을 확인해 주세요.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const anchorWorks = note.anchorWorkIds
+    .map((workId) => paperSet?.works.find((work) => work.id === workId))
+    .filter(Boolean);
+
+  els.theoryDetail.innerHTML = `
+    <article class="theory-detail-panel">
+      <div class="theory-detail-hero">
+        <div>
+          <p class="eyebrow">${theory.shortName} · ${theory.domain}</p>
+          <h3>${theory.name}</h3>
+          <p>${note.headline}</p>
+        </div>
+        <div class="theory-detail-summary">
+          <strong>설명문 초안</strong>
+          <span>${note.explainerDraft.short}</span>
+        </div>
+      </div>
+
+      <div class="theory-detail-grid">
+        ${renderTheoryBlock("핵심 주장", note.coreClaims.map((item) => `<li>${item}</li>`).join(""), "ol")}
+        ${renderConceptBlock(note.keyConcepts)}
+      </div>
+
+      <div class="theory-flow-grid">
+        <section class="theory-flow-card">
+          <h4>주장과 개념의 흐름</h4>
+          <ol>${note.conceptualFlow.map((item) => `<li>${item}</li>`).join("")}</ol>
+        </section>
+        <section class="theory-flow-card">
+          <h4>다른 이론과의 관련성</h4>
+          <div class="relation-list">
+            ${note.relations
+              .map((relation) => {
+                const target = theoryById(relation.targetTheoryId);
+                return `
+                  <article>
+                    <strong>${target?.name || relation.targetTheoryId}</strong>
+                    <p>${relation.relation}</p>
+                  </article>
+                `;
+              })
+              .join("")}
+          </div>
+        </section>
+      </div>
+
+      <div class="theory-detail-grid">
+        ${renderTheoryBlock("한계와 주의점", note.limitations.map((item) => `<li>${item}</li>`).join(""), "ul")}
+        <section class="theory-flow-card anchor-work-card">
+          <h4>화면 노출용 anchor 문헌</h4>
+          <p>전체 대표 문헌은 내부 seed로 유지하고, 이론 설명에는 핵심 문헌 3개만 우선 노출합니다.</p>
+          <div class="anchor-work-list">
+            ${anchorWorks.map(renderAnchorWork).join("")}
+          </div>
+        </section>
+      </div>
+    </article>
+  `;
+}
+
+function renderTheoryBlock(title, body, listType) {
+  return `
+    <section class="theory-flow-card">
+      <h4>${title}</h4>
+      <${listType}>${body}</${listType}>
+    </section>
+  `;
+}
+
+function renderConceptBlock(concepts) {
+  return `
+    <section class="theory-flow-card">
+      <h4>대표 개념</h4>
+      <div class="concept-list">
+        ${concepts
+          .map(
+            (concept) => `
+              <article>
+                <strong>${concept.term}</strong>
+                <p>${concept.meaningKo}</p>
+              </article>
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderAnchorWork(work) {
+  return `
+    <article class="anchor-work">
+      <span class="badge">${work.role.replaceAll("_", " ")}</span>
+      <p>${work.citation}</p>
+      <a href="${work.url}" target="_blank" rel="noreferrer">${work.doi ? `DOI ${work.doi}` : "서지 링크"}</a>
+    </article>
+  `;
 }
 
 function renderSources() {
@@ -515,6 +645,15 @@ function selectArticle(articleId) {
   }
 }
 
+function selectTheory(theoryId) {
+  state.selectedTheoryId = theoryId;
+  renderTheories();
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+  document.querySelector("#theoryDetail")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
 function filteredArticles() {
   const term = state.filters.search.trim().toLowerCase();
   return state.archiveArticles.filter((article) => {
@@ -545,6 +684,18 @@ function questionsForTopic(topicId) {
 
 function topicById(topicId) {
   return state.topics.find((topic) => topic.id === topicId);
+}
+
+function theoryById(theoryId) {
+  return state.theories.find((theory) => theory.id === theoryId);
+}
+
+function theoryNoteById(theoryId) {
+  return state.theoryNotes.find((note) => note.theoryId === theoryId);
+}
+
+function theoryPaperSetById(theoryId) {
+  return state.theoryPapers.find((paperSet) => paperSet.theoryId === theoryId);
 }
 
 function formatAuthors(authors) {

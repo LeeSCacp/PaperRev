@@ -1,0 +1,494 @@
+{
+  "generatedAt": "2026-05-23",
+  "scope": "Representative original and key works for aging psychology and gerontology theories used in PaperRev.",
+  "linkingPolicy": "Not linked to current article drafts yet. Use this file as a bibliography seed for later theory summaries and theory-paper matching.",
+  "selectionNote": "Works were selected as origin statements, core theoretical papers, major measurement or empirical extensions, reviews, or influential critiques. DOI links are provided when available; books and some chapters use publisher or bibliographic pages.",
+  "theories": [
+    {
+      "theoryId": "socioemotional-selectivity-theory",
+      "theoryName": "사회정서적 선택 이론",
+      "shortName": "SST",
+      "works": [
+        {
+          "id": "sst-carstensen-1992",
+          "role": "origin_empirical_support",
+          "citation": "Carstensen, L. L. (1992). Social and emotional patterns in adulthood: Support for socioemotional selectivity theory. Psychology and Aging, 7(3), 331-338.",
+          "doi": "10.1037/0882-7974.7.3.331",
+          "url": "https://doi.org/10.1037/0882-7974.7.3.331",
+          "noteKo": "SST의 초기 경험적 근거로, 성인기 사회관계 축소와 정서적 친밀성 증가를 시간 전망과 연결한다."
+        },
+        {
+          "id": "sst-carstensen-isaacowitz-charles-1999",
+          "role": "core_theory",
+          "citation": "Carstensen, L. L., Isaacowitz, D. M., & Charles, S. T. (1999). Taking time seriously: A theory of socioemotional selectivity. American Psychologist, 54(3), 165-181.",
+          "doi": "10.1037/0003-066X.54.3.165",
+          "url": "https://doi.org/10.1037/0003-066X.54.3.165",
+          "noteKo": "남은 시간 지각이 사회적 목표 선택을 바꾼다는 SST의 대표 이론 논문이다."
+        },
+        {
+          "id": "sst-carstensen-2006",
+          "role": "core_extension",
+          "citation": "Carstensen, L. L. (2006). The influence of a sense of time on human development. Science, 312(5782), 1913-1915.",
+          "doi": "10.1126/science.1127488",
+          "url": "https://doi.org/10.1126/science.1127488",
+          "noteKo": "시간 전망을 인간 발달과 동기 변화의 핵심 변수로 확장해 설명한다."
+        },
+        {
+          "id": "sst-mather-carstensen-2005",
+          "role": "empirical_extension",
+          "citation": "Mather, M., & Carstensen, L. L. (2005). Aging and motivated cognition: The positivity effect in attention and memory. Trends in Cognitive Sciences, 9(10), 496-502.",
+          "doi": "10.1016/j.tics.2005.08.005",
+          "url": "https://doi.org/10.1016/j.tics.2005.08.005",
+          "noteKo": "SST가 제안하는 정서적 목표 우선성이 주의와 기억의 positivity effect로 나타나는 흐름을 정리한다."
+        },
+        {
+          "id": "sst-charles-carstensen-2010",
+          "role": "review",
+          "citation": "Charles, S. T., & Carstensen, L. L. (2010). Social and emotional aging. Annual Review of Psychology, 61, 383-409.",
+          "doi": "10.1146/annurev.psych.093008.100448",
+          "url": "https://doi.org/10.1146/annurev.psych.093008.100448",
+          "noteKo": "사회정서적 노화 연구를 폭넓게 정리하는 리뷰로, SST를 정서노화 읽기의 중심 프레임으로 놓는다."
+        }
+      ]
+    },
+    {
+      "theoryId": "selection-optimization-compensation",
+      "theoryName": "선택-최적화-보상 이론",
+      "shortName": "SOC",
+      "works": [
+        {
+          "id": "soc-baltes-baltes-1990",
+          "role": "origin_core_theory",
+          "citation": "Baltes, P. B., & Baltes, M. M. (1990). Psychological perspectives on successful aging: The model of selective optimization with compensation. In P. B. Baltes & M. M. Baltes (Eds.), Successful Aging: Perspectives from the Behavioral Sciences (pp. 1-34). Cambridge University Press.",
+          "doi": "10.1017/CBO9780511665684.003",
+          "url": "https://doi.org/10.1017/CBO9780511665684.003",
+          "noteKo": "SOC 모델의 고전적 원전으로, 성공적 노화를 손실 조절과 자원 배분의 적응 과정으로 설명한다."
+        },
+        {
+          "id": "soc-baltes-staudinger-lindenberger-1999",
+          "role": "lifespan_theory_context",
+          "citation": "Baltes, P. B., Staudinger, U. M., & Lindenberger, U. (1999). Lifespan psychology: Theory and application to intellectual functioning. Annual Review of Psychology, 50, 471-507.",
+          "doi": "10.1146/annurev.psych.50.1.471",
+          "url": "https://doi.org/10.1146/annurev.psych.50.1.471",
+          "noteKo": "SOC를 이해하는 배경인 전생애 발달심리 관점과 성장-유지-손실 조절의 균형을 제시한다."
+        },
+        {
+          "id": "soc-freund-baltes-2002-jpsp",
+          "role": "measurement_construct_validity",
+          "citation": "Freund, A. M., & Baltes, P. B. (2002). Life-management strategies of selection, optimization, and compensation: Measurement by self-report and construct validity. Journal of Personality and Social Psychology, 82(4), 642-662.",
+          "doi": "10.1037/0022-3514.82.4.642",
+          "url": "https://doi.org/10.1037/0022-3514.82.4.642",
+          "noteKo": "SOC 전략을 자기보고로 측정하고 구성타당도를 검토한 핵심 측정 논문이다."
+        },
+        {
+          "id": "soc-freund-baltes-2002-geronb",
+          "role": "empirical_support",
+          "citation": "Freund, A. M., & Baltes, P. B. (2002). The adaptiveness of selection, optimization, and compensation as strategies of life management: Evidence from a preference study on proverbs. The Journals of Gerontology: Series B, 57(5), P426-P434.",
+          "doi": "10.1093/geronb/57.5.P426",
+          "url": "https://doi.org/10.1093/geronb/57.5.P426",
+          "noteKo": "사람들이 SOC 관련 생활관리 전략을 더 선호하는지 검토한 경험적 확장 논문이다."
+        },
+        {
+          "id": "soc-wiese-freund-baltes-2002",
+          "role": "applied_extension",
+          "citation": "Wiese, B. S., Freund, A. M., & Baltes, P. B. (2002). Subjective career success and emotional well-being: Longitudinal predictive power of selection, optimization, and compensation. Journal of Vocational Behavior, 60(3), 321-335.",
+          "doi": "10.1006/jvbe.2001.1835",
+          "url": "https://doi.org/10.1006/jvbe.2001.1835",
+          "noteKo": "SOC가 일과 경력 맥락의 적응 및 정서적 안녕과 어떻게 연결되는지 보여주는 응용 연구다."
+        }
+      ]
+    },
+    {
+      "theoryId": "cognitive-reserve-scaffolding",
+      "theoryName": "인지 예비능과 보상적 비계화 관점",
+      "shortName": "Reserve/Scaffolding",
+      "works": [
+        {
+          "id": "reserve-stern-2002",
+          "role": "core_theory",
+          "citation": "Stern, Y. (2002). What is cognitive reserve? Theory and research application of the reserve concept. Journal of the International Neuropsychological Society, 8(3), 448-460.",
+          "doi": "10.1017/S1355617702813248",
+          "url": "https://doi.org/10.1017/S1355617702813248",
+          "noteKo": "인지 예비능 개념을 이론과 연구 적용 차원에서 정리한 대표 원전이다."
+        },
+        {
+          "id": "reserve-stern-2009",
+          "role": "review",
+          "citation": "Stern, Y. (2009). Cognitive reserve. Neuropsychologia, 47(10), 2015-2028.",
+          "doi": "10.1016/j.neuropsychologia.2009.03.004",
+          "url": "https://doi.org/10.1016/j.neuropsychologia.2009.03.004",
+          "noteKo": "인지 예비능의 역학적 근거와 노화, 치매 연구 적용을 정리한 주요 리뷰다."
+        },
+        {
+          "id": "stac-park-reuter-lorenz-2009",
+          "role": "scaffolding_core_theory",
+          "citation": "Park, D. C., & Reuter-Lorenz, P. (2009). The adaptive brain: Aging and neurocognitive scaffolding. Annual Review of Psychology, 60, 173-196.",
+          "doi": "10.1146/annurev.psych.59.103006.093656",
+          "url": "https://doi.org/10.1146/annurev.psych.59.103006.093656",
+          "noteKo": "STAC 모델의 핵심 논문으로, 노년기 전두엽 활성 증가를 보상적 비계화로 설명한다."
+        },
+        {
+          "id": "stac-reuter-lorenz-park-2014",
+          "role": "model_revision",
+          "citation": "Reuter-Lorenz, P. A., & Park, D. C. (2014). How does it STAC up? Revisiting the scaffolding theory of aging and cognition. Neuropsychology Review, 24, 355-370.",
+          "doi": "10.1007/s11065-014-9270-9",
+          "url": "https://doi.org/10.1007/s11065-014-9270-9",
+          "noteKo": "STAC-r로 이어지는 수정 모델 논문으로, 보상과 적응의 생애과정적 의미를 보강한다."
+        },
+        {
+          "id": "reserve-stern-etal-2020",
+          "role": "consensus_definition",
+          "citation": "Stern, Y., Arenaza-Urquijo, E. M., Bartrés-Faz, D., et al. (2020). Whitepaper: Defining and investigating cognitive reserve, brain reserve, and brain maintenance. Alzheimer's & Dementia, 16(9), 1305-1311.",
+          "doi": "10.1016/j.jalz.2018.07.219",
+          "url": "https://doi.org/10.1016/j.jalz.2018.07.219",
+          "noteKo": "인지 예비능, 뇌 예비능, 뇌 유지 개념을 구분하는 합의형 정의 자료다."
+        }
+      ]
+    },
+    {
+      "theoryId": "activity-theory",
+      "theoryName": "활동 이론",
+      "shortName": "Activity",
+      "works": [
+        {
+          "id": "activity-havighurst-albrecht-1953",
+          "role": "origin_book",
+          "citation": "Havighurst, R. J., & Albrecht, R. (1953). Older People. Longmans, Green.",
+          "doi": null,
+          "url": "https://www.worldcat.org/search?q=ti%3AOlder+People+au%3AHavighurst+Albrecht",
+          "noteKo": "활동 이론의 초기 원천으로 자주 인용되는 단행본이다. DOI가 확인되지 않아 도서 서지 링크로 관리한다."
+        },
+        {
+          "id": "activity-havighurst-1961",
+          "role": "classic_statement",
+          "citation": "Havighurst, R. J. (1961). Successful aging. The Gerontologist, 1(1), 8-13.",
+          "doi": "10.1093/geront/1.1.8",
+          "url": "https://doi.org/10.1093/geront/1.1.8",
+          "noteKo": "활동, 역할 유지, 삶의 만족을 성공적 노화 논의와 연결한 고전 논문이다."
+        },
+        {
+          "id": "activity-lemon-bengtson-peterson-1972",
+          "role": "formal_empirical_statement",
+          "citation": "Lemon, B. W., Bengtson, V. L., & Peterson, J. A. (1972). An exploration of the activity theory of aging: Activity types and life satisfaction among in-movers to a retirement community. Journal of Gerontology, 27(4), 511-523.",
+          "doi": "10.1093/geronj/27.4.511",
+          "url": "https://doi.org/10.1093/geronj/27.4.511",
+          "noteKo": "활동 유형과 삶의 만족을 연결해 활동 이론을 경험적으로 정식화한 핵심 논문이다."
+        },
+        {
+          "id": "activity-longino-kart-1982",
+          "role": "replication_validation",
+          "citation": "Longino, C. F., & Kart, C. S. (1982). Explicating activity theory: A formal replication. Journal of Gerontology, 37(6), 713-722.",
+          "doi": "10.1093/geronj/37.6.713",
+          "url": "https://doi.org/10.1093/geronj/37.6.713",
+          "noteKo": "Lemon 등(1972)의 활동 이론 정식화를 재검토한 대표 복제/검증 연구다."
+        },
+        {
+          "id": "activity-menec-2003",
+          "role": "longitudinal_extension",
+          "citation": "Menec, V. H. (2003). The relation between everyday activities and successful aging: A 6-year longitudinal study. The Journals of Gerontology: Series B, 58(2), S74-S82.",
+          "doi": "10.1093/geronb/58.2.S74",
+          "url": "https://doi.org/10.1093/geronb/58.2.S74",
+          "noteKo": "일상 활동과 성공적 노화의 관계를 종단적으로 검토한 후속 핵심 연구다."
+        }
+      ]
+    },
+    {
+      "theoryId": "continuity-theory",
+      "theoryName": "연속성 이론",
+      "shortName": "Continuity",
+      "works": [
+        {
+          "id": "continuity-atchley-1971",
+          "role": "origin_article",
+          "citation": "Atchley, R. C. (1971). Retirement and leisure participation: Continuity or crisis? The Gerontologist, 11(1 Part 1), 13-17.",
+          "doi": "10.1093/geront/11.1_Part_1.13",
+          "url": "https://doi.org/10.1093/geront/11.1_Part_1.13",
+          "noteKo": "은퇴 이후 여가 참여를 정체성 위기보다 연속성 관점에서 설명한 초기 논문이다."
+        },
+        {
+          "id": "continuity-atchley-1989",
+          "role": "core_theory",
+          "citation": "Atchley, R. C. (1989). A continuity theory of normal aging. The Gerontologist, 29(2), 183-190.",
+          "doi": "10.1093/geront/29.2.183",
+          "url": "https://doi.org/10.1093/geront/29.2.183",
+          "noteKo": "정상 노화의 적응을 내적/외적 연속성으로 설명한 대표 이론 논문이다."
+        },
+        {
+          "id": "continuity-atchley-1999",
+          "role": "book_length_synthesis",
+          "citation": "Atchley, R. C. (1999). Continuity and Adaptation in Aging: Creating Positive Experiences. Johns Hopkins University Press.",
+          "doi": null,
+          "url": "https://www.press.jhu.edu/books/title/1371/continuity-and-adaptation-aging",
+          "noteKo": "연속성 이론을 장기 종단자료와 함께 단행본 수준으로 정리한 핵심 저작이다."
+        },
+        {
+          "id": "continuity-nimrod-kleiber-2007",
+          "role": "critical_extension",
+          "citation": "Nimrod, G., & Kleiber, D. A. (2007). Reconsidering change and continuity in later life: Toward an innovation theory of successful aging. The International Journal of Aging and Human Development, 65(1), 1-22.",
+          "doi": "10.2190/Q4G5-7176-51Q2-3754",
+          "url": "https://doi.org/10.2190/Q4G5-7176-51Q2-3754",
+          "noteKo": "연속성만으로 설명하기 어려운 노년기 변화와 혁신을 보완적으로 제안한다."
+        },
+        {
+          "id": "continuity-lim-song-2019",
+          "role": "concept_analysis",
+          "citation": "Lim, S., & Song, J. (2019). Maintenance of continuity in older adulthood: Concept analysis. International Journal of Nursing Knowledge, 30(4), 205-212.",
+          "doi": "10.1111/2047-3095.12207",
+          "url": "https://doi.org/10.1111/2047-3095.12207",
+          "noteKo": "연속성 개념을 현대 노년기 돌봄/간호 맥락에서 개념 분석한 참고 논문이다."
+        }
+      ]
+    },
+    {
+      "theoryId": "stress-process-model",
+      "theoryName": "스트레스 과정 모델",
+      "shortName": "Stress Process",
+      "works": [
+        {
+          "id": "stress-pearlin-etal-1981",
+          "role": "origin_core_model",
+          "citation": "Pearlin, L. I., Menaghan, E. G., Lieberman, M. A., & Mullan, J. T. (1981). The stress process. Journal of Health and Social Behavior, 22(4), 337-356.",
+          "doi": "10.2307/2136676",
+          "url": "https://doi.org/10.2307/2136676",
+          "noteKo": "스트레스원, 매개 자원, 결과를 하나의 과정으로 묶은 사회학적 스트레스 모델의 원전이다."
+        },
+        {
+          "id": "stress-pearlin-mullan-semple-skaff-1990",
+          "role": "caregiving_core_model",
+          "citation": "Pearlin, L. I., Mullan, J. T., Semple, S. J., & Skaff, M. M. (1990). Caregiving and the stress process: An overview of concepts and their measures. The Gerontologist, 30(5), 583-594.",
+          "doi": "10.1093/geront/30.5.583",
+          "url": "https://doi.org/10.1093/geront/30.5.583",
+          "noteKo": "치매와 가족돌봄 연구에서 널리 쓰이는 돌봄 스트레스 과정 모델의 핵심 논문이다."
+        },
+        {
+          "id": "stress-pearlin-skaff-1996",
+          "role": "life_course_bridge",
+          "citation": "Pearlin, L. I., & Skaff, M. M. (1996). Stress and the life course: A paradigmatic alliance. The Gerontologist, 36(2), 239-247.",
+          "doi": "10.1093/geront/36.2.239",
+          "url": "https://doi.org/10.1093/geront/36.2.239",
+          "noteKo": "스트레스 과정과 생애과정 관점을 연결해 노년기 스트레스를 해석하는 다리를 놓는다."
+        },
+        {
+          "id": "stress-pearlin-schieman-fazio-meersman-2005",
+          "role": "health_disparities_extension",
+          "citation": "Pearlin, L. I., Schieman, S., Fazio, E. M., & Meersman, S. C. (2005). Stress, health, and the life course: Some conceptual perspectives. Journal of Health and Social Behavior, 46(2), 205-219.",
+          "doi": "10.1177/002214650504600206",
+          "url": "https://doi.org/10.1177/002214650504600206",
+          "noteKo": "스트레스가 생애과정의 사회경제적 불평등과 건강 격차로 이어지는 경로를 설명한다."
+        },
+        {
+          "id": "stress-pearlin-2010",
+          "role": "conceptual_comparison",
+          "citation": "Pearlin, L. I. (2010). The life course and the stress process: Some conceptual comparisons. The Journals of Gerontology: Series B, 65B(2), 207-215.",
+          "doi": "10.1093/geronb/gbp106",
+          "url": "https://doi.org/10.1093/geronb/gbp106",
+          "noteKo": "생애과정 개념과 스트레스 과정 개념을 비교해 두 프레임의 접점을 정리한다."
+        }
+      ]
+    },
+    {
+      "theoryId": "life-course-perspective",
+      "theoryName": "생애과정 관점",
+      "shortName": "Life Course",
+      "works": [
+        {
+          "id": "lifecourse-elder-1974",
+          "role": "origin_book",
+          "citation": "Elder, G. H., Jr. (1974). Children of the Great Depression: Social Change in Life Experience. University of Chicago Press.",
+          "doi": null,
+          "url": "https://press.uchicago.edu/ucp/books/book/chicago/C/bo3684034.html",
+          "noteKo": "역사적 사건과 생애 경험의 연결을 보여준 생애과정 연구의 고전적 출발점이다."
+        },
+        {
+          "id": "lifecourse-elder-1994",
+          "role": "core_theory",
+          "citation": "Elder, G. H., Jr. (1994). Time, human agency, and social change: Perspectives on the life course. Social Psychology Quarterly, 57(1), 4-15.",
+          "doi": "10.2307/2786971",
+          "url": "https://doi.org/10.2307/2786971",
+          "noteKo": "시간, 인간 행위성, 사회변화를 생애과정 관점의 핵심 축으로 정리한 대표 논문이다."
+        },
+        {
+          "id": "lifecourse-elder-johnson-crosnoe-2003",
+          "role": "theory_synthesis",
+          "citation": "Elder, G. H., Jr., Johnson, M. K., & Crosnoe, R. (2003). The emergence and development of life course theory. In J. T. Mortimer & M. J. Shanahan (Eds.), Handbook of the Life Course (pp. 3-19). Springer.",
+          "doi": "10.1007/978-0-306-48247-2_1",
+          "url": "https://doi.org/10.1007/978-0-306-48247-2_1",
+          "noteKo": "생애과정 이론의 핵심 원리와 발전사를 정리한 표준 장이다."
+        },
+        {
+          "id": "lifecourse-bengtson-allen-1993",
+          "role": "family_life_course",
+          "citation": "Bengtson, V. L., & Allen, K. R. (1993). The life course perspective applied to families over time. In P. G. Boss, W. J. Doherty, R. LaRossa, W. R. Schumm, & S. K. Steinmetz (Eds.), Sourcebook of Family Theories and Methods (pp. 469-504). Springer.",
+          "doi": "10.1007/978-0-387-85764-0_19",
+          "url": "https://doi.org/10.1007/978-0-387-85764-0_19",
+          "noteKo": "가족관계와 세대관계를 생애과정 시간축으로 읽는 데 중요한 장이다."
+        },
+        {
+          "id": "lifecourse-george-1993",
+          "role": "transition_review",
+          "citation": "George, L. K. (1993). Sociological perspectives on life transitions. Annual Review of Sociology, 19, 353-373.",
+          "doi": "10.1146/annurev.so.19.080193.002033",
+          "url": "https://doi.org/10.1146/annurev.so.19.080193.002033",
+          "noteKo": "전환 사건과 역할 변화 연구를 생애과정 관점에서 정리한 주요 리뷰다."
+        }
+      ]
+    },
+    {
+      "theoryId": "cumulative-advantage-disadvantage",
+      "theoryName": "누적 이점·누적 불이익 관점",
+      "shortName": "CAD",
+      "works": [
+        {
+          "id": "cad-dannefer-1987",
+          "role": "origin_aging_application",
+          "citation": "Dannefer, D. (1987). Aging as intracohort differentiation: Accentuation, the Matthew effect, and the life course. Sociological Forum, 2, 211-236.",
+          "doi": "10.1007/BF01124164",
+          "url": "https://doi.org/10.1007/BF01124164",
+          "noteKo": "동일 코호트 내부의 불평등이 나이가 들수록 커지는 과정을 Matthew effect와 연결한 고전 논문이다."
+        },
+        {
+          "id": "cad-orand-1996",
+          "role": "core_life_course_extension",
+          "citation": "O'Rand, A. M. (1996). The precious and the precocious: Understanding cumulative disadvantage and cumulative advantage over the life course. The Gerontologist, 36(2), 230-238.",
+          "doi": "10.1093/geront/36.2.230",
+          "url": "https://doi.org/10.1093/geront/36.2.230",
+          "noteKo": "생애과정 전반에서 이점과 불이익이 누적되는 제도적 경로를 설명한 핵심 논문이다."
+        },
+        {
+          "id": "cad-dannefer-2003",
+          "role": "theory_synthesis",
+          "citation": "Dannefer, D. (2003). Cumulative advantage/disadvantage and the life course: Cross-fertilizing age and social science theory. The Journals of Gerontology: Series B, 58(6), S327-S337.",
+          "doi": "10.1093/geronb/58.6.S327",
+          "url": "https://doi.org/10.1093/geronb/58.6.S327",
+          "noteKo": "노화 연구와 사회과학 불평등 이론을 연결한 CAD의 대표 이론 종합 논문이다."
+        },
+        {
+          "id": "cad-diprete-eirich-2006",
+          "role": "general_inequality_review",
+          "citation": "DiPrete, T. A., & Eirich, G. M. (2006). Cumulative advantage as a mechanism for inequality: A review of theoretical and empirical developments. Annual Review of Sociology, 32, 271-297.",
+          "doi": "10.1146/annurev.soc.32.061604.123127",
+          "url": "https://doi.org/10.1146/annurev.soc.32.061604.123127",
+          "noteKo": "누적 이점 메커니즘을 불평등 이론 전반에서 정리한 폭넓은 리뷰다."
+        },
+        {
+          "id": "cad-ferraro-shippee-2009",
+          "role": "aging_health_model",
+          "citation": "Ferraro, K. F., & Shippee, T. P. (2009). Aging and cumulative inequality: How does inequality get under the skin? The Gerontologist, 49(3), 333-343.",
+          "doi": "10.1093/geront/gnp034",
+          "url": "https://doi.org/10.1093/geront/gnp034",
+          "noteKo": "누적 불평등이 노년기 건강 격차로 체화되는 과정을 설명한 노년학 핵심 논문이다."
+        }
+      ]
+    },
+    {
+      "theoryId": "successful-aging-model",
+      "theoryName": "성공적 노화 모델",
+      "shortName": "Successful Aging",
+      "works": [
+        {
+          "id": "successful-havighurst-1961",
+          "role": "early_concept",
+          "citation": "Havighurst, R. J. (1961). Successful aging. The Gerontologist, 1(1), 8-13.",
+          "doi": "10.1093/geront/1.1.8",
+          "url": "https://doi.org/10.1093/geront/1.1.8",
+          "noteKo": "성공적 노화라는 용어와 문제의식을 초기 노년학 맥락에서 제시한 고전이다."
+        },
+        {
+          "id": "successful-rowe-kahn-1987",
+          "role": "core_model_origin",
+          "citation": "Rowe, J. W., & Kahn, R. L. (1987). Human aging: Usual and successful. Science, 237(4811), 143-149.",
+          "doi": "10.1126/science.3299702",
+          "url": "https://doi.org/10.1126/science.3299702",
+          "noteKo": "일반적 노화와 성공적 노화를 구분한 Rowe와 Kahn 모델의 출발점이다."
+        },
+        {
+          "id": "successful-rowe-kahn-1997",
+          "role": "core_model_statement",
+          "citation": "Rowe, J. W., & Kahn, R. L. (1997). Successful aging. The Gerontologist, 37(4), 433-440.",
+          "doi": "10.1093/geront/37.4.433",
+          "url": "https://doi.org/10.1093/geront/37.4.433",
+          "noteKo": "질병/장애 낮음, 높은 기능, 적극적 삶 참여라는 3요소 모델을 널리 알린 핵심 논문이다."
+        },
+        {
+          "id": "successful-strawbridge-wallhagen-cohen-2002",
+          "role": "subjective_critique",
+          "citation": "Strawbridge, W. J., Wallhagen, M. I., & Cohen, R. D. (2002). Successful aging and well-being: Self-rated compared with Rowe and Kahn. The Gerontologist, 42(6), 727-733.",
+          "doi": "10.1093/geront/42.6.727",
+          "url": "https://doi.org/10.1093/geront/42.6.727",
+          "noteKo": "객관적 기준과 자기평가 기준의 차이를 보여 주며 성공적 노화 모델의 한계를 드러낸다."
+        },
+        {
+          "id": "successful-depp-jeste-2006",
+          "role": "review",
+          "citation": "Depp, C. A., & Jeste, D. V. (2006). Definitions and predictors of successful aging: A comprehensive review of larger quantitative studies. The American Journal of Geriatric Psychiatry, 14(1), 6-20.",
+          "doi": "10.1097/01.JGP.0000192501.03069.bc",
+          "url": "https://doi.org/10.1097/01.JGP.0000192501.03069.bc",
+          "noteKo": "성공적 노화 정의와 예측요인을 대규모 양적 연구 중심으로 검토한 대표 리뷰다."
+        },
+        {
+          "id": "successful-martinson-berridge-2015",
+          "role": "critical_review",
+          "citation": "Martinson, M., & Berridge, C. (2015). Successful aging: Contentious past, productive future. The Gerontologist, 55(1), 1-4.",
+          "doi": "10.1093/geront/gnv002",
+          "url": "https://doi.org/10.1093/geront/gnv002",
+          "noteKo": "성공적 노화 개념의 규범성과 배제 가능성을 검토하며 생산적 재구성을 제안한다."
+        }
+      ]
+    },
+    {
+      "theoryId": "ageism-stereotype-embodiment",
+      "theoryName": "노화 고정관념과 연령주의 관점",
+      "shortName": "Ageism",
+      "works": [
+        {
+          "id": "ageism-butler-1969",
+          "role": "origin_concept",
+          "citation": "Butler, R. N. (1969). Age-ism: Another form of bigotry. The Gerontologist, 9(4 Part 1), 243-246.",
+          "doi": "10.1093/geront/9.4_Part_1.243",
+          "url": "https://doi.org/10.1093/geront/9.4_Part_1.243",
+          "noteKo": "ageism이라는 용어를 제시한 고전 논문이다."
+        },
+        {
+          "id": "ageism-levy-1996",
+          "role": "experimental_foundation",
+          "citation": "Levy, B. (1996). Improving memory in old age through implicit self-stereotyping. Journal of Personality and Social Psychology, 71(6), 1092-1107.",
+          "doi": "10.1037/0022-3514.71.6.1092",
+          "url": "https://doi.org/10.1037/0022-3514.71.6.1092",
+          "noteKo": "암묵적 노화 고정관념이 기억 수행에 영향을 줄 수 있음을 보인 초기 실험 연구다."
+        },
+        {
+          "id": "ageism-levy-slade-kunkel-kasl-2002",
+          "role": "longitudinal_empirical_support",
+          "citation": "Levy, B. R., Slade, M. D., Kunkel, S. R., & Kasl, S. V. (2002). Longevity increased by positive self-perceptions of aging. Journal of Personality and Social Psychology, 83(2), 261-270.",
+          "doi": "10.1037/0022-3514.83.2.261",
+          "url": "https://doi.org/10.1037/0022-3514.83.2.261",
+          "noteKo": "노화 자기인식이 장기 생존과 관련될 수 있음을 보인 대표 종단 연구다."
+        },
+        {
+          "id": "ageism-levy-2003",
+          "role": "self_stereotype_review",
+          "citation": "Levy, B. R. (2003). Mind matters: Cognitive and physical effects of aging self-stereotypes. The Journals of Gerontology: Series B, 58(4), P203-P211.",
+          "doi": "10.1093/geronb/58.4.P203",
+          "url": "https://doi.org/10.1093/geronb/58.4.P203",
+          "noteKo": "노화 자기고정관념의 인지적, 신체적 효과를 정리한 핵심 논문이다."
+        },
+        {
+          "id": "ageism-levy-2009",
+          "role": "stereotype_embodiment_theory",
+          "citation": "Levy, B. (2009). Stereotype embodiment: A psychosocial approach to aging. Current Directions in Psychological Science, 18(6), 332-336.",
+          "doi": "10.1111/j.1467-8721.2009.01662.x",
+          "url": "https://doi.org/10.1111/j.1467-8721.2009.01662.x",
+          "noteKo": "고정관념이 생애에 걸쳐 내면화되고 건강 경로에 영향을 준다는 stereotype embodiment theory의 대표 논문이다."
+        },
+        {
+          "id": "ageism-ayalon-teschromer-2018",
+          "role": "contemporary_synthesis",
+          "citation": "Ayalon, L., & Tesch-Römer, C. (Eds.). (2018). Contemporary Perspectives on Ageism. Springer Open.",
+          "doi": "10.1007/978-3-319-73820-8",
+          "url": "https://doi.org/10.1007/978-3-319-73820-8",
+          "noteKo": "현대 연령주의 연구를 사회과학 관점에서 종합한 오픈액세스 편저다."
+        }
+      ]
+    }
+  ]
+}

@@ -79,6 +79,13 @@
 - `data/theories.json`을 추가해 카드뉴스 draft, 수집 보관함과 같은 수준의 `노화 이론` 섹션을 만들었다.
 - 프론트엔드는 카드뉴스/분야 상세에는 `featuredDrafts`를 사용하고, 수집 보관함에는 `archiveRecords`만 사용하도록 변경했다.
 - GitHub Actions 주간 draft 생성 명령에도 `--draft-limit-per-topic=5 --archive-days=365`를 반영했다.
+- `data/theory-papers.json`을 추가해 10개 노화 이론별 대표 원전/핵심 논문 52개를 정리했다.
+- 이론 문헌 정리는 현재 최신 draft와 연결하지 않았고, 이후 이론별 내용 정리와 이론-논문 자동 매칭의 입력 자료로 사용한다.
+- DOI가 있는 49개 항목은 `https://doi.org/...` 링크 응답을 점검했고, 단행본/도서 성격의 3개 항목은 출판사 또는 도서 서지 링크로 관리한다.
+- `data/theory-notes.json`을 추가해 10개 이론별 핵심 주장 5개, 대표 개념 4개, 개념 흐름, 다른 이론과의 관련성, 한계, 설명문 초안을 정리했다.
+- 운영 원칙: `theory-papers.json`은 내부 참고문헌 seed로 유지하고, 실제 화면에는 `theory-notes.json`의 압축 설명과 이론별 anchor work 2-3개만 노출한다.
+- 프론트의 노화 이론 섹션을 `data/theory-notes.json`, `data/theory-papers.json`과 연결했다.
+- 노화 이론 카드를 선택하면 핵심 주장, 대표 개념, 주장과 개념의 흐름, 다른 이론과의 관련성, 한계, anchor 문헌 3개가 상세 패널에 표시된다.
 
 다음 추천 순서:
 

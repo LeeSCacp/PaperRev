@@ -85,12 +85,21 @@ node .\scripts\build-drafts.mjs --windows=7,14,30,60,90,180 --rows=50 --min-topi
 - `data/raw/crossref-latest.json`: Crossref 원본에 가까운 수집 데이터
 - `data/drafts/article-drafts.json`: 정규화, 분류, 카드뉴스 초안이 포함된 검수 후보
 - `data/theories.json`: 카드뉴스와 함께 보여줄 노화심리·노년학 핵심 이론
+- `data/theory-papers.json`: 이론별 대표 원전과 핵심 논문 seed 목록
+- `data/theory-notes.json`: 이론별 핵심 주장, 대표 개념, 한계, 이론 간 흐름, 설명문 초안
 
 현재 draft 출력 구조:
 
 - `featuredDrafts`: 분야별 최신순 상위 5개, 화면의 카드뉴스 draft에 표시
 - `archiveRecords`: `featuredDrafts`에 포함되지 않은 나머지 수집 논문, 최근 1년만 유지
 - `records`: 이전 프론트 호환을 위한 대표 draft 목록이며 현재는 `featuredDrafts`와 동일
+
+이론 데이터 운영 방식:
+
+- `data/theory-papers.json`은 내부 참고문헌 창고입니다. 화면에 모든 문헌을 노출하지 않습니다.
+- `data/theory-notes.json`은 화면과 설명문 작성에 사용할 압축 정리본입니다.
+- 공개 화면에서는 이론별 설명과 anchor work 2-3개만 보여주고, 전체 대표 문헌은 상세/참고문헌 영역에서만 사용합니다.
+- 현재 노화 이론 섹션은 `theory-notes.json`과 `theory-papers.json`을 읽어 선택형 상세 패널을 렌더링합니다.
 
 주의:
 
@@ -127,6 +136,8 @@ GitHub Actions 워크플로가 매주 월요일 09:00 KST에 실행되도록 설
 ## 다음 구현 과제
 
 - 사람이 검수한 초안만 `data/articles.json`으로 승격하는 게시 스크립트
+- 대표 draft 선정 기준을 단순 최신순에서 점수 기반으로 개선
+- 이론별 설명과 최신 논문 draft를 키워드 기반으로 자동 연결
 - 초록 기반 카드뉴스 문장을 더 자연스러운 한국어로 바꾸는 요약 단계
 - draft preview/review 화면
 - GitHub Actions를 이용한 주기적 수집 자동화
