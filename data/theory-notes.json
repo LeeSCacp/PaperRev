@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-23",
+  "generatedAt": "2026-05-24",
   "scope": "Conceptual summaries for aging theory cards. These notes are not linked to current article drafts yet.",
   "displayPolicy": {
     "bibliographySeed": "data/theory-papers.json keeps a broad internal seed list for later verification and writing.",
-    "publicDisplay": "For the site, show the theory summary plus 2-3 anchor works per theory, not every representative work.",
-    "nextStep": "Use these notes to write theory-detail cards before implementing theory-to-latest-draft matching."
+    "publicDisplay": "For the site, show the theory summary plus 3-5 anchor works per theory: original/core works first, then a recent empirical anchor and/or the latest relevant meta-analysis when a clear fit exists.",
+    "nextStep": "Later, connect theory anchors to the latest article drafts through theory-paper matching; for now, anchors remain curated bibliography links."
   },
   "notes": [
     {
@@ -73,7 +73,9 @@
       "anchorWorkIds": [
         "sst-carstensen-isaacowitz-charles-1999",
         "sst-mather-carstensen-2005",
-        "sst-charles-carstensen-2010"
+        "sst-murphy-isaacowitz-2008-meta",
+        "sst-charles-carstensen-2010",
+        "sst-zsoldos-hot-2024"
       ]
     },
     {
@@ -142,7 +144,8 @@
       "anchorWorkIds": [
         "soc-baltes-baltes-1990",
         "soc-freund-baltes-2002-jpsp",
-        "soc-baltes-staudinger-lindenberger-1999"
+        "soc-baltes-staudinger-lindenberger-1999",
+        "soc-koh-etal-2025-technology"
       ]
     },
     {
@@ -212,7 +215,9 @@
       "anchorWorkIds": [
         "reserve-stern-2002",
         "stac-park-reuter-lorenz-2009",
-        "reserve-stern-etal-2020"
+        "reserve-stern-etal-2020",
+        "reserve-liu-etal-2024-meta",
+        "reserve-chen-etal-2024-validation"
       ]
     },
     {
@@ -281,7 +286,8 @@
       "anchorWorkIds": [
         "activity-havighurst-1961",
         "activity-lemon-bengtson-peterson-1972",
-        "activity-menec-2003"
+        "activity-menec-2003",
+        "activity-yi-etal-2025-social-participation-meta"
       ]
     },
     {
@@ -350,7 +356,8 @@
       "anchorWorkIds": [
         "continuity-atchley-1971",
         "continuity-atchley-1989",
-        "continuity-nimrod-kleiber-2007"
+        "continuity-nimrod-kleiber-2007",
+        "continuity-lim-song-2019"
       ]
     },
     {
@@ -419,7 +426,9 @@
       "anchorWorkIds": [
         "stress-pearlin-etal-1981",
         "stress-pearlin-mullan-semple-skaff-1990",
-        "stress-pearlin-2010"
+        "stress-pearlin-2010",
+        "stress-munoz-cruz-etal-2024-caregiver-meta",
+        "stress-lumini-etal-2025-digital-meta"
       ]
     },
     {
@@ -488,7 +497,9 @@
       "anchorWorkIds": [
         "lifecourse-elder-1974",
         "lifecourse-elder-1994",
-        "lifecourse-elder-johnson-crosnoe-2003"
+        "lifecourse-elder-johnson-crosnoe-2003",
+        "lifecourse-cheng-etal-2025-cognitive-aging-scoping",
+        "lifecourse-huang-etal-2025-healthy-aging"
       ]
     },
     {
@@ -557,7 +568,9 @@
       "anchorWorkIds": [
         "cad-dannefer-1987",
         "cad-dannefer-2003",
-        "cad-ferraro-shippee-2009"
+        "cad-ferraro-shippee-2009",
+        "cad-huang-etal-2025-healthy-aging",
+        "cad-xu-etal-2025-neighborhood-epigenetic-aging"
       ]
     },
     {
@@ -626,7 +639,9 @@
       "anchorWorkIds": [
         "successful-rowe-kahn-1987",
         "successful-rowe-kahn-1997",
-        "successful-martinson-berridge-2015"
+        "successful-martinson-berridge-2015",
+        "successful-zhou-etal-2025-prevalence-meta",
+        "successful-seong-etal-2024-kfacs"
       ]
     },
     {
@@ -695,7 +710,9 @@
       "anchorWorkIds": [
         "ageism-butler-1969",
         "ageism-levy-2009",
-        "ageism-ayalon-teschromer-2018"
+        "ageism-ayalon-teschromer-2018",
+        "ageism-zhu-etal-2024-spa-intervention-meta",
+        "ageism-ugwu-idemudia-2025-wellbeing-meta"
       ]
     }
   ]

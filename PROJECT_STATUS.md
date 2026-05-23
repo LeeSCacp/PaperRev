@@ -1,6 +1,6 @@
 # PaperRev 프로젝트 상태
 
-최종 업데이트: 2026-05-23 KST
+최종 업데이트: 2026-05-24 KST
 
 ## 프로젝트 목표
 
@@ -350,3 +350,10 @@ PaperRev는 다음 세 가지 질문에 답하는 사이트여야 한다.
 - Crossref 문서상 최신 수집에는 출판일만 쓰기보다 created/update/index date와 로컬 캐시를 고려해야 한다.
 - OpenAlex works API는 논문 목록에서 필터, 날짜/인용/관련도 정렬, OA 여부 등을 사용할 수 있다.
 - NCBI E-utilities는 PubMed/PMC 등 Entrez 데이터베이스 접근을 위한 공식 API다.
+## 2026-05-24 진행 기록
+
+- 노화 이론 섹션의 anchor 문헌 기준을 `대표 원전/핵심 이론 + 최신 핵심 실증논문 + 최신 메타분석`으로 재정리했다.
+- `data/theory-papers.json`에 최신 실증/메타분석 후보 16개를 추가했고, 내부 참고문헌 seed는 총 68개가 되었다.
+- `data/theory-notes.json`의 화면 노출용 `anchorWorkIds`를 이론별 3-5개로 제한했다.
+- Continuity theory는 이론 자체를 직접 다루는 최근 메타분석/실증 anchor가 명확하지 않아, 기존 원전/핵심 확장 논문에 2019년 개념분석 논문을 최신 보조 anchor로 유지했다.
+- JSON 검증 및 anchor ID 연결 검증 완료: 10개 이론 모두 missing anchor 없음.

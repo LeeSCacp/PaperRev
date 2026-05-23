@@ -488,7 +488,7 @@ function renderTheoryDetail() {
         ${renderTheoryBlock("한계와 주의점", note.limitations.map((item) => `<li>${item}</li>`).join(""), "ul")}
         <section class="theory-flow-card anchor-work-card">
           <h4>화면 노출용 anchor 문헌</h4>
-          <p>전체 대표 문헌은 내부 seed로 유지하고, 이론 설명에는 핵심 문헌 3개만 우선 노출합니다.</p>
+          <p>전체 대표 문헌은 내부 seed로 유지하고, 이론 설명에는 원전, 핵심 이론, 최신 실증/메타분석 anchor 3-5개만 노출합니다.</p>
           <div class="anchor-work-list">
             ${anchorWorks.map(renderAnchorWork).join("")}
           </div>

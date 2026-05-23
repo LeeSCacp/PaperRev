@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-23",
+  "generatedAt": "2026-05-24",
   "scope": "Representative original and key works for aging psychology and gerontology theories used in PaperRev.",
   "linkingPolicy": "Not linked to current article drafts yet. Use this file as a bibliography seed for later theory summaries and theory-paper matching.",
-  "selectionNote": "Works were selected as origin statements, core theoretical papers, major measurement or empirical extensions, reviews, or influential critiques. DOI links are provided when available; books and some chapters use publisher or bibliographic pages.",
+  "selectionNote": "Works were selected as origin statements, core theoretical papers, major measurement or empirical extensions, reviews, influential critiques, or recent empirical/meta-analytic anchors. Public theory cards should expose only 3-5 anchor works per theory; this file remains a broader bibliography seed.",
   "theories": [
     {
       "theoryId": "socioemotional-selectivity-theory",
@@ -48,6 +48,22 @@
           "doi": "10.1146/annurev.psych.093008.100448",
           "url": "https://doi.org/10.1146/annurev.psych.093008.100448",
           "noteKo": "사회정서적 노화 연구를 폭넓게 정리하는 리뷰로, SST를 정서노화 읽기의 중심 프레임으로 놓는다."
+        },
+        {
+          "id": "sst-murphy-isaacowitz-2008-meta",
+          "role": "meta_analysis",
+          "citation": "Murphy, N. A., & Isaacowitz, D. M. (2008). Preferences for emotional information in older and younger adults: A meta-analysis of memory and attention tasks. Psychology and Aging, 23(2), 263-286.",
+          "doi": "10.1037/0882-7974.23.2.263",
+          "url": "https://doi.org/10.1037/0882-7974.23.2.263",
+          "noteKo": "SST와 연결되는 positivity effect 근거를 기억과 주의 과제 전반에서 메타분석한 핵심 종합 논문이다."
+        },
+        {
+          "id": "sst-zsoldos-hot-2024",
+          "role": "recent_empirical",
+          "citation": "Zsoldos, I., & Hot, P. (2024). Limited time horizons lead to the positivity effect in attention, but not to more positive emotions: An investigation of the socioemotional selectivity theory. Psychology and Aging, 39(1), 46-58.",
+          "doi": "10.1037/pag0000781",
+          "url": "https://doi.org/10.1037/pag0000781",
+          "noteKo": "제한된 미래 시간 지각이 주의의 positivity effect와 관련되는지를 직접 검증한 최신 실증 anchor다."
         }
       ]
     },
@@ -95,6 +111,14 @@
           "doi": "10.1006/jvbe.2001.1835",
           "url": "https://doi.org/10.1006/jvbe.2001.1835",
           "noteKo": "SOC가 일과 경력 맥락의 적응 및 정서적 안녕과 어떻게 연결되는지 보여주는 응용 연구다."
+        },
+        {
+          "id": "soc-koh-etal-2025-technology",
+          "role": "recent_empirical_qualitative",
+          "citation": "Koh, W. Q., Ludlow, K., Liddle, J., & Pachana, N. A. (2025). Selection, Optimization, and Compensation Strategies Used by Older Adults to Live Well With Technology: Qualitative Study. JMIR Aging, 8, e75019.",
+          "doi": "10.2196/75019",
+          "url": "https://doi.org/10.2196/75019",
+          "noteKo": "SOC 전략이 노년층의 기술 사용과 일상 적응에서 어떻게 나타나는지 보여주는 최신 질적 실증 연구다."
         }
       ]
     },
@@ -142,6 +166,22 @@
           "doi": "10.1016/j.jalz.2018.07.219",
           "url": "https://doi.org/10.1016/j.jalz.2018.07.219",
           "noteKo": "인지 예비능, 뇌 예비능, 뇌 유지 개념을 구분하는 합의형 정의 자료다."
+        },
+        {
+          "id": "reserve-liu-etal-2024-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Liu, Y., Lu, G., Liu, L., He, Y., & Gong, W. (2024). Cognitive reserve over the life course and risk of dementia: A systematic review and meta-analysis. Frontiers in Aging Neuroscience, 16.",
+          "doi": "10.3389/fnagi.2024.1358992",
+          "url": "https://doi.org/10.3389/fnagi.2024.1358992",
+          "noteKo": "생애과정 전반의 인지 예비능과 치매 위험을 종합한 최신 메타분석 anchor다."
+        },
+        {
+          "id": "reserve-chen-etal-2024-validation",
+          "role": "recent_empirical",
+          "citation": "Chen, H., Hu, J., Gui, S., Li, Q., Wang, J., Yang, X., et al. (2024). Longitudinal validation of cognitive reserve proxy measures: A cohort study in a rural Chinese community. Alzheimer's Research & Therapy, 16(1).",
+          "doi": "10.1186/s13195-024-01451-6",
+          "url": "https://doi.org/10.1186/s13195-024-01451-6",
+          "noteKo": "인지 예비능 대리 지표의 타당성을 종단 코호트에서 검증한 최신 실증 anchor다."
         }
       ]
     },
@@ -189,6 +229,14 @@
           "doi": "10.1093/geronb/58.2.S74",
           "url": "https://doi.org/10.1093/geronb/58.2.S74",
           "noteKo": "일상 활동과 성공적 노화의 관계를 종단적으로 검토한 후속 핵심 연구다."
+        },
+        {
+          "id": "activity-yi-etal-2025-social-participation-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Yi, M., Chen, S., Chao, J., Ma, Y., Li, X., Zhang, H., et al. (2025). Comparative effectiveness and acceptability of non-pharmacological interventions on improving social participation among older adults: A Bayesian network meta-analysis of randomised controlled trials. Age and Ageing, 54(7).",
+          "doi": "10.1093/ageing/afaf193",
+          "url": "https://doi.org/10.1093/ageing/afaf193",
+          "noteKo": "노년층 사회참여를 높이는 비약물 개입의 효과를 비교한 최신 네트워크 메타분석 anchor다."
         }
       ]
     },
@@ -283,6 +331,22 @@
           "doi": "10.1093/geronb/gbp106",
           "url": "https://doi.org/10.1093/geronb/gbp106",
           "noteKo": "생애과정 개념과 스트레스 과정 개념을 비교해 두 프레임의 접점을 정리한다."
+        },
+        {
+          "id": "stress-munoz-cruz-etal-2024-caregiver-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Munoz-Cruz, J. C., Lopez-Martinez, C., Orgeta, V., & Del-Pino-Casado, R. (2024). Subjective caregiver burden and coping in family carers of dependent adults and older people: A systematic review and meta-analysis. Stress and Health, 40(4).",
+          "doi": "10.1002/smi.3395",
+          "url": "https://doi.org/10.1002/smi.3395",
+          "noteKo": "가족 돌봄자의 주관적 부담과 대처를 종합해 stress process의 돌봄 맥락을 보강하는 최신 메타분석이다."
+        },
+        {
+          "id": "stress-lumini-etal-2025-digital-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Lumini, M. J., Franca, D., Sousa, M. R., Araujo, F., Cardoso, C., Sa, M., et al. (2025). Efficacy of digital technology-based interventions for reducing caregiver burden and stress: A systematic review and meta-analysis. Frontiers in Digital Health, 7.",
+          "doi": "10.3389/fdgth.2025.1636084",
+          "url": "https://doi.org/10.3389/fdgth.2025.1636084",
+          "noteKo": "디지털 기반 돌봄자 부담 및 스트레스 감소 개입을 종합한 최신 메타분석 anchor다."
         }
       ]
     },
@@ -330,6 +394,22 @@
           "doi": "10.1146/annurev.so.19.080193.002033",
           "url": "https://doi.org/10.1146/annurev.so.19.080193.002033",
           "noteKo": "전환 사건과 역할 변화 연구를 생애과정 관점에서 정리한 주요 리뷰다."
+        },
+        {
+          "id": "lifecourse-cheng-etal-2025-cognitive-aging-scoping",
+          "role": "recent_scoping_review",
+          "citation": "Cheng, M., Van Herreweghe, L., Gireesh, A., Sieber, S., Ferraro, K. F., & Cullati, S. (2025). Life course socioeconomic position and cognitive aging in later life: A scoping review. Advances in Life Course Research, 64, 100670.",
+          "doi": "10.1016/j.alcr.2025.100670",
+          "url": "https://doi.org/10.1016/j.alcr.2025.100670",
+          "noteKo": "생애과정 사회경제적 위치와 노년기 인지노화의 연결을 정리한 최신 scoping review anchor다."
+        },
+        {
+          "id": "lifecourse-huang-etal-2025-healthy-aging",
+          "role": "recent_empirical_multicohort",
+          "citation": "Huang, Z., Lai, E. T. C., Hashimoto, H., Marmot, M., & Woo, J. (2025). Life-course socioeconomic inequalities, social mobility and healthy aging in older adults: A multi-cohort study. Archives of Gerontology and Geriatrics, 133, 105829.",
+          "doi": "10.1016/j.archger.2025.105829",
+          "url": "https://doi.org/10.1016/j.archger.2025.105829",
+          "noteKo": "생애과정 불평등과 사회이동성이 건강한 노화와 연결되는 방식을 다중 코호트로 검증한 최신 실증 anchor다."
         }
       ]
     },
@@ -377,6 +457,22 @@
           "doi": "10.1093/geront/gnp034",
           "url": "https://doi.org/10.1093/geront/gnp034",
           "noteKo": "누적 불평등이 노년기 건강 격차로 체화되는 과정을 설명한 노년학 핵심 논문이다."
+        },
+        {
+          "id": "cad-huang-etal-2025-healthy-aging",
+          "role": "recent_empirical_multicohort",
+          "citation": "Huang, Z., Lai, E. T. C., Hashimoto, H., Marmot, M., & Woo, J. (2025). Life-course socioeconomic inequalities, social mobility and healthy aging in older adults: A multi-cohort study. Archives of Gerontology and Geriatrics, 133, 105829.",
+          "doi": "10.1016/j.archger.2025.105829",
+          "url": "https://doi.org/10.1016/j.archger.2025.105829",
+          "noteKo": "누적된 사회경제적 이점 및 불이익과 사회이동성이 건강한 노화 격차로 이어지는 경로를 보여주는 최신 실증 anchor다."
+        },
+        {
+          "id": "cad-xu-etal-2025-neighborhood-epigenetic-aging",
+          "role": "recent_empirical",
+          "citation": "Xu, W., Kamis, C., Clark, J., Schultz, A., Engelman, M., & Malecki, K. (2025). Cumulative neighborhood disadvantage and racial and geographic disparities in epigenetic aging. SSM - Population Health, 31, 101825.",
+          "doi": "10.1016/j.ssmph.2025.101825",
+          "url": "https://doi.org/10.1016/j.ssmph.2025.101825",
+          "noteKo": "지역사회 누적 불이익이 후성유전학적 노화 격차와 연결되는 방식을 보여주는 최신 실증 anchor다."
         }
       ]
     },
@@ -432,6 +528,22 @@
           "doi": "10.1093/geront/gnv002",
           "url": "https://doi.org/10.1093/geront/gnv002",
           "noteKo": "성공적 노화 개념의 규범성과 배제 가능성을 검토하며 생산적 재구성을 제안한다."
+        },
+        {
+          "id": "successful-zhou-etal-2025-prevalence-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Zhou, Y., Sun, Y., Pan, Y., Dai, Y., Xiao, Y., Yu, Y., et al. (2025). Prevalence of successful aging in older adults: A systematic review and meta-analysis. Archives of Gerontology and Geriatrics, 128, 105604.",
+          "doi": "10.1016/j.archger.2024.105604",
+          "url": "https://doi.org/10.1016/j.archger.2024.105604",
+          "noteKo": "성공적 노화의 유병률과 분포를 종합한 최신 메타분석 anchor다."
+        },
+        {
+          "id": "successful-seong-etal-2024-kfacs",
+          "role": "recent_empirical",
+          "citation": "Seong, H., Kim, S., Shin, H., Won, C. W., & Kim, Y.-J. (2024). Changes in successful aging and its related indicators among community-dwelling older adults: The Korean Frailty and Aging Cohort Study (KFACS). Geriatric Nursing, 59, 392-400.",
+          "doi": "10.1016/j.gerinurse.2024.07.027",
+          "url": "https://doi.org/10.1016/j.gerinurse.2024.07.027",
+          "noteKo": "한국 지역사회 노년층 코호트에서 성공적 노화와 관련 지표 변화를 검토한 최신 실증 anchor다."
         }
       ]
     },
@@ -487,6 +599,22 @@
           "doi": "10.1007/978-3-319-73820-8",
           "url": "https://doi.org/10.1007/978-3-319-73820-8",
           "noteKo": "현대 연령주의 연구를 사회과학 관점에서 종합한 오픈액세스 편저다."
+        },
+        {
+          "id": "ageism-zhu-etal-2024-spa-intervention-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Zhu, M., Chen, H., Ding, X., & Li, Z. (2024). Effects of Self-Perception of Aging Interventions in Older Adults: A Systematic Review and Meta-Analysis. The Gerontologist, 65(4).",
+          "doi": "10.1093/geront/gnae127",
+          "url": "https://doi.org/10.1093/geront/gnae127",
+          "noteKo": "노화 자기인식 개입의 효과를 종합한 최신 메타분석 anchor다."
+        },
+        {
+          "id": "ageism-ugwu-idemudia-2025-wellbeing-meta",
+          "role": "recent_meta_analysis",
+          "citation": "Ugwu, L. E., & Idemudia, E. S. (2025). Perceptions of Ageing and Psychological Well-Being in Older Adults: A Systematic Review and Meta-Analysis. Research on Aging.",
+          "doi": "10.1177/01640275251391173",
+          "url": "https://doi.org/10.1177/01640275251391173",
+          "noteKo": "노화 인식과 심리적 안녕감의 관련성을 종합한 최신 메타분석 anchor다."
         }
       ]
     }
