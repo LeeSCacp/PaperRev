@@ -21,8 +21,8 @@ const els = {
 
 async function loadArchive() {
   const [topicsResponse, draftResponse] = await Promise.all([
-    fetch("./data/topics.json"),
-    fetch("./data/drafts/article-drafts.json"),
+    fetch("./data/topics.json", { cache: "no-store" }),
+    fetch("./data/drafts/article-drafts.json", { cache: "no-store" }),
   ]);
 
   state.topics = await topicsResponse.json();

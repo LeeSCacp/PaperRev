@@ -387,3 +387,54 @@ PaperRev는 다음 세 가지 질문에 답하는 사이트여야 한다.
 1. 새 점수 기반 featured 35개를 사용자 관점에서 훑어보고, 명백히 어색한 분야 배치가 있는지 1차 검수한다.
 2. 검수 결과를 바탕으로 `TOPIC_RULES`의 negative keyword와 저널 보정값을 한 번 더 조정한다.
 3. 그 다음 `featured-curation.json`을 새 featured 목록 기준으로 갱신하거나, OpenAI API 연결 이후 자동 한국어 핵심 메시지 생성으로 대체한다.
+
+## 2026-05-24 featured 1차 검수 및 분류 규칙 2차 보정
+
+완료:
+
+- 새 featured 35개의 `topicId`, `featuredScore`, `topicScore`, `classificationConfidence`, 상위 3개 분야 점수를 함께 검수했다.
+- `Health and Retirement Study`가 제목/초록에 포함된 생물학·의학 논문이 단순히 `retirement` 키워드 때문에 일·은퇴·연령주의로 들어가는 문제를 확인했다.
+- `digital handwriting`, `kinematics`, `physical performance`, `community-dwelling` 조합의 논문이 사회적 노화로 들어가는 문제를 확인했다.
+- `scripts/build-drafts.mjs`의 `TOPIC_RULES`를 보정했다.
+  - 인지노화: `cognitive functioning`, `cognitive decline`, `cognitive trajectories`, `pentagon-copy` 보강.
+  - 사회적 노화: `community`의 과대 분류를 줄이고, `digital handwriting`, `kinematics`, `physical performance`를 제외 신호로 추가.
+  - 건강행동·디지털헬스: `fall risk`, `gait`, `balance`, `physical function`, `physical performance`, `digital handwriting`, `kinematics` 보강.
+  - 일·은퇴·연령주의: `health and retirement study`, `polygenic`, `kidney function`, `immune aging`, `mortality`를 제외 신호로 추가.
+- 같은 명령으로 draft를 재생성했다.
+- 재생성 결과: selected window 30일, total collected 330개, featured 35개, archive 295개.
+- 분야별 featured는 7개 분야 모두 5개씩 유지된다.
+
+검수 결과:
+
+- 명백한 오분류였던 `Digital Handwriting Kinematics and Physical Performance...`는 사회적 노화에서 건강행동·디지털헬스로 이동했다.
+- `Evaluating the Predictive Utility of ... Polygenic Risk Scores for Kidney Function...`와 `Widowhood, Immune Aging, and Mortality...`는 일·은퇴·연령주의 featured에서 제외됐다.
+- 일·은퇴·연령주의 분야는 오분류를 제거한 결과 14일 범위만으로 5개를 채우지 못해 30일 범위까지 확장됐다. 이는 분야별 최소 5개 확보 정책에 맞는 동작이다.
+- 남은 애매한 사례는 교차 주제 성격이 강하다. 예: `Mindfulness and Rumination... Caregivers... Dementia`는 정서노화와 돌봄·가족이 겹치고, `Volunteering and cognitive functioning...`은 인지노화와 사회적 노화가 겹친다.
+
+다음 추천:
+
+1. 새 featured 35개 기준으로 `featured-curation.json`을 다시 맞춘다.
+2. 이후 검수 화면에서 `topicScores`와 `featuredSignals`를 노출해, 사람이 “분야 유지/분야 변경/보류”를 판단할 수 있게 한다.
+3. 교차 주제 논문은 단일 `topicId`만 쓰지 않고 `secondaryTopicIds`를 화면에 보조 배지로 표시하는 방식을 검토한다.
+
+## 2026-05-24 새 featured 기준 curation 갱신
+
+완료:
+
+- `data/drafts/featured-curation.json`을 현재 featured 35개와 1:1로 맞춰 전면 갱신했다.
+- 기존 파일에 남아 있던 이전 featured 키와 깨진 문자열을 제거했다.
+- 35개 전체에 대해 읽을 수 있는 한국어 `cardTitle`과 5장 카드뉴스 deck(`question`, `method`, `finding`, `meaning`, `caution`)을 작성했다.
+- `app.js`에 남아 있던 오래된 내장 curation fallback을 제거하고, JSON 데이터 fetch에 `cache: "no-store"`를 적용했다.
+- `index.html`과 `archive.html`의 로컬 스크립트 URL에 버전 쿼리를 붙여 GitHub Pages에서 이전 JS가 캐시되어 보이는 문제를 줄였다.
+- 검증 결과: featured 35개, curation 35개, 누락 0개, 초과 0개, 필수 deck 필드 누락 0개.
+
+남은 내용:
+
+- 일부 논문은 교차 주제 성격이 강하다. 예: 치매 가족돌봄자의 마음챙김 연구는 정서노화와 돌봄·가족이 겹치고, 자원봉사와 인지기능 연구는 인지노화와 사회적 노화가 겹친다.
+- 다음 화면 개선에서는 `secondaryTopicIds` 또는 보조 분야 배지를 추가하면 사용자에게 더 자연스럽게 보일 수 있다.
+
+다음 추천:
+
+1. 검수용 preview/review 화면을 만든다.
+2. 이 화면에서 `featuredScore`, `topicScores`, `classificationConfidence`, `featuredSignals`, curation deck을 함께 보여주고 “분야 유지/분야 변경/보류”를 선택할 수 있게 한다.
+3. 그 뒤 OpenAI API 연결 시에는 이 검수 화면을 사람이 최종 승인하는 단계로 사용한다.

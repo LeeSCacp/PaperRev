@@ -11,9 +11,9 @@ const USER_AGENT = "PaperRev prototype; mailto=paperrev@example.com";
 
 const TOPIC_RULES = {
   "cognitive-aging": {
-    strong: ["cognitive aging", "cognition", "cognitive function", "memory", "episodic memory", "working memory"],
-    medium: ["attention", "executive function", "processing speed", "dual-task", "neuropsychological", "cognitive performance"],
-    weak: ["brain", "learning", "reasoning", "decision making", "cognitive health"],
+    strong: ["cognitive aging", "cognition", "cognitive function", "cognitive functioning", "cognitive decline", "memory", "episodic memory", "working memory"],
+    medium: ["attention", "executive function", "processing speed", "dual-task", "neuropsychological", "cognitive performance", "cognitive trajectories", "pentagon-copy"],
+    weak: ["brain", "learning", "reasoning", "decision making", "cognitive health", "handwriting kinematics"],
     negative: ["dementia", "alzheimer", "caregiver", "caregiving", "frailty"],
     journals: ["psychology-and-aging", "aging-neuropsychology-cognition", "experimental-aging-research", "gerontology-series-b"],
   },
@@ -26,9 +26,9 @@ const TOPIC_RULES = {
   },
   "social-aging": {
     strong: ["social isolation", "social engagement", "social participation", "social support", "loneliness"],
-    medium: ["social", "culture", "cultural", "relationship", "community", "neighborhood", "age perception"],
-    weak: ["old age", "environment", "urban", "rural", "immigrant", "identity", "inequality", "policy"],
-    negative: ["cognitive impairment", "dementia", "caregiver", "physical activity", "employment"],
+    medium: ["social", "culture", "cultural", "relationship", "neighborhood", "age perception", "widowhood"],
+    weak: ["old age", "environment", "urban", "rural", "immigrant", "identity", "inequality", "policy", "community-dwelling"],
+    negative: ["cognitive impairment", "dementia", "caregiver", "physical activity", "employment", "digital handwriting", "kinematics", "physical performance"],
     journals: ["ageing-and-society", "research-on-aging", "the-gerontologist", "gerontology-series-b"],
   },
   "dementia-cognitive-impairment": {
@@ -46,9 +46,9 @@ const TOPIC_RULES = {
     journals: ["dementia", "the-gerontologist", "journal-of-applied-gerontology", "bmc-geriatrics"],
   },
   "digital-health-behavior": {
-    strong: ["digital health", "mhealth", "ehealth", "physical activity", "exercise", "falls", "fall prevention"],
-    medium: ["web-based", "technology", "mobile", "app", "wearable", "driving", "sleep", "health behavior"],
-    weak: ["intervention", "telehealth", "remote", "sensor", "rehabilitation", "frailty", "functional decline"],
+    strong: ["digital health", "mhealth", "ehealth", "physical activity", "exercise", "falls", "fall prevention", "fall risk", "gait", "balance", "physical function", "physical performance"],
+    medium: ["web-based", "technology", "mobile", "app", "wearable", "driving", "driving safety", "sleep", "health behavior", "digital handwriting", "kinematics"],
+    weak: ["intervention", "telehealth", "remote", "sensor", "rehabilitation", "frailty", "functional decline", "healthspan"],
     negative: ["employment", "ageism", "caregiver burden", "dementia care"],
     journals: ["jmir-aging", "journal-of-aging-and-health", "gerontology-series-a", "age-and-ageing", "bmc-geriatrics"],
   },
@@ -56,7 +56,7 @@ const TOPIC_RULES = {
     strong: ["ageism", "retirement", "employment", "older worker", "workplace", "work ability"],
     medium: ["work", "worker", "labor", "labour", "age-inclusive", "manager", "pension", "productive aging"],
     weak: ["job", "career", "volunteering", "discrimination", "organizational", "workforce"],
-    negative: ["dementia", "caregiver", "falls", "biomarker"],
+    negative: ["dementia", "caregiver", "falls", "biomarker", "health and retirement study", "polygenic", "kidney function", "immune aging", "mortality"],
     journals: ["ageing-and-society", "research-on-aging", "the-gerontologist", "gerontology-series-b"],
   },
 };

@@ -1,104 +1,4 @@
-const curation = {
-  "10.2196-79630": {
-    topicId: "digital-health-behavior",
-    questionIds: ["can-digital-health-help"],
-    deck: {
-      question: "고령 운전자를 위한 웹 자료는 어떤 조건에서 실제로 도움이 될까?",
-      method: "고령 운전자와 일반의를 대상으로 인터뷰와 포커스그룹을 진행하고, 웹 기반 운전 안전 자료의 요구와 사용성을 점검했습니다.",
-      finding: "큰 글꼴, 쉬운 언어, 직관적 탐색, 신뢰할 수 있는 실천 조언이 핵심 요구로 나타났습니다.",
-      meaning: "디지털 자료는 정보 제공을 넘어 고령자와 임상의가 운전 안전을 함께 논의하는 도구가 될 수 있습니다.",
-      caution: "디지털 문해력과 온라인 정보 신뢰도 문제를 해결하지 않으면 실제 사용으로 이어지기 어렵습니다.",
-    },
-  },
-  "10.2196-79386": {
-    topicId: "dementia-cognitive-impairment",
-    questionIds: ["what-happens-after-screening"],
-    deck: {
-      question: "인지장애 선별 이후 사람들은 왜 진료를 받지 못할까?",
-      method: "MCI 또는 치매 선별 후 진료 연결 경험을 환자와 돌봄자 인터뷰로 분석하고 COM-B 틀에 매핑했습니다.",
-      finding: "건강 문해력, 복잡한 의료 절차, 문화적 치매 인식, 돌봄자의 근무 여건이 장벽과 촉진 요인으로 작동했습니다.",
-      meaning: "조기 발견의 가치는 발견 후 실제 진료와 지원으로 이어지는 경로를 설계할 때 커집니다.",
-      caution: "선별 도구의 정확성뿐 아니라 의료 접근성과 사후 안내 체계까지 함께 평가해야 합니다.",
-    },
-  },
-  "10.2196-87577": {
-    topicId: "digital-health-behavior",
-    questionIds: ["can-digital-health-help", "does-memory-always-decline"],
-    deck: {
-      question: "앱 기반 dual-task 운동은 낙상 경험 고령자에게 지속 가능할까?",
-      method: "낙상 경험이 있는 65세 이상 고령자에게 감독형 수업과 자기주도 앱 훈련을 결합한 24주 프로그램을 적용했습니다.",
-      finding: "앱 사용률은 높았고 초기 감독형 단계의 순응도가 더 높았습니다. 사회적 연결과 맞춤 운동이 지속 참여의 핵심으로 보고됐습니다.",
-      meaning: "디지털 중재는 혼자 쓰는 앱보다 지역사회 수업, 전문가 지원, 자기주도 훈련을 섞을 때 실행 가능성이 높아집니다.",
-      caution: "단일군 실행 가능성 연구이므로 효과 검증을 위해서는 대조군이 있는 본시험이 필요합니다.",
-    },
-  },
-  "10.1093-geroni-igag056": {
-    topicId: "caregiving-family",
-    questionIds: ["what-do-caregivers-need"],
-    deck: {
-      question: "병원에서 집으로 돌아올 때 돌봄자는 어떤 지원 공백을 겪을까?",
-      method: "여러 장기질환과 치매를 가진 고령자의 퇴원 전환 과정에서 무급 돌봄자 인터뷰를 realist evaluation 관점으로 분석했습니다.",
-      finding: "정보 관리, 돌봄자 안녕, 지원 접근성이 서로 얽혀 전환 경험을 좌우했습니다.",
-      meaning: "전환돌봄의 안전성은 환자 중심 안내만으로 부족하며, 돌봄자를 직접 지원하는 정보 조정 체계가 필요합니다.",
-      caution: "디지털 해결책은 돌봄자의 시간, 역량, 정서적 부담을 고려해 설계되어야 합니다.",
-    },
-  },
-  "10.1093-geroni-igag049": {
-    topicId: "work-retirement-ageism",
-    questionIds: ["can-ageism-change"],
-    deck: {
-      question: "미래 관리자들의 고령 근로자 인식은 짧은 수업으로 바뀔까?",
-      method: "경영학 학생에게 노화 지식 피드백과 고령 근로자 영상 자료를 제공하고 태도 변화를 추적했습니다.",
-      finding: "고령 근로자의 적응성, 성실성, 가치에 대한 인식이 개선됐고 일부 변화는 1개월 뒤에도 유지됐습니다.",
-      meaning: "연령주의 완화에는 사실 정보뿐 아니라 세대 간 접촉과 정서적 이미지 변화가 함께 필요합니다.",
-      caution: "태도 변화가 실제 채용, 협업, 조직 행동으로 이어지는지는 별도 검증이 필요합니다.",
-    },
-  },
-  "10.1093-geront-gnag110": {
-    topicId: "caregiving-family",
-    questionIds: ["what-do-caregivers-need"],
-    deck: {
-      question: "치매 돌봄자의 미충족 요구는 어떻게 제대로 측정할 수 있을까?",
-      method: "치매 가족·친구 돌봄자를 대상으로 Benjamin Rose Unmet Need Instrument의 요인 구조와 신뢰도를 검토했습니다.",
-      finding: "총점과 하위척도가 높은 내적 일관성을 보였고, 우울 증상 및 돌봄 부담과의 관련성도 확인됐습니다.",
-      meaning: "돌봄자 지원 프로그램의 효과를 평가하려면 돌봄자의 구체적 요구를 측정하는 도구가 필요합니다.",
-      caution: "경증 치매, 시설 거주자, 다양한 문화권 돌봄자에게도 같은 타당도가 유지되는지 추가 검증이 필요합니다.",
-    },
-  },
-  "10.1093-geront-gnag105": {
-    topicId: "emotional-aging",
-    questionIds: ["what-supports-mental-health"],
-    deck: {
-      question: "도시 환경은 고령자의 정신건강과 어떻게 연결될까?",
-      method: "2000-2024년 발표된 리뷰 논문들을 다시 종합해 도시의 물리적·사회적 환경과 정신건강의 관련성을 정리했습니다.",
-      finding: "서비스 접근성, 녹지와 여가공간, 이동 인프라, 사회적 포용, 지역사회 역경이 반복적으로 등장했습니다.",
-      meaning: "노년기 정신건강 개입은 개인 상담만이 아니라 도시 설계와 사회환경 개선까지 포함할 수 있습니다.",
-      caution: "저소득층, 비서구권, 다양한 지역 맥락에 대한 근거가 아직 충분하지 않습니다.",
-    },
-  },
-  "10.1093-geronb-gbag086": {
-    topicId: "social-aging",
-    questionIds: ["how-culture-shapes-care", "what-do-caregivers-need"],
-    deck: {
-      question: "문화는 치매 가족돌봄을 지지하기도, 어렵게 만들기도 할까?",
-      method: "라틴계 치매 가족 돌봄자를 인터뷰하고 문화가 돌봄 동기와 장벽에 미치는 영향을 분석했습니다.",
-      finding: "가족 돌봄 가치는 회복탄력성의 원천이지만, 치매에 대한 문화적 믿음과 구조적 장벽은 부담을 키웠습니다.",
-      meaning: "돌봄 지원은 문화적 강점을 존중하면서도 서비스 접근 장벽을 줄이는 방식으로 설계되어야 합니다.",
-      caution: "문화 집단을 하나로 단순화하지 않고 가족 구조, 이민 경험, 경제적 조건의 차이를 함께 봐야 합니다.",
-    },
-  },
-  "10.1093-geronb-gbag083": {
-    topicId: "social-aging",
-    questionIds: ["how-does-society-define-old-age"],
-    deck: {
-      question: "사람들이 생각하는 '노년의 시작'은 왜 늦어지고 있을까?",
-      method: "유럽 17개국의 2006년과 2018년 자료를 비교해 노년 시작 연령 인식과 거시 지표의 관련성을 분석했습니다.",
-      finding: "평균적으로 노년 시작은 2018년에 더 늦게 인식됐고, 은퇴 연령과 건강수명 같은 국가 수준 요인이 관련됐습니다.",
-      meaning: "노화 인식은 개인의 나이 감각이 아니라 정책, 노동시장, 건강 기대의 변화와 함께 움직입니다.",
-      caution: "국가별 제도와 성별 인식 차이를 일반화하기 전에 문화권별 추가 검증이 필요합니다.",
-    },
-  },
-};
+const curation = {};
 
 const state = {
   topics: [],
@@ -143,12 +43,12 @@ const els = {
 async function loadData() {
   const [topicsResponse, questionsResponse, theoriesResponse, theoryNotesResponse, theoryPapersResponse, curationResponse, articleData] =
     await Promise.all([
-    fetch("./data/topics.json"),
-    fetch("./data/questions.json"),
-    fetch("./data/theories.json"),
-    fetch("./data/theory-notes.json"),
-    fetch("./data/theory-papers.json"),
-    fetch("./data/drafts/featured-curation.json"),
+    fetch("./data/topics.json", { cache: "no-store" }),
+    fetch("./data/questions.json", { cache: "no-store" }),
+    fetch("./data/theories.json", { cache: "no-store" }),
+    fetch("./data/theory-notes.json", { cache: "no-store" }),
+    fetch("./data/theory-papers.json", { cache: "no-store" }),
+    fetch("./data/drafts/featured-curation.json", { cache: "no-store" }),
     fetchArticleData(),
   ]);
 
@@ -171,7 +71,7 @@ async function loadData() {
 }
 
 async function fetchArticleData() {
-  const draftResponse = await fetch("./data/drafts/article-drafts.json");
+  const draftResponse = await fetch("./data/drafts/article-drafts.json", { cache: "no-store" });
   if (draftResponse.ok) {
     const draftPayload = await draftResponse.json();
     const featuredDrafts = Array.isArray(draftPayload.featuredDrafts)
@@ -188,7 +88,7 @@ async function fetchArticleData() {
     }
   }
 
-  const publishedResponse = await fetch("./data/articles.json");
+  const publishedResponse = await fetch("./data/articles.json", { cache: "no-store" });
   const records = await publishedResponse.json();
   return {
     mode: "published",

@@ -154,4 +154,6 @@ GitHub Actions 워크플로가 매주 월요일 09:00 KST에 실행되도록 설
 - 선정 근거: 각 draft에 `featuredSignals`를 저장합니다.
 - 분야별 노출 수: 기존처럼 7개 분야별 5개씩, 총 35개 featured draft를 유지합니다.
 
-현재 재생성 결과는 14일 범위에서 133개를 수집했고, featured 35개와 archive 98개로 분리됩니다.
+현재 보정 후 재생성 결과는 30일 범위에서 330개를 수집했고, featured 35개와 archive 295개로 분리됩니다.
+
+`data/drafts/featured-curation.json`은 현재 featured 35개와 1:1로 맞춰 갱신되어 있으며, 각 항목은 한국어 카드 제목과 5장 카드뉴스 문구를 포함합니다.
