@@ -108,6 +108,7 @@ const state = {
   theories: [],
   theoryNotes: [],
   theoryPapers: [],
+  articleCuration: {},
   articleMeta: {},
   articleDataMode: "published",
   selectedTopicId: "cognitive-aging",
@@ -136,16 +137,18 @@ const els = {
   articleCount: document.querySelector("#articleCount"),
   topicCount: document.querySelector("#topicCount"),
   issueWindow: document.querySelector("#issueWindow"),
+  issueSummary: document.querySelector("#issueSummary"),
 };
 
 async function loadData() {
-  const [topicsResponse, questionsResponse, theoriesResponse, theoryNotesResponse, theoryPapersResponse, articleData] =
+  const [topicsResponse, questionsResponse, theoriesResponse, theoryNotesResponse, theoryPapersResponse, curationResponse, articleData] =
     await Promise.all([
     fetch("./data/topics.json"),
     fetch("./data/questions.json"),
     fetch("./data/theories.json"),
     fetch("./data/theory-notes.json"),
     fetch("./data/theory-papers.json"),
+    fetch("./data/drafts/featured-curation.json"),
     fetchArticleData(),
   ]);
 
@@ -154,6 +157,7 @@ async function loadData() {
   state.theories = await theoriesResponse.json();
   state.theoryNotes = (await theoryNotesResponse.json()).notes || [];
   state.theoryPapers = (await theoryPapersResponse.json()).theories || [];
+  state.articleCuration = curationResponse.ok ? await curationResponse.json() : {};
   state.articleMeta = articleData.meta;
   state.articleDataMode = articleData.mode;
   state.articles = articleData.records.map(enrichArticle);
@@ -195,9 +199,10 @@ async function fetchArticleData() {
 }
 
 function enrichArticle(article) {
-  const item = curation[article.id] || {};
+  const item = state.articleCuration[article.id] || curation[article.id] || {};
   return {
     ...article,
+    cardTitle: item.cardTitle || article.cardTitle,
     topicId: item.topicId || article.topicId || "social-aging",
     questionIds: item.questionIds || article.questionIds || [],
     deck: item.deck || article.deck || {
@@ -211,6 +216,9 @@ function enrichArticle(article) {
 }
 
 function populateFilters() {
+  if (!els.topicFilter) {
+    return;
+  }
   state.topics.forEach((topic) => {
     const option = document.createElement("option");
     option.value = topic.id;
@@ -225,6 +233,9 @@ function render() {
   els.issueWindow.textContent = state.articleMeta.selectedWindow
     ? `${state.articleMeta.selectedWindow}일`
     : "샘플";
+  if (els.issueSummary) {
+    els.issueSummary.textContent = `${state.topics.length}개 하위 분야 · ${state.articles.length}개 카드뉴스 · ${state.questions.length}개 독자 질문`;
+  }
   renderDataNotice();
   renderTopicGrid();
   renderHomePreview();
@@ -361,7 +372,8 @@ function renderArticleDeck(article) {
     <section class="article-deck-shell">
       <div class="feature-summary">
         <span class="badge ${topic?.color || ""}">${topic?.name || "노화 심리"}</span>
-        <h3>${article.title}</h3>
+        <h3>${displayCardTitle(article)}</h3>
+        <p class="source-title">${article.title}</p>
         <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors)}</p>
         <div class="article-actions">
           <a class="button-link primary" href="${article.url}" target="_blank" rel="noreferrer">
@@ -530,7 +542,7 @@ function renderConceptBlock(concepts) {
 function renderAnchorWork(work) {
   return `
     <article class="anchor-work">
-      <span class="badge">${work.role.replaceAll("_", " ")}</span>
+      <span class="badge">${formatAnchorRole(work.role)}</span>
       <p>${work.citation}</p>
       <a href="${work.url}" target="_blank" rel="noreferrer">${work.doi ? `DOI ${work.doi}` : "서지 링크"}</a>
     </article>
@@ -538,6 +550,9 @@ function renderAnchorWork(work) {
 }
 
 function renderSources() {
+  if (!els.sourceList) {
+    return;
+  }
   const visibleArticles = filteredArticles();
   if (!visibleArticles.length) {
     els.sourceList.innerHTML = `
@@ -585,12 +600,12 @@ function renderArticlePreview(article) {
         <span class="badge ${article.access === "open" ? "green" : "gold"}">
           ${article.access === "open" ? "Open access" : "Metadata/abstract"}
         </span>
-        <h4>${article.deck.question}</h4>
+        <h4>${displayCardTitle(article)}</h4>
         <p>${article.deck.finding}</p>
       </div>
       <div class="paper-card-footer">
         <span>${article.journal}</span>
-        <a href="#sources">원문 보기</a>
+        <a href="${article.url}" target="_blank" rel="noreferrer">원문 보기</a>
       </div>
     </article>
   `;
@@ -606,7 +621,7 @@ function renderArticleSelector(article) {
       <span class="badge ${article.access === "open" ? "green" : "gold"}">
         ${article.access === "open" ? "Open access" : "Metadata/abstract"}
       </span>
-      <h4>${article.deck.question}</h4>
+      <h4>${displayCardTitle(article)}</h4>
       <p>${article.deck.finding}</p>
       <span class="paper-card-footer">${article.journal}</span>
     </button>
@@ -624,6 +639,37 @@ function renderDeckCard(number, title, body, icon) {
       <p>${body}</p>
     </article>
   `;
+}
+
+function displayCardTitle(article) {
+  return article.cardTitle || article.deck?.headline || article.deck?.question || article.title;
+}
+
+function formatAnchorRole(role = "") {
+  const labels = {
+    origin_concept: "대표 원전",
+    origin_article: "대표 원전",
+    origin_book: "대표 원전",
+    origin_core_theory: "핵심 이론",
+    core_theory: "핵심 이론",
+    core_model_origin: "핵심 이론",
+    core_model_statement: "핵심 이론",
+    stereotype_embodiment_theory: "핵심 이론",
+    contemporary_synthesis: "현대 종합",
+    consensus_definition: "합의 정의",
+    empirical_extension: "핵심 실증",
+    recent_empirical: "최신 실증",
+    recent_empirical_qualitative: "최신 실증",
+    recent_empirical_multicohort: "최신 실증",
+    recent_meta_analysis: "최신 메타분석",
+    meta_analysis: "메타분석",
+    recent_scoping_review: "최신 범위문헌고찰",
+    review: "핵심 리뷰",
+    critical_review: "비판적 리뷰",
+    critical_extension: "비판적 확장",
+    concept_analysis: "개념분석",
+  };
+  return labels[role] || role.replaceAll("_", " ");
 }
 
 function selectTopic(topicId) {
@@ -705,17 +751,17 @@ function formatAuthors(authors) {
   return `${authors.slice(0, 3).join(", ")} 외`;
 }
 
-els.searchInput.addEventListener("input", (event) => {
+els.searchInput?.addEventListener("input", (event) => {
   state.filters.search = event.target.value;
   renderSources();
 });
 
-els.topicFilter.addEventListener("change", (event) => {
+els.topicFilter?.addEventListener("change", (event) => {
   state.filters.topic = event.target.value;
   renderSources();
 });
 
-els.accessFilter.addEventListener("change", (event) => {
+els.accessFilter?.addEventListener("change", (event) => {
   state.filters.access = event.target.value;
   renderSources();
 });

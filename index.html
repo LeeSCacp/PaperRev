@@ -18,7 +18,7 @@
           <a href="#topics">분야</a>
           <a href="#detail">상세</a>
           <a href="#theories">이론</a>
-          <a href="#sources">보관함</a>
+          <a href="./archive.html">보관함</a>
         </div>
       </nav>
 
@@ -44,7 +44,7 @@
         <aside class="brief-panel" aria-label="current issue">
           <span class="status-dot"></span>
           <strong>이번 호 구성</strong>
-          <span>7개 하위 분야 · 9개 논문 카드 · 8개 독자 질문</span>
+          <span id="issueSummary">논문 카드와 질문 수를 불러오는 중입니다</span>
         </aside>
       </section>
     </header>
@@ -137,33 +137,16 @@
             장기적으로 너무 많이 쌓이지 않도록 제한합니다.
           </p>
         </div>
-        <details class="source-disclosure">
-          <summary>
-            <span>보관함 열기</span>
-            <small>draft 제외 논문, DOI, Crossref</small>
-          </summary>
-          <div class="source-toolbar" aria-label="source filters">
-            <label>
-              <span>원문 검색</span>
-              <input id="searchInput" type="search" placeholder="논문 제목, 저널, 키워드" />
-            </label>
-            <label>
-              <span>분야</span>
-              <select id="topicFilter">
-                <option value="all">전체 분야</option>
-              </select>
-            </label>
-            <label>
-              <span>접근성</span>
-              <select id="accessFilter">
-                <option value="all">전체</option>
-                <option value="open">Open access</option>
-                <option value="metadata">Metadata/abstract</option>
-              </select>
-            </label>
+        <div class="archive-cta">
+          <div>
+            <strong>보관함은 별도 페이지에서 확인합니다.</strong>
+            <p>메인 화면에는 카드뉴스 draft와 이론 해설만 남기고, draft 제외 논문 목록은 검색 가능한 보조 뷰로 분리했습니다.</p>
           </div>
-          <div id="sourceList" class="source-list"></div>
-        </details>
+          <a class="button-link primary" href="./archive.html">
+            <i data-lucide="archive"></i>
+            보관함 열기
+          </a>
+        </div>
       </section>
 
       <section class="section-block method-section">

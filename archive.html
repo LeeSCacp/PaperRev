@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PaperRev | 수집 보관함</title>
+    <meta
+      name="description"
+      content="PaperRev 카드뉴스 draft에 포함되지 않은 최근 1년 Gerontology/Aging 수집 논문 보관함입니다."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header compact-header">
+      <nav class="topbar" aria-label="primary navigation">
+        <a class="brand" href="./index.html#top">PaperRev</a>
+        <div>
+          <a href="./index.html#topics">분야</a>
+          <a href="./index.html#detail">상세</a>
+          <a href="./index.html#theories">이론</a>
+          <a href="./archive.html">보관함</a>
+        </div>
+      </nav>
+      <section class="archive-hero">
+        <p class="eyebrow">Collection archive</p>
+        <h1>수집 보관함</h1>
+        <p class="lead">
+          카드뉴스 draft에 포함되지 않은 논문만 따로 모았습니다. 최근 1년 범위로 유지하며, DOI와
+          Crossref 링크를 통해 원문 정보를 확인할 수 있습니다.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section class="issue-strip archive-metrics" aria-label="archive highlights">
+        <article>
+          <span class="metric" id="archiveCount">0</span>
+          <p>보관 논문</p>
+        </article>
+        <article>
+          <span class="metric" id="archiveWindow">365일</span>
+          <p>보관 유지 기간</p>
+        </article>
+        <article>
+          <span class="metric" id="featuredCount">0</span>
+          <p>메인 카드뉴스 draft</p>
+        </article>
+      </section>
+
+      <section class="section-block source-section">
+        <div class="section-heading">
+          <p class="eyebrow">Search archive</p>
+          <h2>보관 논문 검색</h2>
+          <p>이 목록은 메인 카드뉴스에 포함되지 않은 보조 자료입니다. 공개 요약으로 사용하기 전에는 원문 확인이 필요합니다.</p>
+        </div>
+
+        <div class="source-toolbar" aria-label="source filters">
+          <label>
+            <span>원문 검색</span>
+            <input id="searchInput" type="search" placeholder="논문 제목, 저널, 키워드" />
+          </label>
+          <label>
+            <span>분야</span>
+            <select id="topicFilter">
+              <option value="all">전체 분야</option>
+            </select>
+          </label>
+          <label>
+            <span>접근성</span>
+            <select id="accessFilter">
+              <option value="all">전체</option>
+              <option value="open">Open access</option>
+              <option value="metadata">Metadata/abstract</option>
+            </select>
+          </label>
+        </div>
+        <div id="sourceList" class="source-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PaperRev archive</span>
+      <a href="./index.html">메인으로 돌아가기</a>
+      <a href="https://api.crossref.org/" target="_blank" rel="noreferrer">Crossref API</a>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./archive.js"></script>
+  </body>
+</html>

@@ -335,6 +335,7 @@ function classifyAndDraft(article) {
     ...article,
     topicId,
     questionIds: primaryQuestionId ? [...new Set([primaryQuestionId, ...questionIds])] : [],
+    cardTitle: buildCardTitle(article, topicId),
     deck: buildDeck(article, topicId, primaryQuestionId),
     koreanSummary: buildKoreanSummary(article, topicId),
     summary_status: "ai_draft",
@@ -344,58 +345,18 @@ function classifyAndDraft(article) {
 function buildDeck(article, topicId, questionId) {
   const topic = topics.find((item) => item.id === topicId);
   const question = questions.find((item) => item.id === questionId);
-  const abstractSentences = splitSentences(article.abstract);
-  const methodSentence = pickSentence(abstractSentences, [
-    "method",
-    "methods",
-    "interview",
-    "focus group",
-    "survey",
-    "cohort",
-    "trial",
-    "review",
-    "analysis",
-  ]);
-  const resultSentence = pickSentence(abstractSentences, [
-    "result",
-    "results",
-    "finding",
-    "findings",
-    "identified",
-    "barriers",
-    "facilitators",
-    "participants",
-    "greater",
-    "lower",
-    "associated",
-    "showed",
-    "revealed",
-    "suggest",
-  ]);
-  const conclusionSentence = pickSentence(abstractSentences, [
-    "conclusion",
-    "discussion",
-    "implication",
-    "support",
-    "highlight",
-    "need",
-  ]);
+  const studyDesign = inferStudyDesign(article);
+  const focus = inferFocus(article, topicId);
 
   return {
     question:
       question?.question ||
       `${topic?.name || "노화 심리"} 관점에서 이 논문은 어떤 문제를 다루는가?`,
-    method: methodSentence
-      ? `초록 기준으로, 이 연구는 ${methodSentence}`
-      : `${article.journal}에 게재된 최근 논문으로, 초록과 메타데이터를 바탕으로 연구 설계를 검수해야 합니다.`,
-    finding: resultSentence
-      ? `주요 결과는 ${resultSentence}`
-      : article.abstract
-        ? `초록에서 핵심 결과 문장을 추가 검수해야 합니다. 현재 자동 추출 요약: ${shorten(article.abstract, 180)}`
-        : "Crossref 메타데이터에는 초록이 없어 원문 또는 출판사 페이지 확인이 필요합니다.",
-    meaning: conclusionSentence
-      ? `이 논문은 ${topic?.name || "노화 심리"} 분야에서 ${conclusionSentence}`
-      : `${topic?.name || "노화 심리"} 분야의 최근 동향을 보여주는 카드뉴스 후보입니다.`,
+    method: `${studyDesign}으로 ${focus}을(를) 다룬 최근 논문입니다. 자동 초안 단계에서는 연구 설계와 표본을 원문에서 확인해야 합니다.`,
+    finding: article.abstract
+      ? `${focus}과(와) 관련된 결과를 보고합니다. 구체적인 수치와 효과 크기는 공개 전 원문 초록에서 다시 확인해야 합니다.`
+      : `Crossref 메타데이터에는 초록이 없어 ${focus}에 대한 세부 결과는 원문 또는 출판사 페이지 확인이 필요합니다.`,
+    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}을(를) 최근 연구 흐름으로 읽을 수 있습니다.`,
     caution: article.abstract
       ? "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
       : "초록이 없는 메타데이터 기반 초안이므로 게시 전 원문 확인이 필수입니다.",
@@ -404,10 +365,54 @@ function buildDeck(article, topicId, questionId) {
 
 function buildKoreanSummary(article, topicId) {
   const topic = topics.find((item) => item.id === topicId);
-  const base = article.abstract
-    ? shorten(article.abstract, 220)
-    : "Crossref에서 초록이 제공되지 않아 원문 확인이 필요합니다.";
-  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${base}`;
+  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${inferFocus(article, topicId)}을(를) 중심으로 원문 확인 후 게시할 수 있습니다.`;
+}
+
+function buildCardTitle(article, topicId) {
+  const topic = topics.find((item) => item.id === topicId);
+  return `${topic?.name || "노화 심리"} 최신 논문: ${inferFocus(article, topicId)}`;
+}
+
+function inferStudyDesign(article) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  if (text.includes("meta-analysis") || text.includes("meta analysis")) return "메타분석";
+  if (text.includes("systematic review")) return "체계적 문헌고찰";
+  if (text.includes("scoping review")) return "범위문헌고찰";
+  if (text.includes("integrative review")) return "통합 문헌고찰";
+  if (text.includes("randomized") || text.includes("randomised") || text.includes("trial")) return "중재 연구";
+  if (text.includes("cohort") || text.includes("longitudinal")) return "종단 연구";
+  if (text.includes("interview") || text.includes("qualitative")) return "질적 연구";
+  if (text.includes("survey")) return "설문 연구";
+  if (text.includes("biomarker") || text.includes("plasma") || text.includes("protein")) return "생물학적 지표 연구";
+  return "최근 실증 연구";
+}
+
+function inferFocus(article, topicId) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  const topic = topics.find((item) => item.id === topicId);
+  const pairs = [
+    ["dementia", "치매와 인지장애"],
+    ["cognitive impairment", "인지장애"],
+    ["mild cognitive impairment", "경도인지장애"],
+    ["memory", "기억과 인지기능"],
+    ["depression", "우울 증상"],
+    ["anxiety", "불안 증상"],
+    ["mental health", "정신건강"],
+    ["caregiver", "돌봄자 부담과 지원"],
+    ["caregiving", "돌봄 경험"],
+    ["family", "가족 돌봄"],
+    ["fall", "낙상 예방과 안전"],
+    ["physical activity", "신체활동"],
+    ["exercise", "운동 개입"],
+    ["digital", "디지털헬스"],
+    ["technology", "기술 활용"],
+    ["ageism", "연령주의"],
+    ["retirement", "은퇴와 일"],
+    ["work", "일터와 고령 근로자"],
+    ["social", "사회적 관계와 환경"],
+    ["loneliness", "외로움과 사회적 고립"],
+  ];
+  return pairs.find(([keyword]) => text.includes(keyword))?.[1] || `${topic?.name || "노화 심리"}의 핵심 쟁점`;
 }
 
 function fallbackTopic(article) {
