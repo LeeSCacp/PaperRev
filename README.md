@@ -143,3 +143,15 @@ GitHub Actions 워크플로가 매주 월요일 09:00 KST에 실행되도록 설
 - 초록 기반 카드뉴스 문장을 더 자연스러운 한국어로 바꾸는 요약 단계
 - draft preview/review 화면
 - GitHub Actions를 이용한 주기적 수집 자동화
+
+## 2026-05-24 업데이트: 분야 분류와 featured 선정
+
+`scripts/build-drafts.mjs`는 이제 단순 최신순만으로 featured draft를 고르지 않습니다.
+
+- 분야 분류: strong / medium / weak / negative 키워드와 저널 보정값을 합산합니다.
+- 분류 근거: 각 draft에 `topicScore`, `topicScores`, `classificationConfidence`를 저장합니다.
+- featured 선정: `최신성`, `초록 충실도`, `분야 적합도`, `분류 신뢰도`, `연구설계`, `접근성`, `저널 우선순위`를 합산한 `featuredScore`를 사용합니다.
+- 선정 근거: 각 draft에 `featuredSignals`를 저장합니다.
+- 분야별 노출 수: 기존처럼 7개 분야별 5개씩, 총 35개 featured draft를 유지합니다.
+
+현재 재생성 결과는 14일 범위에서 133개를 수집했고, featured 35개와 archive 98개로 분리됩니다.

@@ -361,3 +361,29 @@ PaperRev는 다음 세 가지 질문에 답하는 사이트여야 한다.
 - 메인 카드 제목을 반복 질문이 아니라 논문별 핵심 메시지로 표시하도록 바꾸고, `data/drafts/featured-curation.json`을 추가해 featured draft 35개의 한국어 카드 문장을 보정했다.
 - 주간 자동 생성 스크립트가 앞으로 영어 초록 문장을 그대로 붙이지 않도록, 원문 문장 추출 대신 한국어 검수용 템플릿을 생성하게 수정했다.
 - 수집 보관함은 메인 페이지의 접힘 목록에서 별도 `archive.html` 페이지로 분리했다. 메인에서는 CTA만 노출하고, 보관함 페이지에서 검색/분야/접근성 필터를 제공한다.
+
+## 2026-05-24 분야 분류 규칙 및 featured 선정 점수화 업데이트
+
+완료:
+
+- `scripts/build-drafts.mjs`의 분야 분류 규칙을 단순 키워드 카운트에서 `strong / medium / weak / negative` 키워드와 저널 보정 점수를 함께 쓰는 방식으로 바꿨다.
+- 각 논문 draft에 `topicScore`, `topicScores`, `classificationConfidence`를 저장해 왜 해당 분야로 분류됐는지 추적할 수 있게 했다.
+- featured draft 선정 기준을 단순 최신순에서 `최신성 + 초록 충실도 + 분야 적합도 + 분류 신뢰도 + 연구설계 + 접근성 + 저널 우선순위` 합산 점수로 바꿨다.
+- 각 논문 draft에 `featuredScore`와 `featuredSignals`를 저장해 featured 선정 근거를 검토할 수 있게 했다.
+- 자동 생성 카드뉴스 기본 문구의 깨진 한국어 문자열을 새 생성분부터 정상 한국어 템플릿으로 덮어쓰도록 보정했다.
+- `node scripts/build-drafts.mjs --windows=7,14,30,60,90,180 --rows=50 --min-topic-count=5 --draft-limit-per-topic=5 --archive-days=365`로 재생성했다.
+- 재생성 결과: selected window 14일, total collected 133개, featured 35개, archive 98개.
+- featured coverage는 7개 분야 모두 5개씩 유지된다.
+- featured score 범위는 75-102점이며, featured 중 필수 점수 필드 누락과 낮은 분류 신뢰도 항목은 없었다.
+
+남은 내용:
+
+- 점수 기반 선정으로 featured 논문 구성이 바뀌었기 때문에 기존 `data/drafts/featured-curation.json`의 수동 보정 문구와 새 featured 목록이 완전히 일치하지 않는다. 현재는 일치하는 항목만 수동 보정을 적용하고, 나머지는 새 한국어 자동 템플릿을 사용한다.
+- 다음 개선에서는 새 featured 목록을 기준으로 핵심 메시지 보정 작업을 다시 수행하거나, API 요약 연결 후 자동 보정 결과를 생성하는 흐름을 붙이는 것이 좋다.
+- 분야 분류 점수와 featured 점수는 데이터에 저장되지만 아직 공개 화면에 직접 노출하지 않는다. 검수 화면을 만들 때 내부 판단 근거로 노출하면 된다.
+
+다음 추천:
+
+1. 새 점수 기반 featured 35개를 사용자 관점에서 훑어보고, 명백히 어색한 분야 배치가 있는지 1차 검수한다.
+2. 검수 결과를 바탕으로 `TOPIC_RULES`의 negative keyword와 저널 보정값을 한 번 더 조정한다.
+3. 그 다음 `featured-curation.json`을 새 featured 목록 기준으로 갱신하거나, OpenAI API 연결 이후 자동 한국어 핵심 메시지 생성으로 대체한다.

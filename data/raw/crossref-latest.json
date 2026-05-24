@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T04:33:29.180Z",
+  "generatedAt": "2026-05-24T06:04:56.835Z",
   "source": "Crossref",
   "windowsTried": [
     7,
@@ -13,7 +13,7 @@
   "minTopicCount": 5,
   "draftLimitPerTopic": 5,
   "archiveDays": 365,
-  "totalCollected": 136,
+  "totalCollected": 133,
   "records": [
     {
       "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec sec-type=\"background\">\n                    <jats:title>Background</jats:title>\n                    <jats:p>Older adults face increased crash risk due to age-related declines in cognitive, visual, and physical functioning; yet, many Australians in their 70s are continuing to drive. Web-based platforms are increasingly used to deliver health and mobility information to older adults and may support safer driving; however, existing online resources on driving safety often lack age-specific guidance, have usability limitations, and may not be designed with older adults in mind.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"objective\">\n                    <jats:title>Objective</jats:title>\n                    <jats:p>This study aimed to explore the information needs, preferences, and experiences of older drivers and general practitioners (GPs) to inform the formative, prelaunch development of a user-centered web-based platform, Ageing Well on the Road. Interviews and focus groups were conducted to gather feedback on content, accessibility, and usability, with data collection guided by the Consolidated Framework for Implementation Research and the Technology Acceptance Model frameworks to explore implementation and technology adoption factors.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"methods\">\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Website development was informed by a review of 26 Australian websites and consultations with stakeholders. Semistructured interviews were conducted with 7 older adults (aged &gt;67 years; one additional participant completed only survey data) and a focus group with 10 GPs experienced in fitness to drive assessments for older drivers. Thematic analysis was used to explore participants’ experiences with online driving information and feedback on content, usability, and accessibility. Formative feedback from these users directly informed content and design refinements before public launch.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"results\">\n                    <jats:title>Results</jats:title>\n                    <jats:p>The website addressed priority topics, including age-related health conditions affecting driving, licensing requirements, vehicle safety features, and strategies for maintaining driving confidence. Older adults valued large fonts, plain language, intuitive navigation, and trustworthy, practical advice. GPs highlighted the website’s potential to support clinical discussions around driving capacity and safety. Barriers to engagement included digital literacy limitations, accessibility concerns, and uncertainty about online information credibility.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"conclusions\">\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>A co-designed, web-based platform tailored to older adults and clinicians can enhance access to relevant, trustworthy information and support driving self-regulation. Involving end users in the development process is critical to optimize usability and ensure the resource aligns with their needs, highlighting the value of theory-informed, user-guided development for digital health resources.</jats:p>\n                  </jats:sec>",
@@ -2831,6 +2831,53 @@
       }
     },
     {
+      "DOI": "10.1080/13607863.2026.2675172",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ],
+        "date-time": "2026-05-23T06:08:25Z",
+        "timestamp": 1779516505000
+      },
+      "title": [
+        "Correction"
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            22
+          ]
+        ]
+      },
+      "container-title": [
+        "Aging &amp; Mental Health"
+      ],
+      "URL": "https://doi.org/10.1080/13607863.2026.2675172",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            22
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "aging-and-mental-health",
+        "journalName": "Aging & Mental Health",
+        "journalShortName": "Aging Ment Health",
+        "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
       "DOI": "10.1080/13607863.2026.2672093",
       "type": "journal-article",
       "created": {
@@ -3319,8 +3366,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -3337,8 +3384,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -3355,8 +3402,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -3373,8 +3420,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -4285,8 +4332,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -4301,8 +4348,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -4317,8 +4364,8 @@
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -6756,6 +6803,381 @@
         "journalName": "The Journals of Gerontology: Series A",
         "journalShortName": "J Gerontol A",
         "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Purpose</jats:title>\n                    <jats:p>To evaluate the feasibility of using the recently developed OF-Pelvis-Score (OFP-Score) for treatment decisions in patients with osteoporotic fractures of the pelvis (OFP) based on standard clinical diagnostics.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>A multicenter prospective cohort study was conducted at 14 trauma centers including 375 consecutive patients who were treated for an OFP over a period of 19 months. All fractures were classified according to the OF-Pelvis-Classification (OFP-Classification). The decision for either conservative or surgical therapy was made independently of the OFP-Score recommendation. Final decisions were compared to the recommendations given by the OFP-Score.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>\n                      375 patients with an average age of 81.0 years (± 7.6) were included, mainly female (85.6%). According to the OFP-Score, surgery was recommended in 60.5%, and conservative treatment was recommended in 21.9%. In 66 patients (17.6%) the score was undetermined with no treatment recommendation. In daily practice, 33.6% of the patients were treated conservatively and the remaining 66.4% operatively. Overall, the agreement between the OFP-Score and the performed treatment was 91%. The score was obtained in a mean of 3.1 min (± 2.9). All patients improved significantly with respect of VAS (\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001) and ODI (\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001) during their hospital stay.\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>Patients with osteoporotic sacral fractures improved clinically both after surgical and conservative treatment. The OFP-Score-based therapy recommendations showed a promisingly high rate of agreement with the therapy of daily practice. The scoring method provides a structured framework that supports clinical decision-making, complementing clinical judgment and other evidence-based tools in guiding treatment choices.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1186/s12877-026-07682-6",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ],
+        "date-time": "2026-05-23T05:05:57Z",
+        "timestamp": 1779512757000
+      },
+      "title": [
+        "Prospective clinical feasibility assessment of the Osteoporotic Pelvis Fracture Score (OFP-Score)—a multicenter prospective cohort study"
+      ],
+      "author": [
+        {
+          "given": "Ulrich J. A.",
+          "family": "Spiegl",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pamela",
+          "family": "Schanderl",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Volker",
+          "family": "Zimmermann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bernhard",
+          "family": "Ullrich",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Martin",
+          "family": "Naisan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Felix",
+          "family": "Kohler",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Erik",
+          "family": "Wegner",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michael",
+          "family": "Müller",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Frank",
+          "family": "Hartmann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Klaus J.",
+          "family": "Schnake",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Imke",
+          "family": "Schmerwitz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lars",
+          "family": "Behr",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Max J.",
+          "family": "Scheyerer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Robert",
+          "family": "Pätzold",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sebastian",
+          "family": "Grüninger",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Mendel",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Georg",
+          "family": "Osterhoff",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "name": "Working Group Osteoporotic Fractures of the Spine Section of the German Society of Orthopaedics and Trauma",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ]
+      },
+      "container-title": [
+        "BMC Geriatrics"
+      ],
+      "URL": "https://doi.org/10.1186/s12877-026-07682-6",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "bmc-geriatrics",
+        "journalName": "BMC Geriatrics",
+        "journalShortName": "BMC Geriatr",
+        "accessLabel": "Open access",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Chewing function is critical for maintaining health and well-being in older adults. Impaired chewing efficiency has been linked to systemic conditions such as stroke, respiratory disease, and cognitive decline, as well as increased frailty and its progression. Tooth loss and partial dentition often lead older adults to avoid hard-to-chew, fibre-rich foods, thereby increasing their risk of malnutrition. Despite its importance, chewing function remains under-recognized in geriatric assessments. This study aimed to evaluate chewing efficiency and its association with frailty and nutritional status in geriatric patients.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Cross-sectional study of 150 consecutive patients at an acute geriatric clinic in Germany. Participants underwent comprehensive geriatric and dental examinations, including a frailty-assessment using the Clinical Frailty Scale (CFS) and a nutritional screening, the Mini Nutritional Assessment short form (MNA). Chewing efficiency was measured using a two-color chewing gum mixing test.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Among the 150 patients (mean age 82.3 ± 7.6 years, 63.3% female), 28.7% were edentulous. Malnutrition was present in 44.6% of patients, and 47.5% were at risk of malnutrition. Frailty was identified in 81.2% of patients. Lower chewing efficiency was significantly associated with higher frailty (B = 1.36; 95% CI: 0.30, 2.42) and poorer nutritional status (B=-2.46; 95% CI: -4.78, -0.14).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>Chewing efficiency, primarily an indicator of oral health, also closely reflects systemic frailty. Preserving oral function and chewing ability may be important for maintaining overall health in older adults. Given the high prevalence of oral health deficits in frail older adults, incorporating a brief dental assessment into routine geriatric care is both feasible and warranted.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Trial registration</jats:title>\n                    <jats:p>The study received approvel from the Ethics Committee of the Universitätsmedizin Greifswald, and was registered in the German Clinical Trials Register (DRKS) on 17th April 2024 (registration number: DRKS00033778).</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1186/s12877-026-07668-4",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ],
+        "date-time": "2026-05-23T13:54:00Z",
+        "timestamp": 1779544440000
+      },
+      "title": [
+        "Chewing efficiency, nutritional status, and frailty in geriatric patients: a cross-sectional study"
+      ],
+      "author": [
+        {
+          "given": "Wiebke",
+          "family": "Könning",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Birte",
+          "family": "Holtfreter",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stefanie",
+          "family": "Samietz",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Kocher",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Maximilian",
+          "family": "König",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ]
+      },
+      "container-title": [
+        "BMC Geriatrics"
+      ],
+      "URL": "https://doi.org/10.1186/s12877-026-07668-4",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            23
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "bmc-geriatrics",
+        "journalName": "BMC Geriatrics",
+        "journalShortName": "BMC Geriatr",
+        "accessLabel": "Open access",
         "fetchedWindowDays": 7
       }
     },
@@ -13060,155 +13482,6 @@
       }
     },
     {
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Objectives</jats:title>\n                    <jats:p>Making effective everyday decisions is vital for maintaining well-being and independence in older age, yet older adults often face challenges in decision making due to age-related changes in perceptual and cognitive processes. Age-related declines in perception and cognition are not independent, in part because decoding impoverished perceptual input places additional demands on older adults’ limited cognitive resources. In this study, we test whether age-related deficits in decision-making performance can be reduced by improving the perceptual clarity of decision-making materials.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>In a pre-registered experimental study, 48 young (18–30 years) and 48 older adults (70+ years) completed decision-making, reading, and information-search tasks when written information was of standard clarity (moderate size and contrast) or enhanced clarity (increased size and contrast).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Older adults had worse decision-making performance than young adults, but, in line with the perceptual degradation hypothesis, the age deficit was reduced when decision-making information was clearer. Improved perceptual clarity also improved reading speed, but changes to reading speed did not fully account for the effect of clarity on decision-making performance.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion</jats:title>\n                    <jats:p>The results suggest that improving perceptual clarity can reduce age-related deficits in decision making through the provision of clear and accessible information with larger text and better contrast. Older adults can also take steps to improve their own perception, such as wearing appropriate glasses, using magnifiers, and reducing background noise.</jats:p>\n                  </jats:sec>",
-      "DOI": "10.1093/geronb/gbag082",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            7
-          ]
-        ],
-        "date-time": "2026-05-07T11:36:57Z",
-        "timestamp": 1778153817000
-      },
-      "title": [
-        "Clear Decisions: Improved Perceptual Clarity Reduces Age-Related Decision-making Deficits"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0001-5086-1173",
-          "authenticated-orcid": false,
-          "given": "Christopher",
-          "family": "Atkin",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Nottingham Trent University NTU Psychology, , Nottingham,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Hareth",
-          "family": "Al-Janabi",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Birmingham Health Economics Unit, School of Health Sciences, College of Medicine and Health, , Birmingham,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Stephen P",
-          "family": "Badham",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Nottingham Trent University NTU Psychology, , Nottingham,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0002-6098-4369",
-          "authenticated-orcid": false,
-          "given": "Samuel J",
-          "family": "Perry",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Birmingham Health Economics Unit, School of Health Sciences, College of Medicine and Health, , Birmingham,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Katherine L",
-          "family": "Roberts",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Nottingham Trent University NTU Psychology, , Nottingham,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "container-title": [
-        "The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences"
-      ],
-      "URL": "https://doi.org/10.1093/geronb/gbag082",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "gerontology-series-b",
-        "journalName": "The Journals of Gerontology: Series B",
-        "journalShortName": "J Gerontol B",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
       "DOI": "10.1037/pag0000994",
       "type": "journal-article",
       "created": {
@@ -15104,152 +15377,6 @@
       }
     },
     {
-      "DOI": "10.1080/07317115.2026.2669192",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            11
-          ]
-        ],
-        "date-time": "2026-05-11T06:03:37Z",
-        "timestamp": 1778479417000
-      },
-      "title": [
-        "Effects of 3-Month Vitamin D\n                    <sub>3</sub>\n                    Supplementation on Motor and Non-Motor Symptoms in Parkinson’s Disease: A Single-Arm Interventional Study"
-      ],
-      "author": [
-        {
-          "given": "Fatma Oznur",
-          "family": "Afacan",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Unıversity of Health Sciences",
-              "place": [
-                "Istanbul, Türkiye"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Serdar",
-          "family": "Aykac",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Hitit University",
-              "place": [
-                "Corum, Türkiye"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Birsen",
-          "family": "Demirel",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Nutrition and Dietetics, Ondokuz Mayıs University",
-              "place": [
-                "Samsun, Türkiye"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0002-9205-1467",
-          "authenticated-orcid": false,
-          "given": "Nihan Kucuk",
-          "family": "Yilmaz",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Yalova University",
-              "place": [
-                "Yalova, Türkiye"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Didem Onay",
-          "family": "Derin",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Selçuk University",
-              "place": [
-                "Konya, Türkiye"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "container-title": [
-        "Clinical Gerontologist"
-      ],
-      "URL": "https://doi.org/10.1080/07317115.2026.2669192",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "clinical-gerontologist",
-        "journalName": "Clinical Gerontologist",
-        "journalShortName": "Clin Gerontol",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
       "abstract": "<jats:p>Although caregiving research has expanded over the years, LGBTQ + caregivers of individuals with Alzheimer’s disease and related dementia (ADRD) remain understudied. LGBTQ + ADRD caregivers encounter unique obstacles (e.g., elevated stress, barriers to inclusive services, stigma and discrimination) that complicate caregiving experiences and have been understudied in research. To address these obstacles, researchers created the RISE Registry, a national network to engage LGBTQ + individuals in ADRD research. Semi-structured interviews (individual and focus groups) were facilitated with LGBTQ + ADRD caregivers (n = 44). Thematic analysis of the interviews revealed substantial caregiver burden, often compounded by a disconnect between their identities and perceived expectations of caregiving. Caregivers cited conflicting family obligations, limited support resources, and non-affirming services, though some found assistance or respite through veteran or faith-based organizations. These findings underscore the burden and unmet needs of LGBTQ + caregivers, targets that are crucial to address to improve well-being among LGBTQ + caregivers.</jats:p>",
       "DOI": "10.1177/01640275261451173",
       "type": "journal-article",
@@ -15459,306 +15586,6 @@
         "journalId": "research-on-aging",
         "journalName": "Research on Aging",
         "journalShortName": "Res Aging",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
-      "abstract": "<jats:p>\n                    Care for a parent with dementia is often shared among multiple adult children, yet it is not always evenly distributed. Guided by the family stress process model, this study examined associations between perceptions of care equality, depressive symptoms, loneliness, and positive affect among 208 adult children caring for a parent with dementia within 110 families from the Siblings Caring for a Parent with Dementia Study (mean age = 58.36,\n                    <jats:italic toggle=\"yes\">SD</jats:italic>\n                    = 9.38; 89% women), and mediating roles of caregiver burden and social support. When adult child caregivers perceived that they were contributing more to parental care than their sibling, they reported greater depressive symptoms than participants who reported equal care. Unequal care was linked to depressive symptoms, loneliness, and positive affect via caregiver burden but not social support. Perceptions of (un)equal divisions of care are associated with adult children’s mental health, representing potential caregiving intervention targets.\n                  </jats:p>",
-      "DOI": "10.1177/01640275261450640",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ],
-        "date-time": "2026-05-10T11:03:56Z",
-        "timestamp": 1778411036000
-      },
-      "title": [
-        "Sharing in Caring: Perceptions of (In)Equality and Mental Health Among Siblings Caring for a Parent With Dementia"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0001-5321-5097",
-          "authenticated-orcid": false,
-          "given": "Megan",
-          "family": "Gilligan",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "University of Missouri"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0003-1876-8045",
-          "authenticated-orcid": false,
-          "given": "Hanamori F.",
-          "family": "Skoblow",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Missouri"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Jeenkyoung",
-          "family": "Lee",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Missouri"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0003-0490-1650",
-          "authenticated-orcid": false,
-          "given": "Destiny",
-          "family": "Ogle",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Purdue University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "container-title": [
-        "Research on Aging"
-      ],
-      "URL": "https://doi.org/10.1177/01640275261450640",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "research-on-aging",
-        "journalName": "Research on Aging",
-        "journalShortName": "Res Aging",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
-      "abstract": "<jats:p>\n                    Numerous studies document age-related declines in memory using laboratory-based measures, yet little research exists on what older people might have to say about their memory in daily life. The present research examined how age-related memory changes are perceived, managed, remediated, and feared among 50 very old adults. Participants answered nine open-ended questions that tapped four complementary dimensions: memory self-efficacy, memory management, memory remediation, and fears about memory aging. Their oral responses were recorded and transcribed verbatim. Qualitative analyses were carried out on their narrative responses. Results yielded 4 core themes: (1)\n                    <jats:italic toggle=\"yes\">memory self-efficacy perceptions favored prospective remembering,</jats:italic>\n                    (2)\n                    <jats:italic toggle=\"yes\">memory management strategies included frequent use of external memory aids</jats:italic>\n                    , (3)\n                    <jats:italic toggle=\"yes\">affective consequences of forgetting concerned violated social conventions with improvement desired for remembering people's names</jats:italic>\n                    , and (4)\n                    <jats:italic toggle=\"yes\">neurocognitive decline and loss of independence were salient memory-related fears.</jats:italic>\n                    Implications of these data for promoting cognitive vitality in later life are discussed.\n                  </jats:p>",
-      "DOI": "10.1177/00914150261445627",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            11
-          ]
-        ],
-        "date-time": "2026-05-11T05:43:21Z",
-        "timestamp": 1778478201000
-      },
-      "title": [
-        "Practical Memory Concerns in Oldest-Old Adults"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0002-2284-9772",
-          "authenticated-orcid": false,
-          "given": "Katie E.",
-          "family": "Cherry",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Louisiana State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Matthew L.",
-          "family": "Willis",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Louisiana State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Dominique D.",
-          "family": "Bernard",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Louisiana State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Mary E.",
-          "family": "Barnes",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Louisiana State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Kiarah A.",
-          "family": "Allen",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Louisiana State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Celinda",
-          "family": "Reese-Melancon",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Oklahoma State University"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Sangkyu",
-          "family": "Kim",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Tulane University School of Medicine"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "S. Michal",
-          "family": "Jazwinski",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Tulane University School of Medicine"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "container-title": [
-        "The International Journal of Aging and Human Development"
-      ],
-      "URL": "https://doi.org/10.1177/00914150261445627",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            10
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "international-journal-aging-human-development",
-        "journalName": "The International Journal of Aging and Human Development",
-        "journalShortName": "Int J Aging Hum Dev",
         "accessLabel": "Hybrid; metadata accessible",
         "fetchedWindowDays": 14
       }
@@ -20265,191 +20092,6 @@
         "BMC Geriatrics"
       ],
       "URL": "https://doi.org/10.1186/s12877-026-07635-z",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "bmc-geriatrics",
-        "journalName": "BMC Geriatrics",
-        "journalShortName": "BMC Geriatr",
-        "accessLabel": "Open access",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Introduction</jats:title>\n                    <jats:p>Pneumonia is a common infection at the end of life, yet the benefits of antibiotics for symptom relief or prolonged survival remain uncertain. This study aimed to investigate physicians’ attitudes and factors influencing antibiotic prescription in aspiration pneumonia in frail older patients in palliative care settings across Switzerland.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>A survey was conducted among physicians practicing in internal medicine, geriatrics and family medicine, in hospital or ambulatory settings across Switzerland’s three linguistic regions. Participants were randomized to receive one of three clinical vignettes describing a geriatric patient with aspiration pneumonia, with variations in advance directives, functional dependency and dementia status. They were asked whether they would prescribe antibiotics and to explain their reasoning. The survey also collected participant demographics, including age, linguistic region, practice setting and palliative care experience.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Among the 195 participants, 22.1% opted to prescribe antibiotics. The primary reason for prescribing antibiotics was to alleviate dyspnea. Physicians were significantly more likely to prescribe antibiotics for patients with better functional status. Notably, 76.4% believed withholding antibiotics could shorten life, while 77.9% did not think antibiotics improved comfort. Physicians practicing in French-speaking regions were more likely to prescribe antibiotics than their counterparts in German- and Italian-speaking regions (33.7% vs 13.8% and 11.1% respectively.) Age, practice setting and palliative care experience were not significantly associated with prescribing behaviour. Additionally, 77.9% of physicians stated that they would modify their decision if the patient’s family disagreed with their initial choice.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>These findings highlight ongoing uncertainties and cultural variations in antibiotic prescribing practices at the end of life, highlighting the need for clinical decision-support tools and educational resources directed not only at physicians, but also at nursing teams, families, and caregivers. In the context of an aging population and rising antimicrobial resistance, a deeper understanding of the factors influencing antibiotic use in palliative care is essential to inform the development of targeted antimicrobial stewardship interventions aligned with patient values and palliative care goals.</jats:p>\n                  </jats:sec>",
-      "DOI": "10.1186/s12877-026-07477-9",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ],
-        "date-time": "2026-05-12T04:56:44Z",
-        "timestamp": 1778561804000
-      },
-      "title": [
-        "Antibiotic prescription for older patients in end-of-life care: a randomized survey among physicians in Switzerland"
-      ],
-      "author": [
-        {
-          "given": "L.",
-          "family": "Papasokrati",
-          "sequence": "first",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "S.",
-          "family": "Pautex",
-          "sequence": "additional",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "F.",
-          "family": "Herrmann",
-          "sequence": "additional",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "P.",
-          "family": "Vayne-Bossert",
-          "sequence": "additional",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "V.",
-          "family": "Prendki",
-          "sequence": "additional",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ]
-      },
-      "container-title": [
-        "BMC Geriatrics"
-      ],
-      "URL": "https://doi.org/10.1186/s12877-026-07477-9",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "bmc-geriatrics",
-        "journalName": "BMC Geriatrics",
-        "journalShortName": "BMC Geriatr",
-        "accessLabel": "Open access",
-        "fetchedWindowDays": 14
-      }
-    },
-    {
-      "DOI": "10.1186/s12877-026-07492-w",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ],
-        "date-time": "2026-05-12T13:07:53Z",
-        "timestamp": 1778591273000
-      },
-      "title": [
-        "Urban environments and depression among older adults: policy implications from the WHO age-friendly cities framework"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0009-0006-1772-2757",
-          "authenticated-orcid": false,
-          "given": "Yeseul",
-          "family": "Sung",
-          "sequence": "first",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Changwoo",
-          "family": "Shon",
-          "sequence": "additional",
-          "affiliation": [],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            12
-          ]
-        ]
-      },
-      "container-title": [
-        "BMC Geriatrics"
-      ],
-      "URL": "https://doi.org/10.1186/s12877-026-07492-w",
       "published": {
         "date-parts": [
           [

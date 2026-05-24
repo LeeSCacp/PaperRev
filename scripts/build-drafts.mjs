@@ -10,86 +10,78 @@ const DEFAULT_ARCHIVE_DAYS = 365;
 const USER_AGENT = "PaperRev prototype; mailto=paperrev@example.com";
 
 const TOPIC_RULES = {
-  "cognitive-aging": [
-    "cognition",
-    "cognitive",
-    "memory",
-    "attention",
-    "executive",
-    "processing speed",
-    "dual-task",
-    "neuropsychological",
-    "brain",
-  ],
-  "emotional-aging": [
-    "emotion",
-    "emotional",
-    "depression",
-    "depressive",
-    "anxiety",
-    "mental health",
-    "well-being",
-    "loneliness",
-    "stress",
-    "quality of life",
-  ],
-  "social-aging": [
-    "social",
-    "culture",
-    "cultural",
-    "relationship",
-    "community",
-    "isolation",
-    "old age",
-    "age perception",
-    "environment",
-    "urban",
-  ],
-  "dementia-cognitive-impairment": [
-    "dementia",
-    "alzheimer",
-    "mci",
-    "mild cognitive impairment",
-    "cognitive impairment",
-    "case-finding",
-    "screening",
-    "diagnosis",
-  ],
-  "caregiving-family": [
-    "caregiver",
-    "caregiving",
-    "carer",
-    "family",
-    "unpaid care",
-    "transition",
-    "hospital-to-home",
-    "unmet need",
-    "support",
-  ],
-  "digital-health-behavior": [
-    "digital",
-    "web-based",
-    "technology",
-    "app",
-    "mobile",
-    "exercise",
-    "physical activity",
-    "falls",
-    "driving",
-    "health behavior",
-    "intervention",
-  ],
-  "work-retirement-ageism": [
-    "work",
-    "worker",
-    "employment",
-    "retirement",
-    "ageism",
-    "age-inclusive",
-    "manager",
-    "labour",
-    "labor",
-  ],
+  "cognitive-aging": {
+    strong: ["cognitive aging", "cognition", "cognitive function", "memory", "episodic memory", "working memory"],
+    medium: ["attention", "executive function", "processing speed", "dual-task", "neuropsychological", "cognitive performance"],
+    weak: ["brain", "learning", "reasoning", "decision making", "cognitive health"],
+    negative: ["dementia", "alzheimer", "caregiver", "caregiving", "frailty"],
+    journals: ["psychology-and-aging", "aging-neuropsychology-cognition", "experimental-aging-research", "gerontology-series-b"],
+  },
+  "emotional-aging": {
+    strong: ["depression", "depressive", "anxiety", "mental health", "well-being", "emotional well-being"],
+    medium: ["emotion", "emotional", "loneliness", "stress", "resilience", "quality of life", "distress"],
+    weak: ["life satisfaction", "mood", "affect", "anger", "coping", "psychological"],
+    negative: ["dementia care", "caregiver burden", "employment", "retirement"],
+    journals: ["aging-and-mental-health", "clinical-gerontologist", "international-psychogeriatrics"],
+  },
+  "social-aging": {
+    strong: ["social isolation", "social engagement", "social participation", "social support", "loneliness"],
+    medium: ["social", "culture", "cultural", "relationship", "community", "neighborhood", "age perception"],
+    weak: ["old age", "environment", "urban", "rural", "immigrant", "identity", "inequality", "policy"],
+    negative: ["cognitive impairment", "dementia", "caregiver", "physical activity", "employment"],
+    journals: ["ageing-and-society", "research-on-aging", "the-gerontologist", "gerontology-series-b"],
+  },
+  "dementia-cognitive-impairment": {
+    strong: ["dementia", "alzheimer", "mild cognitive impairment", "mci", "cognitive impairment", "adrd"],
+    medium: ["screening", "diagnosis", "case-finding", "cognitive decline", "neurodegenerative", "memory clinic"],
+    weak: ["biomarker", "amyloid", "tau", "neuropsychiatric", "informant", "cognitive assessment"],
+    negative: ["employment", "retirement", "ageism", "healthy aging"],
+    journals: ["dementia", "international-psychogeriatrics", "clinical-gerontologist", "aging-and-mental-health"],
+  },
+  "caregiving-family": {
+    strong: ["caregiver", "caregiving", "carer", "family caregiver", "informal care", "unpaid care"],
+    medium: ["care partner", "family", "care burden", "respite", "long-term care", "nursing home", "home care"],
+    weak: ["transition", "hospital-to-home", "unmet need", "support", "care planning", "social care"],
+    negative: ["employment", "retirement", "physical activity", "biomarker"],
+    journals: ["dementia", "the-gerontologist", "journal-of-applied-gerontology", "bmc-geriatrics"],
+  },
+  "digital-health-behavior": {
+    strong: ["digital health", "mhealth", "ehealth", "physical activity", "exercise", "falls", "fall prevention"],
+    medium: ["web-based", "technology", "mobile", "app", "wearable", "driving", "sleep", "health behavior"],
+    weak: ["intervention", "telehealth", "remote", "sensor", "rehabilitation", "frailty", "functional decline"],
+    negative: ["employment", "ageism", "caregiver burden", "dementia care"],
+    journals: ["jmir-aging", "journal-of-aging-and-health", "gerontology-series-a", "age-and-ageing", "bmc-geriatrics"],
+  },
+  "work-retirement-ageism": {
+    strong: ["ageism", "retirement", "employment", "older worker", "workplace", "work ability"],
+    medium: ["work", "worker", "labor", "labour", "age-inclusive", "manager", "pension", "productive aging"],
+    weak: ["job", "career", "volunteering", "discrimination", "organizational", "workforce"],
+    negative: ["dementia", "caregiver", "falls", "biomarker"],
+    journals: ["ageing-and-society", "research-on-aging", "the-gerontologist", "gerontology-series-b"],
+  },
+};
+
+const JOURNAL_FEATURED_PRIORITY = {
+  "psychology-and-aging": 10,
+  "gerontology-series-b": 10,
+  "the-gerontologist": 9,
+  "aging-and-mental-health": 9,
+  "innovation-in-aging": 8,
+  "jmir-aging": 8,
+  "aging-neuropsychology-cognition": 8,
+  "ageing-and-society": 8,
+  "clinical-gerontologist": 7,
+  "journal-of-aging-and-health": 7,
+  "journal-of-applied-gerontology": 7,
+  "dementia": 7,
+  "international-psychogeriatrics": 7,
+  "research-on-aging": 6,
+  "age-and-ageing": 6,
+  "bmc-geriatrics": 6,
+  "gerontology": 6,
+  "gerontology-series-a": 5,
+  "experimental-aging-research": 5,
+  "international-journal-aging-human-development": 5,
 };
 
 const QUESTION_RULES = {
@@ -280,7 +272,7 @@ function splitFeaturedAndArchive(records) {
   const featuredIds = new Set();
   const featuredDrafts = [];
   for (const topic of topics) {
-    const topicRecords = records.filter((record) => record.topicId === topic.id).sort(sortByDateDesc);
+    const topicRecords = records.filter((record) => record.topicId === topic.id).sort(sortByFeaturedScore);
     for (const record of topicRecords.slice(0, draftLimitPerTopic)) {
       featuredIds.add(record.id);
       featuredDrafts.push(record);
@@ -311,12 +303,8 @@ function classifyAndDraft(article) {
     .join(" ")
     .toLowerCase();
 
-  const topicScores = topics.map((topic) => ({
-    id: topic.id,
-    score: scoreKeywords(haystack, TOPIC_RULES[topic.id] || []),
-  }));
-  topicScores.sort((a, b) => b.score - a.score);
-  const topicId = topicScores[0]?.score > 0 ? topicScores[0].id : fallbackTopic(article);
+  const topicResult = classifyTopic(article, haystack);
+  const topicId = topicResult.topicId;
 
   const questionIds = questions
     .filter((question) => question.topicId === topicId)
@@ -334,100 +322,69 @@ function classifyAndDraft(article) {
   return {
     ...article,
     topicId,
+    topicScore: topicResult.topicScore,
+    topicScores: topicResult.topicScores,
+    classificationConfidence: topicResult.confidence,
     questionIds: primaryQuestionId ? [...new Set([primaryQuestionId, ...questionIds])] : [],
     cardTitle: buildCardTitle(article, topicId),
     deck: buildDeck(article, topicId, primaryQuestionId),
     koreanSummary: buildKoreanSummary(article, topicId),
+    featuredScore: scoreFeatured(article, topicResult),
+    featuredSignals: buildFeaturedSignals(article, topicResult),
     summary_status: "ai_draft",
   };
 }
 
-function buildDeck(article, topicId, questionId) {
-  const topic = topics.find((item) => item.id === topicId);
-  const question = questions.find((item) => item.id === questionId);
-  const studyDesign = inferStudyDesign(article);
-  const focus = inferFocus(article, topicId);
+function classifyTopic(article, haystack) {
+  const topicScores = topics
+    .map((topic) => ({
+      id: topic.id,
+      score: scoreTopic(article, topic.id, haystack),
+    }))
+    .sort((a, b) => b.score - a.score);
+
+  const top = topicScores[0];
+  const runnerUp = topicScores[1];
+  const topicId = top?.score > 0 ? top.id : fallbackTopic(article);
+  const margin = Math.max(0, (top?.score || 0) - (runnerUp?.score || 0));
+  const confidence = top?.score
+    ? Math.min(1, Number(((margin + top.score * 0.25) / Math.max(top.score, 1)).toFixed(2)))
+    : 0.15;
 
   return {
-    question:
-      question?.question ||
-      `${topic?.name || "노화 심리"} 관점에서 이 논문은 어떤 문제를 다루는가?`,
-    method: `${studyDesign}으로 ${focus}을(를) 다룬 최근 논문입니다. 자동 초안 단계에서는 연구 설계와 표본을 원문에서 확인해야 합니다.`,
-    finding: article.abstract
-      ? `${focus}과(와) 관련된 결과를 보고합니다. 구체적인 수치와 효과 크기는 공개 전 원문 초록에서 다시 확인해야 합니다.`
-      : `Crossref 메타데이터에는 초록이 없어 ${focus}에 대한 세부 결과는 원문 또는 출판사 페이지 확인이 필요합니다.`,
-    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}을(를) 최근 연구 흐름으로 읽을 수 있습니다.`,
-    caution: article.abstract
-      ? "자동 초안이므로 원문 초록과 연구 설계, 표본, 결과 수치를 사람이 검수한 뒤 게시해야 합니다."
-      : "초록이 없는 메타데이터 기반 초안이므로 게시 전 원문 확인이 필수입니다.",
+    topicId,
+    topicScore: top?.score || 0,
+    topicScores,
+    confidence,
   };
 }
 
-function buildKoreanSummary(article, topicId) {
-  const topic = topics.find((item) => item.id === topicId);
-  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${inferFocus(article, topicId)}을(를) 중심으로 원문 확인 후 게시할 수 있습니다.`;
-}
+function scoreTopic(article, topicId, haystack) {
+  const rule = TOPIC_RULES[topicId] || {};
+  const title = `${article.title}`.toLowerCase();
+  const abstract = `${article.abstract}`.toLowerCase();
+  const journal = `${article.journal}`.toLowerCase();
+  const subjects = `${(article.topics || []).join(" ")}`.toLowerCase();
 
-function buildCardTitle(article, topicId) {
-  const topic = topics.find((item) => item.id === topicId);
-  return `${topic?.name || "노화 심리"} 최신 논문: ${inferFocus(article, topicId)}`;
-}
+  let score = 0;
+  score += fieldKeywordScore(title, rule.strong, 9);
+  score += fieldKeywordScore(title, rule.medium, 5);
+  score += fieldKeywordScore(title, rule.weak, 2);
+  score += fieldKeywordScore(abstract, rule.strong, 4);
+  score += fieldKeywordScore(abstract, rule.medium, 2);
+  score += fieldKeywordScore(abstract, rule.weak, 1);
+  score += fieldKeywordScore(subjects, rule.strong, 3);
+  score += fieldKeywordScore(subjects, rule.medium, 2);
+  score += fieldKeywordScore(journal, rule.strong, 3);
+  score -= fieldKeywordScore(haystack, rule.negative, 3);
 
-function inferStudyDesign(article) {
-  const text = `${article.title} ${article.abstract}`.toLowerCase();
-  if (text.includes("meta-analysis") || text.includes("meta analysis")) return "메타분석";
-  if (text.includes("systematic review")) return "체계적 문헌고찰";
-  if (text.includes("scoping review")) return "범위문헌고찰";
-  if (text.includes("integrative review")) return "통합 문헌고찰";
-  if (text.includes("randomized") || text.includes("randomised") || text.includes("trial")) return "중재 연구";
-  if (text.includes("cohort") || text.includes("longitudinal")) return "종단 연구";
-  if (text.includes("interview") || text.includes("qualitative")) return "질적 연구";
-  if (text.includes("survey")) return "설문 연구";
-  if (text.includes("biomarker") || text.includes("plasma") || text.includes("protein")) return "생물학적 지표 연구";
-  return "최근 실증 연구";
-}
-
-function inferFocus(article, topicId) {
-  const text = `${article.title} ${article.abstract}`.toLowerCase();
-  const topic = topics.find((item) => item.id === topicId);
-  const pairs = [
-    ["dementia", "치매와 인지장애"],
-    ["cognitive impairment", "인지장애"],
-    ["mild cognitive impairment", "경도인지장애"],
-    ["memory", "기억과 인지기능"],
-    ["depression", "우울 증상"],
-    ["anxiety", "불안 증상"],
-    ["mental health", "정신건강"],
-    ["caregiver", "돌봄자 부담과 지원"],
-    ["caregiving", "돌봄 경험"],
-    ["family", "가족 돌봄"],
-    ["fall", "낙상 예방과 안전"],
-    ["physical activity", "신체활동"],
-    ["exercise", "운동 개입"],
-    ["digital", "디지털헬스"],
-    ["technology", "기술 활용"],
-    ["ageism", "연령주의"],
-    ["retirement", "은퇴와 일"],
-    ["work", "일터와 고령 근로자"],
-    ["social", "사회적 관계와 환경"],
-    ["loneliness", "외로움과 사회적 고립"],
-  ];
-  return pairs.find(([keyword]) => text.includes(keyword))?.[1] || `${topic?.name || "노화 심리"}의 핵심 쟁점`;
-}
-
-function fallbackTopic(article) {
-  const title = article.title.toLowerCase();
-  if (title.includes("dementia") || title.includes("cognitive impairment")) {
-    return "dementia-cognitive-impairment";
+  if ((rule.journals || []).includes(article.journalId)) {
+    score += 6;
   }
-  if (title.includes("care") || title.includes("caregiver") || title.includes("family")) {
-    return "caregiving-family";
-  }
-  if (title.includes("digital") || title.includes("web") || title.includes("technology")) {
-    return "digital-health-behavior";
-  }
-  return "social-aging";
+
+  return Math.max(0, score);
 }
+
 
 function coverageByTopic(records) {
   const coverage = Object.fromEntries(topics.map((topic) => [topic.id, 0]));
@@ -573,4 +530,168 @@ function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
+}
+
+function fieldKeywordScore(text, keywords = [], weight = 1) {
+  return keywords.reduce((score, keyword) => score + countKeyword(text, keyword) * weight, 0);
+}
+
+function countKeyword(text, keyword) {
+  const escaped = `${keyword}`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const boundaryStart = /^[a-z0-9]/i.test(keyword) ? "\\b" : "";
+  const boundaryEnd = /[a-z0-9]$/i.test(keyword) ? "\\b" : "";
+  const regex = new RegExp(`${boundaryStart}${escaped}${boundaryEnd}`, "gi");
+  return text.match(regex)?.length || 0;
+}
+
+function scoreFeatured(article, topicResult) {
+  const published = article.publishedDate ? new Date(`${article.publishedDate}T00:00:00Z`) : null;
+  const ageDays = published ? Math.max(0, daysBetween(published, untilDate)) : 9999;
+  const abstractLength = article.abstract?.length || 0;
+  const studyDesign = inferStudyDesign(article);
+
+  const recencyScore =
+    ageDays <= 7 ? 30 : ageDays <= 14 ? 27 : ageDays <= 30 ? 22 : ageDays <= 90 ? 14 : ageDays <= 180 ? 8 : 3;
+  const abstractScore =
+    abstractLength >= 1200 ? 18 : abstractLength >= 700 ? 15 : abstractLength >= 350 ? 11 : abstractLength > 0 ? 6 : 0;
+  const topicFitScore = Math.min(25, Math.round((topicResult.topicScore || 0) * 0.9));
+  const confidenceScore = Math.round((topicResult.confidence || 0) * 10);
+  const designScore = scoreStudyDesign(studyDesign);
+  const accessScore = article.access === "open" ? 5 : 2;
+  const journalScore = JOURNAL_FEATURED_PRIORITY[article.journalId] || 3;
+
+  return recencyScore + abstractScore + topicFitScore + confidenceScore + designScore + accessScore + journalScore;
+}
+
+function buildFeaturedSignals(article, topicResult) {
+  const published = article.publishedDate ? new Date(`${article.publishedDate}T00:00:00Z`) : null;
+  return {
+    recencyDays: published ? daysBetween(published, untilDate) : null,
+    abstractLength: article.abstract?.length || 0,
+    topicFit: topicResult.topicScore,
+    classificationConfidence: topicResult.confidence,
+    studyDesign: inferStudyDesign(article),
+    access: article.access,
+    journalPriority: JOURNAL_FEATURED_PRIORITY[article.journalId] || 3,
+  };
+}
+
+function scoreStudyDesign(studyDesign) {
+  const weights = {
+    메타분석: 8,
+    "체계적 문헌고찰": 7,
+    "범위 문헌고찰": 5,
+    "통합 문헌고찰": 5,
+    "중재 연구": 7,
+    "종단 연구": 6,
+    "질적 연구": 4,
+    "설문 연구": 3,
+    "생물학적 지표 연구": 4,
+    "최근 실증 연구": 3,
+  };
+  return weights[studyDesign] || 3;
+}
+
+function daysBetween(start, end) {
+  const millis = Date.UTC(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate()) -
+    Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
+  return Math.round(millis / 86400000);
+}
+
+function sortByFeaturedScore(a, b) {
+  return (b.featuredScore || 0) - (a.featuredScore || 0) || sortByDateDesc(a, b);
+}
+
+function buildDeck(article, topicId, questionId) {
+  const topic = topics.find((item) => item.id === topicId);
+  const question = questions.find((item) => item.id === questionId);
+  const studyDesign = inferStudyDesign(article);
+  const focus = inferFocus(article, topicId);
+
+  return {
+    question: question?.question || `${topic?.name || "노화 심리"} 관점에서 이 논문은 어떤 문제를 다루는가?`,
+    method: `${studyDesign}로 ${focus}을(를) 다룬 최근 논문입니다. 자동 초안 단계이므로 연구 설계와 표본은 원문에서 확인해야 합니다.`,
+    finding: article.abstract
+      ? `${focus}과(와) 관련된 결과를 보고합니다. 구체적인 효과 크기, 통계값, 적용 범위는 원문 초록과 본문에서 다시 확인해야 합니다.`
+      : `Crossref 메타데이터에 초록이 없어 ${focus}에 대한 결론은 원문 또는 출판사 페이지 확인이 필요합니다.`,
+    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}을(를) 최근 연구 흐름으로 읽을 수 있습니다.`,
+    caution: article.abstract
+      ? "자동 초안이므로 원문 초록, 연구 설계, 표본, 결과 수치를 사람이 검토한 뒤 게시해야 합니다."
+      : "초록이 없는 메타데이터 기반 초안이므로 게시 전 원문 확인이 필수입니다.",
+  };
+}
+
+function buildKoreanSummary(article, topicId) {
+  const topic = topics.find((item) => item.id === topicId);
+  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${inferFocus(article, topicId)}을(를) 중심으로 원문 확인 후 게시할 수 있습니다.`;
+}
+
+function buildCardTitle(article, topicId) {
+  const topic = topics.find((item) => item.id === topicId);
+  return `${topic?.name || "노화 심리"} 최신 논문: ${inferFocus(article, topicId)}`;
+}
+
+function inferStudyDesign(article) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  if (text.includes("meta-analysis") || text.includes("meta analysis")) return "메타분석";
+  if (text.includes("systematic review")) return "체계적 문헌고찰";
+  if (text.includes("scoping review")) return "범위 문헌고찰";
+  if (text.includes("integrative review")) return "통합 문헌고찰";
+  if (text.includes("randomized") || text.includes("randomised") || text.includes("trial")) return "중재 연구";
+  if (text.includes("cohort") || text.includes("longitudinal")) return "종단 연구";
+  if (text.includes("interview") || text.includes("qualitative")) return "질적 연구";
+  if (text.includes("survey")) return "설문 연구";
+  if (text.includes("biomarker") || text.includes("plasma") || text.includes("protein")) return "생물학적 지표 연구";
+  return "최근 실증 연구";
+}
+
+function inferFocus(article, topicId) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  const topic = topics.find((item) => item.id === topicId);
+  const pairs = [
+    ["mild cognitive impairment", "경도인지장애"],
+    ["cognitive impairment", "인지장애"],
+    ["dementia", "치매와 인지장애"],
+    ["memory", "기억과 인지기능"],
+    ["depression", "우울 증상"],
+    ["anxiety", "불안 증상"],
+    ["mental health", "정신건강"],
+    ["caregiver", "돌봄자 부담과 지원"],
+    ["caregiving", "돌봄 경험"],
+    ["family", "가족 돌봄"],
+    ["fall", "낙상 예방과 안전"],
+    ["physical activity", "신체활동"],
+    ["exercise", "운동 개입"],
+    ["digital", "디지털헬스"],
+    ["technology", "기술 사용"],
+    ["ageism", "연령주의"],
+    ["retirement", "은퇴 전환"],
+    ["work", "일터와 고령 근로자"],
+    ["loneliness", "외로움과 사회적 고립"],
+    ["social", "사회적 관계와 환경"],
+  ];
+  return pairs.find(([keyword]) => text.includes(keyword))?.[1] || `${topic?.name || "노화 심리"}의 핵심 쟁점`;
+}
+
+function fallbackTopic(article) {
+  const text = `${article.title} ${article.abstract} ${article.journal}`.toLowerCase();
+  if (text.includes("dementia") || text.includes("alzheimer") || text.includes("cognitive impairment")) {
+    return "dementia-cognitive-impairment";
+  }
+  if (text.includes("caregiver") || text.includes("caregiving") || text.includes("family care")) {
+    return "caregiving-family";
+  }
+  if (text.includes("depression") || text.includes("anxiety") || text.includes("mental health")) {
+    return "emotional-aging";
+  }
+  if (text.includes("memory") || text.includes("cognition") || text.includes("cognitive")) {
+    return "cognitive-aging";
+  }
+  if (text.includes("digital") || text.includes("web") || text.includes("technology") || text.includes("exercise")) {
+    return "digital-health-behavior";
+  }
+  if (text.includes("ageism") || text.includes("retirement") || text.includes("employment")) {
+    return "work-retirement-ageism";
+  }
+  return "social-aging";
 }
