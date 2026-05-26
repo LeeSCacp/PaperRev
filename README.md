@@ -157,3 +157,22 @@ GitHub Actions 워크플로가 매주 월요일 09:00 KST에 실행되도록 설
 현재 보정 후 재생성 결과는 30일 범위에서 330개를 수집했고, featured 35개와 archive 295개로 분리됩니다.
 
 `data/drafts/featured-curation.json`은 현재 featured 35개와 1:1로 맞춰 갱신되어 있으며, 각 항목은 한국어 카드 제목과 5장 카드뉴스 문구를 포함합니다.
+
+## 2026-05-27 업데이트: 자동 발행 정책
+
+PaperRev는 매주 전체 카드를 사람이 전수 검수하는 방식이 아니라, 자동 발행을 기본값으로 사용합니다.
+
+- 각 draft에는 `publishStatus`, `needsReview`, `qualityFlags`가 저장됩니다.
+- `featuredDrafts`는 `publishStatus: "auto_publish"`인 논문 중에서 분야별 5개씩 선정됩니다.
+- 품질 기준에 걸린 논문은 `reviewRecords`에 분리되며, 메인 카드뉴스에는 노출되지 않습니다.
+- 현재 보류 조건은 `missing_abstract`, `short_abstract`, `low_classification_confidence`, `topic_overlap`, `low_featured_score`, `text_encoding_issue`입니다.
+- `featured-curation.json`은 자동 발행을 막는 필수 검수 파일이 아니라, 해당 ID가 있을 때만 한국어 문구를 더 자연스럽게 덮어쓰는 선택적 보정 파일입니다.
+
+2026-05-27 기준 재생성 결과:
+
+- selected window: 30일
+- total collected: 331개
+- auto publish: 170개
+- needs review: 161개
+- featured: 35개
+- archive: 296개

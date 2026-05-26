@@ -438,3 +438,45 @@ PaperRev는 다음 세 가지 질문에 답하는 사이트여야 한다.
 1. 검수용 preview/review 화면을 만든다.
 2. 이 화면에서 `featuredScore`, `topicScores`, `classificationConfidence`, `featuredSignals`, curation deck을 함께 보여주고 “분야 유지/분야 변경/보류”를 선택할 수 있게 한다.
 3. 그 뒤 OpenAI API 연결 시에는 이 검수 화면을 사람이 최종 승인하는 단계로 사용한다.
+
+## 2026-05-27 자동 발행/예외 보류 정책 구현
+
+목표:
+
+- 매주 35개 카드뉴스를 사람이 전수 검수하지 않고 자동 발행한다.
+- 위험한 카드만 별도 보류 큐로 분리해, 검수는 예외 처리 도구로만 사용한다.
+
+완료:
+
+- `scripts/build-drafts.mjs`에 `publishStatus`, `needsReview`, `qualityFlags`를 추가했다.
+- `featuredDrafts`는 `publishStatus: "auto_publish"`인 논문 중에서만 분야별 5개씩 선정되도록 변경했다.
+- 보류 대상은 `reviewRecords`에 별도로 저장한다.
+- 전체 상태 집계용 `publishStatusCounts`, `qualityFlagCounts`, `reviewCount`를 `article-drafts.json`에 저장한다.
+- 자동 생성 기본 카드 문구가 깨진 한국어로 생성되지 않도록 clean template 함수를 추가했다.
+- `featured-curation.json`은 필수 검수 파일이 아니라, ID가 일치할 때만 문구를 덮어쓰는 선택적 보정 파일로 운용한다.
+
+현재 보류 조건:
+
+- `missing_abstract`: 초록 없음
+- `short_abstract`: 초록이 너무 짧음
+- `low_classification_confidence`: 분야 분류 신뢰도 낮음
+- `topic_overlap`: 1위 분야와 2위 분야 점수 차이가 작음
+- `low_featured_score`: featured 후보 점수 낮음
+- `text_encoding_issue`: 깨진 문자열 감지
+
+2026-05-27 재생성 결과:
+
+- selected window: 30일
+- total collected: 331개
+- auto publish: 170개
+- needs review: 161개
+- featured: 35개
+- archive: 296개
+- featured 문제 항목: 0개
+- featured 분야 분포: 7개 분야 모두 5개씩 유지
+
+다음 추천:
+
+1. GitHub Actions 주간 실행 결과에서도 `featuredProblemCount`가 0인지 확인한다.
+2. `reviewRecords`는 공개 화면에 바로 노출하지 말고, 추후 내부 통계 또는 간단한 debug 페이지에서만 확인한다.
+3. OpenAI API 연결 시 `auto_publish` 후보에만 카드뉴스 본문 생성을 적용하고, `needs_review` 후보는 비용을 쓰지 않도록 한다.

@@ -140,8 +140,10 @@ const normalizedDrafts = [...rawByDoi.values()]
   .filter(Boolean)
   .map(classifyAndDraft)
   .sort(sortByDateDesc);
-const { featuredDrafts, archiveRecords } = splitFeaturedAndArchive(normalizedDrafts);
+const { featuredDrafts, archiveRecords, reviewRecords } = splitFeaturedAndArchive(normalizedDrafts);
 const featuredCoverageByTopic = coverageByTopic(featuredDrafts);
+const publishStatusCounts = countBy(normalizedDrafts, "publishStatus");
+const qualityFlagCounts = countQualityFlags(normalizedDrafts);
 
 const output = {
   generatedAt: new Date().toISOString(),
@@ -153,12 +155,16 @@ const output = {
   archiveDays,
   coverageByTopic: lastCoverage,
   featuredCoverageByTopic,
+  publishStatusCounts,
+  qualityFlagCounts,
   totalCollected: normalizedDrafts.length,
   featuredCount: featuredDrafts.length,
   archiveCount: archiveRecords.length,
+  reviewCount: reviewRecords.length,
   records: featuredDrafts,
   featuredDrafts,
   archiveRecords,
+  reviewRecords,
 };
 
 await mkdir(path.join(ROOT, "data", "raw"), { recursive: true });
@@ -172,12 +178,15 @@ await writeJson("data/raw/crossref-latest.json", {
   draftLimitPerTopic,
   archiveDays,
   totalCollected: normalizedDrafts.length,
+  publishStatusCounts,
+  qualityFlagCounts,
   records: [...rawByDoi.values()],
 });
 await writeJson("data/drafts/article-drafts.json", output);
 
 console.log(`Saved ${normalizedDrafts.length} drafts to data/drafts/article-drafts.json`);
 console.log(`Featured drafts: ${featuredDrafts.length}; archive records: ${archiveRecords.length}`);
+console.log(`Needs review: ${reviewRecords.length}`);
 console.log(`Windows tried: ${windows.join(", ")} days; selected window: ${selectedWindow} days`);
 console.log(`Minimum topic target: ${minTopicCount}`);
 console.log(`Featured draft limit per topic: ${draftLimitPerTopic}; archive days: ${archiveDays}`);
@@ -271,8 +280,9 @@ function normalizeRecord(item) {
 function splitFeaturedAndArchive(records) {
   const featuredIds = new Set();
   const featuredDrafts = [];
+  const publishableRecords = records.filter((record) => record.publishStatus === "auto_publish");
   for (const topic of topics) {
-    const topicRecords = records.filter((record) => record.topicId === topic.id).sort(sortByFeaturedScore);
+    const topicRecords = publishableRecords.filter((record) => record.topicId === topic.id).sort(sortByFeaturedScore);
     for (const record of topicRecords.slice(0, draftLimitPerTopic)) {
       featuredIds.add(record.id);
       featuredDrafts.push(record);
@@ -290,7 +300,9 @@ function splitFeaturedAndArchive(records) {
     })
     .sort(sortByDateDesc);
 
-  return { featuredDrafts, archiveRecords };
+  const reviewRecords = records.filter((record) => record.needsReview).sort(sortByDateDesc);
+
+  return { featuredDrafts, archiveRecords, reviewRecords };
 }
 
 function classifyAndDraft(article) {
@@ -319,19 +331,25 @@ function classifyAndDraft(article) {
 
   const primaryQuestionId = questionIds[0] || questions.find((question) => question.topicId === topicId)?.id;
 
-  return {
+  const featuredScore = scoreFeatured(article, topicResult);
+  const featuredSignals = buildFeaturedSignals(article, topicResult);
+  const draft = {
     ...article,
     topicId,
     topicScore: topicResult.topicScore,
     topicScores: topicResult.topicScores,
     classificationConfidence: topicResult.confidence,
     questionIds: primaryQuestionId ? [...new Set([primaryQuestionId, ...questionIds])] : [],
-    cardTitle: buildCardTitle(article, topicId),
-    deck: buildDeck(article, topicId, primaryQuestionId),
-    koreanSummary: buildKoreanSummary(article, topicId),
-    featuredScore: scoreFeatured(article, topicResult),
-    featuredSignals: buildFeaturedSignals(article, topicResult),
+    cardTitle: buildCardTitleClean(article, topicId),
+    deck: buildDeckClean(article, topicId, primaryQuestionId),
+    koreanSummary: buildKoreanSummaryClean(article, topicId),
+    featuredScore,
+    featuredSignals,
     summary_status: "ai_draft",
+  };
+  return {
+    ...draft,
+    ...evaluatePublishQuality(draft),
   };
 }
 
@@ -392,6 +410,65 @@ function coverageByTopic(records) {
     coverage[record.topicId] = (coverage[record.topicId] || 0) + 1;
   }
   return coverage;
+}
+
+function evaluatePublishQuality(article) {
+  const flags = [];
+  const topScore = article.topicScores?.[0]?.score || 0;
+  const runnerUpScore = article.topicScores?.[1]?.score || 0;
+  const scoreGap = topScore - runnerUpScore;
+
+  if (!article.abstract) {
+    flags.push("missing_abstract");
+  } else if (article.abstract.length < 250) {
+    flags.push("short_abstract");
+  }
+
+  if ((article.classificationConfidence || 0) < 0.4) {
+    flags.push("low_classification_confidence");
+  }
+
+  if (topScore > 0 && runnerUpScore >= 12 && scoreGap <= 6) {
+    flags.push("topic_overlap");
+  }
+
+  if ((article.featuredScore || 0) < 70) {
+    flags.push("low_featured_score");
+  }
+
+  if (hasBrokenText(article.cardTitle) || hasBrokenText(article.koreanSummary) || hasBrokenText(JSON.stringify(article.deck || {}))) {
+    flags.push("text_encoding_issue");
+  }
+
+  return {
+    publishStatus: flags.length ? "needs_review" : "auto_publish",
+    needsReview: flags.length > 0,
+    qualityFlags: flags,
+  };
+}
+
+function hasBrokenText(value = "") {
+  const text = `${value}`;
+  return ["�", "怨", "醫", "移", "理", "?명솕", "?몄", "?뺤", "?쇰Ц", "?뚮큵"].some((token) =>
+    text.includes(token),
+  );
+}
+
+function countBy(records, key) {
+  return records.reduce((counts, record) => {
+    const value = record[key] || "unknown";
+    counts[value] = (counts[value] || 0) + 1;
+    return counts;
+  }, {});
+}
+
+function countQualityFlags(records) {
+  return records.reduce((counts, record) => {
+    for (const flag of record.qualityFlags || []) {
+      counts[flag] = (counts[flag] || 0) + 1;
+    }
+    return counts;
+  }, {});
 }
 
 function scoreKeywords(text, keywords) {
@@ -548,7 +625,7 @@ function scoreFeatured(article, topicResult) {
   const published = article.publishedDate ? new Date(`${article.publishedDate}T00:00:00Z`) : null;
   const ageDays = published ? Math.max(0, daysBetween(published, untilDate)) : 9999;
   const abstractLength = article.abstract?.length || 0;
-  const studyDesign = inferStudyDesign(article);
+  const studyDesign = inferStudyDesignClean(article);
 
   const recencyScore =
     ageDays <= 7 ? 30 : ageDays <= 14 ? 27 : ageDays <= 30 ? 22 : ageDays <= 90 ? 14 : ageDays <= 180 ? 8 : 3;
@@ -570,13 +647,28 @@ function buildFeaturedSignals(article, topicResult) {
     abstractLength: article.abstract?.length || 0,
     topicFit: topicResult.topicScore,
     classificationConfidence: topicResult.confidence,
-    studyDesign: inferStudyDesign(article),
+    studyDesign: inferStudyDesignClean(article),
     access: article.access,
     journalPriority: JOURNAL_FEATURED_PRIORITY[article.journalId] || 3,
   };
 }
 
 function scoreStudyDesign(studyDesign) {
+  const cleanWeights = {
+    메타분석: 8,
+    "체계적 문헌고찰": 7,
+    "범위 문헌고찰": 5,
+    "통합 문헌고찰": 5,
+    "중재 연구": 7,
+    "종단 연구": 6,
+    "질적 연구": 4,
+    "설문 연구": 3,
+    "생물학적 지표 연구": 4,
+    "최근 실증 연구": 3,
+  };
+  if (cleanWeights[studyDesign]) {
+    return cleanWeights[studyDesign];
+  }
   const weights = {
     메타분석: 8,
     "체계적 문헌고찰": 7,
@@ -694,4 +786,79 @@ function fallbackTopic(article) {
     return "work-retirement-ageism";
   }
   return "social-aging";
+}
+
+function buildDeckClean(article, topicId, questionId) {
+  const topic = topics.find((item) => item.id === topicId);
+  const question = questions.find((item) => item.id === questionId);
+  const studyDesign = inferStudyDesignClean(article);
+  const focus = inferFocusClean(article, topicId);
+
+  return {
+    question: question?.question || `${topic?.name || "노화 심리"} 관점에서 이 논문은 어떤 문제를 다루는가?`,
+    method: `${studyDesign}로 ${focus}을(를) 다룬 최근 논문입니다. 자동 생성 카드이므로 연구 설계와 표본은 원문에서 확인해야 합니다.`,
+    finding: article.abstract
+      ? `${focus}과(와) 관련된 결과를 보고합니다. 구체적인 효과 크기, 통계값, 적용 범위는 원문 초록과 본문에서 다시 확인해야 합니다.`
+      : `Crossref 메타데이터에 초록이 없어 ${focus}에 대한 결론은 원문 또는 출판사 페이지 확인이 필요합니다.`,
+    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}을(를) 최근 연구 흐름으로 읽을 수 있습니다.`,
+    caution: article.abstract
+      ? "자동 생성 문구이므로 원문 초록, 연구 설계, 표본, 결과 수치를 기준으로 해석해야 합니다."
+      : "초록이 없는 메타데이터 기반 카드이므로 게시 전 원문 확인이 필요합니다.",
+  };
+}
+
+function buildKoreanSummaryClean(article, topicId) {
+  const topic = topics.find((item) => item.id === topicId);
+  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${inferFocusClean(article, topicId)}을(를) 중심으로 읽을 수 있습니다.`;
+}
+
+function buildCardTitleClean(article, topicId) {
+  const topic = topics.find((item) => item.id === topicId);
+  return `${topic?.name || "노화 심리"} 최신 논문: ${inferFocusClean(article, topicId)}`;
+}
+
+function inferStudyDesignClean(article) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  if (text.includes("meta-analysis") || text.includes("meta analysis")) return "메타분석";
+  if (text.includes("systematic review")) return "체계적 문헌고찰";
+  if (text.includes("scoping review")) return "범위 문헌고찰";
+  if (text.includes("integrative review")) return "통합 문헌고찰";
+  if (text.includes("randomized") || text.includes("randomised") || text.includes("trial")) return "중재 연구";
+  if (text.includes("cohort") || text.includes("longitudinal")) return "종단 연구";
+  if (text.includes("interview") || text.includes("qualitative")) return "질적 연구";
+  if (text.includes("survey")) return "설문 연구";
+  if (text.includes("biomarker") || text.includes("plasma") || text.includes("protein")) return "생물학적 지표 연구";
+  return "최근 실증 연구";
+}
+
+function inferFocusClean(article, topicId) {
+  const text = `${article.title} ${article.abstract}`.toLowerCase();
+  const topic = topics.find((item) => item.id === topicId);
+  const pairs = [
+    ["mild cognitive impairment", "경도인지장애"],
+    ["cognitive impairment", "인지장애"],
+    ["cognitive decline", "인지 저하"],
+    ["cognitive function", "인지기능"],
+    ["dementia", "치매와 인지장애"],
+    ["memory", "기억과 인지기능"],
+    ["depression", "우울 증상"],
+    ["anxiety", "불안 증상"],
+    ["mental health", "정신건강"],
+    ["loneliness", "외로움과 사회적 고립"],
+    ["caregiver", "돌봄자 부담과 지원"],
+    ["caregiving", "돌봄 경험"],
+    ["family", "가족 돌봄"],
+    ["fall", "낙상 예방과 안전"],
+    ["gait", "보행과 균형"],
+    ["balance", "보행과 균형"],
+    ["physical activity", "신체활동"],
+    ["exercise", "운동 개입"],
+    ["digital", "디지털헬스"],
+    ["technology", "기술 사용"],
+    ["ageism", "연령주의"],
+    ["retirement", "은퇴 전환"],
+    ["work", "일터와 고령 근로자"],
+    ["social", "사회적 관계와 환경"],
+  ];
+  return pairs.find(([keyword]) => text.includes(keyword))?.[1] || `${topic?.name || "노화 심리"}의 핵심 쟁점`;
 }
