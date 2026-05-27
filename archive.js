@@ -61,18 +61,15 @@ function renderArchive() {
 }
 
 function renderSourceRow(article) {
-  const topic = topicById(article.topicId);
   return `
     <article class="source-row">
       <div>
-        <span class="badge ${topic?.color || ""}">${topic?.name || "분류 대기"}</span>
+        ${renderTopicBadges(article)}
         <h3>${article.title}</h3>
         <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors || [])}</p>
+        ${renderSourceCoverage(article)}
       </div>
-      <div class="article-actions">
-        <a class="button-link primary" href="${article.url}" target="_blank" rel="noreferrer">DOI</a>
-        <a class="button-link" href="${article.crossrefUrl}" target="_blank" rel="noreferrer">Crossref</a>
-      </div>
+      ${renderArticleLinks(article)}
     </article>
   `;
 }
@@ -80,7 +77,10 @@ function renderSourceRow(article) {
 function filteredRecords() {
   const term = state.filters.search.trim().toLowerCase();
   return state.records.filter((article) => {
-    const topicMatch = state.filters.topic === "all" || article.topicId === state.filters.topic;
+    const topicMatch =
+      state.filters.topic === "all" ||
+      article.topicId === state.filters.topic ||
+      (article.secondaryTopicIds || []).includes(state.filters.topic);
     const accessMatch = state.filters.access === "all" || article.access === state.filters.access;
     const searchable = [
       article.title,
@@ -88,6 +88,9 @@ function filteredRecords() {
       article.koreanSummary,
       (article.authors || []).join(" "),
       (article.topics || []).join(" "),
+      (article.sourceCoverage || []).join(" "),
+      (article.openAlex?.concepts || []).map((concept) => concept.name).join(" "),
+      (article.openAlex?.topics || []).map((topic) => topic.name).join(" "),
     ]
       .join(" ")
       .toLowerCase();
@@ -97,6 +100,56 @@ function filteredRecords() {
 
 function topicById(topicId) {
   return state.topics.find((topic) => topic.id === topicId);
+}
+
+function renderTopicBadges(article) {
+  const primaryTopic = topicById(article.topicId);
+  const secondaryTopics = (article.secondaryTopicIds || [])
+    .map((topicId) => topicById(topicId))
+    .filter(Boolean);
+  return `
+    <div class="topic-badge-row">
+      <span class="badge ${primaryTopic?.color || ""}">${primaryTopic?.name || "분류 대기"}</span>
+      ${secondaryTopics.map((topic) => `<span class="badge subtle ${topic.color}">+ ${topic.name}</span>`).join("")}
+      <span class="badge ${article.access === "open" ? "green" : "gold"}">
+        ${article.access === "open" ? "Open access" : "Metadata/abstract"}
+      </span>
+    </div>
+  `;
+}
+
+function renderSourceCoverage(article) {
+  const coverage = article.sourceCoverage || ["Crossref"];
+  if (!coverage.length) {
+    return "";
+  }
+  return `<p class="source-coverage">수집원: ${coverage.join(" · ")}</p>`;
+}
+
+function renderArticleLinks(article) {
+  const links = article.sourceLinks || {};
+  const doiUrl = links.openAccess || article.url;
+  const crossrefUrl = links.crossref || article.crossrefUrl;
+  const items = [
+    { label: "원문/DOI", url: doiUrl, primary: true },
+    { label: "Crossref", url: crossrefUrl },
+    { label: "OpenAlex", url: links.openAlex },
+    { label: "PubMed", url: links.pubMed || links.pubMedSearch },
+  ].filter((item) => item.url);
+
+  return `
+    <div class="article-actions">
+      ${items
+        .map(
+          (item) => `
+            <a class="button-link ${item.primary ? "primary" : ""}" href="${item.url}" target="_blank" rel="noreferrer">
+              ${item.label}
+            </a>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function formatAuthors(authors) {

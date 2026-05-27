@@ -104,13 +104,14 @@ function enrichArticle(article) {
     ...article,
     cardTitle: item.cardTitle || article.cardTitle,
     topicId: item.topicId || article.topicId || "social-aging",
+    secondaryTopicIds: item.secondaryTopicIds || article.secondaryTopicIds || [],
     questionIds: item.questionIds || article.questionIds || [],
     deck: item.deck || article.deck || {
       question: article.title,
       method: "초록 기반 자동 요약 대기 중입니다.",
       finding: article.koreanSummary,
-      meaning: "검수 후 카드뉴스로 게시됩니다.",
-      caution: "원문과 초록을 확인해야 합니다.",
+      meaning: "이 논문이 노화 심리 연구에서 갖는 의미를 카드뉴스로 정리합니다.",
+      caution: "원문 링크를 함께 제공해 세부 내용을 확인할 수 있습니다.",
     },
   };
 }
@@ -153,19 +154,24 @@ function renderDataNotice() {
     const featuredCount = state.articleMeta.featuredCount || state.articles.length;
     const archiveCount = state.articleMeta.archiveCount || state.archiveArticles.length;
     const totalCollected = state.articleMeta.totalCollected || featuredCount + archiveCount;
+    const coverage = state.articleMeta.sourceCoverageCounts || {};
+    const sourceLabel = Object.entries(coverage)
+      .filter(([, count]) => count > 0)
+      .map(([source, count]) => `${source} ${count}건`)
+      .join(" · ");
     els.dataNotice.innerHTML = `
       <p>
-        현재 화면은 <strong>카드뉴스 draft ${featuredCount}개</strong>를 우선 표시합니다.
-        Crossref에서 최근 ${state.articleMeta.selectedWindow || "-"}일 범위의 논문 ${totalCollected}개를 수집했고,
-        draft에 포함하지 않은 ${archiveCount}개는 최근 ${state.articleMeta.archiveDays || 365}일 기준 보관함에 분리했습니다.
-        공개 게시 전에는 원문과 초록 확인이 필요합니다.
+        최근 ${state.articleMeta.selectedWindow || "-"}일 범위에서 논문 ${totalCollected}개를 수집했고,
+        자동 게시 기준을 통과한 <strong>카드뉴스 ${featuredCount}개</strong>를 메인에 표시합니다.
+        메인에 포함하지 않은 ${archiveCount}개 논문은 최근 ${state.articleMeta.archiveDays || 365}일 기준 보관함에서 확인할 수 있습니다.
+        ${sourceLabel ? `수집원 연결 상태: ${sourceLabel}.` : ""}
       </p>
     `;
     return;
   }
 
   els.dataNotice.innerHTML = `
-    <p>현재 화면은 게시용 샘플 데이터를 표시합니다.</p>
+    <p>현재 화면은 게시용 기본 데이터를 표시합니다.</p>
   `;
 }
 
@@ -178,7 +184,7 @@ function renderTopicGrid() {
           <span>${topic.kicker}</span>
           <strong>${topic.name}</strong>
           <p>${topic.description}</p>
-          <em>${count}개 카드뉴스 후보</em>
+          <em>${count}개 카드뉴스</em>
         </button>
       `;
     })
@@ -267,31 +273,31 @@ function renderTopicDetail() {
 }
 
 function renderArticleDeck(article) {
-  const topic = topicById(article.topicId);
   return `
     <section class="article-deck-shell">
       <div class="feature-summary">
-        <span class="badge ${topic?.color || ""}">${topic?.name || "노화 심리"}</span>
+        ${renderTopicBadges(article)}
         <h3>${displayCardTitle(article)}</h3>
         <p class="source-title">${article.title}</p>
-        <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors)}</p>
-        <div class="article-actions">
-          <a class="button-link primary" href="${article.url}" target="_blank" rel="noreferrer">
-            <i data-lucide="external-link"></i>
-            원문/DOI
-          </a>
-          <a class="button-link" href="${article.crossrefUrl}" target="_blank" rel="noreferrer">
-            <i data-lucide="database"></i>
-            Crossref
-          </a>
-        </div>
+        <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors || [])}</p>
+        ${renderSourceCoverage(article)}
+        ${renderArticleLinks(article)}
       </div>
-      <div class="card-news-deck" aria-label="article card news">
-        ${renderDeckCard("1", "핵심 질문", article.deck.question, "circle-help")}
-        ${renderDeckCard("2", "무엇을 했나", article.deck.method, "clipboard-list")}
-        ${renderDeckCard("3", "주요 결과", article.deck.finding, "chart-no-axes-combined")}
-        ${renderDeckCard("4", "왜 중요한가", article.deck.meaning, "sparkles")}
-        ${renderDeckCard("5", "조심해서 볼 점", article.deck.caution, "triangle-alert")}
+      <div class="deck-area">
+        <div class="deck-toolbar">
+          <strong>카드뉴스 5장</strong>
+          <div class="deck-progress" aria-label="card progress">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+          </div>
+        </div>
+        <div class="card-news-deck" aria-label="article card news" tabindex="0">
+          ${renderDeckCard("1", "핵심 질문", article.deck.question, "circle-help")}
+          ${renderDeckCard("2", "무엇을 했나", article.deck.method, "clipboard-list")}
+          ${renderDeckCard("3", "핵심 메시지", article.deck.finding, "chart-no-axes-combined")}
+          ${renderDeckCard("4", "왜 중요한가", article.deck.meaning, "sparkles")}
+          ${renderDeckCard("5", "조심해서 볼 점", article.deck.caution, "triangle-alert")}
+        </div>
+        <p class="deck-scroll-hint">가로로 넘기며 읽을 수 있습니다.</p>
       </div>
     </section>
   `;
@@ -466,18 +472,15 @@ function renderSources() {
 
   els.sourceList.innerHTML = visibleArticles
     .map((article) => {
-      const topic = topicById(article.topicId);
       return `
         <article class="source-row">
           <div>
-            <span class="badge ${topic?.color || ""}">${topic?.name || "분류 대기"}</span>
+            ${renderTopicBadges(article)}
             <h3>${article.title}</h3>
-            <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors)}</p>
+            <p>${article.journal} · ${article.publishedDate} · ${formatAuthors(article.authors || [])}</p>
+            ${renderSourceCoverage(article)}
           </div>
-          <div class="article-actions">
-            <a class="button-link primary" href="${article.url}" target="_blank" rel="noreferrer">DOI</a>
-            <a class="button-link" href="${article.crossrefUrl}" target="_blank" rel="noreferrer">Crossref</a>
-          </div>
+          ${renderArticleLinks(article)}
         </article>
       `;
     })
@@ -497,9 +500,7 @@ function renderArticlePreview(article) {
   return `
     <article class="paper-card">
       <div>
-        <span class="badge ${article.access === "open" ? "green" : "gold"}">
-          ${article.access === "open" ? "Open access" : "Metadata/abstract"}
-        </span>
+        ${renderTopicBadges(article)}
         <h4>${displayCardTitle(article)}</h4>
         <p>${article.deck.finding}</p>
       </div>
@@ -518,9 +519,7 @@ function renderArticleSelector(article) {
       type="button"
       data-article-id="${article.id}"
     >
-      <span class="badge ${article.access === "open" ? "green" : "gold"}">
-        ${article.access === "open" ? "Open access" : "Metadata/abstract"}
-      </span>
+      ${renderTopicBadges(article)}
       <h4>${displayCardTitle(article)}</h4>
       <p>${article.deck.finding}</p>
       <span class="paper-card-footer">${article.journal}</span>
@@ -538,6 +537,57 @@ function renderDeckCard(number, title, body, icon) {
       <h4>${title}</h4>
       <p>${body}</p>
     </article>
+  `;
+}
+
+function renderTopicBadges(article) {
+  const primaryTopic = topicById(article.topicId);
+  const secondaryTopics = (article.secondaryTopicIds || [])
+    .map((topicId) => topicById(topicId))
+    .filter(Boolean);
+  return `
+    <div class="topic-badge-row">
+      <span class="badge ${primaryTopic?.color || ""}">${primaryTopic?.name || "노화 심리"}</span>
+      ${secondaryTopics.map((topic) => `<span class="badge subtle ${topic.color}">+ ${topic.name}</span>`).join("")}
+      <span class="badge ${article.access === "open" ? "green" : "gold"}">
+        ${article.access === "open" ? "Open access" : "Metadata/abstract"}
+      </span>
+    </div>
+  `;
+}
+
+function renderSourceCoverage(article) {
+  const coverage = article.sourceCoverage || ["Crossref"];
+  if (!coverage.length) {
+    return "";
+  }
+  return `<p class="source-coverage">수집원: ${coverage.join(" · ")}</p>`;
+}
+
+function renderArticleLinks(article) {
+  const links = article.sourceLinks || {};
+  const doiUrl = links.openAccess || article.url;
+  const crossrefUrl = links.crossref || article.crossrefUrl;
+  const items = [
+    { label: "원문/DOI", url: doiUrl, icon: "external-link", primary: true },
+    { label: "Crossref", url: crossrefUrl, icon: "database" },
+    { label: "OpenAlex", url: links.openAlex, icon: "network" },
+    { label: "PubMed", url: links.pubMed || links.pubMedSearch, icon: "library" },
+  ].filter((item) => item.url);
+
+  return `
+    <div class="article-actions">
+      ${items
+        .map(
+          (item) => `
+            <a class="button-link ${item.primary ? "primary" : ""}" href="${item.url}" target="_blank" rel="noreferrer">
+              <i data-lucide="${item.icon}"></i>
+              ${item.label}
+            </a>
+          `,
+        )
+        .join("")}
+    </div>
   `;
 }
 
@@ -603,14 +653,20 @@ function selectTheory(theoryId) {
 function filteredArticles() {
   const term = state.filters.search.trim().toLowerCase();
   return state.archiveArticles.filter((article) => {
-    const topicMatch = state.filters.topic === "all" || article.topicId === state.filters.topic;
+    const topicMatch =
+      state.filters.topic === "all" ||
+      article.topicId === state.filters.topic ||
+      (article.secondaryTopicIds || []).includes(state.filters.topic);
     const accessMatch = state.filters.access === "all" || article.access === state.filters.access;
     const searchable = [
       article.title,
       article.journal,
       article.koreanSummary,
-      article.authors.join(" "),
-      article.topics.join(" "),
+      (article.authors || []).join(" "),
+      (article.topics || []).join(" "),
+      (article.sourceCoverage || []).join(" "),
+      (article.openAlex?.concepts || []).map((concept) => concept.name).join(" "),
+      (article.openAlex?.topics || []).map((topic) => topic.name).join(" "),
       article.deck.question,
       article.deck.finding,
     ]
@@ -645,6 +701,7 @@ function theoryPaperSetById(theoryId) {
 }
 
 function formatAuthors(authors) {
+  authors = authors || [];
   if (authors.length <= 3) {
     return authors.join(", ");
   }

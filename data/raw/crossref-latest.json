@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-26T15:41:14.170Z",
-  "source": "Crossref",
+  "generatedAt": "2026-05-27T06:44:45.614Z",
+  "source": "Crossref + OpenAlex + PubMed",
   "windowsTried": [
     7,
     14,
@@ -13,18 +13,397 @@
   "minTopicCount": 5,
   "draftLimitPerTopic": 5,
   "archiveDays": 365,
-  "totalCollected": 331,
+  "totalCollected": 336,
   "publishStatusCounts": {
-    "needs_review": 161,
-    "auto_publish": 170
+    "auto_publish": 172,
+    "needs_review": 164
   },
   "qualityFlagCounts": {
-    "missing_abstract": 108,
-    "low_featured_score": 131,
-    "low_classification_confidence": 58,
-    "topic_overlap": 17
+    "low_classification_confidence": 59,
+    "missing_abstract": 109,
+    "low_featured_score": 132,
+    "topic_overlap": 18
+  },
+  "sourceCoverageCounts": {
+    "Crossref": 336,
+    "OpenAlex": 318,
+    "PubMed": 64
   },
   "records": [
+    {
+      "abstract": "<jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Falls are a major contributor to injury, disability, and mortality among older adults worldwide. Digital health–based e-counseling has emerged as a scalable strategy to support fall prevention by addressing physical, behavioral, and cognitive risk factors.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Objective</jats:title>\n                    <jats:p>This scoping review aimed to map the scope, characteristics, and outcomes of e-counseling interventions for fall prevention among adults aged 60 years or older.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Guided by Arksey and O’Malley’s framework and reported in accordance with PRISMA-ScR (Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Reviews), we searched PubMed, ScienceDirect, CINAHL, and ProQuest for studies published between January 2019 and May 2025. Eligible studies evaluated digital or telehealth-based counseling interventions for fall prevention. Data were synthesized descriptively, and methodological quality was appraised using the Mixed Methods Appraisal Tool.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>A total of 13 studies were included, comprising randomized controlled trials, feasibility studies, qualitative research, and retrospective cohorts conducted across Asia, Europe, and North America. e-Counseling modalities included virtual reality, mobile health application, teleconsultations, and wearable-triggered feedback systems. Reported outcomes included reductions in fall incidence ranging from 15% to 90.9%, improvements in balance and mobility, increased fall risk awareness, and enhanced self-efficacy. Interventions incorporating cultural tailoring and digital literacy support demonstrated higher engagement and adherence.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>e-Counseling appears to be a promising and scalable approach for fall prevention in older adults, with benefits across physical and behavioral domains. Future research should focus on long-term effectiveness, equitable access in low- and middle-income settings, and integration into routine health care systems.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.2196/78444",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            27
+          ]
+        ],
+        "date-time": "2026-01-27T21:45:10Z",
+        "timestamp": 1769550310000
+      },
+      "title": [
+        "e-Counseling for Fall Prevention in Older Adults: Scoping Review"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-4274-0651",
+          "authenticated-orcid": false,
+          "given": "Lina",
+          "family": "Safarina",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-7524-3910",
+          "authenticated-orcid": false,
+          "given": "Cecep Eli",
+          "family": "Kosasih",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0645-0534",
+          "authenticated-orcid": false,
+          "given": "Iqbal",
+          "family": "Pramukti",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9617-2645",
+          "authenticated-orcid": false,
+          "given": "Nucki",
+          "family": "Nursjamsi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "JMIR Aging"
+      ],
+      "URL": "https://doi.org/10.2196/78444",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "jmir-aging",
+        "journalName": "JMIR Aging",
+        "journalShortName": "JMIR Aging",
+        "accessLabel": "Gold open access",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec sec-type=\"background\">\n                    <jats:title>Background</jats:title>\n                    <jats:p>As populations age globally, accurate and feasible dietary assessment for older adults has become increasingly important. South Korea has already become an “aged society,” with over 14.2% of its population being aged 65 years and older, and is projected to become one of the world’s most rapidly super-aged societies by 2050, with more than 40% of its population in this age group. Similarly, the Asia-Pacific region is experiencing accelerated population aging, with 10 countries classified as “aging societies” (&gt;7% aged ≥65 years), 5 as “aged societies” (&gt;14%), and 11 as “super-aged societies” (&gt;21%) in 2025. Despite the growing need for accurate dietary monitoring in this demographic, nutritional assessment remains challenging due to limitations of conventional methods, compounded by cognitive burden, functional decline, and low literacy. Although various technology-based solutions, including web-based, scanner-based, and mobile tools, have been introduced, challenges related to usability, accuracy, and cost remain unresolved.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"objective\">\n                    <jats:title>Objective</jats:title>\n                    <jats:p>This study aims to evaluate the validity and usability of a speech-based dietary assessment tool as a potential alternative to a traditional pen-and-paper food diary among older adults.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"methods\">\n                    <jats:title>Methods</jats:title>\n                    <jats:p>In a randomized crossover study, adults aged ≥65 years (n=18) completed 2 nonconsecutive 3-day dietary assessment periods using both a speech-recording (SR) method and a food diary (FD). Mean daily nutrient intakes were compared between methods, and agreement was examined using Bland-Altman plots. Usability was assessed after each method using the System Usability Scale (SUS).</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"results\">\n                    <jats:title>Results</jats:title>\n                    <jats:p>\n                      Mean daily intakes estimated by SR and FD were similar in magnitude across most nutrients. The paired mean difference in energy intake (FD-SR) was 38.38 (95% CI −176.63 to 253.40) kcal. Across nutrients, mean differences were generally small, and most 95% CIs included zero, indicating limited evidence of a large systematic difference at the group level. The correlation coefficient between SR and FD ranged from 0.178 to 0.907 depending on the nutrient assessed, though CIs were often wide (eg, energy intake; Pearson\n                      <jats:italic>r</jats:italic>\n                      =0.52, 95% CI 0.05-0.81). Bland-Altman analyses for energy and macronutrients show mean differences close to zero, although substantial individual-level variability was observed. Cholesterol demonstrated greater dispersion and possible proportional bias at higher intake levels. Mean SUS scores were 66.25 for FD and 72.78 for SR, with a paired mean difference (FD-SR) of −6.53 (95% CI −11.75 to −1.30), indicating higher usability ratings for the SR method on average.\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"conclusions\">\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>These findings suggest that in older adults, the speech recognition method–produced dietary intake estimates may be a feasible approach with broadly comparable nutrient intake levels to written food diaries and modestly higher usability ratings. Further work is needed in larger samples to compare approaches with increased precision.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.2196/81336",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            3
+          ]
+        ],
+        "date-time": "2026-04-03T06:05:06Z",
+        "timestamp": 1775196306000
+      },
+      "title": [
+        "Speech Recognition–Based Dietary Assessment Tool for Older Adults: Validation and Usability Study"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0004-1827-8948",
+          "authenticated-orcid": false,
+          "given": "Yoonjee",
+          "family": "‍Sung",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0002-2508-8814",
+          "authenticated-orcid": false,
+          "given": "Soyoung",
+          "family": "Jung",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-0345-9365",
+          "authenticated-orcid": false,
+          "given": "Hae Jin",
+          "family": "Kang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-1025-1968",
+          "authenticated-orcid": false,
+          "given": "So Young",
+          "family": "Moon",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-7945-6956",
+          "authenticated-orcid": false,
+          "given": "Jee Hyang",
+          "family": "Jeong",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4180-8626",
+          "authenticated-orcid": false,
+          "given": "Seong Hye",
+          "family": "Choi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4206-6214",
+          "authenticated-orcid": false,
+          "given": "Eun-Hye",
+          "family": "Lee",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-8536-0835",
+          "authenticated-orcid": false,
+          "given": "Yoo Kyung",
+          "family": "Park",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "JMIR Aging"
+      ],
+      "URL": "https://doi.org/10.2196/81336",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "jmir-aging",
+        "journalName": "JMIR Aging",
+        "journalShortName": "JMIR Aging",
+        "accessLabel": "Gold open access",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec sec-type=\"background\">\n                    <jats:title>Background</jats:title>\n                    <jats:p>The growing aging population has increased the need for technologies that support informal caregivers in home-based older adult care. Digital twin (DT) systems offer promising capabilities; yet, their effectiveness depends on usability, an aspect still insufficiently evaluated among caregivers.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"objective\">\n                    <jats:title>Objective</jats:title>\n                    <jats:p>This study aimed to assess the usability of an older adult care DT system using a dual-method evaluation that integrates subjective and objective behavioral performance.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"methods\">\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Fifty caregivers participated in a usability assessment combining the System Usability Scale (SUS) and detailed system activity log analytics. Log-based measures included task completion, time on task, errors, and abandonment rate. A composite user engagement score was computed and analyzed for correlation and predictive association with SUS ratings. Engagement clusters were also explored.</jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"results\">\n                    <jats:title>Results</jats:title>\n                    <jats:p>\n                      Caregivers reported an excellent mean SUS score of 80.45. System logs showed a 94.08% task completion rate, 2.66% abandonment, and an average task duration of 89.16 seconds. User engagement score demonstrated significant correlations with SUS (\n                      <jats:italic>r</jats:italic>\n                      =0.626, ρ=0.552;\n                      <jats:italic>P</jats:italic>\n                      &lt;.001) and significantly predicted usability in regression analysis (\n                      <jats:italic>β</jats:italic>\n                      =52.94,\n                      <jats:italic>R</jats:italic>\n                      ²=0.392;\n                      <jats:italic>P</jats:italic>\n                      &lt;.001). Engagement-based clustering identified high-, medium-, and low-tier user groups, each exhibiting distinct usability patterns.\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec sec-type=\"conclusions\">\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>Integrating subjective usability ratings with objective behavioral metrics provides a rigorous and comprehensive approach to evaluating DT systems for older adult care. The findings highlight strong usability of the system and offer actionable insights for refining caregiver support technologies.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.2196/91873",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ],
+        "date-time": "2026-05-26T17:12:23Z",
+        "timestamp": 1779815543000
+      },
+      "title": [
+        "Combining Subjective Perceptions and Objective Behavioral Metrics With the Elderly Digital Twin System: Quantitative Usability Study"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0008-4444-1218",
+          "authenticated-orcid": false,
+          "given": "Ziaullah",
+          "family": "Momand",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6069-1315",
+          "authenticated-orcid": false,
+          "given": "Pornchai",
+          "family": "Mongkolnam",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7305-1015",
+          "authenticated-orcid": false,
+          "given": "Debajyoti",
+          "family": "Pal",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0006-3034-9221",
+          "authenticated-orcid": false,
+          "given": "Siam",
+          "family": "Yamsaengsung",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "JMIR Aging"
+      ],
+      "URL": "https://doi.org/10.2196/91873",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "jmir-aging",
+        "journalName": "JMIR Aging",
+        "journalShortName": "JMIR Aging",
+        "accessLabel": "Gold open access",
+        "fetchedWindowDays": 7
+      }
+    },
     {
       "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>The number of older adults with cancer, those who require complex needs and care, continues to increase. With limited learning opportunities, the healthcare workforce is unprepared to meet this growing need. This study examined the long-term impact of Geriatric Oncology: Cognition and Communication (Geri Onc CC), a multidisciplinary program developed and implemented to address this gap in care.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>Multidisciplinary healthcare providers (HCPs) were recruited from across the United States and internationally to participate virtually or in person at a comprehensive cancer center in the Northeast U.S. The program included education about geriatric syndromes, unique and complex issues related to older adults with cancer, and tailored communication strategies. Knowledge, attitudes, and self-efficacy were assessed pre- and post-training, and at 6- and 12-month follow-ups. Skill utilization and implementation practices were evaluated at 6- and 12-month follow-ups only.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>282 HCPs participated. Initial gains in knowledge and self-efficacy were maintained at both 6 and 12 months post-training (ps&amp;lt;.01). Over 70% indicated using all skill categories “somewhat more” or “much more” at both follow-up periods. Most HCPs implemented changes in their clinical practice, teaching, and/or research based on what they learned.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>Geri Onc CC has demonstrated a sustained, positive impact in many areas, including knowledge and self-efficacy. It also led to greater usage of the skills learned and changes in clinical care, teaching, and research. The program addresses a critical gap in education and training of the workforce caring for older adults with cancer.</jats:p>\n                  </jats:sec>",
       "DOI": "10.1093/geroni/igag058",
@@ -639,6 +1018,318 @@
         "journalName": "Innovation in Aging",
         "journalShortName": "Innovation in Aging",
         "accessLabel": "Open access",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "DOI": "10.1093/geront/gnag118",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            24
+          ]
+        ],
+        "date-time": "2026-05-24T11:34:07Z",
+        "timestamp": 1779622447000
+      },
+      "title": [
+        "Book Review of\n                    <i>A Study on Discourse Construction of Digital Trust Among Older Adults in China</i>"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0003-1446-3575",
+          "authenticated-orcid": false,
+          "given": "Jiaqi",
+          "family": "Zhao",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Nanjing Normal University Department of English Language and Literature, , Nanjing, Jiangsu, CN"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "The Gerontologist"
+      ],
+      "URL": "https://doi.org/10.1093/geront/gnag118",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "the-gerontologist",
+        "journalName": "The Gerontologist",
+        "journalShortName": "The Gerontologist",
+        "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>As populations age, extending healthy life expectancy and reducing morbidity are priorities. Cognitive frailty, the co-occurrence of cognitive impairment and physical frailty without dementia, may offer a window for prevention. However, there is limited evidence on how cognitive frailty is understood, which may undermine recognition and risk reduction. This study provides new insights into how cognitive frailty is conceptualised across public and professional contexts, by exploring perceptions, causes and risk factors of cognitive frailty to inform public health and clinical practice.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>We conducted 22 semi-structured interviews with members of the public and healthcare professionals. Interviews examined perceived definitions, symptoms and risk factors. Data were analysed using reflexive thematic analysis.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Three analytic domains were identified: conceptualisations, manifestations and risk factors. Participants often conflated cognitive frailty with cognitive impairment or described it as an early stage of dementia. The physical frailty aspect was under-recognised, particularly among public participants. When presented with the international definition, many reframed cognitive frailty as a transitional and potentially preventable state. Healthcare professionals articulated broader symptom profiles and more integrated risk frameworks, whereas the public emphasised observable physical change. Across both groups, mood changes, social withdrawal and unhealthy lifestyle were viewed as central risks, though their interplay was described with varying detail.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>Inconsistent understanding of cognitive frailty may hinder early recognition and prevention. Clearer operational definitions, supportive policy and targeted education are needed to strengthen detection, risk reduction and intervention strategies that protect independence in later life.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1093/geront/gnag112",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            24
+          ]
+        ],
+        "date-time": "2026-05-24T11:34:06Z",
+        "timestamp": 1779622446000
+      },
+      "title": [
+        "Unravelling Cognitive Frailty: Perceptions, Misconceptions, and the Path to Prevention"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0008-1194-3481",
+          "authenticated-orcid": false,
+          "given": "Gerda",
+          "family": "Prakopimaite",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            },
+            {
+              "name": "University College London Division of Psychology and Language Science, , London,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0006-2386-7936",
+          "authenticated-orcid": false,
+          "given": "Magdalena",
+          "family": "Pfaff",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1722-0221",
+          "authenticated-orcid": false,
+          "given": "Eddy J",
+          "family": "Davelaar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of London Centre for Cognition, Computation and Modelling, Department of Psychological Sciences, Birkbeck, , London,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5896-916X",
+          "authenticated-orcid": false,
+          "given": "Lisa",
+          "family": "Quadt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9507-3293",
+          "authenticated-orcid": false,
+          "given": "Malgorzata",
+          "family": "Raczek",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4629-6196",
+          "authenticated-orcid": false,
+          "given": "Naji",
+          "family": "Tabet",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3320-4531",
+          "authenticated-orcid": false,
+          "given": "Alan J",
+          "family": "Gow",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Heriot-Watt University The Ageing Lab, Department of Psychology and Centre for Applied Behavioural Sciences, , Edinburgh,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-7109-6554",
+          "authenticated-orcid": false,
+          "given": "Carol",
+          "family": "Holland",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lancaster University Centre for Ageing Research, Faculty of Health and Medicine, , Lancashire,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-1398-5841",
+          "authenticated-orcid": false,
+          "given": "Dorina",
+          "family": "Cadar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Sussex CEDAR lab, Centre for Dementia Studies, Department of Clinical Neuroscience, Brighton and Sussex Medical School, , Sussex,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "The Gerontologist"
+      ],
+      "URL": "https://doi.org/10.1093/geront/gnag112",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "the-gerontologist",
+        "journalName": "The Gerontologist",
+        "journalShortName": "The Gerontologist",
+        "accessLabel": "Hybrid; metadata accessible",
         "fetchedWindowDays": 7
       }
     },
@@ -5519,6 +6210,74 @@
         "journalId": "research-on-aging",
         "journalName": "Research on Aging",
         "journalShortName": "Res Aging",
+        "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 7
+      }
+    },
+    {
+      "DOI": "10.1080/13825585.2026.2679769",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            27
+          ]
+        ],
+        "date-time": "2026-05-27T05:27:31Z",
+        "timestamp": 1779859651000
+      },
+      "title": [
+        "Now, what were we talking about? Effects of topic reminders on discourse coherence in young and older adults"
+      ],
+      "author": [
+        {
+          "given": "Paul",
+          "family": "Hoffman",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Edinburgh",
+              "place": [
+                "Edinburgh, UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "Aging, Neuropsychology, and Cognition"
+      ],
+      "URL": "https://doi.org/10.1080/13825585.2026.2679769",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "aging-neuropsychology-cognition",
+        "journalName": "Aging, Neuropsychology, and Cognition",
+        "journalShortName": "Aging Neuropsychol Cogn",
         "accessLabel": "Hybrid; metadata accessible",
         "fetchedWindowDays": 7
       }
@@ -23721,6 +24480,105 @@
       }
     },
     {
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            11
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>Older refugees in the United States face substantial healthcare access barriers shaped by displacement, trauma, and systemic challenges. Despite growing recognition of these barriers, research remains limited. This study examined multilevel predictors of healthcare access barriers among older refugees using the Older Adult Immigrant Adapted Model for Health Promotion, an ecological framework integrating individual, interpersonal, community, and structural factors.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>Data were drawn from the Annual Survey of Refugees (2020–2022), yielding a nationally representative sample of 840 refugees aged 50 and older. Healthcare access barriers were measured as cumulative difficulties across cost, transportation, language, knowledge, and appointment access. Using Poisson regression with LASSO regularization and multiple imputation, we identified salient predictors across ecological levels while accounting for missing data and overfitting.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>The final model explained 65 percent of variance in barrier counts. Structural and social conditions were dominant: cumulative resettlement challenges showed the strongest association with barriers (Incidence Rate Ratio [IRR] = 1.60, p &amp;lt; .001), followed by perceived discrimination (IRR = 1.49–1.52, p &amp;lt; .001) and neighborhood unsafety (IRR = 1.34, p &amp;lt; .01). Poorer physical health modestly increased barriers (IRR = 1.14, p &amp;lt; .05), while residing in the United States for 2–3 years was protective (IRR = 0.81, p &amp;lt; .05). The model demonstrated excellent classification performance (AUC = 0.858).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>Healthcare access barriers among older refugees reflect structural adversity and social exclusion rather than individual characteristics alone. Findings support an ecological perspective that emphasizes multilevel determinants and suggest that interventions should address resettlement coordination, discrimination reduction, and community welcoming alongside healthcare system improvements to achieve equity for aging refugee populations.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1093/geront/gnag088",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            1
+          ]
+        ],
+        "date-time": "2026-05-01T12:17:02Z",
+        "timestamp": 1777637822000
+      },
+      "title": [
+        "Healthcare access barriers among older refugee newcomers in the United States"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-9577-6714",
+          "authenticated-orcid": false,
+          "given": "Hyojin",
+          "family": "Im",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Social Work, Virginia Commonwealth University , Richmond, Virginia,",
+              "place": [
+                "United States"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Megan M",
+          "family": "Taylor",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Social Work, Boston College , Chestnut Hill, Massachusetts,",
+              "place": [
+                "United States"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            26
+          ]
+        ]
+      },
+      "container-title": [
+        "The Gerontologist"
+      ],
+      "URL": "https://doi.org/10.1093/geront/gnag088",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            11
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "the-gerontologist",
+        "journalName": "The Gerontologist",
+        "journalShortName": "The Gerontologist",
+        "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 30
+      }
+    },
+    {
       "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>The impact of nursing home administrator (NHA) and director of nursing (DON) turnover on residents’ care experiences remains underexplored. This study aims to examine the associations of NHA/DON turnover with resident satisfaction scores.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>Five data sources were merged to create an aggregate dataset of 752 Ohio nursing homes in 2017: The Ohio Nursing Home Resident Satisfaction Survey, the Ohio Biennial Survey of Long-Term Care Facilities, the Certification and Survey Provider Enhanced Reports, Medicaid Cost Report, and LTCFocus. Resident satisfaction was measured by eight resident satisfaction scores: overall satisfaction score and seven individual domain scores. The scores were continuous variables ranging from 0 (low) to 100 (high). Leadership turnover was assessed using four specifications: one NHA turnover, two or more NHA turnover, one DON turnover, and two or more DON turnover over the past three years. Multiple linear regressions were conducted via SAS, adjusting for control variables.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Two or more DON turnover are associated with a lower overall resident satisfaction score by 1.14% points (p &amp;lt; .05), lower Environment domain score by 1.01% points (p &amp;lt; .05), and lower Caregivers domain score by 1.80% points (p &amp;lt; .01). NHA turnover is not statistically associated with overall resident satisfaction score but positively associated with two individual domain scores.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>DON turnover is associated with lower resident satisfaction scores, while NHA turnover is not. A single DON turnover may not harm residents’ care experiences; however, frequent turnover among DON could negatively impact them.</jats:p>\n                  </jats:sec>",
       "DOI": "10.1093/geront/gnag106",
       "type": "journal-article",
@@ -24568,90 +25426,6 @@
         "The Gerontologist"
       ],
       "URL": "https://doi.org/10.1093/geront/gnag082",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            6
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "the-gerontologist",
-        "journalName": "The Gerontologist",
-        "journalShortName": "The Gerontologist",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 30
-      }
-    },
-    {
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>Older refugees in the United States face substantial healthcare access barriers shaped by displacement, trauma, and systemic challenges. Despite growing recognition of these barriers, research remains limited. This study examined multilevel predictors of healthcare access barriers among older refugees using the Older Adult Immigrant Adapted Model for Health Promotion (OAHM), an ecological framework integrating individual, interpersonal, community, and structural factors.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>Data were drawn from the Annual Survey of Refugees (2020-2022), yielding a nationally representative sample of 840 refugees aged 50 and older. Healthcare access barriers were measured as cumulative difficulties across cost, transportation, language, knowledge, and appointment access. Using Poisson regression with LASSO regularization and multiple imputation, we identified salient predictors across ecological levels while accounting for missing data and overfitting.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>The final model explained 65 percent of variance in barrier counts. Structural and social conditions were dominant: cumulative resettlement challenges showed the strongest association with barriers (IRR = 1.60, p&amp;lt;.001), followed by perceived discrimination (IRR = 1.49–1.52, p&amp;lt;.001) and neighborhood unsafety (IRR = 1.34, p&amp;lt;.01). Poorer physical health modestly increased barriers (IRR = 1.14, p&amp;lt;.05), while residing in the United States for two to three years was protective (IRR = 0.81, p&amp;lt;.05). The model demonstrated excellent classification performance (AUC = 0.858).</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>Healthcare access barriers among older refugees reflect structural adversity and social exclusion rather than individual characteristics alone. Findings support ecological models emphasizing multilevel determinants and suggest interventions should address resettlement coordination, discrimination reduction, and community welcoming alongside healthcare system improvements to achieve equity for aging refugee populations.</jats:p>\n                  </jats:sec>",
-      "DOI": "10.1093/geront/gnag088",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            1
-          ]
-        ],
-        "date-time": "2026-05-01T12:17:02Z",
-        "timestamp": 1777637822000
-      },
-      "title": [
-        "Healthcare access barriers among older refugee newcomers in the United States"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0001-9577-6714",
-          "authenticated-orcid": false,
-          "given": "Hyojin",
-          "family": "Im",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Virginia Commonwealth University School of Social Work, , Richmond, VA"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Megan M",
-          "family": "Taylor",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Boston College School of Social Work, , Chestnut Hill, . MA"
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            6
-          ]
-        ]
-      },
-      "container-title": [
-        "The Gerontologist"
-      ],
-      "URL": "https://doi.org/10.1093/geront/gnag088",
       "published": {
         "date-parts": [
           [
@@ -28795,219 +29569,6 @@
         "The Gerontologist"
       ],
       "URL": "https://doi.org/10.1093/geront/gnag068",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            29
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "the-gerontologist",
-        "journalName": "The Gerontologist",
-        "journalShortName": "The Gerontologist",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 30
-      }
-    },
-    {
-      "DOI": "10.1093/geront/gnag057",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            28
-          ]
-        ],
-        "date-time": "2026-04-28T11:34:33Z",
-        "timestamp": 1777376073000
-      },
-      "title": [
-        "Aging and Place: Extending the Terrain of Possibilities"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0003-2251-6035",
-          "authenticated-orcid": false,
-          "given": "Amanda",
-          "family": "Grenier",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "University of Toronto Professor, Norman and Honey Schipper Chair in Gerontological Social Work, Factor-Inwentash Faculty of Social Work, , Toronto, Ontario, M5S 1V4,",
-              "place": [
-                "Canada"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            29
-          ]
-        ]
-      },
-      "container-title": [
-        "The Gerontologist"
-      ],
-      "URL": "https://doi.org/10.1093/geront/gnag057",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            29
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "the-gerontologist",
-        "journalName": "The Gerontologist",
-        "journalShortName": "The Gerontologist",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 30
-      }
-    },
-    {
-      "published-print": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            11
-          ]
-        ]
-      },
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background and Objectives</jats:title>\n                    <jats:p>Happiness is key for healthy aging, yet its trajectory and relationship with sexual activity remain understudied. We examined age, period, and cohort (APC) effects on happiness and its longitudinal association with sexual activity among older Americans.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Research Design and Methods</jats:title>\n                    <jats:p>An APC and longitudinal analysis were conducted using data from three waves of the National Social Life, Health, and Aging Project (2005–2016). Hierarchical APC models estimated temporal effects on happiness, while multilevel ordinal regression examined associations between sexual frequency, physical pleasure, and emotional satisfaction with happiness, adjusting for confounding variables.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Happiness trajectories varied by sex: men showed steady increases with age, whereas women displayed a curvilinear pattern peaking in their late 60 s before declining. Happiness declined across periods and cohorts, with the highest prevalence observed in the 1940–1944 cohort. Longitudinal models revealed that sexual quality, particularly emotional satisfaction (men: OR = 2.42, 95% CI: 1.95, 3.00; women: OR = 1.60, 95% CI: 1.31, 1.95), was associated with higher happiness. Physical pleasure (OR = 1.35, 95% CI: 1.10, 1.65) and sexual frequency (OR = 1.53, 95% CI: 1.27, 1.84) were significant only among women. Associations varied dynamically across waves.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Discussion and Implications</jats:title>\n                    <jats:p>Happiness in later life reflects intersecting temporal and intimate determinants. Public health strategies should promote sexual health, reduce stigma, and address social inequalities to enhance the well-being of aging populations.</jats:p>\n                  </jats:sec>",
-      "DOI": "10.1093/geront/gnag069",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            25
-          ]
-        ],
-        "date-time": "2026-04-25T11:33:10Z",
-        "timestamp": 1777116790000
-      },
-      "title": [
-        "Disentangling the dynamics of happiness in later life: a dual analysis of age-period-cohort effects and the role of sexual activity and quality in older Americans"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0001-5733-4309",
-          "authenticated-orcid": false,
-          "given": "Hongjie",
-          "family": "Liu",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Department of Epidemiology and Biostatistics, School of Public Health, University of Maryland , College Park, Maryland,",
-              "place": [
-                "United States"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "vocabulary": "crossref",
-              "role": "author"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0002-5183-4326",
-          "authenticated-orcid": false,
-          "given": "Caitlin Flouton",
-          "family": "Blanco",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Epidemiology and Biostatistics, School of Public Health, University of Maryland , College Park, Maryland,",
-              "place": [
-                "United States"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "vocabulary": "crossref",
-              "role": "author"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0002-8066-6448",
-          "authenticated-orcid": false,
-          "given": "Rajrupa",
-          "family": "Ghosh",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Epidemiology and Biostatistics, School of Public Health, University of Maryland , College Park, Maryland,",
-              "place": [
-                "United States"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "vocabulary": "crossref",
-              "role": "author"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0002-0574-0804",
-          "authenticated-orcid": false,
-          "given": "Toan",
-          "family": "Ha",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Infectious Diseases and Microbiology, University of Pittsburgh School of Public Health , Pittsburgh, Pennsylvania,",
-              "place": [
-                "United States"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "vocabulary": "crossref",
-              "role": "author"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            29
-          ]
-        ]
-      },
-      "container-title": [
-        "The Gerontologist"
-      ],
-      "URL": "https://doi.org/10.1093/geront/gnag069",
       "published": {
         "date-parts": [
           [
@@ -43006,7 +43567,16 @@
       }
     },
     {
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>We compared two exercise intensities on lean and fat mass among older people with HIV (PWH). The High Intensity Exercise to Attenuate Limitations and Train Habits (HEALTH) randomized sedentary PWH ≥50 years to 16 weeks of high-intensity interval training (HIIT) or continuous moderate-intensity exercise (CME), both with resistance exercise. Body composition was measured using dual-energy x-ray absorptiometry (DXA) at baseline and week 16. Primary outcome was percent change in body fat percentage (ratio of fat mass to total mass). Secondary outcomes included percent change in lean, fat, appendicular lean (ALM), and total mass. Linear regression models examined between- and within-group changes from baseline to week 16. Of the 95 participants with pre- and post-DXA scans, the median (interquartile range [IQR]) age was 58 [54-61] years, 14% female, 14% Black, and 14% Hispanic. Fat percentage decreased by -3.3% (95% confidence interval [CI]: -5.2, -1.6) in HIIT and -3.3% (95% CI: -5.3, -1.6) in CME. Fat mass decreased by -3.5% (95% CI: -5.9, -1.0) in HIIT and -3.8% (95% CI: -6.3, -1.3) in CME. Lean mass increased by 1.7% (95% CI: 0.7, 2.7) and ALM by 3.3% (95% CI: 1.3, 5.3) in HIIT and 1.2% (95% CI: 0.2, 2.2) and ALM by 2.6% (95% CI: 0.6, 4.6) in CME. Although both arms had significant improvements compared to baseline, no between arm comparisons were statistically significant. Supervised HIIT or CME combined with resistance training for 16 weeks is an effective strategy for improving body composition in previously sedentary older PWH.</jats:p>",
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            7
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>We compared two exercise intensities on lean and fat mass among older people with HIV (PWH). The High Intensity Exercise to Attenuate Limitations and Train Habits (HEALTH) randomized sedentary PWH ≥50 years to 16 weeks of high-intensity interval training (HIIT) or continuous moderate-intensity exercise (CME), both with resistance exercise. Body composition was measured using dual-energy x-ray absorptiometry (DXA) at baseline and week 16. The primary outcome was the percent change in body fat percentage (ratio of fat mass to total mass). Secondary outcomes included percent change in lean, fat, appendicular lean (ALM), and total mass. Linear regression models examined between- and within-group changes from baseline to week 16. Of the 95 participants with pre- and post-DXA scans, the median (interquartile range [IQR]) age was 58 [54-61] years, 14% female, 14% Black, and 14% Hispanic. Fat percentage decreased by −3.3% (95% confidence interval [CI]: −5.2, −1.6) in HIIT and −3.3% (95% CI: −5.3, −1.6) in CME. Fat mass decreased by −3.5% (95% CI: −5.9, −1.0) in HIIT and −3.8% (95% CI: −6.3, −1.3) in CME. Lean mass increased by 1.7% (95% CI: 0.7, 2.7) and ALM by 3.3% (95% CI: 1.3, 5.3) in HIIT and 1.2% (95% CI: 0.2, 2.2) and ALM by 2.6% (95% CI: 0.6, 4.6) in CME. Although both arms had significant improvements compared to baseline, no between-arm comparisons were statistically significant. Supervised HIIT or CME combined with resistance training for 16 weeks is an effective strategy for improving body composition in previously sedentary older PWH.</jats:p>\n                  <jats:p>Clinicaltrials.gov: NCT04550676</jats:p>",
       "DOI": "10.1093/gerona/glag113",
       "type": "journal-article",
       "created": {
@@ -43021,27 +43591,27 @@
         "timestamp": 1777377080000
       },
       "title": [
-        "The effects of high intensity interval training vs. Continuous moderate intensity exercise on body composition among older adults with HIV"
+        "The effects of high-intensity interval training versus continuous moderate-intensity exercise on body composition among older adults with HIV"
       ],
       "author": [
         {
-          "ORCID": "https://orcid.org/0000-0003-0808-6729",
+          "ORCID": "https://orcid.org/0000-0002-2318-3239",
           "authenticated-orcid": false,
           "given": "Grace L",
           "family": "Kulik",
           "sequence": "first",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Medicine, , Aurora, CO,",
+              "name": "Department of Medicine, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -43051,16 +43621,16 @@
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Washington School of Nursing, , Seattle, WA,",
+              "name": "School of Nursing, University of Washington , Seattle, Washington,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -43070,16 +43640,16 @@
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Medicine, , Aurora, CO,",
+              "name": "Department of Medicine, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -43089,16 +43659,16 @@
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Medicine, , Aurora, CO,",
+              "name": "Department of Medicine, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -43108,92 +43678,100 @@
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus College of Nursing, , Aurora, CO,",
+              "name": "College of Nursing, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
         {
+          "ORCID": "https://orcid.org/0000-0003-0174-3263",
+          "authenticated-orcid": false,
           "given": "Stephanie",
           "family": "Dillon",
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Medicine, , Aurora, CO,",
+              "name": "Department of Medicine, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
         {
+          "ORCID": "https://orcid.org/0000-0001-7791-9072",
+          "authenticated-orcid": false,
           "given": "Paul",
           "family": "Cook",
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus College of Nursing, , Aurora, CO,",
+              "name": "College of Nursing, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
         {
+          "ORCID": "https://orcid.org/0000-0002-9818-0059",
+          "authenticated-orcid": false,
           "given": "Samantha",
           "family": "MaWhinney",
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Biostatistics & Informatics, , Aurora, CO,",
+              "name": "Department of Biostatistics & Informatics, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
         {
+          "ORCID": "https://orcid.org/0000-0001-6618-1316",
+          "authenticated-orcid": false,
           "given": "Debashis",
           "family": "Ghosh",
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Biostatistics & Informatics, , Aurora, CO,",
+              "name": "Department of Biostatistics & Informatics, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -43203,35 +43781,37 @@
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Washington School of Nursing, , Seattle, WA,",
+              "name": "School of Nursing, University of Washington , Seattle, Washington,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
         {
+          "ORCID": "https://orcid.org/0000-0003-0808-6729",
+          "authenticated-orcid": false,
           "given": "Kristine M",
           "family": "Erlandson",
           "sequence": "additional",
           "affiliation": [
             {
-              "name": "University of Colorado-Anschutz Medical Campus Department of Medicine, , Aurora, CO,",
+              "name": "Department of Medicine, University of Colorado-Anschutz Medical Campus , Aurora, Colorado,",
               "place": [
-                "USA"
+                "United States"
               ]
             }
           ],
           "role": [
             {
-              "role": "author",
-              "vocabulary": "crossref"
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -43827,6 +44407,169 @@
           ]
         ]
       },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Charles Bonnet syndrome (CBS) refers to visual hallucinations that can occur following a decline in vision. Although vision loss increases fall risk and susceptibility to falls-related variables such as activity limitation, the potential contribution of CBS is unclear. The present study adopted a qualitative approach to explore experiences of CBS from different perspectives, including its impact on physical activity and falls.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Semistructured interviews were conducted with 17 older adults living with CBS (mean age = 76 years) and 12 community falls and sight loss professionals. Reflexive thematic analysis guided data analysis.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Themes represent the ‘CBS journey’ moving from symptom onset to living with CBS. Low CBS awareness, anticipated stigma and professionals’ failure to raise CBS had negative psychological impacts. While walking, recognisable images could evoke a behavioural response and delay insight. Falls occurred when CBS distracted attention from actual surroundings, automatic reactions led to a loss of balance, and panoramic hallucinations caused disorientation and obscured real hazards. CBS also contributed to concern about falling. While moving about, precipitating factors for CBS included fluctuations in light level and situational stress. Common relief techniques were least effective for people with intrusive symptoms. Instead, engaging in enjoyable multisensory activities or low to moderate physical activity for health provided relief.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>CBS adds an additional layer of complexity to the aetiology of sight-related falls. To reduce the risk of falls caused by CBS, a multifaceted strategy is indicated that addresses factors at the individual, organisational, educational and health care policy levels.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1093/ageing/afag125",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            4,
+            24
+          ]
+        ],
+        "date-time": "2026-04-24T11:46:38Z",
+        "timestamp": 1777031198000
+      },
+      "title": [
+        "‘Everywhere I turn, I’m blocked’: a qualitative exploration of experiences of Charles Bonnet syndrome and its impact on physical activity and falls"
+      ],
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-3444-1272",
+          "authenticated-orcid": false,
+          "given": "Katharine",
+          "family": "Fisher",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Caroline",
+          "family": "Sanders",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Population Health, Health Services Research and Primary Care/School of Health Sciences, University of Manchester , Manchester ,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9878-4621",
+          "authenticated-orcid": false,
+          "given": "Jasleen K",
+          "family": "Jolly",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Optometry and Vision Science, University of Melbourne , Melbourne, Victoria ,",
+              "place": [
+                "Australia"
+              ]
+            },
+            {
+              "name": "Jolly Vision Science , Bolton ,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Penelope",
+          "family": "Stanford",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Emma",
+          "family": "Stanmore",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
+              "place": [
+                "UK"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            17
+          ]
+        ]
+      },
+      "container-title": [
+        "Age and Ageing"
+      ],
+      "URL": "https://doi.org/10.1093/ageing/afag125",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "age-and-ageing",
+        "journalName": "Age and Ageing",
+        "journalShortName": "Age Ageing",
+        "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 30
+      }
+    },
+    {
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            4
+          ]
+        ]
+      },
       "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>There over 250 000 care home residents in England and they account for a disproportionate number of hospital admissions. Since 2016, enhanced services for care homes have been developed to reduce admissions but there is regional variation in provision. We used a nationally representative cohort of care home residents to identify predictors of admissions and measure regional risk adjusted variation.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Using primary care data from a third of practices in England, we derived a cohort of over 40 000 care home residents linked to the national regulator’s register of care homes between 01/01/2023 and 31/12/2024. We estimated a three-level negative binomial regression model including resident, postcode district and commissioner (Integrated Care Board, ICB) level factors which predicted 6-monthly count of admissions. Using this model, we estimated funnel-plots to measure case-mix risk adjusted variation in admission rates at postcode district and commissioner geographical levels.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Significant predictors of admission count included age, gender, frailty, presence of feeding tube, long-term catheterisation, polypharmacy, anticholinergic burden, sedative load, care home rating and proportion of care home jobs filled. Considerable variation in risk adjusted admission rates at commissioner (ICB) level was demonstrated. ICB outliers ranged between having 0.6 and 2.2 times as many admissions as would be expected based on case-mix.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>This is one of the largest studies of care home residents in England. We identified potentially modifiable risk factors for admissions and significant variation in ICB level admission rates. This variation could be the result of differences in enhanced services provision and requires further research.</jats:p>\n                  </jats:sec>",
       "DOI": "10.1093/ageing/afag119",
       "type": "journal-article",
@@ -44088,169 +44831,6 @@
         "Age and Ageing"
       ],
       "URL": "https://doi.org/10.1093/ageing/afag119",
-      "published": {
-        "date-parts": [
-          [
-            2026,
-            5
-          ]
-        ]
-      },
-      "_paperRev": {
-        "journalId": "age-and-ageing",
-        "journalName": "Age and Ageing",
-        "journalShortName": "Age Ageing",
-        "accessLabel": "Hybrid; metadata accessible",
-        "fetchedWindowDays": 30
-      }
-    },
-    {
-      "published-print": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            4
-          ]
-        ]
-      },
-      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Charles Bonnet syndrome (CBS) refers to visual hallucinations that can occur following a decline in vision. Although vision loss increases fall risk and susceptibility to falls-related variables such as activity limitation, the potential contribution of CBS is unclear. The present study adopted a qualitative approach to explore experiences of CBS from different perspectives, including its impact on physical activity and falls.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Semistructured interviews were conducted with 17 older adults living with CBS (mean age = 76 years) and 12 community falls and sight loss professionals. Reflexive thematic analysis guided data analysis.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>Themes represent the ‘CBS journey’ moving from symptom onset to living with CBS. Low CBS awareness, anticipated stigma and professionals’ failure to raise CBS had negative psychological impacts. While walking, recognisable images could evoke a behavioural response and delay insight. Falls occurred when CBS distracted attention from actual surroundings, automatic reactions led to a loss of balance, and panoramic hallucinations caused disorientation and obscured real hazards. CBS also contributed to concern about falling. While moving about, precipitating factors for CBS included fluctuations in light level and situational stress. Common relief techniques were least effective for people with intrusive symptoms. Instead, engaging in enjoyable multisensory activities or low to moderate physical activity for health provided relief.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>CBS adds an additional layer of complexity to the aetiology of sight-related falls. To reduce the risk of falls caused by CBS, a multifaceted strategy is indicated that addresses factors at the individual, organisational, educational and health care policy levels.</jats:p>\n                  </jats:sec>",
-      "DOI": "10.1093/ageing/afag125",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2026,
-            4,
-            24
-          ]
-        ],
-        "date-time": "2026-04-24T11:46:38Z",
-        "timestamp": 1777031198000
-      },
-      "title": [
-        "‘Everywhere I turn, I’m blocked’: a qualitative exploration of experiences of Charles Bonnet syndrome and its impact on physical activity and falls"
-      ],
-      "author": [
-        {
-          "ORCID": "https://orcid.org/0000-0002-3444-1272",
-          "authenticated-orcid": false,
-          "given": "Katharine",
-          "family": "Fisher",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Caroline",
-          "family": "Sanders",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Division of Population Health, Health Services Research and Primary Care/School of Health Sciences, University of Manchester , Manchester ,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "ORCID": "https://orcid.org/0000-0001-9878-4621",
-          "authenticated-orcid": false,
-          "given": "Jasleen K",
-          "family": "Jolly",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Optometry and Vision Science, University of Melbourne , Melbourne, Victoria ,",
-              "place": [
-                "Australia"
-              ]
-            },
-            {
-              "name": "Jolly Vision Science , Bolton ,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Penelope",
-          "family": "Stanford",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        },
-        {
-          "given": "Emma",
-          "family": "Stanmore",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Division of Nursing, Midwifery and Social Work/School of Health Sciences, University of Manchester , Manchester ,",
-              "place": [
-                "UK"
-              ]
-            }
-          ],
-          "role": [
-            {
-              "role": "author",
-              "vocabulary": "crossref"
-            }
-          ]
-        }
-      ],
-      "published-online": {
-        "date-parts": [
-          [
-            2026,
-            5,
-            17
-          ]
-        ]
-      },
-      "container-title": [
-        "Age and Ageing"
-      ],
-      "URL": "https://doi.org/10.1093/ageing/afag125",
       "published": {
         "date-parts": [
           [
@@ -50419,6 +50999,236 @@
         "journalName": "Age and Ageing",
         "journalShortName": "Age Ageing",
         "accessLabel": "Hybrid; metadata accessible",
+        "fetchedWindowDays": 30
+      }
+    },
+    {
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:sec>\n                    <jats:title>Background</jats:title>\n                    <jats:p>Ageism and negative self-perceptions of aging have a detrimental impact on the health of older individuals, and on the healthcare and economic systems. Although existing psychoeducational and behavioral interventions have effectively increased positive self-perceptions of aging, often their beneficial effects have been investigated with short follow-ups or faded over time. This may be due to interventions having been delivered at the individual level without sufficient attention to social context, but individuals’ self-perceptions of aging are likely influenced by the age-related beliefs and behaviors of people close to them.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Objective</jats:title>\n                    <jats:p>We aim to deliver a 12-week multicomponent intervention promoting positive self-perceptions of aging and physical activity to investigate (1) whether it promotes significant change in primary (i.e., self-perceptions of aging and physical activity) and secondary (i.e., self-directed and other-directed ageism, subjective views of couple’s joint aging, perceived age-related changes in one’s partner, anxiety and depressive symptoms, physical fitness, and executive function) intervention outcomes; (2) whether observed change in intervention outcomes is greater when the intervention is delivered to couples compared to when it is delivered to one partner alone; (3) the extent to which the effect of the intervention is extended from one partner who undertakes the intervention to the other partner who does not undertake it.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>We will adopt a three-arm randomized controlled trial (RCT) design with pre, immediate post-intervention, and three- and six-months follow-up assessments. The sample will be divided into three groups, each comprising 60 spouses, cohabiting partners, or long-standing partners aged ≥ 65 years. In the first group, partners will undertake together the intervention, comprising a psychoeducational and a behavioral component. In the second group, only one partner will undertake the same intervention. In the third/control group none of the partners will undertake the intervention during data collection. Self-perceptions of aging, physical activity, ageism, subjective views of couple’s joint aging, perceived age-related changes in one’s partner, and anxiety and depressive symptoms will be assessed via questionnaires whereas physical fitness, executive function, and attention will be objectively assessed in person.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>This project will provide evidence on whether targeting couples could enhance/facilitate promotion of positive self-perceptions of aging and physical activity in older age.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Trial registration</jats:title>\n                    <jats:p>ClinicalTrials.gov: NCT07113860. Release date: 03–07–2025.</jats:p>\n                    <jats:p>Protocol version 3: 1–3–2026.</jats:p>\n                  </jats:sec>",
+      "DOI": "10.1186/s12877-026-07603-7",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            14
+          ]
+        ],
+        "date-time": "2026-05-14T03:55:18Z",
+        "timestamp": 1778730918000
+      },
+      "title": [
+        "Reframing Expectations about aging – Physical Activity and Inclusive Reappraisal (RE-PAIR): Protocol of a randomized intervention promoting positive self-perceptions of aging and physical activity in older couples"
+      ],
+      "author": [
+        {
+          "given": "Serena",
+          "family": "Sabatini",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Francesco",
+          "family": "Pagnini",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Alice Martins",
+          "family": "Pederiva",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Erik",
+          "family": "Henderson",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Boris",
+          "family": "Cheval",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Erika",
+          "family": "Borella",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Vânia",
+          "family": "de la Fuente-Núñez",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Denis",
+          "family": "Gerstorf",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Fabrizio",
+          "family": "Mezza",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Shevaun D.",
+          "family": "Neupert",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Fiona S.",
+          "family": "Rupprecht",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Feliciano",
+          "family": "Villar",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Tim D.",
+          "family": "Windsor",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Susanne",
+          "family": "Wurm",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Maria",
+          "family": "Mataró",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            14
+          ]
+        ]
+      },
+      "container-title": [
+        "BMC Geriatrics"
+      ],
+      "URL": "https://doi.org/10.1186/s12877-026-07603-7",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            14
+          ]
+        ]
+      },
+      "_paperRev": {
+        "journalId": "bmc-geriatrics",
+        "journalName": "BMC Geriatrics",
+        "journalShortName": "BMC Geriatr",
+        "accessLabel": "Open access",
         "fetchedWindowDays": 30
       }
     },

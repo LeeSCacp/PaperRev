@@ -6,7 +6,7 @@
     <title>PaperRev | 수집 보관함</title>
     <meta
       name="description"
-      content="PaperRev 카드뉴스 draft에 포함되지 않은 최근 1년 Gerontology/Aging 수집 논문 보관함입니다."
+      content="PaperRev 메인 카드뉴스에 포함되지 않은 최근 1년 Gerontology/Aging 수집 논문 보관함입니다."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -25,8 +25,8 @@
         <p class="eyebrow">Collection archive</p>
         <h1>수집 보관함</h1>
         <p class="lead">
-          카드뉴스 draft에 포함되지 않은 논문만 따로 모았습니다. 최근 1년 범위로 유지하며, DOI와
-          Crossref 링크를 통해 원문 정보를 확인할 수 있습니다.
+          메인 카드뉴스에 포함되지 않은 논문만 따로 모았습니다. 최근 1년 범위로 유지하며, DOI,
+          Crossref, OpenAlex, PubMed 링크를 통해 원문 정보를 확인할 수 있습니다.
         </p>
       </section>
     </header>
@@ -43,7 +43,7 @@
         </article>
         <article>
           <span class="metric" id="featuredCount">0</span>
-          <p>메인 카드뉴스 draft</p>
+          <p>메인 카드뉴스</p>
         </article>
       </section>
 
@@ -51,7 +51,7 @@
         <div class="section-heading">
           <p class="eyebrow">Search archive</p>
           <h2>보관 논문 검색</h2>
-          <p>이 목록은 메인 카드뉴스에 포함되지 않은 보조 자료입니다. 공개 요약으로 사용하기 전에는 원문 확인이 필요합니다.</p>
+          <p>이 목록은 메인 카드뉴스에 포함되지 않은 보조 자료입니다. 분야, 접근성, 수집원 단서로 빠르게 확인할 수 있습니다.</p>
         </div>
 
         <div class="source-toolbar" aria-label="source filters">
@@ -82,9 +82,11 @@
       <span>PaperRev archive</span>
       <a href="./index.html">메인으로 돌아가기</a>
       <a href="https://api.crossref.org/" target="_blank" rel="noreferrer">Crossref API</a>
+      <a href="https://openalex.org/" target="_blank" rel="noreferrer">OpenAlex</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noreferrer">PubMed</a>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="./archive.js?v=20260524-curation"></script>
+    <script src="./archive.js?v=20260527-sources-ux"></script>
   </body>
 </html>

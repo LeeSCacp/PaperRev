@@ -8,6 +8,9 @@ const DEFAULT_MIN_TOPIC_COUNT = 5;
 const DEFAULT_DRAFT_LIMIT_PER_TOPIC = 5;
 const DEFAULT_ARCHIVE_DAYS = 365;
 const USER_AGENT = "PaperRev prototype; mailto=paperrev@example.com";
+const OPENALEX_MAILTO = "paperrev@example.com";
+const PUBMED_TOOL = "PaperRev";
+const PUBMED_EMAIL = "paperrev@example.com";
 
 const TOPIC_RULES = {
   "cognitive-aging": {
@@ -135,19 +138,21 @@ for (const dayWindow of windows) {
   }
 }
 
-const normalizedDrafts = [...rawByDoi.values()]
+const normalizedDraftsBase = [...rawByDoi.values()]
   .map(normalizeRecord)
   .filter(Boolean)
   .map(classifyAndDraft)
   .sort(sortByDateDesc);
+const normalizedDrafts = await enrichWithAdditionalSources(normalizedDraftsBase);
 const { featuredDrafts, archiveRecords, reviewRecords } = splitFeaturedAndArchive(normalizedDrafts);
 const featuredCoverageByTopic = coverageByTopic(featuredDrafts);
 const publishStatusCounts = countBy(normalizedDrafts, "publishStatus");
 const qualityFlagCounts = countQualityFlags(normalizedDrafts);
+const sourceCoverageCounts = countSourceCoverage(normalizedDrafts);
 
 const output = {
   generatedAt: new Date().toISOString(),
-  source: "Crossref",
+  source: "Crossref + OpenAlex + PubMed",
   windowsTried: windows,
   selectedWindow,
   minTopicCount,
@@ -157,6 +162,7 @@ const output = {
   featuredCoverageByTopic,
   publishStatusCounts,
   qualityFlagCounts,
+  sourceCoverageCounts,
   totalCollected: normalizedDrafts.length,
   featuredCount: featuredDrafts.length,
   archiveCount: archiveRecords.length,
@@ -171,7 +177,7 @@ await mkdir(path.join(ROOT, "data", "raw"), { recursive: true });
 await mkdir(path.join(ROOT, "data", "drafts"), { recursive: true });
 await writeJson("data/raw/crossref-latest.json", {
   generatedAt: output.generatedAt,
-  source: "Crossref",
+  source: "Crossref + OpenAlex + PubMed",
   windowsTried: windows,
   selectedWindow,
   minTopicCount,
@@ -180,6 +186,7 @@ await writeJson("data/raw/crossref-latest.json", {
   totalCollected: normalizedDrafts.length,
   publishStatusCounts,
   qualityFlagCounts,
+  sourceCoverageCounts,
   records: [...rawByDoi.values()],
 });
 await writeJson("data/drafts/article-drafts.json", output);
@@ -190,6 +197,7 @@ console.log(`Needs review: ${reviewRecords.length}`);
 console.log(`Windows tried: ${windows.join(", ")} days; selected window: ${selectedWindow} days`);
 console.log(`Minimum topic target: ${minTopicCount}`);
 console.log(`Featured draft limit per topic: ${draftLimitPerTopic}; archive days: ${archiveDays}`);
+console.log(`Source coverage: ${Object.entries(sourceCoverageCounts).map(([source, count]) => `${source} ${count}`).join(", ")}`);
 console.log("Coverage by topic:");
 for (const topic of topics) {
   console.log(`- ${topic.name}: ${lastCoverage[topic.id] || 0}`);
@@ -338,6 +346,7 @@ function classifyAndDraft(article) {
     topicId,
     topicScore: topicResult.topicScore,
     topicScores: topicResult.topicScores,
+    secondaryTopicIds: secondaryTopicIds(topicResult, topicId),
     classificationConfidence: topicResult.confidence,
     questionIds: primaryQuestionId ? [...new Set([primaryQuestionId, ...questionIds])] : [],
     cardTitle: buildCardTitleClean(article, topicId),
@@ -350,6 +359,150 @@ function classifyAndDraft(article) {
   return {
     ...draft,
     ...evaluatePublishQuality(draft),
+  };
+}
+
+async function enrichWithAdditionalSources(records) {
+  const openAlexByDoi = await fetchOpenAlexByDoi(records);
+  const enriched = records.map((record) => mergeOpenAlex(record, openAlexByDoi.get(record.doi)));
+  const featuredCandidates = [...enriched]
+    .filter((record) => record.publishStatus === "auto_publish")
+    .sort(sortByFeaturedScore)
+    .slice(0, topics.length * draftLimitPerTopic * 2);
+  const pubMedByDoi = await fetchPubMedByDoi(featuredCandidates);
+  return enriched.map((record) => mergePubMed(record, pubMedByDoi.get(record.doi)));
+}
+
+async function fetchOpenAlexByDoi(records) {
+  const byDoi = new Map();
+  const doiUrls = [...new Set(records.map((record) => `https://doi.org/${record.doi}`))];
+  for (const batch of chunk(doiUrls, 50)) {
+    const url = new URL("https://api.openalex.org/works");
+    url.searchParams.set("filter", `doi:${batch.join("|")}`);
+    url.searchParams.set("per-page", `${batch.length}`);
+    url.searchParams.set("mailto", OPENALEX_MAILTO);
+    url.searchParams.set(
+      "select",
+      "id,doi,display_name,cited_by_count,open_access,primary_location,concepts,topics,publication_date,ids",
+    );
+    try {
+      const response = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+      if (!response.ok) {
+        console.warn(`OpenAlex skipped: HTTP ${response.status}`);
+        continue;
+      }
+      const json = await response.json();
+      for (const item of json.results || []) {
+        const doi = normalizeDoi(`${item.doi || ""}`.replace(/^https?:\/\/doi.org\//i, ""));
+        if (doi) {
+          byDoi.set(doi, item);
+        }
+      }
+    } catch (error) {
+      console.warn(`OpenAlex skipped: ${error.message}`);
+    }
+    await sleep(250);
+  }
+  return byDoi;
+}
+
+async function fetchPubMedByDoi(records) {
+  const byDoi = new Map();
+  for (const record of records) {
+    if (!record.doi || byDoi.has(record.doi)) {
+      continue;
+    }
+    const url = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi");
+    url.searchParams.set("db", "pubmed");
+    url.searchParams.set("term", `"${record.doi}"[doi]`);
+    url.searchParams.set("retmode", "json");
+    url.searchParams.set("retmax", "1");
+    url.searchParams.set("tool", PUBMED_TOOL);
+    url.searchParams.set("email", PUBMED_EMAIL);
+    try {
+      const response = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+      if (response.ok) {
+        const json = await response.json();
+        const pmid = json.esearchresult?.idlist?.[0];
+        if (pmid) {
+          byDoi.set(record.doi, {
+            pmid,
+            url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
+          });
+        }
+      }
+    } catch (error) {
+      console.warn(`PubMed skipped for ${record.doi}: ${error.message}`);
+    }
+    await sleep(350);
+  }
+  return byDoi;
+}
+
+function mergeOpenAlex(record, openAlex) {
+  const sourceLinks = {
+    crossref: record.crossrefUrl,
+  };
+  if (!openAlex) {
+    return {
+      ...record,
+      sourceLinks,
+      sourceCoverage: ["Crossref"],
+    };
+  }
+
+  const openAccess = openAlex.open_access || {};
+  const primaryLocation = openAlex.primary_location || {};
+  const bestOaLocation = openAccess.oa_url || primaryLocation.landing_page_url || primaryLocation.pdf_url || "";
+  return {
+    ...record,
+    openAlex: {
+      id: openAlex.id || "",
+      citedByCount: openAlex.cited_by_count || 0,
+      publicationDate: openAlex.publication_date || "",
+      isOpenAccess: Boolean(openAccess.is_oa),
+      oaStatus: openAccess.oa_status || "",
+      oaUrl: bestOaLocation,
+      concepts: (openAlex.concepts || []).slice(0, 6).map((concept) => ({
+        id: concept.id,
+        name: concept.display_name,
+        score: concept.score,
+      })),
+      topics: (openAlex.topics || []).slice(0, 4).map((topic) => ({
+        id: topic.id,
+        name: topic.display_name,
+        score: topic.score,
+      })),
+    },
+    access: openAccess.is_oa ? "open" : record.access,
+    url: bestOaLocation || record.url,
+    sourceLinks: {
+      ...sourceLinks,
+      openAlex: openAlex.id || "",
+      openAccess: bestOaLocation || "",
+    },
+    sourceCoverage: ["Crossref", "OpenAlex"],
+  };
+}
+
+function mergePubMed(record, pubMed) {
+  if (!pubMed) {
+    return {
+      ...record,
+      sourceLinks: {
+        ...(record.sourceLinks || {}),
+        pubMedSearch: `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(record.doi)}`,
+      },
+    };
+  }
+  return {
+    ...record,
+    pubMed,
+    sourceLinks: {
+      ...(record.sourceLinks || {}),
+      pubMed: pubMed.url,
+    },
+    sourceCoverage: [...new Set([...(record.sourceCoverage || ["Crossref"]), "PubMed"])],
   };
 }
 
@@ -375,6 +528,15 @@ function classifyTopic(article, haystack) {
     topicScores,
     confidence,
   };
+}
+
+function secondaryTopicIds(topicResult, primaryTopicId) {
+  const topScore = topicResult.topicScores?.[0]?.score || 0;
+  return (topicResult.topicScores || [])
+    .filter((item) => item.id !== primaryTopicId)
+    .filter((item) => item.score >= 12 || (topScore > 0 && item.score / topScore >= 0.45))
+    .slice(0, 2)
+    .map((item) => item.id);
 }
 
 function scoreTopic(article, topicId, haystack) {
@@ -466,6 +628,15 @@ function countQualityFlags(records) {
   return records.reduce((counts, record) => {
     for (const flag of record.qualityFlags || []) {
       counts[flag] = (counts[flag] || 0) + 1;
+    }
+    return counts;
+  }, {});
+}
+
+function countSourceCoverage(records) {
+  return records.reduce((counts, record) => {
+    for (const source of record.sourceCoverage || ["Crossref"]) {
+      counts[source] = (counts[source] || 0) + 1;
     }
     return counts;
   }, {});
@@ -593,6 +764,14 @@ function parseArgs(items) {
     }
   }
   return parsed;
+}
+
+function chunk(items, size) {
+  const chunks = [];
+  for (let index = 0; index < items.length; index += size) {
+    chunks.push(items.slice(index, index + size));
+  }
+  return chunks;
 }
 
 async function readJson(relativePath) {
@@ -796,20 +975,20 @@ function buildDeckClean(article, topicId, questionId) {
 
   return {
     question: question?.question || `${topic?.name || "노화 심리"} 관점에서 이 논문은 어떤 문제를 다루는가?`,
-    method: `${studyDesign}로 ${focus}을(를) 다룬 최근 논문입니다. 자동 생성 카드이므로 연구 설계와 표본은 원문에서 확인해야 합니다.`,
+    method: `${studyDesign}로 ${focus}를 다룬 최근 논문입니다. 연구 설계와 표본은 원문 링크에서 함께 확인할 수 있습니다.`,
     finding: article.abstract
-      ? `${focus}과(와) 관련된 결과를 보고합니다. 구체적인 효과 크기, 통계값, 적용 범위는 원문 초록과 본문에서 다시 확인해야 합니다.`
+      ? `${focus}에 관한 핵심 결과를 보고합니다. 효과 크기, 통계값, 적용 범위는 원문 초록과 본문에서 함께 확인할 수 있습니다.`
       : `Crossref 메타데이터에 초록이 없어 ${focus}에 대한 결론은 원문 또는 출판사 페이지 확인이 필요합니다.`,
-    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}을(를) 최근 연구 흐름으로 읽을 수 있습니다.`,
+    meaning: `${topic?.name || "노화 심리"} 분야에서 ${focus}를 최근 연구 흐름으로 읽을 수 있습니다.`,
     caution: article.abstract
-      ? "자동 생성 문구이므로 원문 초록, 연구 설계, 표본, 결과 수치를 기준으로 해석해야 합니다."
+      ? "카드뉴스는 초록 기반 요약입니다. 해석할 때는 연구 설계, 표본, 결과 수치를 원문 기준으로 함께 보세요."
       : "초록이 없는 메타데이터 기반 카드이므로 게시 전 원문 확인이 필요합니다.",
   };
 }
 
 function buildKoreanSummaryClean(article, topicId) {
   const topic = topics.find((item) => item.id === topicId);
-  return `${topic?.name || "노화 심리"} 분야 카드뉴스 후보입니다. ${inferFocusClean(article, topicId)}을(를) 중심으로 읽을 수 있습니다.`;
+  return `${topic?.name || "노화 심리"} 분야 카드뉴스입니다. ${inferFocusClean(article, topicId)}를 중심으로 읽을 수 있습니다.`;
 }
 
 function buildCardTitleClean(article, topicId) {
