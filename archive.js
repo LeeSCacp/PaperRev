@@ -2,6 +2,8 @@ const state = {
   topics: [],
   records: [],
   meta: {},
+  visibleLimit: 30,
+  pageSize: 30,
   filters: {
     search: "",
     topic: "all",
@@ -17,6 +19,8 @@ const els = {
   topicFilter: document.querySelector("#topicFilter"),
   accessFilter: document.querySelector("#accessFilter"),
   sourceList: document.querySelector("#sourceList"),
+  archiveListStatus: document.querySelector("#archiveListStatus"),
+  loadMoreArchive: document.querySelector("#loadMoreArchive"),
 };
 
 async function loadArchive() {
@@ -43,11 +47,13 @@ function populateTopicFilter() {
 
 function renderArchive() {
   const visibleRecords = filteredRecords();
+  const renderedRecords = visibleRecords.slice(0, state.visibleLimit);
   els.archiveCount.textContent = state.records.length;
   els.archiveWindow.textContent = `${state.meta.archiveDays || 365}일`;
   els.featuredCount.textContent = state.meta.featuredCount || 0;
 
   if (!visibleRecords.length) {
+    renderListControls(0, 0);
     els.sourceList.innerHTML = `
       <div class="empty-state">
         <h3>조건에 맞는 보관 논문이 없습니다.</h3>
@@ -57,7 +63,30 @@ function renderArchive() {
     return;
   }
 
-  els.sourceList.innerHTML = visibleRecords.map(renderSourceRow).join("");
+  renderListControls(renderedRecords.length, visibleRecords.length);
+  els.sourceList.innerHTML = renderedRecords.map(renderSourceRow).join("");
+}
+
+function renderListControls(renderedCount, totalCount) {
+  if (els.archiveListStatus) {
+    els.archiveListStatus.textContent = totalCount
+      ? `${totalCount}개 중 ${renderedCount}개 표시`
+      : "표시할 논문이 없습니다";
+  }
+
+  if (els.loadMoreArchive) {
+    els.loadMoreArchive.hidden = renderedCount >= totalCount;
+    els.loadMoreArchive.textContent = `더 보기 ${Math.min(state.pageSize, Math.max(totalCount - renderedCount, 0))}개`;
+  }
+}
+
+function resetVisibleLimit() {
+  state.visibleLimit = state.pageSize;
+}
+
+function showMoreRecords() {
+  state.visibleLimit += state.pageSize;
+  renderArchive();
 }
 
 function renderSourceRow(article) {
@@ -161,18 +190,23 @@ function formatAuthors(authors) {
 
 els.searchInput.addEventListener("input", (event) => {
   state.filters.search = event.target.value;
+  resetVisibleLimit();
   renderArchive();
 });
 
 els.topicFilter.addEventListener("change", (event) => {
   state.filters.topic = event.target.value;
+  resetVisibleLimit();
   renderArchive();
 });
 
 els.accessFilter.addEventListener("change", (event) => {
   state.filters.access = event.target.value;
+  resetVisibleLimit();
   renderArchive();
 });
+
+els.loadMoreArchive?.addEventListener("click", showMoreRecords);
 
 loadArchive().catch((error) => {
   document.querySelector("main").innerHTML = `

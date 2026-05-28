@@ -156,6 +156,10 @@ h1 {
   color: #fff;
 }
 
+.button-link[hidden] {
+  display: none;
+}
+
 .button-link.light {
   border-color: rgba(255, 255, 255, 0.42);
   background: rgba(255, 255, 255, 0.14);
@@ -1037,6 +1041,21 @@ select {
   gap: 10px;
 }
 
+.archive-list-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.archive-list-bar .button-link {
+  cursor: pointer;
+}
+
 .source-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1105,9 +1124,15 @@ footer {
   .theory-flow-grid,
   .archive-cta,
   .source-toolbar,
+  .archive-list-bar,
   .source-row,
   .method-grid {
     grid-template-columns: 1fr;
+  }
+
+  .archive-list-bar {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .hero {
