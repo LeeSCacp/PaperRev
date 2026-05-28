@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/crossref-latest.json data/drafts/article-drafts.json
+          git add data/raw/crossref-latest.json data/drafts/article-drafts.json data/drafts/featured-drafts.json data/drafts/archive-records.json
           if git diff --cached --quiet; then
             echo "No draft changes to commit."
           else

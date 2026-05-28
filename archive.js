@@ -24,16 +24,36 @@ const els = {
 };
 
 async function loadArchive() {
-  const [topicsResponse, draftResponse] = await Promise.all([
+  const [topicsResponse, archiveData] = await Promise.all([
     fetch("./data/topics.json", { cache: "no-store" }),
-    fetch("./data/drafts/article-drafts.json", { cache: "no-store" }),
+    fetchArchiveData(),
   ]);
 
   state.topics = await topicsResponse.json();
-  state.meta = await draftResponse.json();
+  state.meta = archiveData;
   state.records = Array.isArray(state.meta.archiveRecords) ? state.meta.archiveRecords : [];
   populateTopicFilter();
   renderArchive();
+}
+
+async function fetchArchiveData() {
+  const archiveResponse = await fetch("./data/drafts/archive-records.json", { cache: "no-store" });
+  if (archiveResponse.ok) {
+    const archivePayload = await archiveResponse.json();
+    return {
+      ...archivePayload,
+      archiveRecords: Array.isArray(archivePayload.archiveRecords)
+        ? archivePayload.archiveRecords
+        : archivePayload.records || [],
+    };
+  }
+
+  const draftResponse = await fetch("./data/drafts/article-drafts.json", { cache: "no-store" });
+  const draftPayload = await draftResponse.json();
+  return {
+    ...draftPayload,
+    archiveRecords: Array.isArray(draftPayload.archiveRecords) ? draftPayload.archiveRecords : [],
+  };
 }
 
 function populateTopicFilter() {

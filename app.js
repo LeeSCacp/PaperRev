@@ -71,6 +71,22 @@ async function loadData() {
 }
 
 async function fetchArticleData() {
+  const featuredResponse = await fetch("./data/drafts/featured-drafts.json", { cache: "no-store" });
+  if (featuredResponse.ok) {
+    const featuredPayload = await featuredResponse.json();
+    const featuredDrafts = Array.isArray(featuredPayload.featuredDrafts)
+      ? featuredPayload.featuredDrafts
+      : featuredPayload.records;
+    if (Array.isArray(featuredDrafts) && featuredDrafts.length) {
+      return {
+        mode: "draft",
+        meta: featuredPayload,
+        records: featuredDrafts,
+        archiveRecords: [],
+      };
+    }
+  }
+
   const draftResponse = await fetch("./data/drafts/article-drafts.json", { cache: "no-store" });
   if (draftResponse.ok) {
     const draftPayload = await draftResponse.json();

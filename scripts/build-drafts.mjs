@@ -150,7 +150,7 @@ const publishStatusCounts = countBy(normalizedDrafts, "publishStatus");
 const qualityFlagCounts = countQualityFlags(normalizedDrafts);
 const sourceCoverageCounts = countSourceCoverage(normalizedDrafts);
 
-const output = {
+const outputMeta = {
   generatedAt: new Date().toISOString(),
   source: "Crossref + OpenAlex + PubMed",
   windowsTried: windows,
@@ -167,10 +167,26 @@ const output = {
   featuredCount: featuredDrafts.length,
   archiveCount: archiveRecords.length,
   reviewCount: reviewRecords.length,
+};
+
+const output = {
+  ...outputMeta,
   records: featuredDrafts,
   featuredDrafts,
   archiveRecords,
   reviewRecords,
+};
+
+const featuredOutput = {
+  ...outputMeta,
+  kind: "featured",
+  records: featuredDrafts,
+};
+
+const archiveOutput = {
+  ...outputMeta,
+  kind: "archive",
+  records: archiveRecords,
 };
 
 await mkdir(path.join(ROOT, "data", "raw"), { recursive: true });
@@ -190,9 +206,12 @@ await writeJson("data/raw/crossref-latest.json", {
   records: [...rawByDoi.values()],
 });
 await writeJson("data/drafts/article-drafts.json", output);
+await writeJson("data/drafts/featured-drafts.json", featuredOutput);
+await writeJson("data/drafts/archive-records.json", archiveOutput);
 
 console.log(`Saved ${normalizedDrafts.length} drafts to data/drafts/article-drafts.json`);
 console.log(`Featured drafts: ${featuredDrafts.length}; archive records: ${archiveRecords.length}`);
+console.log("Split data files: data/drafts/featured-drafts.json, data/drafts/archive-records.json");
 console.log(`Needs review: ${reviewRecords.length}`);
 console.log(`Windows tried: ${windows.join(", ")} days; selected window: ${selectedWindow} days`);
 console.log(`Minimum topic target: ${minTopicCount}`);

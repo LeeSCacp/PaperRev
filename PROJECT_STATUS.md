@@ -138,6 +138,11 @@
   - 버튼을 누를 때마다 30개씩 추가 표시한다.
   - 검색어, 분야, 접근성 필터가 바뀌면 다시 30개부터 표시한다.
   - 보관함 상단에 `전체 결과 중 현재 표시 개수`를 보여준다.
+- 데이터 파일을 페이지 용도별로 분리했다.
+  - `data/drafts/featured-drafts.json`: 메인 카드뉴스 전용.
+  - `data/drafts/archive-records.json`: 수집 보관함 전용.
+  - `data/drafts/article-drafts.json`: 이전 구조와 자동화 호환을 위한 전체 묶음.
+  - 메인 페이지는 featured 파일만 읽고, 보관함 페이지는 archive 파일만 읽도록 변경했다.
 
 ## 1차 선정 저널
 
