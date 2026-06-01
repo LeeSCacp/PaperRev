@@ -1,6 +1,6 @@
 # PaperRev 프로젝트 상태
 
-최종 업데이트: 2026-05-28 KST
+최종 업데이트: 2026-06-01 KST
 
 ## 프로젝트 목표
 
@@ -20,8 +20,9 @@
 - [x] 정적 클릭 가능 프로토타입 제작
 - [x] 논문 수집 및 캐시 구현
 - [x] 자동 카드뉴스 생성 및 자동 게시 기준 구현
+- [x] `D:\CodexCodeProj\PaperRev` 이동 후 현재 루트 기준 재점검
+- [x] 이론-논문 자동 연결
 - [ ] OpenAI API 기반 자연어 카드뉴스 생성
-- [ ] 이론-논문 자동 연결
 
 ## 2026-05-20 진행 기록
 
@@ -144,6 +145,133 @@
   - `data/drafts/article-drafts.json`: 이전 구조와 자동화 호환을 위한 전체 묶음.
   - 메인 페이지는 featured 파일만 읽고, 보관함 페이지는 archive 파일만 읽도록 변경했다.
 
+## 2026-05-30 이동 후 재점검 기록
+
+확인한 내용:
+
+- 현재 작업 루트는 `D:\CodexCodeProj\PaperRev`다. 이전 작업 폴더 경로는 현재 상태 판단의 기준으로 쓰지 않는다.
+- 프로젝트 구조는 GitHub Pages용 정적 사이트와 데이터 생성 스크립트 중심이다.
+  - 루트 화면: `index.html`, `app.js`, `styles.css`
+  - 보관함 화면: `archive.html`, `archive.js`
+  - 데이터: `data/`, `data/drafts/`, `data/raw/`
+  - 자동화/수집: `.github/workflows/weekly-drafts.yml`, `scripts/build-drafts.mjs`, `scripts/fetch-crossref.ps1`
+  - 작업용 임시 폴더: `scratch/` (`.gitignore`에 포함)
+- `git status` 확인 결과 `main`은 `origin/main`과 동기화되어 있고, 미추적 파일은 `COLLABORATOR_BRIEF.html`, `COLLABORATOR_BRIEF.md` 2개다.
+- 현재 폴더에는 `AGENTS.md`, `AI_HANDOFF.md`, `WORKING_SUMMARY.md`, `package.json`, `.env`, `.env.example`이 없다. 상태 기록의 기준 문서는 `PROJECT_STATUS.md`다.
+- 코드/설정/문서에서 예전 절대경로를 검색한 결과, 프로젝트 파일 기준으로 남아 있던 이전 작업 폴더 기록 1건을 현재 경로로 갱신했다.
+- 실행 환경은 별도 npm 설치 파일 없이 Node.js와 정적 파일 서버를 사용한다.
+  - 로컬 미리보기: `python -m http.server 8000`
+  - draft 재생성: `node .\scripts\build-drafts.mjs --windows=7,14,30,60,90,180 --rows=50 --min-topic-count=5 --draft-limit-per-topic=5 --archive-days=365`
+  - Crossref 단독 테스트: `powershell -ExecutionPolicy Bypass -File .\scripts\fetch-crossref.ps1 -FromDate "2026-01-01" -Rows 3`
+  - GitHub Actions 런타임: Node `24`
+
+현재 데이터 상태:
+
+- `data/raw/crossref-latest.json`: selected window 30일, total collected 340개.
+- `data/drafts/article-drafts.json`: 대표 records 35개, featured 35개, archive 305개, reviewRecords 164개.
+- `publishStatusCounts`: `auto_publish` 176개, `needs_review` 164개.
+- `qualityFlagCounts`: `missing_abstract` 108개, `low_featured_score` 130개, `low_classification_confidence` 56개, `topic_overlap` 20개.
+- `data/drafts/featured-drafts.json`: 메인 카드뉴스용 records 35개.
+- `data/drafts/archive-records.json`: 보관함용 records 305개.
+
+검증:
+
+- `node --check app.js` 통과.
+- `node --check archive.js` 통과.
+- `node --check scripts/build-drafts.mjs` 통과.
+- 로컬 서버 `http://localhost:8000` 기준 HTTP 확인 통과: `index.html` 200, `archive.html` 200, 메인 JSON 35개, 보관함 JSON 305개.
+
+남은 내용:
+
+- 미추적 협업 브리프 2개를 유지할지, 추적할지, `scratch/` 또는 별도 문서 위치로 옮길지 결정해야 한다.
+- GitHub Actions의 다음 주간 실행 결과가 현재 분리 데이터 구조(`featured-drafts.json`, `archive-records.json`)까지 정상 커밋하는지 원격 로그로 확인해야 한다.
+- 당시 기준으로 OpenAI API 기반 자연어 카드뉴스 생성과 이론-논문 자동 연결은 미구현이었다.
+- README와 상태 문서는 현재 구조에 맞춰 갱신했다. 이번 점검에서는 DOM 클릭 검증까지는 하지 않았고, 로컬 HTTP 응답과 JSON 로딩 가능성까지 확인했다.
+
+다음 추천:
+
+1. 먼저 미추적 `COLLABORATOR_BRIEF.*` 2개의 처리 방침을 정한다. 공유용 산출물로 유지할 문서라면 추적하고, 임시 전달본이면 `scratch/`로 이동하거나 정리한다.
+2. 그다음 브라우저에서 `index.html`과 `archive.html`을 직접 열어 카드뉴스 탭, 보관함 필터, 더 보기 버튼까지 클릭 검증한다.
+3. 이후 GitHub Actions 수동 실행 또는 다음 예약 실행 로그를 확인해 주간 자동 커밋이 현재 구조와 충돌하지 않는지 검증한다.
+4. 당시 기능 개발 우선순위는 `이론-논문 자동 연결`이었다. OpenAI API 연결보다 비용과 운영 리스크가 낮고, 기존 `theory-notes.json`, `theory-papers.json`, 최신 draft 데이터를 바로 활용할 수 있기 때문이다.
+
+## 2026-05-30 공동 작업자 공유 브리프 갱신
+
+완료:
+
+- `COLLABORATOR_BRIEF.md`와 `COLLABORATOR_BRIEF.html`을 현재 프로젝트 상태 기준으로 다시 작성했다.
+- 이전 브리프에 남아 있던 과거 다음 단계(`분야 분류 규칙 개선 + featured 선정 점수화`)를 제거하고, 이미 구현된 자동 발행/리뷰 보류 정책을 반영했다.
+- 현재 데이터 스냅샷을 공유용으로 정리했다: 최근 30일 수집 340편, 자동 발행 후보 176편, 리뷰 보류 164편, 메인 카드뉴스 35개, 보관함 305개.
+- 협업자가 바로 피드백할 수 있도록 검토 요청 항목을 추가했다: 메인 카드뉴스 적합성, 7개 분야명, 카드뉴스 문장 톤, 보관함 탐색성, 노화 이론 anchor 문헌.
+- 다음 작업 우선순위를 `이론-논문 자동 연결`로 명시하고, OpenAI API 기반 문장 개선은 그 다음 단계로 정리했다.
+
+남은 내용:
+
+- 공유 전 브라우저에서 HTML 산출물의 실제 시각 레이아웃을 한 번 확인하면 좋다.
+- 공유 후 받은 피드백은 `PROJECT_STATUS.md`에 별도 섹션으로 정리하고, 코드 수정이 필요한 항목과 문구 수정만 필요한 항목을 나눠야 한다.
+
+다음 추천:
+
+1. `COLLABORATOR_BRIEF.*`를 git에 포함할 공유 산출물로 확정한다.
+2. 브리프를 보낸 뒤, 협업자에게 5개 검토 항목 기준으로 의견을 받아 정리한다.
+3. 그 다음 실제 구현은 `이론-논문 자동 연결`부터 진행한다.
+
+## 2026-06-01 공유 산출물 확정 및 브라우저 재검증
+
+완료:
+
+- `COLLABORATOR_BRIEF.md`와 `COLLABORATOR_BRIEF.html`을 공유용 산출물로 유지하기로 하고, 다음 git 정리 대상에 포함했다.
+- 로컬 서버 `http://localhost:8000`에서 공유 브리프 HTML을 브라우저 DOM 기준으로 확인했다.
+  - 제목: `PaperRev 공동 작업자 공유용 브리프`
+  - 데이터 스냅샷 수치: `340`, `176`, `164`, `35`, `305`, `7`
+  - 다음 작업 문구: `이론-논문 자동 연결`
+  - 과거 다음 작업 문구(`분야 분류 규칙 개선 + featured 선정 점수화`)는 공유 브리프 본문에서 제거됨
+  - 브라우저 콘솔 error 로그 없음
+- 메인 페이지 `index.html` DOM 확인 결과, 카드뉴스 중심 홈과 보관함 링크가 로드되고 콘솔 error 로그는 없었다.
+- 보관함 `archive.html` DOM 확인 결과, 검색 입력 1개, select 2개, `더 보기 30개` 버튼이 로드되고 콘솔 error 로그는 없었다.
+
+제한:
+
+- 브라우저 도구의 스크린샷/클릭 명령이 반복 시간 초과되어, `더 보기` 버튼의 실제 클릭 후 표시 개수 변화는 이번 단계에서 완료 검증하지 못했다.
+- 따라서 이번 검증은 로딩/DOM/콘솔 오류 확인까지로 기록하고, 클릭 상호작용은 별도 브라우저 수동 확인 또는 다른 자동화 경로로 재확인해야 한다.
+
+다음 추천:
+
+1. 이 기록 직후 `이론-논문 자동 연결` 구현으로 진행했다.
+2. 구현 후 메인 페이지의 이론 섹션에서 최신 카드뉴스 연결이 실제로 표시되는지 다시 확인했다.
+
+## 2026-06-01 이론-논문 자동 연결 구현
+
+완료:
+
+- `app.js`에 이론별 rule set을 추가해 현재 featured 카드뉴스와 노화 이론을 자동 연결하도록 했다.
+- 연결 점수는 주 분야, 보조 분야, 독자 질문, 이론 키워드, OpenAlex 개념을 함께 사용한다.
+- 선택된 이론 상세 패널에 `이 이론으로 읽을 최신 카드뉴스` 섹션을 추가했다.
+- 각 연결 카드에는 카드뉴스 제목, 핵심 메시지, 연결 점수, 연결 이유를 함께 표시한다.
+- `styles.css`에 이론 연결 카드 레이아웃을 추가하고 모바일에서는 1열로 접히도록 했다.
+- `data/theory-notes.json`과 `data/theory-papers.json`의 설명 문구를 현재 규칙 기반 연결 방식에 맞게 갱신했다.
+- `index.html`의 `app.js` 버전 쿼리를 `20260601-theory-links`로 갱신해 브라우저/GitHub Pages 캐시가 이전 JS를 잡지 않도록 했다.
+
+검증:
+
+- `node --check app.js`, `node --check archive.js`, `node --check scripts/build-drafts.mjs` 통과.
+- `data/theory-notes.json`, `data/theory-papers.json`, `data/theories.json`, `data/drafts/featured-drafts.json` JSON 파싱 통과.
+- 로컬 브라우저 DOM 확인 결과 메인 페이지에 `이 이론으로 읽을 최신 카드뉴스` 섹션이 표시됨.
+- 첫 이론 상세 기준 연결 카드 3개가 렌더링되며, 연결 점수 예시는 `85`, `62`, `56`으로 확인됨.
+- 브라우저 콘솔 error 로그 없음.
+
+남은 내용:
+
+- 연결 규칙은 규칙 기반이므로, 협업자 검토를 통해 어색한 연결을 조정해야 한다.
+- 현재는 featured 카드뉴스만 연결한다. 보관함 논문까지 확장할지는 성능과 화면 복잡도를 본 뒤 결정한다.
+- OpenAI API 기반 자연어 카드뉴스 생성은 아직 미구현이다.
+
+다음 추천:
+
+1. 협업자에게 공유 브리프와 함께 이론 상세의 연결 카드가 이론적으로 자연스러운지 검토를 요청한다.
+2. 피드백을 반영해 `THEORY_ARTICLE_RULES`의 키워드를 조정한다.
+3. 그 다음 OpenAI API 기반 카드뉴스 문장 개선을 `auto_publish` 후보에만 적용하는 방향으로 진행한다.
+
 ## 1차 선정 저널
 
 | 저널 | 접근성 | 선정 근거 | 수집 상태 |
@@ -178,7 +306,7 @@
 
 ## 확인된 로컬 상태
 
-- 작업 폴더: `D:\PaperRev`
+- 작업 폴더: `D:\CodexCodeProj\PaperRev`
 - 이 문서 작성 전 확인된 프로젝트 파일: 없음
 - 디스크상 `AGENTS.md`: 현재 폴더에서는 발견되지 않음
 - 사용자 제공 지침: 확인한 내용을 바탕으로 다음 단계 추천, 진행/남은 내용 체크, 프로젝트 내 진행 내용 기록 및 업데이트

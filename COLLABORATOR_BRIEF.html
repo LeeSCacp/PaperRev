@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PaperRev 공동 작업자 공유용 브리프</title>
+    <style>
+      :root {
+        --bg: #f6f2ea;
+        --ink: #20231f;
+        --muted: #68726b;
+        --line: #d9ddd5;
+        --surface: #ffffff;
+        --green: #1d5d52;
+        --blue: #244f78;
+        --soft: #eef4f1;
+        --warn: #fff7e6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 44px 24px 64px;
+      }
+
+      header {
+        margin-bottom: 28px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 22px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--green);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 2.28rem;
+        line-height: 1.18;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.32rem;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 6px;
+      }
+
+      section {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 22px;
+        margin-top: 16px;
+      }
+
+      .summary {
+        border: 1px solid rgba(29, 93, 82, 0.22);
+        border-radius: 8px;
+        background: var(--soft);
+        padding: 18px;
+        font-size: 1.04rem;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfcfa;
+        padding: 14px;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--blue);
+        font-size: 1.45rem;
+        line-height: 1.2;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .callout {
+        border-color: #ecd89e;
+        background: var(--warn);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      code {
+        border-radius: 4px;
+        background: #eef1ee;
+        padding: 1px 5px;
+        font-family: Consolas, "SFMono-Regular", monospace;
+        font-size: 0.92em;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          padding: 28px 16px 48px;
+        }
+
+        h1 {
+          font-size: 1.82rem;
+        }
+
+        .stats,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">PaperRev collaborator brief</p>
+        <h1>PaperRev 공동 작업자 공유용 브리프</h1>
+        <p class="summary">
+          PaperRev는 Gerontology/Aging 분야의 최신 논문을 자동 수집한 뒤, 노화심리 하위 분야별
+          카드뉴스와 이론 해설로 정리해 보여주는 공개용 큐레이션 페이지입니다.
+        </p>
+        <p class="meta">업데이트: 2026-05-30 KST</p>
+      </header>
+
+      <section>
+        <h2>왜 만드는가</h2>
+        <p>
+          최신 논문은 계속 나오지만, 독자가 원문 목록을 직접 뒤져 흐름을 파악하기는 어렵습니다.
+          PaperRev의 목표는 학술 검색엔진을 하나 더 만드는 것이 아니라, 사용자가 "이번 주 노화심리
+          연구에서 무엇을 먼저 보면 되는지" 빠르게 이해할 수 있는 읽기 경험을 제공하는 것입니다.
+        </p>
+      </section>
+
+      <section>
+        <h2>현재 구현 상태</h2>
+        <ul>
+          <li>정적 사이트로 구현되어 GitHub Pages 배포에 적합합니다.</li>
+          <li>메인 화면은 분야별 카드뉴스, 핵심 질문, 노화 이론 해설을 중심으로 구성됩니다.</li>
+          <li>논문은 인지노화, 정서노화, 사회적 노화, 치매·인지장애, 돌봄·가족, 건강행동·디지털헬스, 일·은퇴·연령주의의 7개 분야로 묶습니다.</li>
+          <li>메인에는 자동 발행 기준을 통과한 분야별 대표 카드뉴스 5개씩, 총 35개를 노출합니다.</li>
+          <li>메인에 포함되지 않은 수집 논문은 <code>archive.html</code> 보관함에서 검색/필터로 확인합니다.</li>
+          <li>노화 이론 섹션은 최신 논문을 해석하기 위한 배경 층으로 사용합니다.</li>
+          <li>각 이론 상세에는 현재 featured 카드뉴스 중 관련도가 높은 논문 3개를 자동 연결해 보여줍니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>현재 데이터 스냅샷</h2>
+        <div class="stats">
+          <div class="stat"><strong>340</strong><span>최근 30일 수집 논문</span></div>
+          <div class="stat"><strong>176</strong><span>자동 발행 후보</span></div>
+          <div class="stat"><strong>164</strong><span>리뷰 보류</span></div>
+          <div class="stat"><strong>35</strong><span>메인 카드뉴스</span></div>
+          <div class="stat"><strong>305</strong><span>보관함 논문</span></div>
+          <div class="stat"><strong>7</strong><span>노화심리 하위 분야</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>데이터 흐름</h2>
+        <ol>
+          <li><code>scripts/build-drafts.mjs</code>가 allowlist 저널의 최신 논문을 Crossref에서 수집합니다.</li>
+          <li>DOI 기준으로 중복을 제거하고, 제목/초록 키워드로 분야와 독자 질문을 자동 분류합니다.</li>
+          <li>OpenAlex와 PubMed 링크를 보강해 원문/메타데이터 접근 경로를 넓힙니다.</li>
+          <li><code>publishStatus</code>, <code>needsReview</code>, <code>qualityFlags</code>를 기준으로 자동 발행 후보와 리뷰 보류 항목을 분리합니다.</li>
+          <li><code>featured-drafts.json</code>은 메인 카드뉴스 전용, <code>archive-records.json</code>은 보관함 전용으로 사용합니다.</li>
+          <li><code>article-drafts.json</code>은 전체 묶음과 자동화 호환용으로 유지합니다.</li>
+          <li><code>featured-curation.json</code>은 해당 ID가 있을 때 한국어 문구를 더 자연스럽게 덮어쓰는 선택적 보정 파일입니다.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>운영 원칙</h2>
+        <ul>
+          <li>자동 발행을 기본값으로 두고, 문제가 감지된 항목만 <code>reviewRecords</code>로 보류합니다.</li>
+          <li><code>reviewRecords</code>는 공개 메인 화면에 섞지 않습니다.</li>
+          <li>영어 초록 문장을 그대로 화면에 노출하지 않고, 한국어 카드뉴스 문장으로 정리합니다.</li>
+          <li>카드뉴스는 원문을 대체하는 최종 해석이 아니라, 어떤 논문을 먼저 볼지 돕는 안내층입니다.</li>
+          <li>임상적 조언처럼 읽히는 문장은 피하고, 원문/DOI/Crossref/OpenAlex/PubMed 링크를 함께 제공합니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>최근 개선 사항</h2>
+        <ul>
+          <li>자동 발행/리뷰 보류 정책을 추가했습니다.</li>
+          <li>메인 카드뉴스는 <code>auto_publish</code> 항목만 사용하도록 제한했습니다.</li>
+          <li>품질 플래그를 저장해 왜 보류됐는지 추적할 수 있게 했습니다.</li>
+          <li>보관함은 기본 30개 표시 후 <code>더 보기</code>로 확장합니다.</li>
+          <li>메인과 보관함 데이터 파일을 분리해 초기 로딩 부담을 줄였습니다.</li>
+          <li>분야별 보조 태그를 표시해 교차 주제 논문을 더 자연스럽게 설명합니다.</li>
+          <li>이론별 관련 분야, 독자 질문, 키워드, OpenAlex 개념을 점수화해 최신 카드뉴스와 자동 연결합니다.</li>
+        </ul>
+      </section>
+
+      <section class="callout">
+        <h2>공동 작업자에게 부탁할 검토</h2>
+        <ol>
+          <li>메인 카드뉴스 35개가 노화심리 독자가 먼저 볼 만한 항목인지 봐 주세요.</li>
+          <li>7개 분야 구분과 분야명이 외부 독자에게 직관적인지 의견을 주세요.</li>
+          <li>카드뉴스 문장이 너무 단정적이거나 원문 확인 없이 결론처럼 읽히는 부분이 있는지 확인해 주세요.</li>
+          <li>보관함이 "더 찾아보고 싶은 사람"에게 충분한 보조 탐색 도구인지 봐 주세요.</li>
+          <li>노화 이론 섹션에 더 필요한 이론이나 anchor 문헌이 있는지 제안해 주세요.</li>
+          <li>이론 상세에 자동 연결된 카드뉴스 3개가 해당 이론으로 읽기에 자연스러운지 확인해 주세요.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>바로 다음 작업</h2>
+        <p>
+          우선순위는 협업자 검토를 통해 <strong>이론-논문 자동 연결</strong>의 어색한 매칭을 보정하는 것입니다.
+          현재 연결은 규칙 기반이므로, 특정 이론에 너무 넓거나 좁게 연결되는 카드가 있으면
+          <code>THEORY_ARTICLE_RULES</code>의 키워드를 조정하면 됩니다.
+        </p>
+        <p>
+          그 다음 단계는 OpenAI API 기반 카드뉴스 문장 개선입니다. 이때도 <code>auto_publish</code> 후보에만 비용을
+          쓰고, <code>needs_review</code> 항목은 보류 큐에 남기는 방향이 적절합니다.
+        </p>
+      </section>
+
+      <section>
+        <h2>공동 작업자가 보면 좋은 파일</h2>
+        <div class="grid">
+          <ul>
+            <li><code>index.html</code>, <code>app.js</code>, <code>styles.css</code></li>
+            <li><code>archive.html</code>, <code>archive.js</code></li>
+            <li><code>scripts/build-drafts.mjs</code></li>
+            <li><code>data/drafts/featured-drafts.json</code></li>
+          </ul>
+          <ul>
+            <li><code>data/drafts/archive-records.json</code></li>
+            <li><code>data/drafts/article-drafts.json</code></li>
+            <li><code>data/drafts/featured-curation.json</code></li>
+            <li><code>data/theory-notes.json</code>, <code>data/theory-papers.json</code></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

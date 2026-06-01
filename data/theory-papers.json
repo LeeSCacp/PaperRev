@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-05-24",
   "scope": "Representative original and key works for aging psychology and gerontology theories used in PaperRev.",
-  "linkingPolicy": "Not linked to current article drafts yet. Use this file as a bibliography seed for later theory summaries and theory-paper matching.",
+  "linkingPolicy": "This file remains the curated bibliography seed. Current article draft linking is rule-based in the public UI, using theory metadata, theory notes, and featured draft text rather than hard-coding links in this bibliography file.",
   "selectionNote": "Works were selected as origin statements, core theoretical papers, major measurement or empirical extensions, reviews, influential critiques, or recent empirical/meta-analytic anchors. Public theory cards should expose only 3-5 anchor works per theory; this file remains a broader bibliography seed.",
   "theories": [
     {

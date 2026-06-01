@@ -1,5 +1,115 @@
 const curation = {};
 
+const THEORY_ARTICLE_RULES = {
+  "socioemotional-selectivity-theory": [
+    "well-being",
+    "quality of life",
+    "emotion",
+    "emotional",
+    "loneliness",
+    "social support",
+    "time perspective",
+    "meaning",
+  ],
+  "selection-optimization-compensation": [
+    "adaptation",
+    "compensation",
+    "functional",
+    "function",
+    "mobility",
+    "rehabilitation",
+    "self-efficacy",
+    "fall",
+    "digital",
+  ],
+  "cognitive-reserve-scaffolding": [
+    "cognition",
+    "cognitive",
+    "memory",
+    "mci",
+    "dementia",
+    "neuropsychological",
+    "reserve",
+    "brain",
+    "cognitive decline",
+  ],
+  "activity-theory": [
+    "activity",
+    "activities",
+    "social participation",
+    "engagement",
+    "volunteering",
+    "physical activity",
+    "community",
+    "exercise",
+  ],
+  "continuity-theory": [
+    "continuity",
+    "identity",
+    "roles",
+    "retirement",
+    "relocation",
+    "transition",
+    "family",
+    "home",
+    "lifestyle migration",
+  ],
+  "stress-process-model": [
+    "stress",
+    "stressor",
+    "coping",
+    "caregiver",
+    "caregiving",
+    "burden",
+    "depression",
+    "anxiety",
+    "dementia",
+    "hospice",
+  ],
+  "life-course-perspective": [
+    "life course",
+    "trajectory",
+    "trajectories",
+    "cohort",
+    "early life",
+    "midlife",
+    "historical",
+    "transition",
+    "socioeconomic",
+    "urbanicity",
+  ],
+  "cumulative-advantage-disadvantage": [
+    "inequality",
+    "disadvantage",
+    "socioeconomic",
+    "deprivation",
+    "neighborhood",
+    "access",
+    "digital divide",
+    "vulnerable",
+  ],
+  "successful-aging-model": [
+    "successful aging",
+    "quality of life",
+    "well-being",
+    "function",
+    "physical function",
+    "health behavior",
+    "engagement",
+    "active",
+  ],
+  "ageism-stereotype-embodiment": [
+    "ageism",
+    "stereotype",
+    "self-perceptions of aging",
+    "old age",
+    "older worker",
+    "workplace",
+    "employment",
+    "retirement age",
+  ],
+};
+
 const state = {
   topics: [],
   questions: [],
@@ -375,6 +485,7 @@ function renderTheoryDetail() {
   const anchorWorks = note.anchorWorkIds
     .map((workId) => paperSet?.works.find((work) => work.id === workId))
     .filter(Boolean);
+  const linkedArticles = linkedArticlesForTheory(theory, note);
 
   els.theoryDetail.innerHTML = `
     <article class="theory-detail-panel">
@@ -417,6 +528,8 @@ function renderTheoryDetail() {
           </div>
         </section>
       </div>
+
+      ${renderTheoryArticleLinks(linkedArticles)}
 
       <div class="theory-detail-grid">
         ${renderTheoryBlock("한계와 주의점", note.limitations.map((item) => `<li>${item}</li>`).join(""), "ul")}
@@ -467,6 +580,42 @@ function renderAnchorWork(work) {
       <span class="badge">${formatAnchorRole(work.role)}</span>
       <p>${work.citation}</p>
       <a href="${work.url}" target="_blank" rel="noreferrer">${work.doi ? `DOI ${work.doi}` : "서지 링크"}</a>
+    </article>
+  `;
+}
+
+function renderTheoryArticleLinks(matches) {
+  return `
+    <section class="theory-linked-section">
+      <div class="stack-heading">
+        <h4>이 이론으로 읽을 최신 카드뉴스</h4>
+        <span>${matches.length}개 연결</span>
+      </div>
+      <p>분야, 독자 질문, 이론 키워드, OpenAlex 개념을 함께 점수화해 현재 featured 카드뉴스와 자동 연결합니다.</p>
+      <div class="theory-linked-list">
+        ${
+          matches.length
+            ? matches.map(renderTheoryLinkedArticle).join("")
+            : `<article class="theory-linked-empty">현재 featured 카드뉴스 중 직접 연결할 항목이 충분하지 않습니다.</article>`
+        }
+      </div>
+    </section>
+  `;
+}
+
+function renderTheoryLinkedArticle(match) {
+  const article = match.article;
+  return `
+    <article class="theory-linked-article">
+      <div>
+        ${renderTopicBadges(article)}
+        <h5>${displayCardTitle(article)}</h5>
+        <p>${article.deck.finding}</p>
+      </div>
+      <div class="theory-match-meta">
+        <span>연결 점수 ${match.score}</span>
+        <small>${match.reasons.join(" · ")}</small>
+      </div>
     </article>
   `;
 }
@@ -690,6 +839,120 @@ function filteredArticles() {
       .toLowerCase();
     return topicMatch && accessMatch && searchable.includes(term);
   });
+}
+
+function linkedArticlesForTheory(theory, note) {
+  if (!theory) {
+    return [];
+  }
+  return state.articles
+    .map((article) => scoreArticleForTheory(article, theory, note))
+    .filter((match) => match.score >= 24)
+    .sort((a, b) => {
+      if (b.score !== a.score) {
+        return b.score - a.score;
+      }
+      return new Date(b.article.publishedDate || 0) - new Date(a.article.publishedDate || 0);
+    })
+    .slice(0, 3);
+}
+
+function scoreArticleForTheory(article, theory, note) {
+  const relatedTopicIds = theory.relatedTopicIds || [];
+  const relatedQuestionIds = theory.relatedQuestionIds || [];
+  const reasons = [];
+  let score = 0;
+
+  if (relatedTopicIds.includes(article.topicId)) {
+    score += 35;
+    reasons.push("주 분야 일치");
+  }
+
+  const secondaryMatches = (article.secondaryTopicIds || []).filter((topicId) => relatedTopicIds.includes(topicId));
+  if (secondaryMatches.length) {
+    score += Math.min(18, secondaryMatches.length * 9);
+    reasons.push("보조 분야 일치");
+  }
+
+  const questionMatches = (article.questionIds || []).filter((questionId) => relatedQuestionIds.includes(questionId));
+  if (questionMatches.length) {
+    score += Math.min(18, questionMatches.length * 9);
+    reasons.push("독자 질문 일치");
+  }
+
+  const keywordMatches = matchedTheoryKeywords(articleSearchText(article), theory, note);
+  if (keywordMatches.length) {
+    score += Math.min(30, keywordMatches.length * 6);
+    reasons.push(`키워드 ${keywordMatches.slice(0, 3).join(", ")}`);
+  }
+
+  const openAlexMatches = matchedOpenAlexConcepts(article, theory, note);
+  if (openAlexMatches.length) {
+    score += Math.min(12, openAlexMatches.length * 4);
+    reasons.push(`개념 ${openAlexMatches.slice(0, 2).join(", ")}`);
+  }
+
+  return {
+    article,
+    score,
+    reasons: reasons.length ? reasons : ["주제 근접"],
+  };
+}
+
+function matchedTheoryKeywords(text, theory, note) {
+  const conceptTerms = (note?.keyConcepts || []).map((concept) => concept.term);
+  const terms = [
+    ...(theory.keywords || []),
+    ...(THEORY_ARTICLE_RULES[theory.id] || []),
+    ...conceptTerms,
+  ];
+  return unique(terms.map(normalizeText).filter((term) => term && text.includes(term)));
+}
+
+function matchedOpenAlexConcepts(article, theory, note) {
+  const conceptNames = [
+    ...(article.openAlex?.concepts || []).map((concept) => concept.name),
+    ...(article.openAlex?.topics || []).map((topic) => topic.name),
+  ]
+    .map(normalizeText)
+    .filter(Boolean);
+  if (!conceptNames.length) {
+    return [];
+  }
+  const terms = [
+    ...(theory.keywords || []),
+    ...(THEORY_ARTICLE_RULES[theory.id] || []),
+    ...(note?.keyConcepts || []).map((concept) => concept.term),
+  ]
+    .map(normalizeText)
+    .filter(Boolean);
+  return unique(conceptNames.filter((name) => terms.some((term) => name.includes(term) || term.includes(name))));
+}
+
+function articleSearchText(article) {
+  return normalizeText(
+    [
+      article.title,
+      article.cardTitle,
+      article.abstract,
+      article.koreanSummary,
+      article.deck?.question,
+      article.deck?.method,
+      article.deck?.finding,
+      article.deck?.meaning,
+      article.deck?.caution,
+      (article.openAlex?.concepts || []).map((concept) => concept.name).join(" "),
+      (article.openAlex?.topics || []).map((topic) => topic.name).join(" "),
+    ].join(" "),
+  );
+}
+
+function normalizeText(value = "") {
+  return `${value}`.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function unique(items) {
+  return [...new Set(items)];
 }
 
 function articlesForTopic(topicId) {

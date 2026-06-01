@@ -1,10 +1,10 @@
 {
   "generatedAt": "2026-05-24",
-  "scope": "Conceptual summaries for aging theory cards. These notes are not linked to current article drafts yet.",
+  "scope": "Conceptual summaries for aging theory cards. The public site now uses these notes with theory metadata and current featured drafts to surface rule-based theory-article links.",
   "displayPolicy": {
     "bibliographySeed": "data/theory-papers.json keeps a broad internal seed list for later verification and writing.",
     "publicDisplay": "For the site, show the theory summary plus 3-5 anchor works per theory: original/core works first, then a recent empirical anchor and/or the latest relevant meta-analysis when a clear fit exists.",
-    "nextStep": "Later, connect theory anchors to the latest article drafts through theory-paper matching; for now, anchors remain curated bibliography links."
+    "nextStep": "Continue refining rule-based theory-article links and use collaborator feedback to decide which links need manual curation or stronger matching rules."
   },
   "notes": [
     {
