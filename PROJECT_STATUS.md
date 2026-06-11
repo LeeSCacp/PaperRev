@@ -167,12 +167,12 @@
 
 현재 데이터 상태:
 
-- `data/raw/crossref-latest.json`: selected window 30일, total collected 340개.
-- `data/drafts/article-drafts.json`: 대표 records 35개, featured 35개, archive 305개, reviewRecords 164개.
-- `publishStatusCounts`: `auto_publish` 176개, `needs_review` 164개.
-- `qualityFlagCounts`: `missing_abstract` 108개, `low_featured_score` 130개, `low_classification_confidence` 56개, `topic_overlap` 20개.
+- 2026-05-30 점검 당시 `data/raw/crossref-latest.json`: selected window 30일, total collected 340개.
+- 2026-05-30 점검 당시 `data/drafts/article-drafts.json`: 대표 records 35개, featured 35개, archive 305개, reviewRecords 164개.
+- 2026-05-30 점검 당시 `publishStatusCounts`: `auto_publish` 176개, `needs_review` 164개.
+- 2026-05-30 점검 당시 `qualityFlagCounts`: `missing_abstract` 108개, `low_featured_score` 130개, `low_classification_confidence` 56개, `topic_overlap` 20개.
 - `data/drafts/featured-drafts.json`: 메인 카드뉴스용 records 35개.
-- `data/drafts/archive-records.json`: 보관함용 records 305개.
+- 2026-05-30 점검 당시 `data/drafts/archive-records.json`: 보관함용 records 305개.
 
 검증:
 
@@ -271,6 +271,43 @@
 1. 협업자에게 공유 브리프와 함께 이론 상세의 연결 카드가 이론적으로 자연스러운지 검토를 요청한다.
 2. 피드백을 반영해 `THEORY_ARTICLE_RULES`의 키워드를 조정한다.
 3. 그 다음 OpenAI API 기반 카드뉴스 문장 개선을 `auto_publish` 후보에만 적용하는 방향으로 진행한다.
+
+## 2026-06-10 재개 점검
+
+확인한 내용:
+
+- 현재 작업 트리는 깨끗하며 `main`은 `origin/main`과 동기화되어 있다.
+- 최신 커밋은 `781a1a0 Add collaborator brief and theory article links`다.
+- 현재 데이터 파일 기준 `data/drafts/article-drafts.json`은 `generatedAt: 2026-06-01T02:51:18.365Z`다.
+- 현재 데이터 스냅샷:
+  - selected window: 30일
+  - total collected: 276개
+  - auto publish: 146개
+  - needs review: 130개
+  - featured: 35개
+  - archive: 241개
+  - theory: 10개, theory note: 10개
+- `README.md`, `COLLABORATOR_BRIEF.md`, `COLLABORATOR_BRIEF.html`의 현재 데이터 스냅샷 수치를 최신 파일 기준으로 갱신했다.
+- 로컬 브라우저에서 보관함 상호작용을 직접 검증했다.
+  - 초기 상태: `241개 중 30개 표시`, `더 보기 30개`, 렌더링 row 30개
+  - `더 보기` 클릭 후: `241개 중 60개 표시`, 렌더링 row 60개
+  - `dementia` 검색 후: `48개 중 30개 표시`, 검색어 입력값 `dementia`
+  - 분야 필터 `치매·인지장애`: `48개 중 30개 표시`
+  - 접근성 필터 `open`: `111개 중 30개 표시`
+  - 브라우저 콘솔 error 로그 없음
+
+남은 내용:
+
+- 이론-논문 자동 연결은 구현됐지만 규칙 기반이므로, 협업자 검토 또는 샘플 점검을 통해 어색한 연결을 조정해야 한다.
+- GitHub Actions 주간 실행 로그와 결과 파일 커밋이 안정적으로 이어지는지 확인해야 한다.
+- OpenAI API 기반 자연어 카드뉴스 생성은 아직 미구현이다.
+- draft preview/review 화면과 `reviewRecords` 확인용 내부 뷰는 아직 없다.
+
+다음 추천:
+
+1. 이론 연결 결과를 샘플 검토해 `THEORY_ARTICLE_RULES`를 보정한다.
+2. GitHub Actions 주간 실행 로그와 결과 파일 커밋 상태를 확인한다.
+3. 그 다음 OpenAI API 요약 또는 preview/review 화면 중 하나를 선택해 진행한다.
 
 ## 1차 선정 저널
 
