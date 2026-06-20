@@ -1,6 +1,6 @@
 # PaperRev 프로젝트 상태
 
-최종 업데이트: 2026-06-01 KST
+최종 업데이트: 2026-06-20 KST
 
 ## 프로젝트 목표
 
@@ -308,6 +308,55 @@
 1. 이론 연결 결과를 샘플 검토해 `THEORY_ARTICLE_RULES`를 보정한다.
 2. GitHub Actions 주간 실행 로그와 결과 파일 커밋 상태를 확인한다.
 3. 그 다음 OpenAI API 요약 또는 preview/review 화면 중 하나를 선택해 진행한다.
+
+## 2026-06-17 이론-논문 연결 품질 보정
+
+확인한 내용:
+
+- 현재 작업 루트는 `D:\CodexCodeProj\PaperRev`이며, 작업 전 `main`은 `origin/main`과 동기화된 상태였다.
+- 현재 데이터 파일 기준 `data/drafts/article-drafts.json`은 `generatedAt: 2026-06-08T02:48:32.284Z`다.
+- 현재 데이터 스냅샷:
+  - selected window: 14일
+  - total collected: 142개
+  - auto publish: 55개
+  - needs review: 87개
+  - featured: 30개
+  - archive: 112개
+  - quality flags: `missing_abstract` 72개, `low_featured_score` 64개, `topic_overlap` 10개, `low_classification_confidence` 33개
+
+진행한 내용:
+
+- 이론 상세의 최신 카드뉴스 자동 연결 결과를 샘플 검토했다.
+- `app.js`의 연결 필터를 강화해, 점수 기준을 넘더라도 키워드 또는 OpenAlex 개념 근거가 최소 1개 있어야 표시되도록 했다.
+- `THEORY_ARTICLE_RULES`에서 너무 넓은 키워드인 `access`, `function`을 더 구체적인 표현으로 교체했다.
+- `data/theories.json`의 공개 이론 키워드에서도 `access`, `function`을 각각 `digital exclusion`, `care access`, `physical function`, `physical functioning` 중심으로 보정했다.
+- `index.html`의 `app.js` 캐시 버전을 `20260617-theory-link-quality`로 올렸다.
+- `README.md`, `COLLABORATOR_BRIEF.md`, `COLLABORATOR_BRIEF.html`의 현재 데이터 스냅샷과 공유 문구를 2026-06-17 기준으로 갱신했다.
+
+검증한 내용:
+
+- 실제 프론트 점수 로직과 같은 기준으로 10개 이론 모두 관련 카드뉴스 3개가 유지되는 것을 확인했다.
+- CAD 연결에서 `access` 단독 근거로 올라오던 약한 매칭은 제거됐다.
+
+남은 내용:
+
+- GitHub Actions 주간 실행 로그와 결과 파일 커밋이 현재 분리 데이터 구조를 안정적으로 갱신하는지 확인해야 한다.
+- 협업자가 이론 상세의 자동 연결 카드가 의미상 자연스러운지 한 번 더 검토하면 좋다.
+- OpenAI API 기반 카드뉴스 문장 개선 또는 draft preview/review 내부 화면은 아직 미구현이다.
+
+다음 추천:
+
+1. GitHub Actions 주간 실행 로그와 결과 파일 커밋 상태를 먼저 확인한다.
+2. 이후 OpenAI API 기반 카드뉴스 문장 개선과 preview/review 내부 화면 중 하나를 선택한다.
+3. 선택 기준은 공개 문장 품질을 먼저 올릴지, 검수 운영 편의성을 먼저 만들지다.
+
+## 2026-06-20 커밋 전 원격 데이터 재동기화
+
+- `origin/main`의 주간 데이터 커밋 `55a819c`를 확인하고 로컬 변경을 그 위로 rebase했다.
+- 최신 `data/drafts/article-drafts.json` 기준 `generatedAt`은 `2026-06-15T02:54:08.309Z`다.
+- 최신 데이터 스냅샷은 selected window 14일, total collected 151개, auto publish 65개, needs review 86개, featured 33개, archive 118개다.
+- 최신 데이터 기준으로 `README.md`, `COLLABORATOR_BRIEF.md`, `COLLABORATOR_BRIEF.html`의 공유 수치를 다시 맞췄다.
+- 다음 우선순위는 GitHub Actions 실행 로그와 자동 커밋의 지속 안정성을 확인한 뒤, preview/review 내부 화면을 구현하는 것이다.
 
 ## 1차 선정 저널
 

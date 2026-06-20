@@ -183,21 +183,21 @@
           <li>정적 사이트로 구현되어 GitHub Pages 배포에 적합합니다.</li>
           <li>메인 화면은 분야별 카드뉴스, 핵심 질문, 노화 이론 해설을 중심으로 구성됩니다.</li>
           <li>논문은 인지노화, 정서노화, 사회적 노화, 치매·인지장애, 돌봄·가족, 건강행동·디지털헬스, 일·은퇴·연령주의의 7개 분야로 묶습니다.</li>
-          <li>메인에는 자동 발행 기준을 통과한 분야별 대표 카드뉴스 5개씩, 총 35개를 노출합니다.</li>
+          <li>메인에는 자동 발행 기준을 통과한 분야별 대표 카드뉴스를 노출합니다. 현재 파일 기준으로는 33개입니다.</li>
           <li>메인에 포함되지 않은 수집 논문은 <code>archive.html</code> 보관함에서 검색/필터로 확인합니다.</li>
           <li>노화 이론 섹션은 최신 논문을 해석하기 위한 배경 층으로 사용합니다.</li>
-          <li>각 이론 상세에는 현재 featured 카드뉴스 중 관련도가 높은 논문 3개를 자동 연결해 보여줍니다.</li>
+          <li>각 이론 상세에는 현재 featured 카드뉴스 중 관련도가 높은 논문을 최대 3개까지 자동 연결해 보여줍니다.</li>
         </ul>
       </section>
 
       <section>
         <h2>현재 데이터 스냅샷</h2>
         <div class="stats">
-          <div class="stat"><strong>276</strong><span>최근 30일 수집 논문</span></div>
-          <div class="stat"><strong>146</strong><span>자동 발행 후보</span></div>
-          <div class="stat"><strong>130</strong><span>리뷰 보류</span></div>
-          <div class="stat"><strong>35</strong><span>메인 카드뉴스</span></div>
-          <div class="stat"><strong>241</strong><span>보관함 논문</span></div>
+          <div class="stat"><strong>151</strong><span>최근 14일 수집 논문</span></div>
+          <div class="stat"><strong>65</strong><span>자동 발행 후보</span></div>
+          <div class="stat"><strong>86</strong><span>리뷰 보류</span></div>
+          <div class="stat"><strong>33</strong><span>메인 카드뉴스</span></div>
+          <div class="stat"><strong>118</strong><span>보관함 논문</span></div>
           <div class="stat"><strong>7</strong><span>노화심리 하위 분야</span></div>
         </div>
       </section>
@@ -236,27 +236,28 @@
           <li>메인과 보관함 데이터 파일을 분리해 초기 로딩 부담을 줄였습니다.</li>
           <li>분야별 보조 태그를 표시해 교차 주제 논문을 더 자연스럽게 설명합니다.</li>
           <li>이론별 관련 분야, 독자 질문, 키워드, OpenAlex 개념을 점수화해 최신 카드뉴스와 자동 연결합니다.</li>
+          <li>이론-논문 자동 연결은 키워드/OpenAlex 근거가 최소 1개 있는 항목만 표시하도록 강화했습니다.</li>
+          <li><code>access</code>, <code>function</code>처럼 너무 넓은 이론 키워드를 더 구체적인 표현으로 바꿨습니다.</li>
         </ul>
       </section>
 
       <section class="callout">
         <h2>공동 작업자에게 부탁할 검토</h2>
         <ol>
-          <li>메인 카드뉴스 35개가 노화심리 독자가 먼저 볼 만한 항목인지 봐 주세요.</li>
+          <li>메인 카드뉴스 33개가 노화심리 독자가 먼저 볼 만한 항목인지 봐 주세요.</li>
           <li>7개 분야 구분과 분야명이 외부 독자에게 직관적인지 의견을 주세요.</li>
           <li>카드뉴스 문장이 너무 단정적이거나 원문 확인 없이 결론처럼 읽히는 부분이 있는지 확인해 주세요.</li>
           <li>보관함이 "더 찾아보고 싶은 사람"에게 충분한 보조 탐색 도구인지 봐 주세요.</li>
           <li>노화 이론 섹션에 더 필요한 이론이나 anchor 문헌이 있는지 제안해 주세요.</li>
-          <li>이론 상세에 자동 연결된 카드뉴스 3개가 해당 이론으로 읽기에 자연스러운지 확인해 주세요.</li>
+          <li>이론 상세에 자동 연결된 카드뉴스가 해당 이론으로 읽기에 자연스러운지 확인해 주세요.</li>
         </ol>
       </section>
 
       <section>
         <h2>바로 다음 작업</h2>
         <p>
-          우선순위는 협업자 검토를 통해 <strong>이론-논문 자동 연결</strong>의 어색한 매칭을 보정하는 것입니다.
-          현재 연결은 규칙 기반이므로, 특정 이론에 너무 넓거나 좁게 연결되는 카드가 있으면
-          <code>THEORY_ARTICLE_RULES</code>의 키워드를 조정하면 됩니다.
+          우선순위는 GitHub Actions 주간 실행 로그와 결과 파일 커밋 상태를 확인하는 것입니다.
+          로컬 데이터 기준으로 이론-논문 자동 연결 품질 보정은 1차 완료했으므로, 다음에는 원격 자동화가 같은 데이터 구조를 안정적으로 갱신하는지 확인해야 합니다.
         </p>
         <p>
           그 다음 단계는 OpenAI API 기반 카드뉴스 문장 개선입니다. 이때도 <code>auto_publish</code> 후보에만 비용을

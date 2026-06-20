@@ -85,7 +85,7 @@
     "whyItMatters": "노년기 정신건강, 돌봄 접근성, 디지털 격차, 연령주의 연구의 구조적 배경을 설명합니다.",
     "relatedTopicIds": ["social-aging", "digital-health-behavior", "work-retirement-ageism"],
     "relatedQuestionIds": ["how-does-society-define-old-age", "can-digital-health-help", "can-ageism-change"],
-    "keywords": ["inequality", "disadvantage", "digital divide", "access"]
+    "keywords": ["inequality", "disadvantage", "digital divide", "digital exclusion", "care access"]
   },
   {
     "id": "successful-aging-model",
@@ -96,7 +96,7 @@
     "whyItMatters": "건강행동, 활동 참여, 웰빙 지표 논문을 읽을 때 널리 쓰이는 기준이지만, 규범성과 배제 가능성도 함께 검토해야 합니다.",
     "relatedTopicIds": ["digital-health-behavior", "cognitive-aging", "emotional-aging"],
     "relatedQuestionIds": ["can-digital-health-help", "does-memory-always-decline", "what-supports-mental-health"],
-    "keywords": ["successful aging", "function", "engagement", "health behavior"]
+    "keywords": ["successful aging", "physical function", "physical functioning", "engagement", "health behavior"]
   },
   {
     "id": "ageism-stereotype-embodiment",

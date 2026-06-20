@@ -14,8 +14,8 @@ const THEORY_ARTICLE_RULES = {
   "selection-optimization-compensation": [
     "adaptation",
     "compensation",
-    "functional",
-    "function",
+    "functional decline",
+    "functional impairment",
     "mobility",
     "rehabilitation",
     "self-efficacy",
@@ -84,16 +84,18 @@ const THEORY_ARTICLE_RULES = {
     "socioeconomic",
     "deprivation",
     "neighborhood",
-    "access",
     "digital divide",
+    "digital exclusion",
+    "care access",
+    "health care access",
     "vulnerable",
   ],
   "successful-aging-model": [
     "successful aging",
     "quality of life",
     "well-being",
-    "function",
     "physical function",
+    "physical functioning",
     "health behavior",
     "engagement",
     "active",
@@ -847,7 +849,7 @@ function linkedArticlesForTheory(theory, note) {
   }
   return state.articles
     .map((article) => scoreArticleForTheory(article, theory, note))
-    .filter((match) => match.score >= 24)
+    .filter((match) => match.score >= 24 && match.specificEvidenceCount > 0)
     .sort((a, b) => {
       if (b.score !== a.score) {
         return b.score - a.score;
@@ -896,6 +898,7 @@ function scoreArticleForTheory(article, theory, note) {
     article,
     score,
     reasons: reasons.length ? reasons : ["주제 근접"],
+    specificEvidenceCount: keywordMatches.length + openAlexMatches.length,
   };
 }
 
